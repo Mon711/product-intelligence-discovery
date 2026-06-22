@@ -23,3 +23,10 @@ def load_shopify_config() -> ShopifyConfig:
 
     if not access_token:
         raise ValueError("SHOPIFY_ADMIN_ACCESS_TOKEN is missing")
+
+    return ShopifyConfig(
+        shop_domain=shop_domain,
+        access_token=access_token,
+        api_version=api_version or "2024-04",
+    )
+
