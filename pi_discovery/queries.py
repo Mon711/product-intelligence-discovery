@@ -9,3 +9,37 @@ query ShopInfo {
   }
 }
 """
+
+TYPE_FIELDS_QUERY = """
+query TypeFields($typeName: String!) {
+  __type(name: $typeName) {
+    name
+    kind
+    description
+    fields {
+      name
+      description
+      args {
+        name
+        description
+      }
+      type {
+        kind
+        name
+        ofType {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
+              kind
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+"""

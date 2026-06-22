@@ -92,23 +92,6 @@ SHOPIFY_API_VERSION=2024-04
 python scripts/test_shopify_connection.py
 ```
 
-Expected output:
-```
-Connected to Shopify successfully.
-Shop name: Your Store Name
-MyShopify domain: your-store.myshopify.com
-Primary domain: https://your-store.com
-```
-
----
-
-## Modified Files (Pending)
-
-The following files have uncommitted changes:
-- `.gitignore` - Updated with project-specific excludes
-- `pi_discovery/config.py` - Configuration code
-- `pi_discovery/shopify_client.py` - Client implementation
-
 ---
 
 ## Notes
