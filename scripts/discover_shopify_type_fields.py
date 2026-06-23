@@ -93,3 +93,8 @@ def main() -> None:
 
     print(f"Discovered {len(fields_df)} fields for {args.type_name}.")
     print(f"Saved CSV to: {output_path}")
+
+
+if __name__ == "__main__":
+    main()
+
