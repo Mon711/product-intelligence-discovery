@@ -44,6 +44,7 @@
   - Dynamically queries any Shopify GraphQL type schema
   - Retrieves field names, types, descriptions, and arguments
   - Supports nested type inspection (up to 4 levels deep)
+  - Includes full argument type information (name, type, default values)
 
 ### Connection Testing (`scripts/test_shopify_connection.py`)
 - ✅ Standalone test script to validate setup
@@ -63,11 +64,12 @@
     - `field_type` - Type signature (with ! for required, [] for lists)
     - `is_required` - Boolean indicating if field is required
     - `description` - Field description from Shopify docs
-    - `args` - Field arguments (if any)
+    - `args` - Field arguments with their types and default values (e.g., `id: ID!, first: Int = 10`)
   - Saves CSV to `outputs/schema_fields/{type_name}_fields.csv`
   - Usage: `python scripts/discover_shopify_type_fields.py Product`
   - Features:
     - Handles complex nested types
+    - Displays full argument type information including defaults
     - Creates output directory automatically
     - Provides feedback on number of fields discovered
 
