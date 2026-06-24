@@ -22,6 +22,27 @@ query TypeFields($typeName: String!) {
       args {
         name
         description
+        defaultValue
+        type {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
+              kind
+              name
+              ofType {
+                kind
+                name
+                ofType {
+                  kind
+                  name
+                }
+              }
+            }
+          }
+        }
       }
       type {
         kind
@@ -35,6 +56,10 @@ query TypeFields($typeName: String!) {
             ofType {
               kind
               name
+              ofType {
+                kind
+                name
+              }
             }
           }
         }

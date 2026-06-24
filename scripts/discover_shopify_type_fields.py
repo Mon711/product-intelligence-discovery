@@ -32,8 +32,21 @@ def is_required(type_ref: dict[str, Any] | None) -> bool:
 
     return type_ref.get("kind") == "NON_NULL"
 
+def format_arg(arg: dict[str, Any]) -> str:
+    arg_name = arg["name"]
+    arg_type = type_ref_to_string(arg.get("type"))
+    default_value = arg.get("defaultValue")
+    
+    if default_value is not None:
+        return f"{arg_name}: {arg_type} = {default_value}"
+    
+    return f"{arg_name}: {arg_type}"
+    
 
-def build_field_rows(type_info: dict[str:Any]) -> list[dict[str:Any]]:
+def format_args(args: list[dict[str, Any]]) -> str:
+    return ", ".join(format_arg(arg) for arg in args)
+
+def build_field_rows(type_info: dict[str, Any]) -> list[dict[str, Any]]:
     rows = []
 
     for field in type_info.get("fields") or []:
@@ -47,7 +60,7 @@ def build_field_rows(type_info: dict[str:Any]) -> list[dict[str:Any]]:
                 "field_type": type_ref_to_string(field.get("type")),
                 "is_required": is_required(field.get("type")),
                 "description": field.get("description"),
-                "args": ", ".join(arg["name"] for arg in args),
+                "args": format_args(args),
             }
         )
 
