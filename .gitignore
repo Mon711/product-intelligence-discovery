@@ -5,3 +5,4 @@ scripts/__pycache__
 outputs
 ga4_oauth_client.json
 ga4_token.json
+.vscode/
