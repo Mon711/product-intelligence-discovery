@@ -1,4 +1,0 @@
-pandas
-google-auth
-google-auth-oauthlib
-google-analytics-admin

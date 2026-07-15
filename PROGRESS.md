@@ -90,7 +90,9 @@ product-intelligence-discovery/
 ├── outputs/
 │   └── schema_fields/           # Generated CSV files
 ├── .gitignore
-├── requirements.txt             # Python dependencies
+├── .python-version              # Python version used by uv
+├── pyproject.toml               # Project settings and direct dependencies
+├── uv.lock                      # Exact locked dependency versions
 └── PROGRESS.md                  # This file
 ```
 
@@ -150,10 +152,13 @@ python scripts/discover_shopify_type_fields.py Product --output-dir custom_outpu
 
 ## Dependencies
 
-The project uses the following Python packages (see `requirements.txt`):
+The project uses the following Python packages (see `pyproject.toml`):
 - `requests` - HTTP client for Shopify API
 - `python-dotenv` - Environment variable loading
 - `pandas` - Data processing and CSV export
+- Google authentication and Analytics clients - GA4 authentication, property discovery, and reporting
+
+Install or update the complete environment with `uv sync`. Use `uv add <package>` and `uv remove <package>` to change dependencies so that `pyproject.toml` and `uv.lock` stay synchronized.
 
 ---
 
