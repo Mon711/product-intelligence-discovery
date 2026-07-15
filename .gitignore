@@ -1,8 +1,19 @@
+# Local Python environment and generated package files
 .venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Local secrets and authentication tokens
 .env
-pi_discovery/__pycache__
-scripts/__pycache__
-outputs
 ga4_oauth_client.json
 ga4_token.json
+
+# Generated discovery output
+outputs/
+
+# Editor and operating-system files
 .vscode/
+.DS_Store
