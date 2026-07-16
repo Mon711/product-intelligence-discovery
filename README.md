@@ -16,16 +16,25 @@ uv sync
 
 This installs the required Python version when needed, creates or updates `.venv`, and installs the exact dependency versions recorded in `uv.lock`. You do not need to activate the virtual environment when using `uv run`.
 
-Copy `.env.example` to `.env` and fill in the credentials needed by the script you want to run.
+Keep local credentials in the matching config folder:
+
+- `config/shopify/.env` contains Shopify environment variables.
+- `config/ga4/ga4_oauth_client.json` contains the Google OAuth client file.
+- `config/ga4/ga4_token.json` is created or refreshed after GA4 sign-in.
 
 ## Run scripts
 
 ```bash
-uv run python scripts/test_shopify_connection.py
-uv run python scripts/discover_shopify_type_fields.py Product
-uv run python scripts/test_ga4_connection.py
-uv run python scripts/list_ga4_properties.py
-uv run python scripts/list_ga4_event_counts.py
+uv run python -m scripts.shopify.test_shopify_connection
+uv run python -m scripts.shopify.discover_shopify_type_fields Product
+
+uv run python -m scripts.ga4.test_ga4_connection
+uv run python -m scripts.ga4.list_ga4_properties
+uv run python -m scripts.ga4.list_ga4_event_counts
+uv run python -m scripts.ga4.list_ga4_metadata
+uv run python -m scripts.ga4.list_ga4_item_performance
+uv run python -m scripts.ga4.list_ga4_purchase_transactions
+uv run python -m scripts.ga4.list_ga4_purchase_events
 ```
 
 ## Manage dependencies

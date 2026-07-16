@@ -1,6 +1,6 @@
 import requests
 
-from  pi_discovery.config import ShopifyConfig
+from shopify_discovery.config import ShopifyConfig
 
 class ShopifyApiError(Exception):
     pass

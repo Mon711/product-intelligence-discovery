@@ -9,11 +9,11 @@
 ## What's Implemented
 
 ### Core Infrastructure
-- ✅ Python package structure (`pi_discovery/`)
+- ✅ Separate Shopify and GA4 Python packages
 - ✅ Environment variable configuration (.env support)
 - ✅ Git setup with proper .gitignore
 
-### Configuration Management (`pi_discovery/config.py`)
+### Configuration Management (`shopify_discovery/config.py`)
 - ✅ `ShopifyConfig` dataclass for storing Shopify credentials
   - Immutable (frozen=True) for security
   - Fields: `shop_domain`, `access_token`, `api_version`
@@ -23,7 +23,7 @@
   - Sets default API version (2026-04)
   - Raises clear errors if credentials missing
 
-### Shopify GraphQL Client (`pi_discovery/shopify_client.py`)
+### Shopify GraphQL Client (`shopify_discovery/shopify_client.py`)
 - ✅ `ShopifyClient` class for API communication
   - Accepts ShopifyConfig and constructs Admin API endpoint URL
   - `execute()` method for running GraphQL queries and mutations
@@ -35,7 +35,7 @@
   - 30-second timeout on all requests
   - Proper authentication headers
 
-### GraphQL Queries (`pi_discovery/queries.py`)
+### GraphQL Queries (`shopify_discovery/queries.py`)
 - ✅ `SHOP_QUERY` - Fetches basic shop information
   - Shop name
   - MyShopify domain
@@ -46,14 +46,14 @@
   - Supports nested type inspection (up to 4 levels deep)
   - Includes full argument type information (name, type, default values)
 
-### Connection Testing (`scripts/test_shopify_connection.py`)
+### Connection Testing (`scripts/shopify/test_shopify_connection.py`)
 - ✅ Standalone test script to validate setup
   - Loads configuration
   - Executes a test query
   - Displays shop information on success
-  - Usage: `python scripts/test_shopify_connection.py`
+  - Usage: `uv run python -m scripts.shopify.test_shopify_connection`
 
-### Field Discovery Tool (`scripts/discover_shopify_type_fields.py`)
+### Field Discovery Tool (`scripts/shopify/discover_shopify_type_fields.py`)
 - ✅ CLI tool to explore Shopify GraphQL schema
   - Accepts type name as command-line argument (e.g., `Product`, `ProductVariant`, `Customer`)
   - Queries Shopify's introspection API to get all fields for a type
@@ -66,7 +66,7 @@
     - `description` - Field description from Shopify docs
     - `args` - Field arguments with their types and default values (e.g., `id: ID!, first: Int = 10`)
   - Saves CSV to `outputs/schema_fields/{type_name}_fields.csv`
-  - Usage: `python scripts/discover_shopify_type_fields.py Product`
+  - Usage: `uv run python -m scripts.shopify.discover_shopify_type_fields Product`
   - Features:
     - Handles complex nested types
     - Displays full argument type information including defaults
@@ -79,14 +79,19 @@
 
 ```
 product-intelligence-discovery/
-├── pi_discovery/
+├── shopify_discovery/
 │   ├── __init__.py
 │   ├── config.py                # Configuration management
 │   ├── shopify_client.py        # Shopify GraphQL client
 │   └── queries.py               # GraphQL query definitions
+├── ga4_discovery/
+│   └── auth.py                  # Shared GA4 OAuth helper
 ├── scripts/
-│   ├── test_shopify_connection.py      # Connection test script
-│   └── discover_shopify_type_fields.py # Field discovery tool
+│   ├── ga4/                      # GA4 discovery scripts
+│   └── shopify/                  # Shopify discovery scripts
+├── config/
+│   ├── ga4/                      # Local GA4 OAuth files
+│   └── shopify/                  # Local Shopify .env file
 ├── outputs/
 │   └── schema_fields/           # Generated CSV files
 ├── .gitignore
@@ -112,7 +117,7 @@ product-intelligence-discovery/
 ## How to Use
 
 ### Setup Environment Variables
-Create a `.env` file in the project root:
+Create `config/shopify/.env`:
 ```
 SHOPIFY_SHOP_DOMAIN=your-store.myshopify.com
 SHOPIFY_ADMIN_ACCESS_TOKEN=your-access-token-here
@@ -122,7 +127,7 @@ SHOPIFY_API_VERSION=2026-04
 ### Test Connection
 Verify that your Shopify credentials are working:
 ```bash
-python scripts/test_shopify_connection.py
+uv run python -m scripts.shopify.test_shopify_connection
 ```
 
 Expected output:
@@ -136,16 +141,16 @@ Primary domain: https://your-store.com
 ### Discover Type Fields
 Explore available fields for any Shopify GraphQL type and export to CSV:
 ```bash
-python scripts/discover_shopify_type_fields.py Product
-python scripts/discover_shopify_type_fields.py ProductVariant
-python scripts/discover_shopify_type_fields.py Customer
+uv run python -m scripts.shopify.discover_shopify_type_fields Product
+uv run python -m scripts.shopify.discover_shopify_type_fields ProductVariant
+uv run python -m scripts.shopify.discover_shopify_type_fields Customer
 ```
 
 The CSV files will be saved in `outputs/schema_fields/`. Each file contains all available fields for that type with their types, requirements, and descriptions.
 
 Custom output directory:
 ```bash
-python scripts/discover_shopify_type_fields.py Product --output-dir custom_output/
+uv run python -m scripts.shopify.discover_shopify_type_fields Product --output-dir custom_output/
 ```
 
 ---

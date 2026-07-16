@@ -10,7 +10,7 @@ from google.analytics.data_v1beta.types import (
 )
 from google.api_core.exceptions import GoogleAPICallError
 
-from list_ga4_item_performance import get_credentials
+from ga4_discovery.auth import get_credentials
 
 PROPERTY_ID = "268350484"
 

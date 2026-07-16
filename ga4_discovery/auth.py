@@ -6,11 +6,12 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 
 
 SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
-CLIENT_FILE = Path("ga4_oauth_client.json")
-TOKEN_FILE = Path("ga4_token.json")
+CONFIG_DIR = Path(__file__).resolve().parent.parent / "config" / "ga4"
+CLIENT_FILE = CONFIG_DIR / "ga4_oauth_client.json"
+TOKEN_FILE = CONFIG_DIR / "ga4_token.json"
 
 
-def main() -> None:
+def get_credentials() -> Credentials:
     credentials = None
 
     if TOKEN_FILE.exists():
@@ -25,8 +26,4 @@ def main() -> None:
 
         TOKEN_FILE.write_text(credentials.to_json())
 
-    print("Authentication successful!")
-
-
-if __name__ == "__main__":
-    main()
+    return credentials

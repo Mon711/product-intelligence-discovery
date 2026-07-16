@@ -7,9 +7,9 @@ build/
 dist/
 
 # Local secrets and authentication tokens
-.env
-ga4_oauth_client.json
-ga4_token.json
+config/shopify/.env
+config/ga4/ga4_oauth_client.json
+config/ga4/ga4_token.json
 
 # Generated discovery output
 outputs/

@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -12,7 +13,8 @@ class ShopifyConfig:
 
 
 def load_shopify_config() -> ShopifyConfig:
-    load_dotenv()
+    config_file = Path(__file__).resolve().parent.parent / "config" / "shopify" / ".env"
+    load_dotenv(config_file)
 
     shop_domain = os.getenv("SHOPIFY_SHOP_DOMAIN")
     access_token = os.getenv("SHOPIFY_ADMIN_ACCESS_TOKEN")
@@ -29,4 +31,3 @@ def load_shopify_config() -> ShopifyConfig:
         access_token=access_token,
         api_version=api_version or "2026-04",
     )
-

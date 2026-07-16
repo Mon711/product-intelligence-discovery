@@ -1,12 +1,15 @@
 import argparse
 from pathlib import Path
+import sys
 from typing import Any
 
 import pandas as pd
 
-from pi_discovery.config import load_shopify_config
-from pi_discovery.queries import TYPE_FIELDS_QUERY
-from pi_discovery.shopify_client import ShopifyClient
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from shopify_discovery.config import load_shopify_config
+from shopify_discovery.queries import TYPE_FIELDS_QUERY
+from shopify_discovery.shopify_client import ShopifyClient
 
 
 def type_ref_to_string(type_ref: dict[str, Any] | None) -> str:
@@ -110,4 +113,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
