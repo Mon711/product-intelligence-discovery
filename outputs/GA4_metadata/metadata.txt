@@ -1,0 +1,1870 @@
+====================
+DIMENSIONS
+====================
+API name: achievementId
+Display name: Achievement ID
+Description: The achievement ID in a game for an event. Populated by the event parameter `achievement_id`.
+
+API name: adFormat
+Display name: Ad format
+Description: Describes the way ads looked and where they were located. Typical formats include `Interstitial`, `Banner`, `Rewarded`, and `Native advanced`.
+
+API name: adSourceName
+Display name: Ad source
+Description: The source network that served the ad. Typical sources include `AdMob Network`, `Liftoff`, `Facebook Audience Network`, and `Mediated house ads`.
+
+API name: adUnitName
+Display name: Ad unit
+Description: The name you chose to describe this Ad unit. Ad units are containers you place in your apps to show ads to users.
+
+API name: appVersion
+Display name: App version
+Description: The app's versionName (Android) or short bundle version (iOS).
+
+API name: audienceId
+Display name: Audience ID
+Description: The numeric identifier of an Audience. Users are reported in the audiences to which they belonged during the report's date range. Current user behavior does not affect historical audience membership in reports.
+
+API name: audienceName
+Display name: Audience name
+Description: The given name of an Audience. Users are reported in the audiences to which they belonged during the report's date range. Current user behavior does not affect historical audience membership in reports.
+
+API name: audienceResourceName
+Display name: Audience resource name
+Description: The resource name of this audience. Resource names contain both collection & resource identifiers to uniquely identify a resource; to learn more, see [Resource names](//google.aip.dev/122).
+
+API name: brandingInterest
+Display name: Interests
+Description: Interests demonstrated by users who are higher in the shopping funnel. Users can be counted in multiple interest categories. For example, `Shoppers`, `Lifestyles & Hobbies/Pet Lovers`, or `Travel/Travel Buffs/Beachbound Travelers`.
+
+API name: browser
+Display name: Browser
+Description: The browsers used to view your website.
+
+API name: browserVersion
+Display name: Browser version
+Description: The version of the browser from which the user activity originated. For example, a version might appear as `146.0.7680.178`. To understand which browser this version belongs to, use this version alongside the Browser dimension.
+
+API name: campaignId
+Display name: Campaign ID
+Description: The identifier of the marketing campaign. Present only for key events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: campaignName
+Display name: Campaign
+Description: The name of the marketing campaign. Present only for key events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: character
+Display name: Character
+Description: The player character in a game for an event. Populated by the event parameter `character`.
+
+API name: city
+Display name: City
+Description: The city from which the user activity originated.
+
+API name: cityId
+Display name: City ID
+Description: The geographic ID of the city from which the user activity originated, derived from their IP address.
+
+API name: cm360AccountId
+Display name: CM360 account ID
+Description: The CM360 Account ID that led to the key event. Identifies the CM360 Account.
+
+API name: cm360AccountName
+Display name: CM360 account name
+Description: The CM360 Account Name that led to the key event. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+
+API name: cm360AdvertiserId
+Display name: CM360 advertiser ID
+Description: The CM360 Advertiser ID that led to the key event. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+
+API name: cm360AdvertiserName
+Display name: CM360 advertiser name
+Description: The CM360 Advertiser Name that led to the key event. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+
+API name: cm360CampaignId
+Display name: CM360 campaign ID
+Description: The CM360 Campaign ID that led to the key event. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+
+API name: cm360CampaignName
+Display name: CM360 campaign name
+Description: The CM360 Campaign Name that led to the key event. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+
+API name: cm360CreativeFormat
+Display name: CM360 creative format
+Description: The CM360 Creative Format that led to the key event. CM360 creative formats are also referred to as creative types.
+
+API name: cm360CreativeId
+Display name: CM360 creative ID
+Description: The CM360 Creative ID that led to the key event. Identifies a CM360 creative.
+
+API name: cm360CreativeName
+Display name: CM360 creative name
+Description: The CM360 Creative Name that led to the key event. The name given to a CM360 creative.
+
+API name: cm360CreativeType
+Display name: CM360 creative type
+Description: The CM360 Creative Type that led to the key event. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+
+API name: cm360CreativeTypeId
+Display name: CM360 creative type ID
+Description: The CM360 Creative Type ID that led to the key event. Identifies a CM360 creative type.
+
+API name: cm360CreativeVersion
+Display name: CM360 creative version
+Description: The CM360 Creative Version that led to the key event. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+
+API name: cm360Medium
+Display name: CM360 medium
+Description: The CM360 Medium that led to the key event. The CM360 medium is also referred to as the placement cost structure.
+
+API name: cm360PlacementCostStructure
+Display name: CM360 placement cost structure
+Description: The CM360 Placement Cost Structure that led to the key event. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+
+API name: cm360PlacementId
+Display name: CM360 placement ID
+Description: The CM360 Placement ID that led to the key event. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: cm360PlacementName
+Display name: CM360 placement name
+Description: The CM360 Placement Name that led to the key event. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: cm360RenderingId
+Display name: CM360 rendering ID
+Description: The CM360 Rendering ID that led to the key event. Identifies a CM360 creative.
+
+API name: cm360SiteId
+Display name: CM360 site ID
+Description: The CM360 Site ID that led to the key event. Identifies a CM360 site.
+
+API name: cm360SiteName
+Display name: CM360 site name
+Description: The CM360 Site Name that led to the key event. The CM360 Site name from which the ad space was purchased.
+
+API name: cm360Source
+Display name: CM360 source
+Description: The CM360 Source that led to the key event. The CM360 source is also referred to as the site name.
+
+API name: cm360SourceMedium
+Display name: CM360 source / medium
+Description: The CM360 Source Medium that led to the key event. A combination of the source and medium.
+
+API name: cohort
+Display name: Cohort
+Description: The cohort's name in the request. A cohort is a set of users who started using your website or app in any consecutive group of days. If a cohort name is not specified in the request, cohorts are named by their zero based index such as cohort_0 and cohort_1.
+
+API name: cohortNthDay
+Display name: Daily cohort
+Description: Day offset relative to the firstSessionDate for the users in the cohort. For example, if a cohort is selected with the start and end date of 2020-03-01, then for the date 2020-03-02, cohortNthDay will be 0001.
+
+API name: cohortNthMonth
+Display name: Monthly cohort
+Description: Month offset relative to the firstSessionDate for the users in the cohort. Month boundaries align with calendar month boundaries. For example, if a cohort is selected with the start and end date in March 2020, then for any date in April 2020, cohortNthMonth will be 0001.
+
+API name: cohortNthWeek
+Display name: Weekly cohort
+Description: Week offset relative to the firstSessionDate for the users in the cohort. Weeks start on Sunday and end on Saturday. For example, if a cohort is selected with the start and end date in the range 2020-11-08 to 2020-11-14, then for the dates in the range 2020-11-15 to 2020-11-21, cohortNthWeek will be 0001.
+
+API name: comparison
+Display name: Comparison
+Description: Comparisons enable you to evaluate subsets of your data side by side. For report requests, the comparisons column is automatically added to the response. For pivot report requests, the requested dimension must be used.
+
+API name: contentGroup
+Display name: Content group
+Description: A category that applies to items of published content. Populated by the event parameter `content_group`.
+
+API name: contentId
+Display name: Content ID
+Description: The identifier of the selected content. Populated by the event parameter `content_id`.
+
+API name: contentType
+Display name: Content type
+Description: The category of the selected content. Populated by the event parameter `content_type`.
+
+API name: continent
+Display name: Continent
+Description: The continent from which the user activity originated. For example, `Americas` or `Asia`.
+
+API name: continentId
+Display name: Continent ID
+Description: The geographic ID of the continent from which the user activity originated, derived from their IP address.
+
+API name: country
+Display name: Country
+Description: The country from which the user activity originated.
+
+API name: countryId
+Display name: Country ID
+Description: The geographic ID of the country from which the user activity originated, derived from their IP address. Formatted according to ISO 3166-1 alpha-2 standard.
+
+API name: currencyCode
+Display name: Currency
+Description: The local currency code (based on ISO 4217 standard) of the eCommerce event. For example, `USD` or `GBP`. Currency is specified in tagging by the `currency` parameter. Businesses that transact in more than one currency can specify a local currency code when sending eCommerce events to Analytics, and this dimension shows those currencies. To Learn more, See [Currency reference](https://support.google.com/analytics/answer/9796179).
+
+API name: date
+Display name: Date
+Description: The date of the event, formatted as YYYYMMDD.
+
+API name: dateHour
+Display name: Date + hour (YYYYMMDDHH)
+Description: The combined values of date and hour formatted as YYYYMMDDHH.
+
+API name: dateHourMinute
+Display name: Date hour and minute
+Description: The combined values of date, hour, and minute formatted as YYYYMMDDHHMM.
+
+API name: day
+Display name: Day
+Description: The day of the month, a two-digit number from 01 to 31.
+
+API name: dayOfWeek
+Display name: Day of week
+Description: The integer day of the week. It returns values in the range 0 to 6 with Sunday as the first day of the week.
+
+API name: dayOfWeekName
+Display name: Day of week name
+Description: The day of the week in English. This dimension has values such as Sunday or Monday.
+
+API name: defaultChannelGroup
+Display name: Default channel group
+Description: The key event's default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
+
+API name: deviceCategory
+Display name: Device category
+Description: The type of device: Desktop, Tablet, or Mobile.
+
+API name: deviceModel
+Display name: Device model
+Description: The mobile device model (example: iPhone 10,6).
+
+API name: dv360AdvertiserId
+Display name: DV360 advertiser ID
+Description: The DV360 Advertiser ID that led to the key event. Identifies the DV360 advertiser.
+
+API name: dv360AdvertiserName
+Display name: DV360 advertiser name
+Description: The DV360 Advertiser Name that led to the key event. DV360 advertisers represent real-life businesses that run advertising campaigns.
+
+API name: dv360CampaignId
+Display name: DV360 campaign ID
+Description: The DV360 Campaign ID that led to the key event. Identifies the DV360 campaign.
+
+API name: dv360CampaignName
+Display name: DV360 campaign name
+Description: The DV360 Campaign Name that led to the key event. DV360 campaigns group together related insertion orders with a common business goal.
+
+API name: dv360CreativeFormat
+Display name: DV360 creative format
+Description: The DV360 Creative Format that led to the key event. Also referred to as the creative type. For example, expandable, video, or native.
+
+API name: dv360CreativeId
+Display name: DV360 creative ID
+Description: The DV360 Creative ID that led to the key event. Identifies the DV360 creative.
+
+API name: dv360CreativeName
+Display name: DV360 creative name
+Description: The DV360 Creative Name that led to the key event. The name given to a DV360 creative.
+
+API name: dv360ExchangeId
+Display name: DV360 exchange ID
+Description: The DV360 Exchange ID that led to the key event. Identifies the DV360 exchange.
+
+API name: dv360ExchangeName
+Display name: DV360 exchange name
+Description: The DV360 Exchange Name that led to the key event. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+
+API name: dv360InsertionOrderId
+Display name: DV360 insertion order ID
+Description: The DV360 Insertion Order ID that led to the key event. Identifies the DV360 insertion order.
+
+API name: dv360InsertionOrderName
+Display name: DV360 insertion order name
+Description: The DV360 Insertion Order Name that led to the key event. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+
+API name: dv360LineItemId
+Display name: DV360 line item ID
+Description: The DV360 Line Item ID that led to the key event. Identifies the DV360 line item.
+
+API name: dv360LineItemName
+Display name: DV360 line item name
+Description: The DV360 Line Item Name that led to the key event. A DV360 line item bids on impressions and serves creatives to inventory sources.
+
+API name: dv360Medium
+Display name: DV360 medium
+Description: The DV360 Medium that led to the key event. The billable outcome of the insertion order. For example, `cpm`.
+
+API name: dv360PartnerId
+Display name: DV360 partner ID
+Description: The DV360 Partner ID that led to the key event. Identifies the DV360 partner.
+
+API name: dv360PartnerName
+Display name: DV360 partner name
+Description: The DV360 Partner Name that led to the key event. DV360 partners represent agencies, trading desks, or large individual advertisers.
+
+API name: dv360Source
+Display name: DV360 source
+Description: The DV360 Source that led to the key event. The DV360 site name where your ad was displayed.
+
+API name: dv360SourceMedium
+Display name: DV360 source / medium
+Description: The DV360 Source Medium that led to the key event. A combination of the source and medium.
+
+API name: eventName
+Display name: Event name
+Description: The name of the event.
+
+API name: fileExtension
+Display name: File extension
+Description: The extension of the downloaded file (for example, `pdf` or `txt`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `file_extension`.
+
+API name: fileName
+Display name: File name
+Description: The page path of the downloaded file (for example, `/menus/dinner-menu.pdf`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `file_name`.
+
+API name: firstSessionDate
+Display name: First session date
+Description: The date the user's first session occurred, formatted as YYYYMMDD.
+
+API name: firstUserCampaignId
+Display name: First user campaign ID
+Description: Identifier of the marketing campaign that first acquired the user. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: firstUserCampaignName
+Display name: First user campaign
+Description: Name of the marketing campaign that first acquired the user. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: firstUserCm360AccountId
+Display name: First user CM360 account ID
+Description: The CM360 Account ID that originally acquired the user. Identifies the CM360 account.
+
+API name: firstUserCm360AccountName
+Display name: First user CM360 account name
+Description: The CM360 Account Name that originally acquired the user. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+
+API name: firstUserCm360AdvertiserId
+Display name: First user CM360 advertiser ID
+Description: The CM360 Advertiser ID that originally acquired the user. Identifies the CM360 advertiser.
+
+API name: firstUserCm360AdvertiserName
+Display name: First user CM360 advertiser name
+Description: The CM360 Advertiser Name that originally acquired the user. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+
+API name: firstUserCm360CampaignId
+Display name: First user CM360 campaign ID
+Description: The CM360 Campaign ID that originally acquired the user. Identifies the CM360 campaign.
+
+API name: firstUserCm360CampaignName
+Display name: First user CM360 campaign name
+Description: The CM360 Campaign Name that originally acquired the user. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+
+API name: firstUserCm360CreativeFormat
+Display name: First user CM360 creative format
+Description: The CM360 Creative Format that originally acquired the user. CM360 creative formats are also referred to as creative types.
+
+API name: firstUserCm360CreativeId
+Display name: First user CM360 creative ID
+Description: The CM360 Creative ID that originally acquired the user. Identifies a CM360 creative.
+
+API name: firstUserCm360CreativeName
+Display name: First user CM360 creative name
+Description: The CM360 Creative Name that originally acquired the user. The name given to a CM360 creative.
+
+API name: firstUserCm360CreativeType
+Display name: First user CM360 creative type
+Description: The CM360 Creative Type that originally acquired the user. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+
+API name: firstUserCm360CreativeTypeId
+Display name: First user CM360 creative type ID
+Description: The CM360 Creative Type ID that originally acquired the user. Identifies a CM360 creative type.
+
+API name: firstUserCm360CreativeVersion
+Display name: First user CM360 creative version
+Description: The CM360 Creative Version that originally acquired the user. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+
+API name: firstUserCm360Medium
+Display name: First user CM360 medium
+Description: The CM360 Medium that originally acquired the user. The CM360 medium is also referred to as the placement cost structure.
+
+API name: firstUserCm360PlacementCostStructure
+Display name: First user CM360 placement cost structure
+Description: The CM360 Placement Cost Structure that originally acquired the user. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+
+API name: firstUserCm360PlacementId
+Display name: First user CM360 placement ID
+Description: The CM360 Placement ID that originally acquired the user. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: firstUserCm360PlacementName
+Display name: First user CM360 placement name
+Description: The CM360 Placement Name that originally acquired the user. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: firstUserCm360RenderingId
+Display name: First user CM360 rendering ID
+Description: The CM360 Rendering ID that originally acquired the user. Identifies a CM360 creative.
+
+API name: firstUserCm360SiteId
+Display name: First user CM360 site ID
+Description: The CM360 Site ID that originally acquired the user. Identifies a CM360 site.
+
+API name: firstUserCm360SiteName
+Display name: First user CM360 site name
+Description: The CM360 Site Name that originally acquired the user. The CM360 Site name from which the ad space was purchased.
+
+API name: firstUserCm360Source
+Display name: First user CM360 source
+Description: The CM360 Source that originally acquired the user. The CM360 source is also referred to as the site name.
+
+API name: firstUserCm360SourceMedium
+Display name: First user CM360 source / medium
+Description: The CM360 Source Medium that originally acquired the user. A combination of the source and medium.
+
+API name: firstUserDefaultChannelGroup
+Display name: First user default channel group
+Description: The default channel group that first acquired the user. Default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
+
+API name: firstUserDv360AdvertiserId
+Display name: First user DV360 advertiser ID
+Description: The DV360 Advertiser ID that originally acquired the user. Identifies the DV360 advertiser.
+
+API name: firstUserDv360AdvertiserName
+Display name: First user DV360 advertiser name
+Description: The DV360 Advertiser Name that originally acquired the user. DV360 advertisers represent real-life businesses that run advertising campaigns.
+
+API name: firstUserDv360CampaignId
+Display name: First user DV360 campaign ID
+Description: The DV360 Campaign ID that originally acquired the user. Identifies the DV360 campaign.
+
+API name: firstUserDv360CampaignName
+Display name: First user DV360 campaign name
+Description: The DV360 Campaign Name that originally acquired the user. DV360 campaigns group together related insertion orders with a common business goal.
+
+API name: firstUserDv360CreativeFormat
+Display name: First user DV360 creative format
+Description: The DV360 Creative Format that originally acquired the user. Also referred to as the creative type. For example, expandable, video, or native.
+
+API name: firstUserDv360CreativeId
+Display name: First user DV360 creative ID
+Description: The DV360 Creative ID that originally acquired the user. Identifies the DV360 creative.
+
+API name: firstUserDv360CreativeName
+Display name: First user DV360 creative name
+Description: The DV360 Creative Name that originally acquired the user. The name given to a DV360 creative.
+
+API name: firstUserDv360ExchangeId
+Display name: First user DV360 exchange ID
+Description: The DV360 Exchange ID that originally acquired the user. Identifies the DV360 exchange.
+
+API name: firstUserDv360ExchangeName
+Display name: First user DV360 exchange name
+Description: The DV360 Exchange Name that originally acquired the user. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+
+API name: firstUserDv360InsertionOrderId
+Display name: First user DV360 insertion order ID
+Description: The DV360 Insertion Order ID that originally acquired the user. Identifies the DV360 insertion order.
+
+API name: firstUserDv360InsertionOrderName
+Display name: First user DV360 insertion order name
+Description: The DV360 Insertion Order Name that originally acquired the user. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+
+API name: firstUserDv360LineItemId
+Display name: First user DV360 line item ID
+Description: The DV360 Line Item ID that originally acquired the user. Identifies the DV360 line item.
+
+API name: firstUserDv360LineItemName
+Display name: First user DV360 line item name
+Description: The DV360 Line Item Name that originally acquired the user. A DV360 line item bids on impressions and serves creatives to inventory sources.
+
+API name: firstUserDv360Medium
+Display name: First user DV360 medium
+Description: The DV360 Medium that originally acquired the user. The billable outcome of the insertion order. For example, `cpm`.
+
+API name: firstUserDv360PartnerId
+Display name: First user DV360 partner ID
+Description: The DV360 Partner ID that originally acquired the user. Identifies the DV360 partner.
+
+API name: firstUserDv360PartnerName
+Display name: First user DV360 partner name
+Description: The DV360 Partner Name that originally acquired the user. DV360 partners represent agencies, trading desks, or large individual advertisers.
+
+API name: firstUserDv360Source
+Display name: First user DV360 source
+Description: The DV360 Source that originally acquired the user. The DV360 site name where your ad was displayed.
+
+API name: firstUserDv360SourceMedium
+Display name: First user DV360 source / medium
+Description: The DV360 Source Medium that originally acquired the user. A combination of the source and medium.
+
+API name: firstUserGoogleAdsAccountName
+Display name: First user Google Ads account name
+Description: The Account name from Google Ads that first acquired the user.
+
+API name: firstUserGoogleAdsAdGroupId
+Display name: First user Google Ads ad group ID
+Description: The Ad Group Id in Google Ads that first acquired the user.
+
+API name: firstUserGoogleAdsAdGroupName
+Display name: First user Google Ads ad group name
+Description: The Ad Group Name in Google Ads that first acquired the user.
+
+API name: firstUserGoogleAdsAdNetworkType
+Display name: First user Google Ads ad network type
+Description: The advertising network that first acquired the user. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
+
+API name: firstUserGoogleAdsCampaignId
+Display name: First user Google Ads campaign ID
+Description: Identifier of the Google Ads marketing campaign that first acquired the user.
+
+API name: firstUserGoogleAdsCampaignName
+Display name: First user Google Ads campaign
+Description: Name of the Google Ads marketing campaign that first acquired the user.
+
+API name: firstUserGoogleAdsCampaignType
+Display name: First user Google Ads campaign type
+Description: The campaign type of the Google Ads campaign that first acquired the user. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
+
+API name: firstUserGoogleAdsCreativeId
+Display name: First user Google Ads creative ID
+Description: The ID of the Google Ads creative that first acquired the user. Creative IDs identify individual ads.
+
+API name: firstUserGoogleAdsCustomerId
+Display name: First user Google Ads customer ID
+Description: The Customer ID from Google Ads that first acquired the user. Customer IDs in Google Ads uniquely identify Google Ads accounts.
+
+API name: firstUserGoogleAdsKeyword
+Display name: First user Google Ads keyword text
+Description: First user Google Ads keyword text | The matched keyword that first acquired the user. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
+
+API name: firstUserGoogleAdsQuery
+Display name: First user Google Ads query
+Description: The search query that first acquired the user.
+
+API name: firstUserManualAdContent
+Display name: First user manual ad content
+Description: The ad content that first acquired the user. Populated by the utm_content parameter.
+
+API name: firstUserManualCampaignId
+Display name: First user manual campaign ID
+Description: The manual Campaign ID that originally acquired the user. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+
+API name: firstUserManualCampaignName
+Display name: First user manual campaign name
+Description: The manual Campaign Name that originally acquired the user. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+
+API name: firstUserManualCreativeFormat
+Display name: First user manual creative format
+Description: The manual Creative Format that originally acquired the user. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+
+API name: firstUserManualMarketingTactic
+Display name: First user manual marketing tactic
+Description: The manual Marketing Tactic that originally acquired the user. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+
+API name: firstUserManualMedium
+Display name: First user manual medium
+Description: The manual Medium that originally acquired the user. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+
+API name: firstUserManualSource
+Display name: First user manual source
+Description: The manual Source that originally acquired the user. The referrer. Populated by `utm_source` URL parameter.
+
+API name: firstUserManualSourceMedium
+Display name: First user manual source / medium
+Description: The manual Source Medium that originally acquired the user. A combination of the source and medium.
+
+API name: firstUserManualSourcePlatform
+Display name: First user manual source platform
+Description: The manual Source Platform that originally acquired the user. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+
+API name: firstUserManualTerm
+Display name: First user manual term
+Description: The term that first acquired the user. Populated by the utm_term parameter.
+
+API name: firstUserMedium
+Display name: First user medium
+Description: The medium that first acquired the user to your website or app.
+
+API name: firstUserPrimaryChannelGroup
+Display name: First user primary channel group
+Description: The primary channel group that originally acquired a user. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+
+API name: firstUserSa360AdGroupId
+Display name: First user SA360 ad group ID
+Description: The SA360 Ad Group ID that originally acquired the user. Identifies the SA360 ad group.
+
+API name: firstUserSa360AdGroupName
+Display name: First user SA360 ad group name
+Description: The SA360 Ad Group Name that originally acquired the user. SA360 Ad groups contain ads and keywords that relate to each other.
+
+API name: firstUserSa360CampaignId
+Display name: First user SA360 campaign ID
+Description: The SA360 Campaign ID that originally acquired the user. Identifies the SA360 campaign.
+
+API name: firstUserSa360CampaignName
+Display name: First user SA360 campaign
+Description: The SA360 Campaign Name that originally acquired the user. A SA360 campaign lets you organize your ads and define a goal for your advertising.
+
+API name: firstUserSa360CreativeFormat
+Display name: First user SA360 creative format
+Description: The SA360 Creative Format that originally acquired the user. The creative format is the specific layout or design of the advertisement used in a campaign.
+
+API name: firstUserSa360EngineAccountId
+Display name: First user SA360 engine account ID
+Description: The SA360 Engine Account ID that originally acquired the user. Identifies the SA360 engine account.
+
+API name: firstUserSa360EngineAccountName
+Display name: First user SA360 engine account name
+Description: The SA360 Engine Account Name that originally acquired the user. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account.
+
+API name: firstUserSa360EngineAccountType
+Display name: First user SA360 engine account type
+Description: The SA360 Engine Account Type that originally acquired the user. The type of engine used by the search engine account.
+
+API name: firstUserSa360KeywordText
+Display name: First user SA360 keyword text
+Description: The SA360 Keyword Text that originally acquired the user. The keywords that matched the search query.
+
+API name: firstUserSa360ManagerAccountId
+Display name: First user SA360 manager account ID
+Description: The SA360 Manager Account ID that originally acquired the user. Identifies the SA360 manager account.
+
+API name: firstUserSa360ManagerAccountName
+Display name: First user SA360 manager account name
+Description: The SA360 Manager Account Name that originally acquired the user. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+
+API name: firstUserSa360Medium
+Display name: First user SA360 medium
+Description: The SA360 Medium that originally acquired the user. The payment mode used in ad buying. For example, `cpc`.
+
+API name: firstUserSa360Query
+Display name: First user SA360 query
+Description: The SA360 Query that originally acquired the user. The search query typed by the user.
+
+API name: firstUserSa360Source
+Display name: First user SA360 source
+Description: The SA360 Source that originally acquired the user. The search query happened on this site.
+
+API name: firstUserSa360SourceMedium
+Display name: First user SA360 source / medium
+Description: The SA360 Source Medium that originally acquired the user. A combination of the source and medium.
+
+API name: firstUserSource
+Display name: First user source
+Description: The source that first acquired the user to your website or app.
+
+API name: firstUserSourceMedium
+Display name: First user source / medium
+Description: The combined values of the dimensions `firstUserSource` and `firstUserMedium`.
+
+API name: firstUserSourcePlatform
+Display name: First user source platform
+Description: The source platform that first acquired the user. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
+
+API name: fullPageUrl
+Display name: Full page URL
+Description: The hostname, page path, and query string for web pages visited; for example, the `fullPageUrl` portion of `https://www.example.com/store/contact-us?query_string=true` is `www.example.com/store/contact-us?query_string=true`.
+
+API name: googleAdsAccountName
+Display name: Google Ads account name
+Description: The Account name from Google Ads for the campaign that led to the key event. Corresponds to `customer.descriptive_name` in the Google Ads API.
+
+API name: googleAdsAdGroupId
+Display name: Google Ads ad group ID
+Description: The Google Ads ad group ID attributed to the key event.
+
+API name: googleAdsAdGroupName
+Display name: Google Ads ad group name
+Description: The ad group name attributed to the key event.
+
+API name: googleAdsAdNetworkType
+Display name: Google Ads ad network type
+Description: The advertising network type of the key event. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
+
+API name: googleAdsCampaignId
+Display name: Google Ads campaign ID
+Description: The campaign ID for the Google Ads campaign attributed to the key event.
+
+API name: googleAdsCampaignName
+Display name: Google Ads campaign
+Description: The campaign name for the Google Ads campaign attributed to the key event.
+
+API name: googleAdsCampaignType
+Display name: Google Ads campaign type
+Description: The campaign type for the Google Ads campaign attributed to the key event. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
+
+API name: googleAdsCreativeId
+Display name: Google Ads creative ID
+Description: The ID of the Google Ads creative attributed to the key event. Creative IDs identify individual ads.
+
+API name: googleAdsCustomerId
+Display name: Google Ads customer ID
+Description: The Customer ID from Google Ads for the campaign that led to key event. Customer IDs in Google Ads uniquely identify Google Ads accounts.
+
+API name: googleAdsKeyword
+Display name: Google Ads keyword text
+Description: The matched keyword that led to the key event. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
+
+API name: googleAdsQuery
+Display name: Google Ads query
+Description: The search query that led to the key event.
+
+API name: groupId
+Display name: Group ID
+Description: The player group ID in a game for an event. Populated by the event parameter `group_id`.
+
+API name: hostName
+Display name: Hostname
+Description: Includes the subdomain and domain names of a URL; for example, the Host Name of www.example.com/contact.html is www.example.com.
+
+API name: hour
+Display name: Hour
+Description: The two-digit hour of the day that the event was logged. This dimension ranges from 0-23 and is reported in your property's timezone.
+
+API name: isKeyEvent
+Display name: Is key event
+Description: The string `true` if the event is a key event. Marking an event as a key event affects reports from time of creation. It doesn't change historic data. You can mark any event as key in Google Analytics, and some events (such as `first_open` or `purchase`) are marked as key events by default.
+
+API name: isoWeek
+Display name: ISO week of the year
+Description: ISO week number, where each week starts on Monday. For details, see http://en.wikipedia.org/wiki/ISO_week_date. Example values include 01, 02, & 53.
+
+API name: isoYear
+Display name: ISO year
+Description: The ISO year of the event. For details, see http://en.wikipedia.org/wiki/ISO_week_date. Example values include 2022 & 2023.
+
+API name: isoYearIsoWeek
+Display name: ISO week of ISO year
+Description: The combined values of isoWeek and isoYear. Example values include 201652 & 201701.
+
+API name: itemAffiliation
+Display name: Item affiliation
+Description: The name or code of the affiliate (partner/vendor; if any) associated with an individual item. Populated by the `affiliation` item parameter.
+
+API name: itemBrand
+Display name: Item brand
+Description: Brand name of the item.
+
+API name: itemCategory
+Display name: Item category
+Description: The hierarchical category in which the item is classified. For example, in Apparel/Mens/Summer/Shirts/T-shirts, Apparel is the item category.
+
+API name: itemCategory2
+Display name: Item category 2
+Description: The hierarchical category in which the item is classified. For example, in Apparel/Mens/Summer/Shirts/T-shirts, Mens is the item category 2.
+
+API name: itemCategory3
+Display name: Item category 3
+Description: The hierarchical category in which the item is classified. For example, in Apparel/Mens/Summer/Shirts/T-shirts, Summer is the item category 3.
+
+API name: itemCategory4
+Display name: Item category 4
+Description: The hierarchical category in which the item is classified. For example, in Apparel/Mens/Summer/Shirts/T-shirts, Shirts is the item category 4.
+
+API name: itemCategory5
+Display name: Item category 5
+Description: The hierarchical category in which the item is classified. For example, in Apparel/Mens/Summer/Shirts/T-shirts, T-shirts is the item category 5.
+
+API name: itemId
+Display name: Item ID
+Description: The ID of the item.
+
+API name: itemListId
+Display name: Item list ID
+Description: The ID of the item list.
+
+API name: itemListName
+Display name: Item list name
+Description: The name of the item list.
+
+API name: itemListPosition
+Display name: Item list position
+Description: The position of an item in a list. For example, a product you sell in a list. This dimension is populated in tagging by the `index` parameter in the items array.
+
+API name: itemLocationID
+Display name: Item location ID
+Description: The physical location associated with the item. For example, the physical store location. It's recommended to use the [Google Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) that corresponds to the associated item. A custom location ID can also be used. This field is populated in tagging by the `location_id` parameter in the items array.
+
+API name: itemName
+Display name: Item name
+Description: The name of the item.
+
+API name: itemPromotionCreativeName
+Display name: Item promotion creative name
+Description: The name of the item-promotion creative.
+
+API name: itemPromotionCreativeSlot
+Display name: Item promotion creative slot
+Description: The name of the promotional creative slot associated with the item. This dimension can be specified in tagging by the `creative_slot` parameter at the event or item level. If the parameter is specified at both the event & item level, the item-level parameter is used.
+
+API name: itemPromotionId
+Display name: Item promotion ID
+Description: The ID of the item promotion.
+
+API name: itemPromotionName
+Display name: Item promotion name
+Description: The name of the promotion for the item.
+
+API name: itemVariant
+Display name: Item variant
+Description: The specific variation of a product. For example, XS, S, M, or L for size; or Red, Blue, Green, or Black for color. Populated by the `item_variant` parameter.
+
+API name: landingPage
+Display name: Landing page
+Description: The page path associated with the first pageview in a session.
+
+API name: landingPagePlusQueryString
+Display name: Landing page + query string
+Description: The page path + query string associated with the first pageview in a session.
+
+API name: language
+Display name: Language
+Description: The language setting of the user's browser or device. For example, `English`.
+
+API name: languageCode
+Display name: Language code
+Description: The language setting (ISO 639) of the user's browser or device. For example, `en-us`.
+
+API name: level
+Display name: Level
+Description: The player's level in a game. Populated by the event parameter `level`.
+
+API name: linkClasses
+Display name: Link classes
+Description: The HTML class attribute for an outbound link. For example if a user clicks a link `<a class="center" href="www.youtube.com">`, this dimension will return `center`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_classes`.
+
+API name: linkDomain
+Display name: Link domain
+Description: The destination domain of the outbound link. For example if a user clicks a link `<a href="www.youtube.com">`, this dimension will return `youtube.com`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_domain`.
+
+API name: linkId
+Display name: Link ID
+Description: The HTML ID attribute for an outbound link or file download. For example if a user clicks a link `<a id="socialLinks" href="www.youtube.com">`, this dimension will return `socialLinks`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_id`.
+
+API name: linkText
+Display name: Link text
+Description: The link text of the file download. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_text`.
+
+API name: linkUrl
+Display name: Link URL
+Description: The full URL for an outbound link or file download. For example if a user clicks a link `<a href="https://www.youtube.com/results?search_query=analytics">`, this dimension will return `https://www.youtube.com/results?search_query=analytics`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_url`.
+
+API name: manualAdContent
+Display name: Manual ad content
+Description: The ad content attributed to the key event. Populated by the utm_content parameter.
+
+API name: manualCampaignId
+Display name: Manual campaign ID
+Description: The manual Campaign ID that led to the key event. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+
+API name: manualCampaignName
+Display name: Manual campaign name
+Description: The manual Campaign Name that led to the key event. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+
+API name: manualCreativeFormat
+Display name: Manual creative format
+Description: The manual Creative Format that led to the key event. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+
+API name: manualMarketingTactic
+Display name: Manual marketing tactic
+Description: The manual Marketing Tactic that led to the key event. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+
+API name: manualMedium
+Display name: Manual medium
+Description: The manual Medium that led to the key event. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+
+API name: manualSource
+Display name: Manual source
+Description: The manual Source that led to the key event. The referrer. Populated by `utm_source` URL parameter.
+
+API name: manualSourceMedium
+Display name: Manual source / medium
+Description: The manual Source Medium that led to the key event. A combination of the source and medium.
+
+API name: manualSourcePlatform
+Display name: Manual source platform
+Description: The manual Source Platform that led to the key event. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+
+API name: manualTerm
+Display name: Manual term
+Description: The term attributed to the key event. Populated by the utm_term parameter.
+
+API name: medium
+Display name: Medium
+Description: The medium attributed to the key event.
+
+API name: method
+Display name: Method
+Description: The method by which an event was triggered. Populated by the event parameter `method`.
+
+API name: minute
+Display name: Minute
+Description: The two-digit minute of the hour that the event was logged. This dimension ranges from 0-59 and is reported in your property's timezone.
+
+API name: mobileDeviceBranding
+Display name: Device brand
+Description: Manufacturer or branded name (examples: Samsung, HTC, Verizon, T-Mobile).
+
+API name: mobileDeviceMarketingName
+Display name: Device
+Description: The branded device name (examples: Galaxy S10 or P30 Pro).
+
+API name: mobileDeviceModel
+Display name: Mobile model
+Description: The mobile device model name (examples: iPhone X or SM-G950F).
+
+API name: month
+Display name: Month
+Description: The month of the event, a two digit integer from 01 to 12.
+
+API name: newVsReturning
+Display name: New / returning
+Description: New users have 0 previous sessions, and returning users have 1 or more previous sessions. This dimension returns two values: `new` or `returning`.
+
+API name: nthDay
+Display name: Nth day
+Description: The number of days since the start of the date range.
+
+API name: nthHour
+Display name: Nth hour
+Description: The number of hours since the start of the date range. The starting hour is 0000.
+
+API name: nthMinute
+Display name: Nth minute
+Description: The number of minutes since the start of the date range. The starting minute is 0000.
+
+API name: nthMonth
+Display name: Nth month
+Description: The number of months since the start of a date range. The starting month is 0000.
+
+API name: nthWeek
+Display name: Nth week
+Description: A number representing the number of weeks since the start of a date range.
+
+API name: nthYear
+Display name: Nth year
+Description: The number of years since the start of the date range. The starting year is 0000.
+
+API name: operatingSystem
+Display name: Operating system
+Description: The operating systems used by visitors to your app or website. Includes desktop and mobile operating systems such as Windows and Android.
+
+API name: operatingSystemVersion
+Display name: OS version
+Description: The operating system versions used by visitors to your website or app. For example, Android 10's version is 10, and iOS 13.5.1's version is 13.5.1.
+
+API name: operatingSystemWithVersion
+Display name: Operating system with version
+Description: The operating system and version. For example, Android 10 or Windows 7.
+
+API name: orderCoupon
+Display name: Order coupon
+Description: Code for the order-level coupon.
+
+API name: outbound
+Display name: Outbound
+Description: Returns `true` if the link led to a site that is not a part of the property's domain. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `outbound`.
+
+API name: pageLocation
+Display name: Page location
+Description: The protocol, hostname, page path, and query string for web pages visited; for example, the `pageLocation` portion of `https://www.example.com/store/contact-us?query_string=true` is `https://www.example.com/store/contact-us?query_string=true`. Populated by the event parameter `page_location`.
+
+API name: pagePath
+Display name: Page path
+Description: The portion of the URL between the hostname and query string for web pages visited; for example, the pagePath portion of `https://www.example.com/store/contact-us?query_string=true` is `/store/contact-us`.
+
+API name: pagePathPlusQueryString
+Display name: Page path + query string
+Description: The portion of the URL following the hostname for web pages visited; for example, the `pagePathPlusQueryString` portion of `https://www.example.com/store/contact-us?query_string=true` is `/store/contact-us?query_string=true`.
+
+API name: pageReferrer
+Display name: Page referrer
+Description: The full referring URL including the hostname and path. This referring URL is the user's previous URL and can be this website's domain or other domains. Populated by the event parameter `page_referrer`.
+
+API name: pageTitle
+Display name: Page title
+Description: The web page titles used on your site.
+
+API name: percentScrolled
+Display name: Percent scrolled
+Description: The percentage down the page that the user has scrolled (for example, `90`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `percent_scrolled`.
+
+API name: platform
+Display name: Platform
+Description: The platform on which your app or website ran; for example, web, iOS, or Android. To determine a stream's type in a report, use both platform and streamId.
+
+API name: platformDeviceCategory
+Display name: Platform / device category
+Description: The platform and type of device on which your website or mobile app ran. (example: Android / mobile)
+
+API name: primaryChannelGroup
+Display name: Primary channel group
+Description: The primary channel group attributed to the key event. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+
+API name: region
+Display name: Region
+Description: The geographic region from which the user activity originated, derived from their IP address.
+
+API name: sa360AdGroupId
+Display name: SA360 ad group ID
+Description: The SA360 Ad Group ID that led to the key event. Identifies the SA360 ad group.
+
+API name: sa360AdGroupName
+Display name: SA360 ad group name
+Description: The SA360 Ad Group Name that led to the key event. SA360 Ad groups contain ads and keywords that relate to each other.
+
+API name: sa360CampaignId
+Display name: SA360 campaign ID
+Description: The SA360 Campaign ID that led to the key event. Identifies the SA360 campaign.
+
+API name: sa360CampaignName
+Display name: SA360 campaign
+Description: The SA360 Campaign Name that led to the key event. A SA360 campaign lets you organize your ads and define a goal for your advertising.
+
+API name: sa360CreativeFormat
+Display name: SA360 creative format
+Description: The SA360 Creative Format that led to the key event. The creative format is the specific layout or design of the advertisement used in a campaign.
+
+API name: sa360EngineAccountId
+Display name: SA360 engine account ID
+Description: The SA360 Engine Account ID that led to the key event. Identifies the SA360 engine account.
+
+API name: sa360EngineAccountName
+Display name: SA360 engine account name
+Description: The SA360 Engine Account Name that led to the key event. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account.
+
+API name: sa360EngineAccountType
+Display name: SA360 engine account type
+Description: The SA360 Engine Account Type that led to the key event. The type of engine used by the search engine account.
+
+API name: sa360KeywordText
+Display name: SA360 keyword text
+Description: The SA360 Keyword Text that led to the key event. The keywords that matched the search query.
+
+API name: sa360ManagerAccountId
+Display name: SA360 manager account ID
+Description: The SA360 Manager Account ID that led to the key event. Identifies the SA360 manager account.
+
+API name: sa360ManagerAccountName
+Display name: SA360 manager account name
+Description: The SA360 Manager Account Name that led to the key event. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+
+API name: sa360Medium
+Display name: SA360 medium
+Description: The SA360 Medium that led to the key event. The payment mode used in ad buying. For example, `cpc`.
+
+API name: sa360Query
+Display name: SA360 query
+Description: The SA360 Query that led to the key event. The search query typed by the user.
+
+API name: sa360Source
+Display name: SA360 source
+Description: The SA360 Source that led to the key event. The search query happened on this site.
+
+API name: sa360SourceMedium
+Display name: SA360 source / medium
+Description: The SA360 Source Medium that led to the key event. A combination of the source and medium.
+
+API name: screenResolution
+Display name: Screen resolution
+Description: The screen resolution of the user's monitor. For example, 1920x1080.
+
+API name: searchTerm
+Display name: Search term
+Description: The term searched by the user. For example if the user visits `/some-page.html?q=some-term`, this dimension returns `some-term`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `search_term`.
+
+API name: sessionCampaignId
+Display name: Session campaign ID
+Description: The marketing campaign ID for a session. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: sessionCampaignName
+Display name: Session campaign
+Description: The marketing campaign name for a session. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+
+API name: sessionCm360AccountId
+Display name: Session CM360 account ID
+Description: The CM360 Account ID that led to the session. Identifies the CM360 account.
+
+API name: sessionCm360AccountName
+Display name: Session CM360 account name
+Description: The CM360 Account Name that led to the session. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+
+API name: sessionCm360AdvertiserId
+Display name: Session CM360 advertiser ID
+Description: The CM360 Advertiser ID that led to the session. Identifies the CM360 advertiser.
+
+API name: sessionCm360AdvertiserName
+Display name: Session CM360 advertiser name
+Description: The CM360 Advertiser Name that led to the session. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+
+API name: sessionCm360CampaignId
+Display name: Session CM360 campaign ID
+Description: The CM360 Campaign ID that led to the session. Identifies the CM360 campaign.
+
+API name: sessionCm360CampaignName
+Display name: Session CM360 campaign name
+Description: The CM360 Campaign Name that led to the session. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+
+API name: sessionCm360CreativeFormat
+Display name: Session CM360 creative format
+Description: The CM360 Creative Format that led to the session. CM360 creative formats are also referred to as creative types.
+
+API name: sessionCm360CreativeId
+Display name: Session CM360 creative ID
+Description: The CM360 Creative ID that led to the session. Identifies a CM360 creative.
+
+API name: sessionCm360CreativeName
+Display name: Session CM360 creative name
+Description: The CM360 Creative Name that led to the session. The name given to a CM360 creative.
+
+API name: sessionCm360CreativeType
+Display name: Session CM360 creative type
+Description: The CM360 Creative Type that led to the session. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+
+API name: sessionCm360CreativeTypeId
+Display name: Session CM360 creative type ID
+Description: The CM360 Creative Type ID that led to the session. Identifies a CM360 creative type.
+
+API name: sessionCm360CreativeVersion
+Display name: Session CM360 creative version
+Description: The CM360 Creative Version that led to the session. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+
+API name: sessionCm360Medium
+Display name: Session CM360 medium
+Description: The CM360 Medium that led to the session. The CM360 medium is also referred to as the placement cost structure.
+
+API name: sessionCm360PlacementCostStructure
+Display name: Session CM360 placement cost structure
+Description: The CM360 Placement Cost Structure that led to the session. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+
+API name: sessionCm360PlacementId
+Display name: Session CM360 placement ID
+Description: The CM360 Placement ID that led to the session. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: sessionCm360PlacementName
+Display name: Session CM360 placement name
+Description: The CM360 Placement Name that led to the session. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+
+API name: sessionCm360RenderingId
+Display name: Session CM360 rendering ID
+Description: The CM360 Rendering ID that led to the session. Identifies a CM360 creative.
+
+API name: sessionCm360SiteId
+Display name: Session CM360 site ID
+Description: The CM360 Site ID that led to the session. Identifies a CM360 site.
+
+API name: sessionCm360SiteName
+Display name: Session CM360 site name
+Description: The CM360 Site Name that led to the session. The CM360 Site name from which the ad space was purchased.
+
+API name: sessionCm360Source
+Display name: Session CM360 source
+Description: The CM360 Source that led to the session. The CM360 source is also referred to as the site name.
+
+API name: sessionCm360SourceMedium
+Display name: Session CM360 source / medium
+Description: The CM360 Source Medium that led to the session. A combination of the source and medium.
+
+API name: sessionDefaultChannelGroup
+Display name: Session default channel group
+Description: The session's default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
+
+API name: sessionDv360AdvertiserId
+Display name: Session DV360 advertiser ID
+Description: The DV360 Advertiser ID that led to the session. Identifies the DV360 advertiser.
+
+API name: sessionDv360AdvertiserName
+Display name: Session DV360 advertiser name
+Description: The DV360 Advertiser Name that led to the session. DV360 advertisers represent real-life businesses that run advertising campaigns.
+
+API name: sessionDv360CampaignId
+Display name: Session DV360 campaign ID
+Description: The DV360 Campaign ID that led to the session. Identifies the DV360 campaign.
+
+API name: sessionDv360CampaignName
+Display name: Session DV360 campaign name
+Description: The DV360 Campaign Name that led to the session. DV360 campaigns group together related insertion orders with a common business goal.
+
+API name: sessionDv360CreativeFormat
+Display name: Session DV360 creative format
+Description: The DV360 Creative Format that led to the session. Also referred to as the creative type. For example, expandable, video, or native.
+
+API name: sessionDv360CreativeId
+Display name: Session DV360 creative ID
+Description: The DV360 Creative ID that led to the session. Identifies the DV360 creative.
+
+API name: sessionDv360CreativeName
+Display name: Session DV360 creative name
+Description: The DV360 Creative Name that led to the session. The name given to a DV360 creative.
+
+API name: sessionDv360ExchangeId
+Display name: Session DV360 exchange ID
+Description: The DV360 Exchange ID that led to the session. Identifies the DV360 exchange.
+
+API name: sessionDv360ExchangeName
+Display name: Session DV360 exchange name
+Description: The DV360 Exchange Name that led to the session. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+
+API name: sessionDv360InsertionOrderId
+Display name: Session DV360 insertion order ID
+Description: The DV360 Insertion Order ID that led to the session. Identifies the DV360 insertion order.
+
+API name: sessionDv360InsertionOrderName
+Display name: Session DV360 insertion order name
+Description: The DV360 Insertion Order Name that led to the session. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+
+API name: sessionDv360LineItemId
+Display name: Session DV360 line item ID
+Description: The DV360 Line Item ID that led to the session. Identifies the DV360 line item.
+
+API name: sessionDv360LineItemName
+Display name: Session DV360 line item name
+Description: The DV360 Line Item Name that led to the session. A DV360 line item bids on impressions and serves creatives to inventory sources.
+
+API name: sessionDv360Medium
+Display name: Session DV360 medium
+Description: The DV360 Medium that led to the session. The billable outcome of the insertion order. For example, `cpm`.
+
+API name: sessionDv360PartnerId
+Display name: Session DV360 partner ID
+Description: The DV360 Partner ID that led to the session. Identifies the DV360 partner.
+
+API name: sessionDv360PartnerName
+Display name: Session DV360 partner name
+Description: The DV360 Partner Name that led to the session. DV360 partners represent agencies, trading desks, or large individual advertisers.
+
+API name: sessionDv360Source
+Display name: Session DV360 source
+Description: The DV360 Source that led to the session. The DV360 site name where your ad was displayed.
+
+API name: sessionDv360SourceMedium
+Display name: Session DV360 source / medium
+Description: The DV360 Source Medium that led to the session. A combination of the source and medium.
+
+API name: sessionGoogleAdsAccountName
+Display name: Session Google Ads account name
+Description: The Account name from Google Ads that led to the session. Corresponds to customer.descriptive_name in the Google Ads API.
+
+API name: sessionGoogleAdsAdGroupId
+Display name: Session Google Ads ad group ID
+Description: The Ad Group Id in Google Ads for a session.
+
+API name: sessionGoogleAdsAdGroupName
+Display name: Session Google Ads ad group name
+Description: The Ad Group Name in Google Ads for a session.
+
+API name: sessionGoogleAdsAdNetworkType
+Display name: Session Google Ads ad network type
+Description: The advertising network that led to the session. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
+
+API name: sessionGoogleAdsCampaignId
+Display name: Session Google Ads campaign ID
+Description: The Campaign ID for the Google Ads Campaign that led to this session.
+
+API name: sessionGoogleAdsCampaignName
+Display name: Session Google Ads campaign
+Description: The Campaign name for the Google Ads Campaign that led to this session.
+
+API name: sessionGoogleAdsCampaignType
+Display name: Session Google Ads campaign type
+Description: The campaign type for the Google Ads campaign that led to this session. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
+
+API name: sessionGoogleAdsCreativeId
+Display name: Session Google Ads creative ID
+Description: The ID of the Google Ads creative that led to a session on your website or app. Creative IDs identify individual ads.
+
+API name: sessionGoogleAdsCustomerId
+Display name: Session Google Ads customer ID
+Description: The Customer ID from Google Ads that led to the session. Customer IDs in Google Ads uniquely identify Google Ads accounts.
+
+API name: sessionGoogleAdsKeyword
+Display name: Session Google Ads keyword text
+Description: The matched keyword that led to the session. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
+
+API name: sessionGoogleAdsQuery
+Display name: Session Google Ads query
+Description: The search query that led to the session.
+
+API name: sessionManualAdContent
+Display name: Session manual ad content
+Description: The ad content that led to a session. Populated by the utm_content parameter.
+
+API name: sessionManualCampaignId
+Display name: Session manual campaign ID
+Description: The manual Campaign ID that led to the session. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+
+API name: sessionManualCampaignName
+Display name: Session manual campaign name
+Description: The manual Campaign Name that led to the session. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+
+API name: sessionManualCreativeFormat
+Display name: Session manual creative format
+Description: The manual Creative Format that led to the session. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+
+API name: sessionManualMarketingTactic
+Display name: Session manual marketing tactic
+Description: The manual Marketing Tactic that led to the session. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+
+API name: sessionManualMedium
+Display name: Session manual medium
+Description: The manual Medium that led to the session. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+
+API name: sessionManualSource
+Display name: Session manual source
+Description: The manual Source that led to the session. The referrer. Populated by `utm_source` URL parameter.
+
+API name: sessionManualSourceMedium
+Display name: Session manual source / medium
+Description: The manual Source Medium that led to the session. A combination of the source and medium.
+
+API name: sessionManualSourcePlatform
+Display name: Session manual source platform
+Description: The manual Source Platform that led to the session. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+
+API name: sessionManualTerm
+Display name: Session manual term
+Description: The term that led to a session. Populated by the utm_term parameter.
+
+API name: sessionMedium
+Display name: Session medium
+Description: The medium that initiated a session on your website or app.
+
+API name: sessionPrimaryChannelGroup
+Display name: Session primary channel group
+Description: The primary channel group that led to the session. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+
+API name: sessionSa360AdGroupId
+Display name: Session SA360 ad group ID
+Description: The SA360 Ad Group ID that led to the session. Identifies the SA360 ad group.
+
+API name: sessionSa360AdGroupName
+Display name: Session SA360 ad group name
+Description: The SA360 Ad Group Name that led to the session. SA360 Ad groups contain ads and keywords that relate to each other.
+
+API name: sessionSa360CampaignId
+Display name: Session SA360 campaign ID
+Description: The SA360 Campaign ID that led to the session. Identifies the SA360 campaign.
+
+API name: sessionSa360CampaignName
+Display name: Session SA360 campaign
+Description: The SA360 Campaign Name that led to the session. A SA360 campaign lets you organize your ads and define a goal for your advertising.
+
+API name: sessionSa360CreativeFormat
+Display name: Session SA360 creative format
+Description: The SA360 Creative Format that led to the session. The creative format is the specific layout or design of the advertisement used in a campaign.
+
+API name: sessionSa360EngineAccountId
+Display name: Session SA360 engine account ID
+Description: The SA360 Engine Account ID that led to the session. Identifies the SA360 engine account.
+
+API name: sessionSa360EngineAccountName
+Display name: Session SA360 engine account name
+Description: The SA360 Engine Account Name that led to the session. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account.
+
+API name: sessionSa360EngineAccountType
+Display name: Session SA360 engine account type
+Description: The SA360 Engine Account Type that led to the session. The type of engine used by the search engine account. For example, `google ads`, `bing`, or `baidu`.
+
+API name: sessionSa360Keyword
+Display name: Session SA360 keyword text
+Description: The SA360 Keyword Text that led to the session. The keywords that matched the search query.
+
+API name: sessionSa360ManagerAccountId
+Display name: Session SA360 manager account ID
+Description: The SA360 Manager Account ID that led to the session. Identifies the SA360 manager account.
+
+API name: sessionSa360ManagerAccountName
+Display name: Session SA360 manager account name
+Description: The SA360 Manager Account Name that led to the session. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+
+API name: sessionSa360Medium
+Display name: Session SA360 medium
+Description: The SA360 Medium that led to the session. The payment mode used in ad buying. For example, `cpc`.
+
+API name: sessionSa360Query
+Display name: Session SA360 query
+Description: The SA360 Query that led to the session. The search query typed by the user.
+
+API name: sessionSa360Source
+Display name: Session SA360 source
+Description: The SA360 Source that led to the session. The search query happened on this site.
+
+API name: sessionSa360SourceMedium
+Display name: Session SA360 source / medium
+Description: The SA360 Source Medium that led to the session. A combination of the source and medium.
+
+API name: sessionSource
+Display name: Session source
+Description: The source that initiated a session on your website or app.
+
+API name: sessionSourceMedium
+Display name: Session source / medium
+Description: The combined values of the dimensions `sessionSource` and `sessionMedium`.
+
+API name: sessionSourcePlatform
+Display name: Session source platform
+Description: The source platform of the session's campaign. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
+
+API name: shippingTier
+Display name: Shipping tier
+Description: The shipping tier selected for delivery of the purchased item. For example, `Ground`, `Air`, or `Next-day`. Populated by the `shipping_tier` event parameter.
+
+API name: signedInWithUserId
+Display name: Signed in with user ID
+Description: The string `yes` if the user signed in with the User-ID feature. To learn more about User-ID, see [Measure activity across platforms with User-ID](https://support.google.com/analytics/answer/9213390).
+
+API name: source
+Display name: Source
+Description: The source attributed to the key event.
+
+API name: sourceMedium
+Display name: Source / medium
+Description: The combined values of the dimensions `source` and `medium`.
+
+API name: sourcePlatform
+Display name: Source platform
+Description: The source platform of the key event's campaign. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
+
+API name: streamId
+Display name: Stream ID
+Description: The numeric data stream identifier for your app or website.
+
+API name: streamName
+Display name: Stream name
+Description: The data stream name for your app or website.
+
+API name: testDataFilterId
+Display name: Test data filter ID
+Description: The numeric identifier of a data filter in testing state. You use data filters to include or exclude event data from your reports based on event-parameter values. To learn more, see [Data filters](https://support.google.com/analytics/answer/10108813).
+
+API name: testDataFilterName
+Display name: Test data filter name
+Description: The name of data filters in testing state. You use data filters to include or exclude event data from your reports based on event-parameter values. To learn more, see [Data filters](https://support.google.com/analytics/answer/10108813).
+
+API name: transactionId
+Display name: Transaction ID
+Description: The ID of the ecommerce transaction.
+
+API name: unifiedPagePathScreen
+Display name: Page path and screen class
+Description: The page path (web) or screen class (app) on which the event was logged.
+
+API name: unifiedPageScreen
+Display name: Page path + query string and screen class
+Description: The page path and query string (web) or screen class (app) on which the event was logged.
+
+API name: unifiedScreenClass
+Display name: Page title and screen class
+Description: The page title (web) or screen class (app) on which the event was logged.
+
+API name: unifiedScreenName
+Display name: Page title and screen name
+Description: The page title (web) or screen name (app) on which the event was logged.
+
+API name: userAgeBracket
+Display name: Age
+Description: User age brackets.
+
+API name: userGender
+Display name: Gender
+Description: User gender.
+
+API name: videoProvider
+Display name: Video provider
+Description: The source of the video (for example, `youtube`). Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_provider`.
+
+API name: videoTitle
+Display name: Video title
+Description: The title of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_title`.
+
+API name: videoUrl
+Display name: Video URL
+Description: The URL of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_url`.
+
+API name: virtualCurrencyName
+Display name: Virtual currency name
+Description: The name of a virtual currency with which the user is interacting. Such as spending or purchasing gems in a game. Populated by the `virtual_currency_name` event parameter.
+
+API name: visible
+Display name: Visible
+Description: Returns `true` if the content is visible. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `visible`.
+
+API name: week
+Display name: Week
+Description: The week of the event, a two-digit number from 01 to 53. Each week starts on Sunday. January 1st is always in week 01. The first and last week of the year have fewer than 7 days in most years. Weeks other than the first and the last week of the year always have 7 days. For years where January 1st is a Sunday, the first week of that year and the last week of the prior year have 7 days.
+
+API name: year
+Display name: Year
+Description: The four-digit year of the event. For example, 2020 or 2024.
+
+API name: yearMonth
+Display name: Year month
+Description: The combined values of year and month. Example values include 202212 or 202301.
+
+API name: yearWeek
+Display name: Year week
+Description: The combined values of year and week. Example values include 202253 or 202301.
+
+API name: customEvent:event_category
+Display name: Event Category
+Description: An event scoped custom dimension for your Analytics property.
+
+API name: customEvent:event_label
+Display name: Event Label
+Description: An event scoped custom dimension for your Analytics property.
+
+====================
+METRICS
+====================
+API name: active1DayUsers
+Display name: 1-day active users
+Description: The number of distinct active users on your site or app within a 1 day period. The 1 day period includes the last day in the report's date range. Note: this is the same as Active Users.
+
+API name: active28DayUsers
+Display name: 28-day active users
+Description: The number of distinct active users on your site or app within a 28 day period. The 28 day period includes the last day in the report's date range.
+
+API name: active7DayUsers
+Display name: 7-day active users
+Description: The number of distinct active users on your site or app within a 7 day period. The 7 day period includes the last day in the report's date range.
+
+API name: activeUsers
+Display name: Active users
+Description: The number of distinct users who visited your site or app.
+
+API name: addToCarts
+Display name: Add to carts
+Description: The number of times users added items to their shopping carts.
+
+API name: adUnitExposure
+Display name: Ad unit exposure
+Description: The time that an ad unit was exposed to a user, in milliseconds.
+
+API name: advertiserAdClicks
+Display name: Ads clicks
+Description: Total number of times users have clicked on an ad to reach the property. Includes clicks from linked integrations like linked Search Ads 360 advertisers. Also includes uploaded clicks from data import.
+
+API name: advertiserAdCost
+Display name: Ads cost
+Description: The total amount you paid for your ads. Includes costs from linked integrations like linked Google Ads accounts. Also includes uploaded cost from data import; to learn more, see [Import cost data](https://support.google.com/analytics/answer/10071305).
+
+API name: advertiserAdCostPerClick
+Display name: Ads cost per click
+Description: Ads cost per click is ad cost divided by ad clicks and is often abbreviated CPC.
+
+API name: advertiserAdCostPerKeyEvent
+Display name: Cost per key event
+Description: Cost per key event is ad cost divided by key events.
+
+API name: advertiserAdImpressions
+Display name: Ads impressions
+Description: The total number of impressions. Includes impressions from linked integrations like linked Display & Video 360 advertisers. Also includes uploaded impressions from data import.
+
+API name: averagePurchaseRevenue
+Display name: Average purchase revenue
+Description: The average purchase revenue in the transaction group of events.
+
+API name: averagePurchaseRevenuePerPayingUser
+Display name: ARPPU
+Description: Average revenue per paying user (ARPPU) is the total purchase revenue per active user that logged a purchase event. The summary metric is for the time period selected.
+
+API name: averagePurchaseRevenuePerUser
+Display name: Average purchase revenue per active user
+Description: The average purchase revenue per active user is the total purchase revenue per active user that logged any event. The summary metric is for the time period selected.
+
+API name: averageRevenuePerUser
+Display name: ARPU
+Description: Average revenue per active user (ARPU). The summary metric is for the time period selected. ARPU uses Total Revenue and includes AdMob estimated earnings.
+
+API name: averageSessionDuration
+Display name: Average session duration
+Description: The average duration (in seconds) of users` sessions.
+
+API name: bounceRate
+Display name: Bounce rate
+Description: The percentage of sessions that were not engaged ((Sessions Minus Engaged sessions) divided by Sessions). This metric is returned as a fraction; for example, 0.2761 means 27.61% of sessions were bounces.
+
+API name: cartToViewRate
+Display name: Cart-to-view rate
+Description: The number of users who added a product(s) to their cart divided by the number of users who viewed the same product(s). This metric is returned as a fraction; for example, 0.1132 means 11.32% of users who viewed a product also added the same product to their cart.
+
+API name: checkouts
+Display name: Checkouts
+Description: The number of times users started the checkout process. This metric counts the occurrence of the `begin_checkout` event.
+
+API name: cohortActiveUsers
+Display name: Cohort active users
+Description: The number of users in the cohort who are active in the time window corresponding to the cohort nth day/week/month. For example in the row where cohortNthWeek = 0001, this metric is the number of users (in the cohort) who are active in week 1.
+
+API name: cohortTotalUsers
+Display name: Cohort total users
+Description: The total number of users in the cohort. This metric is the same value in every row of the report for each cohort. Because cohorts are defined by a shared acquisition date, cohortTotalUsers is the same as cohortActiveUsers for the cohort's selection date range. For report rows later than the cohort's selection range, it is typical for cohortActiveUsers to be smaller than cohortTotalUsers. This difference represents users from the cohort that were not active for the later date. cohortTotalUsers is commonly used in the metric expression cohortActiveUsers/cohortTotalUsers to compute a user retention fraction for the cohort. The relationship between activeUsers and totalUsers is not equivalent to the relationship between cohortActiveUsers and cohortTotalUsers.
+
+API name: crashAffectedUsers
+Display name: Crash-affected users
+Description: The number of users that logged a crash in this row of the report. For example if the report is time series by date, this metrics reports total users with at least one crash on this date. Crashes are events with the name "app_exception".
+
+API name: crashFreeUsersRate
+Display name: Crash-free users rate
+Description: The number of users without crash events (in this row of the report) divided by the total number of users. This metric is returned as a fraction; for example, 0.9243 means 92.43% of users were crash-free.
+
+API name: dauPerMau
+Display name: DAU / MAU
+Description: The rolling percent of 30-day active users who are also 1-day active users. This metric is returned as a fraction; for example, 0.113 means 11.3% of 30-day active users were also 1-day active users.
+
+API name: dauPerWau
+Display name: DAU / WAU
+Description: The rolling percent of 7-day active users who are also 1-day active users. This metric is returned as a fraction; for example, 0.082 means 8.2% of 7-day active users were also 1-day active users.
+
+API name: ecommercePurchases
+Display name: Ecommerce purchases
+Description: The number of times users completed a purchase. This metric counts `purchase` events; this metric does not count `in_app_purchase` and subscription events.
+
+API name: engagedSessions
+Display name: Engaged sessions
+Description: The number of sessions that lasted longer than 10 seconds, or had a key event, or had 2 or more screen views.
+
+API name: engagementRate
+Display name: Engagement rate
+Description: The percentage of engaged sessions (Engaged sessions divided by Sessions). This metric is returned as a fraction; for example, 0.7239 means 72.39% of sessions were engaged sessions.
+
+API name: eventCount
+Display name: Event count
+Description: The count of events.
+
+API name: eventCountPerUser
+Display name: Event count per active user
+Description: The average number of events per user (Event count divided by Active users).
+
+API name: eventsPerSession
+Display name: Events per session
+Description: The average number of events per session (Event count divided by Sessions).
+
+API name: eventValue
+Display name: Event value
+Description: The sum of the event parameter named `value`.
+
+API name: firstTimePurchaserRate
+Display name: First-time purchaser rate
+Description: The percentage of active users who made their first purchase. This metric is returned as a fraction; for example, 0.092 means 9.2% of active users were first time purchasers.
+
+API name: firstTimePurchasers
+Display name: First time purchasers
+Description: The number of users that completed their first purchase event.
+
+API name: firstTimePurchasersPerNewUser
+Display name: First-time purchasers per new user
+Description: The average number of first time purchasers per new user.
+
+API name: grossItemRevenue
+Display name: Gross item revenue
+Description: The total revenue from items only. Gross item revenue is the product of its price and quantity. Item revenue excludes tax and shipping values; tax & shipping values are specified at the event and not item level. Gross item revenue does not include refunds.
+
+API name: grossPurchaseRevenue
+Display name: Gross purchase revenue
+Description: The sum of revenue from purchases made in your app or site. Gross purchase revenue sums the revenue for these events: `purchase`, `ecommerce_purchase`, `in_app_purchase`, `app_store_subscription_convert`, and `app_store_subscription_renew`. Purchase revenue is specified by the `value` parameter in tagging.
+
+API name: itemDiscountAmount
+Display name: Item discount amount
+Description: The monetary value of item discounts in eCommerce events. This metric is populated in tagging by the `discount` item parameter.
+
+API name: itemListClickEvents
+Display name: Item-list click events
+Description: The number of times users clicked an item when it appeared in a list. This metric counts the occurrence of the `select_item` event.
+
+API name: itemListClickThroughRate
+Display name: Item list click through rate
+Description: The number of users who selected a list(s) divided by the number of users who viewed the same list(s). This metric is returned as a fraction; for example, 0.2145 means 21.45% of users who viewed a list also selected the same list.
+
+API name: itemListViewEvents
+Display name: Item-list view events
+Description: The number of times the item list was viewed. This metric counts the occurrence of the `view_item_list` event.
+
+API name: itemPromotionClickThroughRate
+Display name: Item promotion click through rate
+Description: The number of users who selected a promotion(s) divided by the number of users who viewed the same promotion(s). This metric is returned as a fraction; for example, 0.1382 means 13.82% of users who viewed a promotion also selected the promotion.
+
+API name: itemRefundAmount
+Display name: Item refund amount
+Description: Item refund amount is the total refunded transaction revenue from items only. Item refund amount is the product of price and quantity for the `refund` event.
+
+API name: itemRevenue
+Display name: Item revenue
+Description: The total revenue from purchases minus refunded transaction revenue from items only. Item revenue is the product of its price and quantity. Item revenue excludes tax and shipping values; tax & shipping values are specified at the event and not item level.
+
+API name: itemsAddedToCart
+Display name: Items added to cart
+Description: The number of units added to cart for a single item. This metric counts the quantity of items in `add_to_cart` events.
+
+API name: itemsCheckedOut
+Display name: Items checked out
+Description: The number of units checked out for a single item. This metric counts the quantity of items in `begin_checkout` events.
+
+API name: itemsClickedInList
+Display name: Items clicked in list
+Description: The number of units clicked in list for a single item. This metric counts the quantity of items in `select_item` events.
+
+API name: itemsClickedInPromotion
+Display name: Items clicked in promotion
+Description: The number of units clicked in promotion for a single item. This metric counts the quantity of items in `select_promotion` events.
+
+API name: itemsPurchased
+Display name: Items purchased
+Description: The number of units for a single item included in purchase events. This metric counts the quantity of items in purchase events.
+
+API name: itemsViewed
+Display name: Items viewed
+Description: The number of units viewed for a single item. This metric counts the quantity of items in `view_item` events.
+
+API name: itemsViewedInList
+Display name: Items viewed in list
+Description: The number of units viewed in list for a single item. This metric counts the quantity of items in `view_item_list` events.
+
+API name: itemsViewedInPromotion
+Display name: Items viewed in promotion
+Description: The number of units viewed in promotion for a single item. This metric counts the quantity of items in `view_promotion` events.
+
+API name: itemViewEvents
+Display name: Item view events
+Description: The number of times the item details were viewed. The metric counts the occurrence of the `view_item` event.
+
+API name: keyEvents
+Display name: Key events
+Description: The count of key events. Marking an event as a key event affects reports from time of creation. It doesn't change historic data. You can mark any event as key in Google Analytics, and some events (such as `first_open` or `purchase`) are marked as key events by default.
+
+API name: newUsers
+Display name: New users
+Description: The number of users who interacted with your site or launched your app for the first time (event triggered: first_open or first_visit).
+
+API name: organicGoogleSearchAveragePosition
+Display name: Organic Google Search average position
+Description: The average ranking of your website URLs for the query reported from Search Console. For example, if your site's URL appears at position 3 for one query and position 7 for another query, the average position would be (3+7)/2, or 5. This metric requires an active Search Console link.
+
+API name: organicGoogleSearchClicks
+Display name: Organic Google Search clicks
+Description: The number of organic Google Search clicks reported from Search Console.  This metric requires an active Search Console link.
+
+API name: organicGoogleSearchClickThroughRate
+Display name: Organic Google Search click through rate
+Description: The organic Google Search click through rate reported from Search Console. Click through rate is clicks per impression. This metric is returned as a fraction; for example, 0.0588 means about 5.88% of impressions resulted in a click. This metric requires an active Search Console link.
+
+API name: organicGoogleSearchImpressions
+Display name: Organic Google Search impressions
+Description: The number of organic Google Search impressions reported from Search Console. This metric requires an active Search Console link.
+
+API name: promotionClicks
+Display name: Promotion clicks
+Description: The number of times an item promotion was clicked. This metric counts the occurrence of the `select_promotion` event.
+
+API name: promotionViews
+Display name: Promotion views
+Description: The number of times an item promotion was viewed. This metric counts the occurrence of the `view_promotion` event.
+
+API name: publisherAdClicks
+Display name: Publisher ad clicks
+Description: The number of ad_click events.
+
+API name: publisherAdImpressions
+Display name: Publisher ad impressions
+Description: The number of ad_impression events.
+
+API name: purchaseRevenue
+Display name: Purchase revenue
+Description: The sum of revenue from purchases minus refunded transaction revenue made in your app or site. Purchase revenue sums the revenue for these events: `purchase`, `ecommerce_purchase`, `in_app_purchase`, `app_store_subscription_convert`, and `app_store_subscription_renew`. Purchase revenue is specified by the `value` parameter in tagging.
+
+API name: purchaserRate
+Display name: Purchaser rate
+Description: The percentage of active users who made 1 or more purchase transactions. This metric is returned as a fraction; for example, 0.412 means 41.2% of users were purchasers.
+
+API name: purchaseToViewRate
+Display name: Purchase-to-view rate
+Description: The number of users who purchased a product(s) divided by the number of users who viewed the same product(s). This metric is returned as a fraction; for example, 0.128 means 12.8% of users that viewed a product(s) also purchased the same product(s).
+
+API name: refundAmount
+Display name: Refund amount
+Description: The total refunded transaction revenues. Refund amount sums refunded revenue for the `refund` and `app_store_refund` events.
+
+API name: returnOnAdSpend
+Display name: Return on ad spend
+Description: Return On Ad Spend (ROAS) is total revenue divided by advertiser ad cost.
+
+API name: screenPageViews
+Display name: Views
+Description: The number of app screens or web pages your users viewed. Repeated views of a single page or screen are counted. (screen_view + page_view events).
+
+API name: screenPageViewsPerSession
+Display name: Views per session
+Description: The number of app screens or web pages your users viewed per session. Repeated views of a single page or screen are counted. (screen_view + page_view events) / sessions.
+
+API name: screenPageViewsPerUser
+Display name: Views per active user
+Description: The number of app screens or web pages your users viewed per active user. Repeated views of a single page or screen are counted. (screen_view + page_view events) / active users.
+
+API name: scrolledUsers
+Display name: Scrolled users
+Description: The number of unique users who scrolled down at least 90% of the page.
+
+API name: sessionKeyEventRate
+Display name: Session key event rate
+Description: The percentage of sessions in which any key event was triggered.
+
+API name: sessions
+Display name: Sessions
+Description: The number of sessions that began on your site or app (event triggered: session_start).
+
+API name: sessionsPerUser
+Display name: Sessions per active user
+Description: The average number of sessions per user (Sessions divided by Active Users).
+
+API name: shippingAmount
+Display name: Shipping amount
+Description: Shipping amount associated with a transaction. Populated by the `shipping` event parameter.
+
+API name: taxAmount
+Display name: Tax amount
+Description: Tax amount associated with a transaction. Populated by the `tax` event parameter.
+
+API name: totalAdRevenue
+Display name: Total ad revenue
+Description: The total advertising revenue from both Admob and third-party sources.
+
+API name: totalPurchasers
+Display name: Total purchasers
+Description: The number of users that logged purchase events for the time period selected.
+
+API name: totalRevenue
+Display name: Total revenue
+Description: The sum of revenue from purchases, subscriptions, and advertising (Purchase revenue plus Subscription revenue plus Ad revenue) minus refunded transaction revenue.
+
+API name: totalUsers
+Display name: Total users
+Description: The number of distinct users who have logged at least one event, regardless of whether the site or app was in use when that event was logged.
+
+API name: transactions
+Display name: Transactions
+Description: The count of transaction events with purchase revenue. Transaction events are in_app_purchase, ecommerce_purchase, purchase, app_store_subscription_renew, app_store_subscription_convert, and refund.
+
+API name: transactionsPerPurchaser
+Display name: Transactions per purchaser
+Description: The average number of transactions per purchaser.
+
+API name: userEngagementDuration
+Display name: User engagement
+Description: The total amount of time (in seconds) your website or app was in the foreground of users` devices.
+
+API name: userKeyEventRate
+Display name: User key event rate
+Description: The percentage of users who triggered any key event.
+
+API name: wauPerMau
+Display name: WAU / MAU
+Description: The rolling percent of 30-day active users who are also 7-day active users. This metric is returned as a fraction; for example, 0.234 means 23.4% of 30-day active users were also 7-day active users.
+
+API name: keyEvents:purchase
+Display name: Key event count for purchase
+Description: The count of a specific key event.
+
+API name: sessionKeyEventRate:purchase
+Display name: Session key event rate for purchase
+Description: The percentage of sessions in which a specific key event was triggered.
+
+API name: userKeyEventRate:purchase
+Display name: User key event rate for purchase
+Description: The percentage of users who triggered a specific key event.
+

@@ -1,0 +1,16 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+MediaImage,OBJECT,alt,String,False,A word or phrase to share the nature or contents of a media.,
+MediaImage,OBJECT,createdAt,DateTime!,True,The date and time ([ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)) when the file was created.,
+MediaImage,OBJECT,fileErrors,[FileError!]!,True,Any errors that have occurred on the file.,
+MediaImage,OBJECT,fileStatus,FileStatus!,True,The status of the file.,
+MediaImage,OBJECT,id,ID!,True,A globally-unique ID.,
+MediaImage,OBJECT,image,Image,False,The image for the media. Returns `null` until `status` is `READY`.,
+MediaImage,OBJECT,mediaContentType,MediaContentType!,True,The media content type.,
+MediaImage,OBJECT,mediaErrors,[MediaError!]!,True,Any errors which have occurred on the media.,
+MediaImage,OBJECT,mediaWarnings,[MediaWarning!]!,True,The warnings attached to the media.,
+MediaImage,OBJECT,mimeType,String,False,The MIME type of the image.,
+MediaImage,OBJECT,originalSource,MediaImageOriginalSource,False,The original source of the image.,
+MediaImage,OBJECT,preview,MediaPreviewImage,False,The preview image for the media.,
+MediaImage,OBJECT,status,MediaStatus!,True,Current status of the media.,
+MediaImage,OBJECT,translations,[Translation!]!,True,The published translations associated with the resource.,"locale: String!, marketId: ID"
+MediaImage,OBJECT,updatedAt,DateTime!,True,The date and time ([ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601)) when the file was last updated.,

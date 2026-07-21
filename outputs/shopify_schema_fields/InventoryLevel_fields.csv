@@ -1,0 +1,11 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+InventoryLevel,OBJECT,canDeactivate,Boolean!,True,Whether the inventory items associated with the inventory level can be deactivated.,
+InventoryLevel,OBJECT,createdAt,DateTime!,True,The date and time when the inventory level was created.,
+InventoryLevel,OBJECT,deactivationAlert,String,False,"Describes either the impact of deactivating the inventory level, or why the inventory level can't be deactivated.",
+InventoryLevel,OBJECT,id,ID!,True,A globally-unique ID.,
+InventoryLevel,OBJECT,isActive,Boolean!,True,Whether the inventory level is active.,
+InventoryLevel,OBJECT,item,InventoryItem!,True,Inventory item associated with the inventory level.,
+InventoryLevel,OBJECT,location,Location!,True,The location associated with the inventory level.,
+InventoryLevel,OBJECT,quantities,[InventoryQuantity!]!,True,"The quantity of an inventory item at a specific location, for a quantity
+[name](https://shopify.dev/docs/apps/fulfillment/inventory-management-apps#inventory-states).",names: [String!]!
+InventoryLevel,OBJECT,updatedAt,DateTime!,True,The date and time when the inventory level was updated.,

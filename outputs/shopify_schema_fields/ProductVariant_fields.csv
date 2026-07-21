@@ -1,0 +1,65 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+ProductVariant,OBJECT,availableForSale,Boolean!,True,Whether the product variant is available for sale.,
+ProductVariant,OBJECT,availablePublicationsCount,Count,False,"The number of
+[publications](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication)
+that a resource is published to, without
+[feedback errors](https://shopify.dev/docs/api/admin-graphql/latest/objects/ResourceFeedback).",
+ProductVariant,OBJECT,barcode,String,False,The value of the barcode associated with the product.,
+ProductVariant,OBJECT,compareAtPrice,Money,False,The compare-at price of the variant in the default shop currency.,
+ProductVariant,OBJECT,contextualPricing,ProductVariantContextualPricing!,True,"The pricing that applies for a customer in a given context. As of API version 2025-04, only active markets are considered in the price resolution.",context: ContextualPricingContext!
+ProductVariant,OBJECT,createdAt,DateTime!,True,The date and time when the variant was created.,
+ProductVariant,OBJECT,defaultCursor,String!,True,"A default [cursor](https://shopify.dev/api/usage/pagination-graphql) that returns the single next record, sorted ascending by ID.",
+ProductVariant,OBJECT,deliveryProfile,DeliveryProfile,False,The [delivery profile](https://shopify.dev/api/admin-graphql/latest/objects/DeliveryProfile) for the variant.,
+ProductVariant,OBJECT,displayName,String!,True,"Display name of the variant, based on product's title + variant's title.",
+ProductVariant,OBJECT,events,EventConnection!,True,The paginated list of events associated with the host subject.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false, sortKey: EventSortKeys = ID, query: String"
+ProductVariant,OBJECT,id,ID!,True,A globally-unique ID.,
+ProductVariant,OBJECT,inventoryItem,InventoryItem!,True,"The inventory item, which is used to query for inventory information.",
+ProductVariant,OBJECT,inventoryPolicy,ProductVariantInventoryPolicy!,True,Whether customers are allowed to place an order for the product variant when it's out of stock.,
+ProductVariant,OBJECT,inventoryQuantity,Int,False,The total sellable quantity of the variant.,
+ProductVariant,OBJECT,legacyResourceId,UnsignedInt64!,True,The ID of the corresponding resource in the REST Admin API.,
+ProductVariant,OBJECT,media,MediaConnection!,True,The media associated with the product variant.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,metafield,Metafield,False,"A [custom field](https://shopify.dev/docs/apps/build/custom-data),
+including its `namespace` and `key`, that's associated with a Shopify resource
+for the purposes of adding and storing additional information.","namespace: String, key: String!"
+ProductVariant,OBJECT,metafields,MetafieldConnection!,True,"A list of [custom fields](https://shopify.dev/docs/apps/build/custom-data)
+that a merchant associates with a Shopify resource.","namespace: String, keys: [String!], first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,position,Int!,True,The order of the product variant in the list of product variants. The first position in the list is 1.,
+ProductVariant,OBJECT,price,Money!,True,The price of the product variant in the default shop currency.,
+ProductVariant,OBJECT,product,Product!,True,The product that this variant belongs to.,
+ProductVariant,OBJECT,productParents,ProductConnection!,True,A list of products that have product variants that contain this variant as a product component.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false, query: String"
+ProductVariant,OBJECT,productVariantComponents,ProductVariantComponentConnection!,True,A list of the product variant components.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,publishedOnPublication,Boolean!,True,"Whether the resource is published to a specified
+[publication](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication).",publicationId: ID!
+ProductVariant,OBJECT,requiresComponents,Boolean!,True,"Whether a product variant requires components. The default value is `false`.
+If `true`, then the product variant can only be purchased as a parent bundle with components and it will be omitted
+from channels that don't support bundles.",
+ProductVariant,OBJECT,resourcePublications,ResourcePublicationConnection!,True,"The list of resources that are published to a
+[publication](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication).","onlyPublished: Boolean = true, first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,resourcePublicationsCount,Count,False,"The total number of
+[publications](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication)
+that a resource is published to, including publications with
+[feedback errors](https://shopify.dev/docs/api/admin-graphql/latest/objects/ResourceFeedback).
+To get a count that excludes publications with feedback errors, use `availablePublicationsCount`.",onlyPublished: Boolean = true
+ProductVariant,OBJECT,resourcePublicationsV2,ResourcePublicationV2Connection!,True,"The list of resources that are either published or staged to be published to a
+[publication](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication).
+By default, only publications to `APP` catalog types are returned.
+For `Product` and `ProductVariant`, use the `catalogType` argument to retrieve
+publications for other catalog types, such as `COMPANY_LOCATION` (B2B) or `MARKET`.
+`Collection` only supports publications to `APP` catalog types.","onlyPublished: Boolean = true, catalogType: CatalogType, first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,selectedOptions,[SelectedOption!]!,True,List of product options applied to the variant.,
+ProductVariant,OBJECT,sellableOnlineQuantity,Int!,True,"The total sellable quantity of the variant for online channels.
+This doesn't represent the total available inventory or capture
+[limitations based on customer location](https://help.shopify.com/manual/markets/inventory_and_fulfillment).",
+ProductVariant,OBJECT,sellingPlanGroups,SellingPlanGroupConnection!,True,A list of all selling plan groups defined in the current shop associated with the product variant.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,sellingPlanGroupsCount,Count,False,Count of selling plan groups associated with the product variant.,
+ProductVariant,OBJECT,showUnitPrice,Boolean!,True,Whether to show the unit price for this product variant.,
+ProductVariant,OBJECT,sku,String,False,"A case-sensitive identifier for the product variant in the shop.
+Required in order to connect to a fulfillment service.",
+ProductVariant,OBJECT,taxable,Boolean!,True,Whether a tax is charged when the product variant is sold.,
+ProductVariant,OBJECT,title,String!,True,The title of the product variant.,
+ProductVariant,OBJECT,translations,[Translation!]!,True,The published translations associated with the resource.,"locale: String!, marketId: ID"
+ProductVariant,OBJECT,unitPrice,MoneyV2,False,The unit price value for the variant based on the variant measurement.,
+ProductVariant,OBJECT,unitPriceMeasurement,UnitPriceMeasurement,False,The unit price measurement for the variant.,
+ProductVariant,OBJECT,unpublishedPublications,PublicationConnection!,True,"The list of [publications](https://shopify.dev/docs/api/admin-graphql/latest/objects/Publication)
+that the resource isn't published to.","first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+ProductVariant,OBJECT,updatedAt,DateTime!,True,The date and time (ISO 8601 format) when the product variant was last modified.,

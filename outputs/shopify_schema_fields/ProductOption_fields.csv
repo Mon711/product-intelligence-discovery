@@ -1,0 +1,8 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+ProductOption,OBJECT,id,ID!,True,A globally-unique ID.,
+ProductOption,OBJECT,linkedMetafield,LinkedMetafield,False,The metafield identifier linked to this option.,
+ProductOption,OBJECT,name,String!,True,The product option’s name.,
+ProductOption,OBJECT,optionValues,[ProductOptionValue!]!,True,"Similar to values, option_values returns all the corresponding option value objects to the product option, including values not assigned to any variants.",
+ProductOption,OBJECT,position,Int!,True,The product option's position.,
+ProductOption,OBJECT,translations,[Translation!]!,True,The published translations associated with the resource.,"locale: String!, marketId: ID"
+ProductOption,OBJECT,values,[String!]!,True,The corresponding value to the product option name.,

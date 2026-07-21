@@ -1,0 +1,162 @@
+Date         Transaction ID     Item Name                                Item ID                                        Variant   Purchases      Revenue
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-07-16   6636275138699      Catia Skirt - Rainbow Check              shopify_AU_7957185822859_44384282476683        XL                1       169.00
+2026-07-16   6636915556491      Marisol Mini Dress - Rainbow Check       shopify_AU_7976632680587_44445289119883        M                 1       169.00
+2026-07-16   6636936921227      Coco Top - Gelato Stripe                 shopify_AU_8095252971659_46037232910475        L                 1        99.00
+2026-07-16   6636936921227      Eloise Skirt - Gelato stripe             shopify_AU_8095253135499_46037233205387        L                 1       169.00
+2026-07-16   6636936921227      Iris Short - Gelato stripe               shopify_AU_8095251955851_46037226750091        L                 1       119.00
+2026-07-16   6636947865739      Evelyn Jacket - Noir Gingham             shopify_AU_8087319838859_45891880714379        XL                1       199.00
+2026-07-16   6637024444555      Bella Trench - Bordeaux Check            shopify_AU_8095260246155_46037261156491        XS                1       259.00
+2026-07-16   6637137068171      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428894347        S                 1       199.00
+2026-07-16   6637148504203      Clea Dress - Pink Polka                  shopify_AU_8034407809163_45049018122379        XS                1       149.00
+2026-07-16   6637194838155      Elvira Dress - Lapis Stripe              shopify_AU_8087231987851_45888148177035        M                 1       219.00
+2026-07-16   6637196705931      Phoebe Dress - Aegan Stripe              shopify_AU_8028923592843_45024022528139        S                 1       219.00
+2026-07-15   6612489994379      Cecile Dress - Chene Stripe              shopify_AU_7718629081227_43292200697995        XS                1       164.85
+2026-07-15   6634413392011      Olea Knit Cardi - Moss                   shopify_AU_8079975579787_45560190206091        XL                1       139.00
+2026-07-15   6634525556875      Cecile Dress - Chene Stripe              shopify_AU_7718629081227_43292200763531        M                 1       199.15
+2026-07-15   6635068489867      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627331211        M                 1       259.00
+2026-07-15   6635124031627      Phoebe Dress - Aegan Stripe              shopify_AU_8028923592843_45024022560907        M                 1       219.00
+2026-07-15   6635139039371      Marisol Mini Dress - Antoine Blue        shopify_AU_7865910231179_43691655889035        S                 1        59.00
+2026-07-15   6635306156171      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428894347        S                 1       199.00
+2026-07-15   6635374772363      Gabrielle Dress - Gelato stripe          shopify_AU_8095252545675_46037228650635        M                 1       219.00
+2026-07-15   6635423006859      Cecile Dress - Chene Stripe              shopify_AU_7718629081227_43292200730763        S                 1       159.00
+2026-07-15   6635793186955      Bella Trench - Noir Gingham              shopify_AU_8087264034955_45889510572171        L                 1       259.00
+2026-07-15   6635793186955      Cassandra Pant - Ruby Check              shopify_AU_8031562563723_45031965196427        L                 1       109.00
+2026-07-15   6635923374219      Madelina Dress - Carnivale Stripe        shopify_AU_7865909739659_43691653464203        M                 1       199.00
+2026-07-15   6635923374219      Myra Blouse  - White                     shopify_AU_8031562039435_45031963361419        M                 1       109.00
+2026-07-15   6635923374219      Rhea Mini Dress  - White                 shopify_AU_8031555453067_45031903953035        M                 1       119.00
+2026-07-15   6635957354635      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627363979        L                 1       259.00
+2026-07-15   6636069355659      Gabrielle Dress - Gelato stripe          shopify_AU_8095252545675_46037228585099        XS                1       219.00
+2026-07-15   6636174770315      Eloise Skirt - Gelato stripe             shopify_AU_8095253135499_46037233205387        L                 1       169.00
+2026-07-15   6636174770315      Eloise Skirt - Gelato stripe             shopify_AU_8095253135499_46037233238155        XL                1       169.00
+2026-07-14   6630547783819      Zelie Pant - Navy Polka                  shopify_AU_7718647595147_43292443967627        M                 1       169.00
+2026-07-14   6631568998539      Alexis Pant - Cornflower Stripe          shopify_AU_8034434613387_45049103057035        S                 1       210.12
+2026-07-14   6633144615051      Iris Shirt - Gelato stripe               shopify_AU_8095251595403_46037224751243        S                 1       159.00
+2026-07-14   6633144615051      Iris Short - Gelato stripe               shopify_AU_8095251955851_46037226717323        M                 1       119.00
+2026-07-14   6633225650315      Coco Top - Rainbow Check                 shopify_AU_7957185790091_44384282181771        XS                1        99.00
+2026-07-14   6633608478859      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627363979        L                 1       259.00
+2026-07-14   6633630138507      Lyra Mini Dress  - Aegan Stripe          shopify_AU_8028922937483_45024021119115        XS                1       119.00
+2026-07-14   6633840803979      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627298443        S                 1       259.00
+2026-07-14   6633861021835      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627331211        M                 1       259.00
+2026-07-14   6633862594699      Louise Top - Granita Stripe              shopify_AU_7848634581131_43627272831115        L                 1        79.00
+2026-07-14   6633862594699      Manon skirt - Granita Stripe             shopify_AU_7841970159755_43599941304459        L                 1       129.00
+2026-07-14   6634122051723      Coco Top - Rainbow Check                 shopify_AU_7957185790091_44384282247307        M                 1        99.00
+2026-07-14   6634122051723      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428861579        XS                1       199.00
+2026-07-13   6629439275147      Cecile Dress - Chene Stripe              shopify_AU_7718629081227_43292200697995        XS                1       302.63
+2026-07-13   6630030540939      Cassandra Top - White                    shopify_AU_8030600200331_45028654547083        XL                1        89.00
+2026-07-13   6630081167499      Coco Skirt - Palm Stripe                 shopify_AU_7957185626251_44384281428107        M                 1        89.00
+2026-07-13   6630081167499      Coco Top - Palm Stripe                   shopify_AU_7957185659019_44384281591947        M                 1        79.00
+2026-07-13   6630153257099      Luella Mini Dress - Noir                 shopify_AU_8095285051531_46038702555275        S                 1       169.00
+2026-07-13   6630580813963      Mae Mini Dress - Sapphire                shopify_AU_8087087612043_45882149699723        M                 1       179.00
+2026-07-13   6630712115339      Isadora Dress - Rainbow Check            shopify_AU_7957185757323_44384282116235        L                 1       202.23
+2026-07-13   6630745735307      Luella Mini Dress - Noir                 shopify_AU_8095285051531_46038702620811        L                 1       169.00
+2026-07-13   6630755926155      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627298443        S                 1       259.00
+2026-07-13   6630886080651      Eden Cami - White                        shopify_AU_7985965629579_44472632705163        L                 1        59.00
+2026-07-13   6631014563979      Rosalia Dress - Antoine Blue             shopify_AU_7865910263947_43691656020107        XS                1        89.00
+2026-07-12   6627935813771      Coco Top - Rainbow Check                 shopify_AU_7957185790091_44384282312843        XL                1       123.72
+2026-07-12   6628011933835      Daphne Jacket - Pink Polka               shopify_AU_8034404925579_45049006129291        XL                1       199.00
+2026-07-12   6628015112331      Coco Top - Gelato Stripe                 shopify_AU_8095252971659_46037232844939        S                 1        99.00
+2026-07-12   6628015112331      Kiara Dress - Rainbow Stripe             shopify_AU_7957185003659_44384278118539        S                 1        99.00
+2026-07-12   6628462067851      Adelina Dress - Ivory                    shopify_AU_7957185429643_44384280412299        M                 1        89.00
+2026-07-12   6628462067851      Phoebe Dress  - Ruby Check               shopify_AU_8031564529803_45031970996363        M                 1       169.00
+2026-07-12   6628462067851      Sadie Dress - Ecru                       shopify_AU_7957186085003_44384283721867        M                 1       159.00
+2026-07-12   6628576395403      Marisol Mini Dress - Rainbow Check       shopify_AU_7976632680587_44445289087115        S                 1       169.00
+2026-07-12   6628576395403      Phoebe Dress - Aegan Stripe              shopify_AU_8028923592843_45024022528139        S                 1       219.00
+2026-07-12   6628708974731      Adelina Dress - Ivory                    shopify_AU_7957185429643_44384280445067        L                 1        89.00
+2026-07-12   6628787552395      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428927115        M                 1       199.00
+2026-07-12   6628870291595      Louise Top - Granita Stripe              shopify_AU_7848634581131_43627272831115        L                 1        79.00
+2026-07-12   6628870291595      Manon skirt - Granita Stripe             shopify_AU_7841970159755_43599941304459        L                 1       129.00
+2026-07-12   6628876746891      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627298443        S                 1       259.00
+2026-07-12   6628886970507      Arlo Mini Dress - Carinvale Stripe       shopify_AU_7865909641355_43691652972683        M                 1       131.39
+2026-07-12   6628886970507      Marisol Mini Dress - Antoine Blue        shopify_AU_7865910231179_43691655889035        S                 1       113.31
+2026-07-12   6628886970507      Rhea Mini Dress  - White                 shopify_AU_8031555453067_45031903920267        S                 1       226.70
+2026-07-12   6628891721867      Liva Midi Dress - Noir                   shopify_AU_8095285739659_46038704291979        XL                1       229.00
+2026-07-12   6628958699659      Camila Mini Dress - Rainbow Stripe       shopify_AU_7957184970891_44384278020235        XL                1        89.00
+2026-07-12   6628958699659      Catia Skirt - Ivory                      shopify_AU_7957185331339_44384279986315        XL                1        89.00
+2026-07-12   6629021581451      Roxana Jacket - Ecru                     shopify_AU_8034409873547_45049028542603        M                 1       139.00
+2026-07-12   6629115297931      Sophia Dress  - Ikaria stripe            shopify_AU_8028922183819_45024019447947        S                 1       149.00
+2026-07-11   6626158542987      Rosalia Dress - Antoine Blue             shopify_AU_7865910263947_43691656085643        M                 1        89.00
+2026-07-11   6626174402699      Remi Blouse - Chalk                      shopify_AU_7865910984843_43691659755659        XL                1        89.00
+2026-07-11   6626445918347      Evelyn Jacket - Bordeaux Check           shopify_AU_8095281086603_46038368223371        L                 1       199.00
+2026-07-11   6626529968267      Evelyn Jacket - Noir Gingham             shopify_AU_8087319838859_45891880648843        M                 1       199.00
+2026-07-11   6626574663819      Florencia Mini Dress - Seine Stripe      shopify_AU_7901687382155_43954512953483        S                 1       119.00
+2026-07-11   6626605990027      Adelina Dress - Ivory                    shopify_AU_7957185429643_44384280510603        XXL               1       112.36
+2026-07-11   6626665463947      Isadora Dress - Bluebell                 shopify_AU_8095257493643_46037254733963        M                 1       219.00
+2026-07-11   6626666086539      Marisol Mini Dress - Rainbow Check       shopify_AU_7976632680587_44445289054347        XS                1       169.00
+2026-07-11   6626737225867      Coco Skirt - Palm Stripe                 shopify_AU_7957185626251_44384281428107        M                 1        89.00
+2026-07-11   6626737225867      Coco Top - Palm Stripe                   shopify_AU_7957185659019_44384281591947        M                 1        79.00
+2026-07-11   6626841297035      Alexis Pant - Cornflower Stripe          shopify_AU_8034434613387_45049103057035        S                 1       169.00
+2026-07-11   6626841297035      Coco Top - Ciel Blue                     shopify_AU_8058934034571_45139459702923        S                 1        99.00
+2026-07-11   6626841297035      Marsielle Top - Chalk                    shopify_AU_7902748999819_43996445835403        S                 1       119.00
+2026-07-11   6626925772939      Hanne Coat - Citron Check                shopify_AU_8079982592139_45560627331211        M                 1       259.00
+2026-07-11   6626981380235      Coco Top - Ivory                         shopify_AU_7957185298571_44384279789707        L                 1        49.00
+2026-07-11   6626995273867      Alexis Pant - Noir Gingham               shopify_AU_8087309451403_45891396370571        S                 1       162.44
+2026-07-11   6626995273867      Coco Top - Noir Gingham                  shopify_AU_8087325147275_45892125524107        S                 1       101.11
+2026-07-11   6627125002379      Georgie Dress - Lemon                    shopify_AU_7901687677067_43954517016715        S                 1       159.00
+2026-07-11   6627125002379      Kaia Knit Top - Lemon                    shopify_AU_7957186052235_44384283492491        XS                1       109.00
+2026-07-11   6627182018699      Alexis Pant - Noir Gingham               shopify_AU_8087309451403_45891396370571        S                 1       159.00
+2026-07-10   6624375177355      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428927115        M                 1       199.00
+2026-07-10   6624448118923      Alexis Pant - Cornflower Stripe          shopify_AU_8034434613387_45049103122571        L                 1       169.00
+2026-07-10   6624448118923      Marsielle Top - Chalk                    shopify_AU_7902748999819_43996445900939        L                 1       119.00
+2026-07-10   6624452083851      Cassandra Pant - Ruby Check              shopify_AU_8031562563723_45031965196427        L                 1       109.00
+2026-07-10   6624452083851      Jemma Dress - Blue Polka                 shopify_AU_8087204397195_45886810357899        L                 1       219.00
+2026-07-10   6624460963979      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428992651        XL                1       199.00
+2026-07-10   6624490225803      Evelyn Jacket - Noir Gingham             shopify_AU_8087319838859_45891880714379        XL                1       201.73
+2026-07-10   6624588857483      Isla Mini Dress - Siesta Stripe          shopify_AU_7865910198411_43691655725195        S                 1       129.00
+2026-07-10   6624619298955      Gabrielle Dress - Gelato stripe          shopify_AU_8095252545675_46037228585099        XS                1       219.00
+2026-07-10   6624619298955      Isla Mini Dress - Siesta Stripe          shopify_AU_7865910198411_43691655725195        S                 1       129.00
+2026-07-10   6624663797899      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428992651        XL                1       199.00
+2026-07-10   6624779010187      Phoebe Dress - Fiesta Flicker            shopify_AU_8095292096651_46039180116107        S                 1       219.00
+2026-07-10   6624881672331      Clea Dress - Antique Check               shopify_AU_8034404040843_45049001050251        XXL               1       149.00
+2026-07-10   6624928432267      Gabrielle Dress  - Chene Stripe          shopify_AU_7718626263179_43292154298507        XS                1       219.00
+2026-07-10   6624938426507      Luella Mini Dress - Bluebell             shopify_AU_8095257985163_46037255618699        XL                1       171.26
+2026-07-10   6625010548875      Catia Skirt - Ivory                      shopify_AU_7957185331339_44384279888011        S                 1        89.00
+2026-07-10   6625010548875      Coco Top - Ivory                         shopify_AU_7957185298571_44384279724171        S                 1        49.00
+2026-07-10   6625010548875      Louise Top - Carinvale Stripe            shopify_AU_7865909608587_43691652808843        M                 1        49.00
+2026-07-09   6621673554059      Georgie Dress - Red & White Gingham      shopify_AU_7841971634315_43599948611723        XS                1       159.00
+2026-07-09   6621673554059      Lola Blouse - Antoine Blue               shopify_AU_7865910296715_43691656216715        S                 1        59.00
+2026-07-09   6621673554059      Lola Shorts - Antoine Blue               shopify_AU_7865910329483_43691656380555        S                 1        59.00
+2026-07-09   6621715071115      Clea Dress - Antique Check               shopify_AU_8034404040843_45049000919179        S                 1       149.00
+2026-07-09   6621715071115      Gabrielle Dress - Cornflower Stripe      shopify_AU_8034434089099_45049101385867        S                 1       159.00
+2026-07-09   6621851680907      Alva Skirt - Navy                        shopify_AU_7579273232523_42866117443723        XS                1        69.00
+2026-07-09   6621851680907      Catia Skirt - Ivory                      shopify_AU_7957185331339_44384279855243        XS                1        89.00
+2026-07-09   6621851680907      Catia Skirt - Rainbow Check              shopify_AU_7957185822859_44384282345611        XS                1       169.00
+2026-07-09   6622089773195      Emilia Top - Siesta Stripe               shopify_AU_7865910132875_43691655364747        XS                1        99.00
+2026-07-09   6622089773195      Livia Pant - Siesta Stripe               shopify_AU_7865910100107_43691655233675        S                 1       109.00
+2026-07-09   6622140563595      Marsala Dress - Blue Gingham             shopify_AU_7913437724811_44274388009099        M                 1       169.70
+2026-07-09   6622170185867      Cassandra Top - White                    shopify_AU_8030600200331_45028654547083        XL                1        89.00
+2026-07-09   6622170185867      Livia Pant - Ikaria Stripe               shopify_AU_8028920447115_45024014925963        XL                1       129.00
+2026-07-09   6622264983691      Cassandra Pant - Ruby Check              shopify_AU_8031562563723_45031965098123        XS                1       109.00
+2026-07-09   6622264983691      Cassandra Pant - White                   shopify_AU_8031554470027_45031900151947        XS                1       109.00
+2026-07-09   6622264983691      Cassandra Top - White                    shopify_AU_8030600200331_45028654416011        XS                1        89.00
+2026-07-09   6622264983691      Georgie Dress - Red & White Gingham      shopify_AU_7841971634315_43599948611723        XS                1       159.00
+2026-07-09   6622264983691      Lottie Short - Chalk                     shopify_AU_7865911017611_43691659788427        XS                1        79.00
+2026-07-09   6622313480331      Elvira Dress - Lapis Stripe              shopify_AU_8087231987851_45888148177035        M                 1       219.00
+2026-07-09   6622313480331      Sophia Dress  - Ikaria stripe            shopify_AU_8028922183819_45024019480715        M                 1       149.00
+2026-07-09   6622355062923      Manon skirt - Granita Stripe             shopify_AU_7841970159755_43599941238923        S                 1       129.00
+2026-07-09   6622371512459      Sophia Dress  - Ikaria stripe            shopify_AU_8028922183819_45024019513483        L                 1       149.00
+2026-07-09   6622688608395      Louise Top - Granita Stripe              shopify_AU_7848634581131_43627272798347        M                 1        79.00
+2026-07-09   6622688608395      Manon skirt - Granita Stripe             shopify_AU_7841970159755_43599941271691        M                 1       129.00
+2026-07-09   6622690640011      Clea Dress - Noir Gingham                shopify_AU_8087124541579_45883889844363        S                 1       149.00
+2026-07-09   6622723342475      Alexis Pant - Cornflower Stripe          shopify_AU_8034434613387_45049103089803        M                 1       169.00
+2026-07-09   6622984437899      Zelie Jacket - Navy Polka                shopify_AU_7718644809867_43292428861579        XS                1       199.00
+2026-07-09   6623116001419      Catia Skirt - Ivory                      shopify_AU_7957185331339_44384279920779        M                 1        89.00
+2026-07-09   6623116001419      Coco Top - Ivory                         shopify_AU_7957185298571_44384279789707        L                 1        49.00
+2026-07-09   6623116001419      Marisol Mini Dress - Antoine Blue        shopify_AU_7865910231179_43691655921803        M                 1        59.00
+2026-07-09   6623155683467      Cassandra Pant - White                   shopify_AU_8031554470027_45031900217483        M                 1       109.00
+2026-07-09   6623155683467      Cassandra Top - White                    shopify_AU_8030600200331_45028654448779        S                 1        89.00
+2026-07-09   6623182061707      Olea Knit Cardi - Moss                   shopify_AU_8079975579787_45560190107787        S                 1       139.00
+2026-07-09   6623187501195      Clea Dress - Antique Check               shopify_AU_8034404040843_45049000919179        S                 1       149.00
+2026-07-09   6623195922571      Georgie Dress - Azure Stripe             shopify_AU_7901687578763_43954513707147        M                 1       159.00
+2026-07-09   6623195922571      Georgie Dress - Lemon                    shopify_AU_7901687677067_43954517049483        M                 1       159.00
+2026-07-09   6623218925707      Catia Skirt - Rainbow Check              shopify_AU_7957185822859_44384282345611        XS                1       169.00
+2026-07-09   6623218925707      Coco Top - Gelato Stripe                 shopify_AU_8095252971659_46037232844939        S                 1        99.00
+2026-07-09   6623218925707      Coco Top - Rainbow Check                 shopify_AU_7957185790091_44384282214539        S                 1        99.00
+2026-07-09   6623218925707      Eloise Skirt - Gelato stripe             shopify_AU_8095253135499_46037233107083        XS                1       169.00
+2026-07-09   6623273484427      Olea Knit Cardi - Moss                   shopify_AU_8079975579787_45560190107787        S                 1       139.00
+2026-07-09   6623280365707      Alexandra Trench - Antique Check         shopify_AU_8034402861195_45048991842443        L                 1       249.00
+2026-07-09   6623288524939      Remi Blouse - Chalk                      shopify_AU_7865910984843_43691659624587        XS                1        89.00
+2026-07-09   6623300616331      Gabrielle Dress - Cornflower Stripe      shopify_AU_8034434089099_45049101385867        S                 1       159.00
+2026-07-09   6623301402763      Madelina Dress - Carnivale Stripe        shopify_AU_7865909739659_43691653529739        XL                1       377.70
+2026-07-09   6623337316491      Adelina Dress - Ivory                    shopify_AU_7957185429643_44384280379531        S                 1        89.00
+2026-07-09   6623337316491      Sophia Dress  - Ikaria stripe            shopify_AU_8028922183819_45024019447947        S                 1       149.00

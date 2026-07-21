@@ -1,0 +1,21 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+InventoryItem,OBJECT,countryCodeOfOrigin,CountryCode,False,The ISO 3166-1 alpha-2 country code of where the item originated from.,
+InventoryItem,OBJECT,countryHarmonizedSystemCodes,CountryHarmonizedSystemCodeConnection!,True,A list of country specific harmonized system codes.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+InventoryItem,OBJECT,createdAt,DateTime!,True,The date and time when the inventory item was created.,
+InventoryItem,OBJECT,duplicateSkuCount,Int!,True,The number of inventory items that share the same SKU with this item.,
+InventoryItem,OBJECT,harmonizedSystemCode,String,False,The harmonized system code of the item. This must be a number between 6 and 13 digits.,
+InventoryItem,OBJECT,id,ID!,True,A globally-unique ID.,
+InventoryItem,OBJECT,inventoryHistoryUrl,URL,False,The URL that points to the inventory history for the item.,
+InventoryItem,OBJECT,inventoryLevel,InventoryLevel,False,The inventory item's quantities at the specified location.,"locationId: ID!, includeInactive: Boolean = false"
+InventoryItem,OBJECT,inventoryLevels,InventoryLevelConnection!,True,A list of the inventory item's quantities for each location that the inventory item can be stocked at.,"includeInactive: Boolean = false, first: Int, after: String, last: Int, before: String, reverse: Boolean = false, query: String"
+InventoryItem,OBJECT,legacyResourceId,UnsignedInt64!,True,The ID of the corresponding resource in the REST Admin API.,
+InventoryItem,OBJECT,locationsCount,Count,False,The number of locations where this inventory item is stocked.,
+InventoryItem,OBJECT,measurement,InventoryItemMeasurement!,True,The packaging dimensions of the inventory item.,
+InventoryItem,OBJECT,provinceCodeOfOrigin,String,False,The ISO 3166-2 alpha-2 province code of where the item originated from.,
+InventoryItem,OBJECT,requiresShipping,Boolean!,True,Whether the inventory item requires shipping.,
+InventoryItem,OBJECT,sku,String,False,Inventory item SKU. Case-sensitive string.,
+InventoryItem,OBJECT,tracked,Boolean!,True,Whether inventory levels are tracked for the item.,
+InventoryItem,OBJECT,trackedEditable,EditableProperty!,True,Whether the value of the `tracked` field for the inventory item can be changed.,
+InventoryItem,OBJECT,unitCost,MoneyV2,False,"Unit cost associated with the inventory item. Note: the user must have ""View product costs"" permission granted in order to access this field once product granular permissions are enabled.",
+InventoryItem,OBJECT,updatedAt,DateTime!,True,The date and time when the inventory item was updated.,
+InventoryItem,OBJECT,variants,ProductVariantConnection,False,A paginated list of the variants that reference this inventory item.,"first: Int, after: String, last: Int, before: String"

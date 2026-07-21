@@ -1,0 +1,52 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+Customer,OBJECT,addressesV2,MailingAddressConnection!,True,The addresses associated with the customer.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Customer,OBJECT,amountSpent,MoneyV2!,True,The total amount that the customer has spent on orders in their lifetime.,
+Customer,OBJECT,canDelete,Boolean!,True,"Whether the merchant can delete the customer from their store.
+
+A customer can be deleted from a store only if they haven't yet made an order. After a customer makes an
+order, they can't be deleted from a store.",
+Customer,OBJECT,companyContactProfiles,[CompanyContact!]!,True,A list of the customer's company contact profiles.,
+Customer,OBJECT,createdAt,DateTime!,True,The date and time when the customer was added to the store.,
+Customer,OBJECT,dataSaleOptOut,Boolean!,True,Whether the customer has opted out of having their data sold.,
+Customer,OBJECT,defaultAddress,MailingAddress,False,The default address associated with the customer.,
+Customer,OBJECT,defaultEmailAddress,CustomerEmailAddress,False,The customer's default email address.,
+Customer,OBJECT,defaultPhoneNumber,CustomerPhoneNumber,False,The customer's default phone number.,
+Customer,OBJECT,displayName,String!,True,"The full name of the customer, based on the values for first_name and last_name. If the first_name and
+last_name are not available, then this falls back to the customer's email address, and if that is not available, the customer's phone number.",
+Customer,OBJECT,events,EventConnection!,True,A list of events associated with the customer.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false, sortKey: EventSortKeys = ID, query: String"
+Customer,OBJECT,firstName,String,False,The customer's first name.,
+Customer,OBJECT,id,ID!,True,A globally-unique ID.,
+Customer,OBJECT,identityProviderSubjects,[IdentityProviderSubject!]!,True,The identity provider subject identifiers associated with this customer.,
+Customer,OBJECT,image,Image!,True,The image associated with the customer.,
+Customer,OBJECT,lastName,String,False,The customer's last name.,
+Customer,OBJECT,lastOrder,Order,False,The customer's last order.,
+Customer,OBJECT,legacyResourceId,UnsignedInt64!,True,The ID of the corresponding resource in the REST Admin API.,
+Customer,OBJECT,lifetimeDuration,String!,True,"The amount of time since the customer was first added to the store.
+
+Example: 'about 12 years'.",
+Customer,OBJECT,locale,String!,True,The customer's locale.,
+Customer,OBJECT,mergeable,CustomerMergeable!,True,Whether the customer can be merged with another customer.,
+Customer,OBJECT,metafield,Metafield,False,"A [custom field](https://shopify.dev/docs/apps/build/custom-data),
+including its `namespace` and `key`, that's associated with a Shopify resource
+for the purposes of adding and storing additional information.","namespace: String, key: String!"
+Customer,OBJECT,metafields,MetafieldConnection!,True,"A list of [custom fields](https://shopify.dev/docs/apps/build/custom-data)
+that a merchant associates with a Shopify resource.","namespace: String, keys: [String!], first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Customer,OBJECT,multipassIdentifier,String,False,A unique identifier for the customer that's used with Multipass login.,
+Customer,OBJECT,note,String,False,A note about the customer.,
+Customer,OBJECT,numberOfOrders,UnsignedInt64!,True,The number of orders that the customer has made at the store in their lifetime.,
+Customer,OBJECT,orders,OrderConnection!,True,A list of the customer's orders.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false, sortKey: OrderSortKeys = ID, query: String"
+Customer,OBJECT,paymentMethods,CustomerPaymentMethodConnection!,True,A list of the customer's payment methods.,"showRevoked: Boolean = false, first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Customer,OBJECT,productSubscriberStatus,CustomerProductSubscriberStatus!,True,Possible subscriber states of a customer defined by their subscription contracts.,
+Customer,OBJECT,state,CustomerState!,True,"The state of the customer's account with the shop.
+
+Please note that this only meaningful when Classic Customer Accounts is active.",
+Customer,OBJECT,statistics,CustomerStatistics!,True,The statistics for a given customer.,
+Customer,OBJECT,storeCreditAccounts,StoreCreditAccountConnection!,True,"Returns a list of store credit accounts that belong to the owner resource.
+A store credit account owner can hold multiple accounts each with a different currency.","first: Int, after: String, last: Int, before: String, query: String"
+Customer,OBJECT,subscriptionContracts,SubscriptionContractConnection!,True,A list of the customer's subscription contracts.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Customer,OBJECT,tags,[String!]!,True,A comma separated list of tags that have been added to the customer.,
+Customer,OBJECT,taxExempt,Boolean!,True,Whether the customer is exempt from being charged taxes on their orders.,
+Customer,OBJECT,taxExemptions,[TaxExemption!]!,True,The list of tax exemptions applied to the customer.,
+Customer,OBJECT,taxSettings,TaxSettings!,True,The customer's tax settings.,
+Customer,OBJECT,updatedAt,DateTime!,True,The date and time when the customer was last updated.,
+Customer,OBJECT,verifiedEmail,Boolean!,True,Whether the customer has verified their email address. Defaults to `true` if the customer is created through the Shopify admin or API.,

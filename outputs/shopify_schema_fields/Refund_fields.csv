@@ -1,0 +1,16 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+Refund,OBJECT,createdAt,DateTime,False,The date and time when the refund was created.,
+Refund,OBJECT,duties,[RefundDuty!],False,A list of the refunded duties as part of this refund.,
+Refund,OBJECT,id,ID!,True,A globally-unique ID.,
+Refund,OBJECT,legacyResourceId,UnsignedInt64!,True,The ID of the corresponding resource in the REST Admin API.,
+Refund,OBJECT,note,String,False,The optional note associated with the refund.,
+Refund,OBJECT,order,Order!,True,The order associated with the refund.,
+Refund,OBJECT,orderAdjustments,OrderAdjustmentConnection!,True,The order adjustments that are attached with the refund.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Refund,OBJECT,processedAt,DateTime!,True,The date and time when the refund was processed.,
+Refund,OBJECT,refundLineItems,RefundLineItemConnection!,True,The `RefundLineItem` resources attached to the refund.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Refund,OBJECT,refundShippingLines,RefundShippingLineConnection!,True,The `RefundShippingLine` resources attached to the refund.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Refund,OBJECT,return,Return,False,The return associated with the refund.,
+Refund,OBJECT,staffMember,StaffMember,False,The staff member who created the refund.,
+Refund,OBJECT,totalRefundedSet,MoneyBag!,True,"The total amount across all transactions for the refund, in shop and presentment currencies.",
+Refund,OBJECT,transactions,OrderTransactionConnection!,True,The transactions associated with the refund.,"first: Int, after: String, last: Int, before: String, reverse: Boolean = false"
+Refund,OBJECT,updatedAt,DateTime!,True,The date and time when the refund was updated.,

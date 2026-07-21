@@ -1,0 +1,52 @@
+ITEM PERFORMANCE (LAST 7 DAYS)
+================================================================================
+ID: shopify_AU_8079982592139_45560627265675 | Name: Hanne Coat - Citron Check | Variant: XS | Viewed: 970 | Added to cart: 8 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7718626263179_43292154298507 | Name: Gabrielle Dress  - Chene Stripe | Variant: XS | Viewed: 469 | Added to cart: 3 | Purchased: 1 | Revenue: 219
+ID: shopify_AU_7718644809867_43292428861579 | Name: Zelie Jacket - Navy Polka | Variant: XS | Viewed: 440 | Added to cart: 6 | Purchased: 3 | Revenue: 596.999999
+ID: shopify_AU_8087319838859_45891880583307 | Name: Evelyn Jacket - Noir Gingham | Variant: XS | Viewed: 364 | Added to cart: 5 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7957185790091_44384282181771 | Name: Coco Top - Rainbow Check | Variant: XS | Viewed: 316 | Added to cart: 7 | Purchased: 1 | Revenue: 99
+ID: shopify_AU_8087264034955_45889510473867 | Name: Bella Trench - Noir Gingham | Variant: XS | Viewed: 311 | Added to cart: 4 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095252545675_46037228585099 | Name: Gabrielle Dress - Gelato stripe | Variant: XS | Viewed: 299 | Added to cart: 7 | Purchased: 1 | Revenue: 219
+ID: shopify_AU_7579273232523_42866117443723 | Name: Alva Skirt - Navy | Variant: XS | Viewed: 298 | Added to cart: 24 | Purchased: 1 | Revenue: 69
+ID: shopify_AU_7957185822859_44384282345611 | Name: Catia Skirt - Rainbow Check | Variant: XS | Viewed: 292 | Added to cart: 10 | Purchased: 2 | Revenue: 337.999999
+ID: shopify_AU_8031564529803_45031970930827 | Name: Phoebe Dress  - Ruby Check | Variant: XS | Viewed: 276 | Added to cart: 6 | Purchased: 1 | Revenue: 169
+ID: shopify_AU_8095252971659_46037232812171 | Name: Coco Top - Gelato Stripe | Variant: XS | Viewed: 264 | Added to cart: 6 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8034434089099_45049101353099 | Name: Gabrielle Dress - Cornflower Stripe | Variant: XS | Viewed: 240 | Added to cart: 2 | Purchased: 1 | Revenue: 159
+ID: shopify_AU_7901687677067_43954516983947 | Name: Georgie Dress - Lemon | Variant: XS | Viewed: 237 | Added to cart: 4 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095281086603_46038368125067 | Name: Evelyn Jacket - Bordeaux Check | Variant: XS | Viewed: 232 | Added to cart: 1 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7841970159755_43599941206155 | Name: Manon skirt - Granita Stripe | Variant: XS | Viewed: 229 | Added to cart: 4 | Purchased: 1 | Revenue: 129
+ID: shopify_AU_8095288066187_46038887268491 | Name: Luella Mini Dress - Fiesta Flicker | Variant: XS | Viewed: 212 | Added to cart: 1 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095285051531_46038702522507 | Name: Luella Mini Dress - Noir | Variant: XS | Viewed: 208 | Added to cart: 3 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7718629081227_43292200697995 | Name: Cecile Dress - Chene Stripe | Variant: XS | Viewed: 202 | Added to cart: 1 | Purchased: 2 | Revenue: 467.476184
+ID: shopify_AU_7901687578763_43954513641611 | Name: Georgie Dress - Azure Stripe | Variant: XS | Viewed: 201 | Added to cart: 1 | Purchased: 1 | Revenue: 159
+ID: shopify_AU_7865910263947_43691656020107 | Name: Rosalia Dress - Antoine Blue | Variant: XS | Viewed: 194 | Added to cart: 16 | Purchased: 1 | Revenue: 89
+ID: shopify_AU_8095257985163_46037255487627 | Name: Luella Mini Dress - Bluebell | Variant: XS | Viewed: 192 | Added to cart: 1 | Purchased: 1 | Revenue: 169
+ID: shopify_AU_8028923592843_45024022495371 | Name: Phoebe Dress - Aegan Stripe | Variant: XS | Viewed: 188 | Added to cart: 5 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7976632680587_44445289054347 | Name: Marisol Mini Dress - Rainbow Check | Variant: XS | Viewed: 187 | Added to cart: 5 | Purchased: 1 | Revenue: 169
+ID: shopify_AU_7957185757323_44384282017931 | Name: Isadora Dress - Rainbow Check | Variant: XS | Viewed: 185 | Added to cart: 0 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7841971634315_43599948611723 | Name: Georgie Dress - Red & White Gingham | Variant: XS | Viewed: 183 | Added to cart: 2 | Purchased: 3 | Revenue: 477
+ID: shopify_AU_7865909739659_43691653398667 | Name: Madelina Dress - Carnivale Stripe | Variant: XS | Viewed: 170 | Added to cart: 1 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8034434613387_45049103024267 | Name: Alexis Pant - Cornflower Stripe | Variant: XS | Viewed: 167 | Added to cart: 2 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095251234955_46037223899275 | Name: Clementine Jacket - Plaid | Variant: XS | Viewed: 163 | Added to cart: 0 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7957185659019_44384281526411 | Name: Coco Top - Palm Stripe | Variant: XS | Viewed: 160 | Added to cart: 1 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095260246155_46037261156491 | Name: Bella Trench - Bordeaux Check | Variant: XS | Viewed: 160 | Added to cart: 3 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7718647595147_43292443902091 | Name: Zelie Pant - Navy Polka | Variant: XS | Viewed: 158 | Added to cart: 2 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8034404368523_45049001640075 | Name: Alexis Pant - Antique Check | Variant: XS | Viewed: 157 | Added to cart: 1 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8031567839371_45031983153291 | Name: Madelina Dress - Liquorice Stripe | Variant: XS | Viewed: 155 | Added to cart: 6 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095251955851_46037226651787 | Name: Iris Short - Gelato stripe | Variant: XS | Viewed: 153 | Added to cart: 2 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8058934034571_45139459670155 | Name: Coco Top - Ciel Blue | Variant: XS | Viewed: 151 | Added to cart: 5 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7957185331339_44384279855243 | Name: Catia Skirt - Ivory | Variant: XS | Viewed: 150 | Added to cart: 5 | Purchased: 1 | Revenue: 89.000001
+ID: shopify_AU_7985965629579_44472632606859 | Name: Eden Cami - White | Variant: XS | Viewed: 147 | Added to cart: 10 | Purchased: 2 | Revenue: 117.999999
+ID: shopify_AU_8079975579787_45560190075019 | Name: Olea Knit Cardi - Moss | Variant: XS | Viewed: 144 | Added to cart: 2 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7865910198411_43691655692427 | Name: Isla Mini Dress - Siesta Stripe | Variant: XS | Viewed: 142 | Added to cart: 3 | Purchased: 1 | Revenue: 129
+ID: shopify_AU_7865910984843_43691659624587 | Name: Remi Blouse - Chalk | Variant: XS | Viewed: 138 | Added to cart: 8 | Purchased: 1 | Revenue: 89.000001
+ID: shopify_AU_8095257493643_46037254668427 | Name: Isadora Dress - Bluebell | Variant: XS | Viewed: 137 | Added to cart: 0 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095253135499_46037233107083 | Name: Eloise Skirt - Gelato stripe | Variant: XS | Viewed: 135 | Added to cart: 5 | Purchased: 1 | Revenue: 168.999999
+ID: shopify_AU_7957185429643_44384280346763 | Name: Adelina Dress - Ivory | Variant: XS | Viewed: 134 | Added to cart: 3 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8095292096651_46039180083339 | Name: Phoebe Dress - Fiesta Flicker | Variant: XS | Viewed: 131 | Added to cart: 2 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_7579273232523_42866117476491 | Name: Alva Skirt - Navy | Variant: S | Viewed: 126 | Added to cart: 11 | Purchased: 1 | Revenue: 69
+ID: shopify_AU_7848634581131_43627272732811 | Name: Louise Top - Granita Stripe | Variant: XS | Viewed: 125 | Added to cart: 3 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8031562563723_45031965098123 | Name: Cassandra Pant - Ruby Check | Variant: XS | Viewed: 118 | Added to cart: 5 | Purchased: 2 | Revenue: 218
+ID: shopify_AU_7865910100107_43691655200907 | Name: Livia Pant - Siesta Stripe | Variant: XS | Viewed: 117 | Added to cart: 3 | Purchased: 0 | Revenue: 0
+ID: shopify_AU_8087309451403_45891396370571 | Name: Alexis Pant - Noir Gingham | Variant: S | Viewed: 116 | Added to cart: 6 | Purchased: 2 | Revenue: 321.437939
+ID: shopify_AU_7865911083147_43691660148875 | Name: Remi Blouse - Noir | Variant: S | Viewed: 115 | Added to cart: 24 | Purchased: 1 | Revenue: 89

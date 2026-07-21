@@ -1,0 +1,4 @@
+type_name,type_kind,field_name,field_type,is_required,description,args
+SelectedOption,OBJECT,name,String!,True,The product option’s name.,
+SelectedOption,OBJECT,optionValue,ProductOptionValue!,True,The product option’s value object.,
+SelectedOption,OBJECT,value,String!,True,The product option’s value.,

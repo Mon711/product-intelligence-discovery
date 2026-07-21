@@ -11,9 +11,6 @@ config/shopify/.env
 config/ga4/ga4_oauth_client.json
 config/ga4/ga4_token.json
 
-# Generated discovery output
-outputs/
-
 # Editor and operating-system files
 .vscode/
 .DS_Store
