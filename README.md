@@ -118,8 +118,7 @@ The repository currently provides:
 - Shopify connection testing and GraphQL type-field discovery.
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
-- Shared Meta access-token loading from an environment variable. Meta API
-  requests have not begun.
+- Shared Meta access-token loading and ad-account connection testing.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify and GA4 outputs for inspection.
@@ -225,15 +224,15 @@ contents into documentation, issues, prompts, or logs.
 
 ### Meta configuration
 
-Set the Meta access token in your environment before running a Meta discovery
-script:
+Create `config/meta/.env` with the Meta access token:
 
-```bash
-export META_ACCESS_TOKEN=your-access-token
+```dotenv
+META_ACCESS_TOKEN=your-access-token
 ```
 
-Meta discovery currently loads this value only; it does not make or validate
-any Meta API requests.
+Meta discovery loads this file before reading the access token. An exported
+`META_ACCESS_TOKEN` environment variable takes precedence. The authentication
+helper does not make or validate any Meta API requests.
 
 ## Running the scripts
 
@@ -353,7 +352,8 @@ product-intelligence-discovery/
 ├── meta_discovery/          Shared Meta access-token loading
 ├── scripts/
 │   ├── shopify/             Runnable Shopify discovery experiments
-│   └── ga4/                 Runnable GA4 discovery experiments
+│   ├── ga4/                 Runnable GA4 discovery experiments
+│   └── meta/                Runnable Meta discovery experiments
 ├── config/                  Local ignored credentials and tracked placeholders
 ├── outputs/                 Saved discovery evidence and generated exports
 ├── docs/                    Product brief and detailed GA4 discovery reports
@@ -386,8 +386,9 @@ product-intelligence-discovery/
 
 ### `meta_discovery/`
 
-- `auth.py` loads `META_ACCESS_TOKEN` from the environment and raises a clear
-  error when it is missing. It does not make API requests or validate the token.
+- `auth.py` loads `config/meta/.env`, reads `META_ACCESS_TOKEN`, and raises a
+  clear error when it is missing. It does not make API requests or validate the
+  token.
 - `__init__.py` marks the directory as an importable Python package.
 
 ### `scripts/shopify/`
@@ -419,6 +420,12 @@ product-intelligence-discovery/
 - `list_ga4_purchase_events.py` prints fixed-window transaction-level purchase
   rows, totals, row counts, time zone, thresholding, data-loss, and sampling
   metadata when available.
+- `__init__.py` enables module-style execution.
+
+### `scripts/meta/`
+
+- `test_meta_connection.py` lists the accessible Meta ad accounts with their
+  IDs and account statuses.
 - `__init__.py` enables module-style execution.
 
 ### `config/`
