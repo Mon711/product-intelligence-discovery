@@ -10,6 +10,7 @@ dist/
 config/shopify/.env
 config/ga4/ga4_oauth_client.json
 config/ga4/ga4_token.json
+config/meta/.env
 
 # Editor and operating-system files
 .vscode/

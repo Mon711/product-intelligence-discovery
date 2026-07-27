@@ -1,8 +1,8 @@
 # Product Intelligence Discovery
 
 This repository contains small Python tools and saved evidence used to discover,
-test, and document data available from Shopify and Google Analytics 4 (GA4) for
-the Steele Product Intelligence project.
+test, and document data available from Shopify, Google Analytics 4 (GA4), and
+Meta Ads for the Steele Product Intelligence project.
 
 > [!IMPORTANT]
 > **This is a discovery-only repository.** It is intended for Product
@@ -77,7 +77,7 @@ and implementation begin elsewhere.
 
 ### In scope here
 
-- Confirm that authorized Shopify and GA4 access works.
+- Confirm that authorized Shopify, GA4, and Meta Ads access works.
 - Explore available API objects, fields, dimensions, and metrics.
 - Run small, readable reports against selected test windows.
 - Save privacy-minimal outputs that can be inspected later.
@@ -106,8 +106,11 @@ for a beginner to read and change.
 
 **Started:** 20 June 2026  
 **Current phase:** Foundation, data discovery, and source reconciliation  
-**Sources currently explored:** Shopify Admin GraphQL API and GA4 Admin/Data APIs  
-**Sources not yet implemented:** Meta Ads and other possible future sources
+**Sources currently explored:** Shopify Admin GraphQL API, GA4 Admin/Data APIs,
+and Meta Ads authentication
+
+**Sources not yet implemented:** Meta Ads API discovery and other possible
+future sources
 
 The repository currently provides:
 
@@ -115,6 +118,8 @@ The repository currently provides:
 - Shopify connection testing and GraphQL type-field discovery.
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
+- Shared Meta access-token loading from an environment variable. Meta API
+  requests have not begun.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify and GA4 outputs for inspection.
@@ -132,6 +137,7 @@ for production database design.
 flowchart LR
     SC["Shopify credentials<br/>config/shopify/.env"] --> SP["Shopify discovery package"]
     GC["GA4 OAuth files<br/>config/ga4/"] --> GP["GA4 discovery package"]
+    MC["Meta access token<br/>META_ACCESS_TOKEN environment variable"] --> MP["Meta discovery package"]
     SP --> SS["Shopify scripts"]
     GP --> GS["GA4 scripts"]
     SS --> SO["Schema, order, and order-line outputs"]
@@ -160,6 +166,7 @@ before using their numbers.
 - [`uv`](https://docs.astral.sh/uv/getting-started/installation/)
 - Authorized Shopify Admin API credentials
 - An authorized Google OAuth Desktop client with GA4 access
+- A Meta access token, when running future Meta discovery scripts
 
 The project pins Python 3.12 in `.python-version`. Direct dependencies are
 declared in `pyproject.toml`, and exact resolved versions are recorded in
@@ -215,6 +222,18 @@ read-only Analytics access.
 
 All three credential files are ignored by Git. Never commit or paste their
 contents into documentation, issues, prompts, or logs.
+
+### Meta configuration
+
+Set the Meta access token in your environment before running a Meta discovery
+script:
+
+```bash
+export META_ACCESS_TOKEN=your-access-token
+```
+
+Meta discovery currently loads this value only; it does not make or validate
+any Meta API requests.
 
 ## Running the scripts
 
@@ -331,6 +350,7 @@ uv sync --frozen
 product-intelligence-discovery/
 ├── shopify_discovery/       Shared Shopify configuration, client, and queries
 ├── ga4_discovery/           Shared GA4 OAuth authentication
+├── meta_discovery/          Shared Meta access-token loading
 ├── scripts/
 │   ├── shopify/             Runnable Shopify discovery experiments
 │   └── ga4/                 Runnable GA4 discovery experiments
@@ -362,6 +382,12 @@ product-intelligence-discovery/
   token, refreshes it when possible, or starts a local browser OAuth flow and
   saves the resulting token. Discovery scripts should reuse this helper rather
   than duplicate authentication.
+- `__init__.py` marks the directory as an importable Python package.
+
+### `meta_discovery/`
+
+- `auth.py` loads `META_ACCESS_TOKEN` from the environment and raises a clear
+  error when it is missing. It does not make API requests or validate the token.
 - `__init__.py` marks the directory as an importable Python package.
 
 ### `scripts/shopify/`
