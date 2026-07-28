@@ -107,10 +107,9 @@ for a beginner to read and change.
 **Started:** 20 June 2026  
 **Current phase:** Foundation, data discovery, and source reconciliation  
 **Sources currently explored:** Shopify Admin GraphQL API, GA4 Admin/Data APIs,
-and Meta Ads authentication
+and Meta Ads Graph API
 
-**Sources not yet implemented:** Meta Ads API discovery and other possible
-future sources
+**Sources not yet implemented:** Other possible future sources
 
 The repository currently provides:
 
@@ -118,7 +117,8 @@ The repository currently provides:
 - Shopify connection testing and GraphQL type-field discovery.
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
-- Shared Meta access-token loading and ad-account connection testing.
+- Shared Meta access-token loading plus first-page ad-account, campaign, and
+  ad-set listing.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify and GA4 outputs for inspection.
@@ -324,6 +324,19 @@ Current GA4 script behavior:
 - The scripts print reports to standard output. Saved text files in `outputs/`
   were created from earlier runs and are not automatically refreshed.
 
+### Meta Ads
+
+Run the small first-page discovery requests:
+
+```bash
+uv run python -m scripts.meta.test_meta_connection
+uv run python -m scripts.meta.list_campaigns
+uv run python -m scripts.meta.list_adsets
+```
+
+These scripts print accessible ad accounts, campaigns, and ad sets to standard
+output. They do not paginate or save output files.
+
 ### Dependency management
 
 ```bash
@@ -426,6 +439,10 @@ product-intelligence-discovery/
 
 - `test_meta_connection.py` lists the accessible Meta ad accounts with their
   IDs and account statuses.
+- `list_campaigns.py` lists the first page of campaigns for the Steele
+  production ad account.
+- `list_adsets.py` lists the first page of ad sets for the Steele production ad
+  account.
 - `__init__.py` enables module-style execution.
 
 ### `config/`
