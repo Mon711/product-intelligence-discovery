@@ -1,0 +1,225 @@
+----------------------------------------
+Ad Set Name: Steele_SaleCatalog_15july26_DPA
+ID: 120250238579010458
+Campaign ID: 120250238579020458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-07-15T23:07:03+1000
+Updated: 2026-07-15T23:07:23+1000
+----------------------------------------
+Ad Set Name: Steele_EOSS_Campaign_25june26
+ID: 120249284399590458
+Campaign ID: 120249284399580458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-06-25T01:44:36+1000
+Updated: 2026-06-25T01:44:54+1000
+----------------------------------------
+Ad Set Name: Steele_EOSS_Campaign_25june26
+ID: 120249284063800458
+Campaign ID: 120249284063790458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-06-25T01:37:49+1000
+Updated: 2026-06-25T01:38:08+1000
+----------------------------------------
+Ad Set Name: Steele_EOSS_Campaign_25june26
+ID: 120249284003500458
+Campaign ID: 120249284003520458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-06-25T01:32:00+1000
+Updated: 2026-06-25T01:32:18+1000
+----------------------------------------
+Ad Set Name: Steele_EOSS_Campaign_25june26
+ID: 120249282805750458
+Campaign ID: 120249282805760458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-06-25T01:01:54+1000
+Updated: 2026-06-25T01:02:13+1000
+----------------------------------------
+Ad Set Name: Steele_NewArrivals_13May26
+ID: 120246312718200458
+Campaign ID: 120246312718430458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-05-14T17:48:53+1000
+Updated: 2026-05-14T17:49:00+1000
+----------------------------------------
+Ad Set Name: Steele_retargeting_engagers+viewcontent_april2026
+ID: 120245546322370458
+Campaign ID: 120245546322350458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-04-30T19:54:15+1000
+Updated: 2026-04-30T22:31:57+1000
+----------------------------------------
+Ad Set Name: Steele New arrival_catalog 2026
+ID: 120244692207080458
+Campaign ID: 120244692207060458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-04-17T18:09:04+1000
+Updated: 2026-04-17T18:09:12+1000
+----------------------------------------
+Ad Set Name: Steele_Retargeting_last180daysvisitors not purchased
+ID: 120244683957090458
+Campaign ID: 120244683957100458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-04-17T15:17:16+1000
+Updated: 2026-04-17T16:03:43+1000
+----------------------------------------
+Ad Set Name: Steele_midFunnel_ATC_170426
+ID: 120244683587070458
+Campaign ID: 120244683587050458
+Status: PAUSED
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-04-17T14:52:41+1000
+Updated: 2026-04-29T16:16:57+1000
+----------------------------------------
+Ad Set Name: steele_MidseasonSale_25march26
+ID: 120243336345320458
+Campaign ID: 120243336345310458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-03-24T23:32:40+1100
+Updated: 2026-03-25T18:14:25+1100
+----------------------------------------
+Ad Set Name: Steele_NewArrivals_Duplicated
+ID: 120242629889330458
+Campaign ID: 120241300740720458
+Status: PAUSED
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-03-09T22:19:50+1100
+Updated: 2026-04-30T19:58:59+1000
+----------------------------------------
+Ad Set Name: Catalog | Prospecting | Full Price |updated| Feb26
+ID: 120241775607170458
+Campaign ID: 120241775607190458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-02-18T23:15:17+1100
+Updated: 2026-04-17T18:34:00+1000
+----------------------------------------
+Ad Set Name: Steele_NewArrivals_5feb 26
+ID: 120241300740690458
+Campaign ID: 120241300740720458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-02-06T04:17:34+1100
+Updated: 2026-02-14T19:20:05+1100
+----------------------------------------
+Ad Set Name: Broad_Resort_9Dec25
+ID: 120240716049870458
+Campaign ID: 120240716049730458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-01-22T16:37:08+1100
+Updated: 2026-02-14T19:19:18+1100
+----------------------------------------
+Ad Set Name: Catalog | Prospecting | Full Price |updated|jan26
+ID: 120240633562450458
+Campaign ID: 120230387194400458
+Status: PAUSED
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2026-01-20T05:17:28+1100
+Updated: 2026-02-03T07:48:00+1100
+----------------------------------------
+Ad Set Name: Steele_EOSS_24thDec25
+ID: 120239591172280458
+Campaign ID: 120239591172260458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-12-25T00:04:23+1100
+Updated: 2025-12-25T00:04:29+1100
+----------------------------------------
+Ad Set Name: Broad_Resort_9Dec25
+ID: 120238735871240458
+Campaign ID: 120231472862090458
+Status: PAUSED
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-12-10T14:41:01+1100
+Updated: 2026-01-25T20:20:42+1100
+----------------------------------------
+Ad Set Name: Broad_Essentials_6Dec25
+ID: 120238510735700458
+Campaign ID: 120231472862090458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-12-06T20:13:16+1100
+Updated: 2026-01-25T04:18:15+1100
+----------------------------------------
+Ad Set Name: Catalog | Prospecting | Full Price |updated
+ID: 120238510400200458
+Campaign ID: 120230387194400458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-12-06T19:35:18+1100
+Updated: 2026-01-26T19:32:51+1100
+----------------------------------------
+Ad Set Name: Steele_BlackFridaySale_18nov25
+ID: 120237417843330458
+Campaign ID: 120237417843270458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-11-20T16:39:26+1100
+Updated: 2025-11-28T16:09:40+1100
+----------------------------------------
+Ad Set Name: Steele_Sale_19nov25_DPA
+ID: 120237372197620458
+Campaign ID: 120237372197630458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-11-19T23:44:36+1100
+Updated: 2026-02-26T15:23:05+1100
+----------------------------------------
+Ad Set Name: Steele_BlackFridaySale_18nov25
+ID: 120237228673240458
+Campaign ID: 120237228673230458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-11-18T02:12:31+1100
+Updated: 2025-11-20T16:35:49+1100
+----------------------------------------
+Ad Set Name: Steele_BFS_leadgen_14_nov_25
+ID: 120236963838890458
+Campaign ID: 120236963838900458
+Status: ACTIVE
+Optimization Goal: QUALITY_LEAD
+Billing Event: IMPRESSIONS
+Created: 2025-11-14T16:38:26+1100
+Updated: 2025-11-14T16:38:34+1100
+----------------------------------------
+Ad Set Name: Steele_BFS_leadgen_14_nov_25
+ID: 120236940572590458
+Campaign ID: 120236940572580458
+Status: ACTIVE
+Optimization Goal: OFFSITE_CONVERSIONS
+Billing Event: IMPRESSIONS
+Created: 2025-11-14T04:28:49+1100
+Updated: 2025-11-14T04:28:56+1100
