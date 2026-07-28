@@ -118,7 +118,7 @@ The repository currently provides:
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
 - Shared Meta access-token loading plus first-page ad-account, campaign, and
-  ad-set listing.
+  ad-set and ad listing.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify and GA4 outputs for inspection.
@@ -332,10 +332,11 @@ Run the small first-page discovery requests:
 uv run python -m scripts.meta.test_meta_connection
 uv run python -m scripts.meta.list_campaigns
 uv run python -m scripts.meta.list_adsets
+uv run python -m scripts.meta.list_ads
 ```
 
-These scripts print accessible ad accounts, campaigns, and ad sets to standard
-output. They do not paginate or save output files.
+These scripts print accessible ad accounts, campaigns, ad sets, and ads to
+standard output. They do not paginate or save output files.
 
 ### Dependency management
 
@@ -442,6 +443,8 @@ product-intelligence-discovery/
 - `list_campaigns.py` lists the first page of campaigns for the Steele
   production ad account.
 - `list_adsets.py` lists the first page of ad sets for the Steele production ad
+  account.
+- `list_ads.py` lists the first page of ads for the Steele production ad
   account.
 - `__init__.py` enables module-style execution.
 

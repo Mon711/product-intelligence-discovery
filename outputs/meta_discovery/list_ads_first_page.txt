@@ -1,0 +1,225 @@
+----------------------------------------
+Ad Name: Steele_outerwear_14may26_static1
+ID: 120246336098680458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: PAUSED
+Creative ID: 2231962067556522
+Created: 2026-05-15T00:07:23+1000
+Updated: 2026-07-28T13:54:01+1000
+----------------------------------------
+Ad Name: Steele_NewArrivals_16april26_Video1
+ID: 120246312718390458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: PAUSED
+Creative ID: 1320608509934183
+Created: 2026-05-14T17:48:56+1000
+Updated: 2026-07-28T13:53:57+1000
+----------------------------------------
+Ad Name: Steele_newarrivals_ZelieJacket_motion_july26
+ID: 120250353125940458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: ACTIVE
+Creative ID: 1438954678061258
+Created: 2026-07-20T18:33:12+1000
+Updated: 2026-07-20T18:38:34+1000
+----------------------------------------
+Ad Name: Steele_Bestsellers_Outerwear_july26
+ID: 120250353096010458
+Campaign ID: 120233396922910458
+Ad Set ID: 120233396922930458
+Status: ACTIVE
+Creative ID: 1563771498786593
+Created: 2026-07-20T18:26:29+1000
+Updated: 2026-07-20T18:29:38+1000
+----------------------------------------
+Ad Name: Steele_Bestsellers_ZelieJacket_Gif_july26
+ID: 120250353027000458
+Campaign ID: 120233396922910458
+Ad Set ID: 120233396922930458
+Status: ACTIVE
+Creative ID: 1349271994059188
+Created: 2026-07-20T18:23:01+1000
+Updated: 2026-07-20T18:26:18+1000
+----------------------------------------
+Ad Name: Steele_Bestsellers_ZelieJacket_static1_july26
+ID: 120250352837600458
+Campaign ID: 120233396922910458
+Ad Set ID: 120233396922930458
+Status: ACTIVE
+Creative ID: 2297529757684942
+Created: 2026-07-20T18:19:32+1000
+Updated: 2026-07-20T18:25:01+1000
+----------------------------------------
+Ad Name: Steele_NewArrivals_July26_gif1
+ID: 120250352763300458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: ACTIVE
+Creative ID: 1508525333909047
+Created: 2026-07-20T18:11:19+1000
+Updated: 2026-07-20T18:15:43+1000
+----------------------------------------
+Ad Name: Steele_sets_Instapost2_july26
+ID: 120250352684990458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: ACTIVE
+Creative ID: 2120599798496708
+Created: 2026-07-20T18:06:18+1000
+Updated: 2026-07-20T18:11:48+1000
+----------------------------------------
+Ad Name: SaleProducts_DPA
+ID: 120250238579000458
+Campaign ID: 120250238579020458
+Ad Set ID: 120250238579010458
+Status: ACTIVE
+Creative ID: 1744300190039110
+Created: 2026-07-15T23:07:07+1000
+Updated: 2026-07-15T23:16:12+1000
+----------------------------------------
+Ad Name: Steele New arrival_catalog 2026 – Copy
+ID: 120250207535360458
+Campaign ID: 120244692207060458
+Ad Set ID: 120244692207080458
+Status: ACTIVE
+Creative ID: 813515491814716
+Created: 2026-07-14T21:33:35+1000
+Updated: 2026-07-14T21:35:46+1000
+----------------------------------------
+Ad Name: Steele_new arrivaqsl insta post 5
+ID: 120250174696430458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: ACTIVE
+Creative ID: 2128984187978979
+Created: 2026-07-13T19:35:55+1000
+Updated: 2026-07-13T19:45:20+1000
+----------------------------------------
+Ad Name: Steele_new arrivaqsl insta post 6
+ID: 120250174750060458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: ACTIVE
+Creative ID: 2235826987208866
+Created: 2026-07-13T19:37:38+1000
+Updated: 2026-07-13T19:42:01+1000
+----------------------------------------
+Ad Name: Steele_new arrivaqsl insta post 4
+ID: 120250174640960458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: ACTIVE
+Creative ID: 1014699241465305
+Created: 2026-07-13T19:33:52+1000
+Updated: 2026-07-13T19:39:03+1000
+----------------------------------------
+Ad Name: Steele_Bestsellers_motion3_June26
+ID: 120247809381830458
+Campaign ID: 120233396922910458
+Ad Set ID: 120233396922930458
+Status: PAUSED
+Creative ID: 1147719161765153
+Created: 2026-06-05T23:37:18+1000
+Updated: 2026-07-07T14:48:13+1000
+----------------------------------------
+Ad Name: Steele_essentials_23mar26_Video 2
+ID: 120244131853990458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: PAUSED
+Creative ID: 2961426797384859
+Created: 2026-04-06T05:42:27+1000
+Updated: 2026-07-07T14:25:09+1000
+----------------------------------------
+Ad Name: Steele_collection_Carousel14may26
+ID: 120246405492600458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: PAUSED
+Creative ID: 1325799332799642
+Created: 2026-05-15T22:17:54+1000
+Updated: 2026-07-07T14:24:51+1000
+----------------------------------------
+Ad Name: Steele_essentials_23mar26_Video – Copy 2
+ID: 120244131690810458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: PAUSED
+Creative ID: 996428299482629
+Created: 2026-04-06T05:38:24+1000
+Updated: 2026-07-07T14:22:39+1000
+----------------------------------------
+Ad Name: Steele_retargeting_Full Price catalogue_30april26
+ID: 120245546322360458
+Campaign ID: 120245546322350458
+Ad Set ID: 120245546322370458
+Status: ACTIVE
+Creative ID: 2213623069380197
+Created: 2026-04-30T19:58:38+1000
+Updated: 2026-07-07T14:16:53+1000
+----------------------------------------
+Ad Name: Eoss_static4_july2026
+ID: 120249972455620458
+Campaign ID: 120249284399580458
+Ad Set ID: 120249284399590458
+Status: ACTIVE
+Creative ID: 886474044527390
+Created: 2026-07-07T14:01:38+1000
+Updated: 2026-07-07T14:07:34+1000
+----------------------------------------
+Ad Name: Eoss_static5_july2026
+ID: 120249972487160458
+Campaign ID: 120249284399580458
+Ad Set ID: 120249284399590458
+Status: ACTIVE
+Creative ID: 4374973149487379
+Created: 2026-07-07T14:03:25+1000
+Updated: 2026-07-07T14:06:46+1000
+----------------------------------------
+Ad Name: Steele_newArrivalsinsta post4
+ID: 120249805870040458
+Campaign ID: 120246312718430458
+Ad Set ID: 120246312718200458
+Status: PAUSED
+Creative ID: 826748513708669
+Created: 2026-07-02T20:55:15+1000
+Updated: 2026-07-04T23:00:59+1000
+----------------------------------------
+Ad Name: Steele_motion1_hannecoat_30june26
+ID: 120249803788750458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: ACTIVE
+Creative ID: 2535887650173076
+Created: 2026-07-02T20:13:56+1000
+Updated: 2026-07-02T22:07:22+1000
+----------------------------------------
+Ad Name: Steele_outerwear_Collectionad_30june26
+ID: 120249804128460458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: ACTIVE
+Creative ID: 1761957141639803
+Created: 2026-07-02T20:47:20+1000
+Updated: 2026-07-02T20:50:19+1000
+----------------------------------------
+Ad Name: Steele_static_hannecoat_30june26
+ID: 120249803949160458
+Campaign ID: 120235813647500458
+Ad Set ID: 120235813647550458
+Status: ACTIVE
+Creative ID: 2046040699337199
+Created: 2026-07-02T20:19:10+1000
+Updated: 2026-07-02T20:24:46+1000
+----------------------------------------
+Ad Name: Steele_Bestsellers_motion4_June26_collection
+ID: 120249702843870458
+Campaign ID: 120233396922910458
+Ad Set ID: 120233396922930458
+Status: PAUSED
+Creative ID: 1007029475451026
+Created: 2026-06-30T18:00:58+1000
+Updated: 2026-07-01T08:42:08+1000
