@@ -1,0 +1,175 @@
+----------------------------------------
+Campaign Name: Steele_SaleCatalog_15july26
+ID: 120250238579020458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2026-07-15T23:07:03+1000
+Updated: 2026-07-21T21:03:06+1000
+----------------------------------------
+Campaign Name: Steele_EOSS_Campaign_25june26.
+ID: 120249284399580458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-06-25T01:44:35+1000
+Updated: 2026-07-09T20:21:20+1000
+----------------------------------------
+Campaign Name: Steele_EOSS_Campaign_25june26
+ID: 120249284063790458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-06-25T01:37:48+1000
+Updated: 2026-06-25T01:41:48+1000
+----------------------------------------
+Campaign Name: Steele_EOSSale_Campaign_25june26
+ID: 120249284003520458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-06-25T01:31:59+1000
+Updated: 2026-06-25T01:33:01+1000
+----------------------------------------
+Campaign Name: err
+ID: 120249282805760458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-06-25T01:01:53+1000
+Updated: 2026-06-25T01:33:05+1000
+----------------------------------------
+Campaign Name: Steele_NewArrivals_updated
+ID: 120246312718430458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2026-05-14T17:48:53+1000
+Updated: 2026-07-14T21:31:36+1000
+----------------------------------------
+Campaign Name: Steele_retargeting_30apr2026
+ID: 120245546322350458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2026-04-30T19:54:14+1000
+Updated: 2026-07-27T22:09:57+1000
+----------------------------------------
+Campaign Name: Steele New arrival_catalog 2026
+ID: 120244692207060458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2026-04-17T18:09:03+1000
+Updated: 2026-05-29T16:24:00+1000
+----------------------------------------
+Campaign Name: Steele_Retargeting_april2026
+ID: 120244683957100458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-04-17T15:17:15+1000
+Updated: 2026-04-22T04:34:16+1000
+----------------------------------------
+Campaign Name: Steele_midFunnel_ATC_170426
+ID: 120244683587050458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-04-17T14:52:41+1000
+Updated: 2026-04-27T16:01:01+1000
+----------------------------------------
+Campaign Name: steele_MidseasonSale_25march26
+ID: 120243336345310458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-03-24T23:32:39+1100
+Updated: 2026-05-28T16:55:37+1000
+----------------------------------------
+Campaign Name: Full Price Catalog- Feb updated
+ID: 120241775607190458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-02-18T23:15:16+1100
+Updated: 2026-05-18T14:56:50+1000
+----------------------------------------
+Campaign Name: Steele_NewArrivals
+ID: 120241300740720458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-02-06T04:17:33+1100
+Updated: 2026-05-12T18:33:59+1000
+----------------------------------------
+Campaign Name: Steele_Essentials
+ID: 120240716049730458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2026-01-22T16:37:08+1100
+Updated: 2026-02-25T17:32:49+1100
+----------------------------------------
+Campaign Name: Steele_EOSS_25thDec25
+ID: 120239591172260458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-12-25T00:04:22+1100
+Updated: 2026-01-06T00:47:03+1100
+----------------------------------------
+Campaign Name: Steele_BlackFridaySale_18nov25_duplicated
+ID: 120237417843270458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-11-20T16:39:25+1100
+Updated: 2026-02-10T19:33:40+1100
+----------------------------------------
+Campaign Name: Steele_SaleCatalog
+ID: 120237372197630458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-11-19T23:44:35+1100
+Updated: 2026-04-16T06:08:16+1000
+----------------------------------------
+Campaign Name: Steele_BlackFridaySale_18nov25
+ID: 120237228673230458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-11-18T02:12:29+1100
+Updated: 2025-11-20T16:39:31+1100
+----------------------------------------
+Campaign Name: Steele_BFS_leadgen_14_nov_25_metalead
+ID: 120236963838900458
+Status: PAUSED
+Objective: OUTCOME_LEADS
+Created: 2025-11-14T16:38:25+1100
+Updated: 2025-11-17T00:41:16+1100
+----------------------------------------
+Campaign Name: Steele_BFS_leadgen_14_nov_25
+ID: 120236940572580458
+Status: PAUSED
+Objective: OUTCOME_LEADS
+Created: 2025-11-14T04:28:47+1100
+Updated: 2025-11-14T16:23:59+1100
+----------------------------------------
+Campaign Name: Steele_Collections
+ID: 120235813647500458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2025-10-28T18:55:03+1100
+Updated: 2026-05-29T16:21:36+1000
+----------------------------------------
+Campaign Name: Steele_Bestsellers
+ID: 120233396922910458
+Status: ACTIVE
+Objective: OUTCOME_SALES
+Created: 2025-09-23T05:59:32+1000
+Updated: 2026-06-26T23:10:53+1000
+----------------------------------------
+Campaign Name: Steele_asc_Sale_17sep25
+ID: 120233026191430458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-09-17T05:24:50+1000
+Updated: 2025-09-19T23:59:51+1000
+----------------------------------------
+Campaign Name: EL | ADV+ | Spring '25 Campaign
+ID: 120231472862090458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-08-21T05:58:39+1000
+Updated: 2026-01-27T02:28:19+1100
+----------------------------------------
+Campaign Name: EL | ADV+ | Purchase | AUG 25
+ID: 120230387525580458
+Status: PAUSED
+Objective: OUTCOME_SALES
+Created: 2025-08-02T03:40:36+1000
+Updated: 2025-08-23T00:38:04+1000
