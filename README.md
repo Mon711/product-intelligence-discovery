@@ -118,7 +118,7 @@ The repository currently provides:
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
 - Shared Meta access-token loading plus first-page ad-account, campaign, and
-  ad-set and ad listing.
+  ad-set and ad listing, plus one Creative JSON inspection.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify and GA4 outputs for inspection.
@@ -326,17 +326,20 @@ Current GA4 script behavior:
 
 ### Meta Ads
 
-Run the small first-page discovery requests:
+Run the small discovery requests:
 
 ```bash
 uv run python -m scripts.meta.test_meta_connection
 uv run python -m scripts.meta.list_campaigns
 uv run python -m scripts.meta.list_adsets
 uv run python -m scripts.meta.list_ads
+uv run python -m scripts.meta.inspect_creative
 ```
 
-These scripts print accessible ad accounts, campaigns, ad sets, and ads to
-standard output. They do not paginate or save output files.
+The listing scripts print accessible ad accounts, campaigns, ad sets, and ads
+to standard output. `inspect_creative.py` compares 15 example Steele Creatives
+and prints their complete JSON responses. The listing scripts do not paginate
+or save output files.
 
 ### Dependency management
 
@@ -446,6 +449,8 @@ product-intelligence-discovery/
   account.
 - `list_ads.py` lists the first page of ads for the Steele production ad
   account.
+- `inspect_creative.py` compares 15 example Steele Ad Creatives and prints
+  their complete JSON structures.
 - `__init__.py` enables module-style execution.
 
 ### `config/`
