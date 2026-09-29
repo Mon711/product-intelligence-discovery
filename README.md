@@ -126,11 +126,12 @@ The repository currently provides:
 - Shopify connection testing and GraphQL type-field discovery.
 - A fixed-window, paginated Shopify order and order-line export.
 - Shared GA4 OAuth authentication and token refresh.
-- Shared Meta access-token loading plus first-page ad-account, campaign, and
-  ad-set and ad listing, plus one Creative JSON inspection.
+- Shared Meta access-token loading and personal long-lived OAuth authorization,
+  plus first-page ad-account, campaign, ad-set, and ad listing, a 15-Creative
+  comparison, and object-story inspection for the same 15 examples.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
-- Saved Shopify and GA4 outputs for inspection.
+- Saved Shopify, GA4, and Meta outputs for inspection.
 - A fixed-window Shopify-to-GA4 purchase reconciliation.
 - A detailed GA4 discovery report in Markdown and DOCX form.
 
@@ -145,11 +146,13 @@ for production database design.
 flowchart LR
     SC["Shopify credentials<br/>config/shopify/.env"] --> SP["Shopify discovery package"]
     GC["GA4 OAuth files<br/>config/ga4/"] --> GP["GA4 discovery package"]
-    MC["Meta access token<br/>META_ACCESS_TOKEN environment variable"] --> MP["Meta discovery package"]
+    MC["Meta App credentials and tokens<br/>config/meta/.env"] --> MP["Meta discovery package"]
     SP --> SS["Shopify scripts"]
     GP --> GS["GA4 scripts"]
+    MP --> MS["Meta scripts"]
     SS --> SO["Schema, order, and order-line outputs"]
     GS --> GO["Metadata, event, item, and purchase outputs"]
+    MS --> MO["Ad-account, Creative, and object-story outputs"]
     SO --> R["Shopify/GA4 reconciliation"]
     GO --> R
     R --> E["Discovery findings and database-design evidence"]
@@ -174,7 +177,7 @@ before using their numbers.
 - [`uv`](https://docs.astral.sh/uv/getting-started/installation/)
 - Authorized Shopify Admin API credentials
 - An authorized Google OAuth Desktop client with GA4 access
-- A Meta access token, when running future Meta discovery scripts
+- A Meta access token, when running Meta discovery scripts
 
 The project pins Python 3.12 in `.python-version`. Direct dependencies are
 declared in `pyproject.toml`, and exact resolved versions are recorded in
@@ -243,10 +246,28 @@ Meta discovery loads this file before reading the access token. An exported
 `META_ACCESS_TOKEN` environment variable takes precedence. The authentication
 helper does not make or validate any Meta API requests.
 
+For the local personal OAuth flow, add the Meta App credentials and exact local
+redirect URI instead:
+
+```dotenv
+META_APP_ID=your-meta-app-id
+META_APP_SECRET=your-meta-app-secret
+META_OAUTH_REDIRECT_URI=http://localhost:8765/callback
+```
+
+Add that same redirect URI to the Meta App's valid OAuth redirect URIs. Never
+commit or print the App Secret. The OAuth script requests `ads_read`,
+`pages_show_list`, and `pages_read_engagement`, exchanges the browser login for
+a long-lived User token, retrieves the Page token for Steele Page
+`114421101975106`, and writes `META_USER_ACCESS_TOKEN`,
+`META_PAGE_ACCESS_TOKEN`, and the backward-compatible `META_ACCESS_TOKEN` to
+this ignored file. It refuses to save tokens if the required permissions or
+Steele Page are missing.
+
 ## Running the scripts
 
 > [!CAUTION]
-> These commands contact live Shopify or Google APIs. Use them only with
+> These commands contact live Shopify, Google, or Meta APIs. Use them only with
 > authorization. Several reports also contain hard-coded property IDs or date
 > ranges. Inspect the relevant script before running it for a new investigation.
 
@@ -335,6 +356,12 @@ Current GA4 script behavior:
 
 ### Meta Ads
 
+> **Incomplete discovery:** Meta work had only just begun when the project
+> paused. The saved listings are first pages, and all 15 saved object-story
+> metadata and content requests failed with permission errors. These scripts
+> and files do not establish a complete Meta connector, performance dataset,
+> or dashboard. They are retained as historical research evidence.
+
 Run the small discovery requests:
 
 ```bash
@@ -343,12 +370,33 @@ uv run python -m scripts.meta.list_campaigns
 uv run python -m scripts.meta.list_adsets
 uv run python -m scripts.meta.list_ads
 uv run python -m scripts.meta.inspect_creative
+uv run python -m scripts.meta.inspect_object_stories
 ```
+
+Generate or refresh the personal long-lived Meta tokens:
+
+```bash
+uv run python -m scripts.meta.authorize_meta
+```
+
+This command opens Facebook Login in the default browser and briefly listens on
+`localhost:8765` for the OAuth callback. Ads discovery uses the User token;
+object-story discovery uses the Page token. The script never prints either
+token. `pages_read_user_content` is not requested because it is not currently
+available to this app; comment access remains a separate permission-dependent
+discovery question.
 
 The listing scripts print accessible ad accounts, campaigns, ad sets, and ads
 to standard output. `inspect_creative.py` compares 15 example Steele Creatives
-and prints their complete JSON responses. The listing scripts do not paginate
-or save output files.
+and prints their complete JSON responses. `inspect_object_stories.py` reuses
+that maintained Creative list and the saved Creative comparison to inspect each
+referenced `effective_object_story_id`. For each available object story, it
+first attempts Graph API field-metadata discovery and then requests conservative
+post, attachment, permalink, media-reference, and summary-level engagement
+fields. A metadata or object-story failure is saved for that Creative without
+stopping the remaining examples. The complete results are printed and saved to
+`outputs/meta_discovery/object_stories_of_15_ads.json`. The listing scripts do
+not paginate or save output files.
 
 ### Dependency management
 
@@ -460,6 +508,13 @@ product-intelligence-discovery/
   account.
 - `inspect_creative.py` compares 15 example Steele Ad Creatives and prints
   their complete JSON structures.
+- `authorize_meta.py` runs the local browser OAuth code flow, exchanges the
+  result for a long-lived User token, verifies the Steele Page assignment, and
+  saves separate User and Page tokens without printing them.
+- `inspect_object_stories.py` reads those same 15 maintained Creative examples
+  and their saved `effective_object_story_id` values, attempts supported field
+  metadata discovery, then saves each raw object-story response or individual
+  error without following related media objects.
 - `__init__.py` enables module-style execution.
 
 ### `config/`
@@ -481,6 +536,9 @@ product-intelligence-discovery/
 - `shopify_orders/` contains fixed-window order and order-line CSV exports.
 - `discovery/` contains the fixed order-level reconciliation CSV and an earlier
   ShopifyQL-versus-GA4 reconciliation workbook.
+- `meta_discovery/` contains saved Meta listing and Creative evidence. The
+  object-story script writes its 15-example comparison to
+  `object_stories_of_15_ads.json` when it is run.
 
 Outputs are evidence tied to their original execution conditions. Do not assume
 they are current, exhaustive, or automatically reproducible without checking
@@ -579,6 +637,12 @@ across a wider window or the older property.
   printed layout; it is not a general data pipeline.
 - The item-performance report is limited to 50 rows.
 - Saved outputs are snapshots and may be stale.
+- Personal Meta User tokens generally last about 60 days. Page tokens can still
+  be invalidated if the user loses Page access, revokes the app, changes account
+  security settings, or Meta invalidates the authorization.
+- The Meta object-story inspection depends on the saved 15-Creative comparison,
+  makes separate metadata and normal requests, and deliberately does not
+  paginate, retry, or follow attachment and media IDs.
 - GA4 Data API reports are grouped analytics tables, not raw browser-event
   storage.
 
@@ -620,6 +684,9 @@ decisions:
    and measure coverage by day and Shopify source.
 7. Complete the source-discovery handoff, then implement production ingestion,
    storage, and dashboards in their dedicated repositories.
+8. Treat the 15 object-story permission failures as an open Meta access
+   question. Confirm whether this detail is needed under the Dalgo plan before
+   continuing API discovery.
 
 ## Keeping this README current
 
