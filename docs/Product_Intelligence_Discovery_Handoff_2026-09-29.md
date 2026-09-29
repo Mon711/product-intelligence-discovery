@@ -106,25 +106,6 @@ As of this handoff, the public [Dalgo GitHub organization](https://github.com/Da
 
 Dalgo's public history also shows a shift toward helping teams use data in regular decisions, with native charts and dashboards described in a [Tech4Dev Dalgo 2.0 article](https://projecttech4dev.org/dalgo-2-0-from-pipelines-to-actionable-insights/). That is potentially relevant to a discovery process focused on business questions. Confirm the exact product version, features, permissions, and support included in Creatnet's arrangement directly with Tech4Dev.
 
-## A practical path for discovery without code
-
-The aim is to turn past technical evidence into a small, agreed business and delivery scope. Each step should produce something a person can review without running this repository.
-
-1. **Reconfirm the decisions.** Interview leadership, e-commerce, marketing, and design/buying. Ask each person what decision they make, how often, what they use now, where they disagree, and what action a useful answer would change. Select the first few decisions before choosing charts.
-2. **Define the measures.** For each chosen question, write the metric name, plain-language meaning, source of authority, formula, date/time zone, currency, refund and attribution rules, level of detail, and owner. Start with revenue, orders, product demand, inventory availability, product views, cart actions, and advertising spend where relevant.
-3. **Make a source inventory.** With source owners, record the exact Steele Shopify store(s), GA4 property and web stream(s), Meta ad account(s), and any new sources. Record access owner, historical range, refresh needs, privacy constraints, and whether the source is reliable enough for the selected questions.
-4. **Review Dalgo with Tech4Dev.** Walk through the selected sources and the known July reconciliation. Ask which connectors and streams work, what historical backfill and refreshes Dalgo will provide, how failed runs are exposed, and how Creatnet will read the aggregated data. List any connector gaps that Creatnet must implement in the Dalgo repository. Record the contract boundary and each team's owner for the handoff.
-5. **Validate one narrow end-to-end example.** Choose one product-level question and one closed date range. Trace it from source report through Dalgo's aggregated data into Creatnet's analysis, compare IDs and totals, investigate differences, and record the limits. This tests both sides of the data handoff.
-6. **Agree the first deliverable.** Document the audience, 3–5 questions it must answer, accepted definitions, source coverage, freshness target, known exclusions, Dalgo and Creatnet owners, review date, and evidence needed to call it useful. Plan later ML and image features against the same trusted data foundation.
-
-### Questions worth taking to the first Tech4Dev discussion
-
-- Which of Shopify, GA4, and Meta Ads can Dalgo connect in **our** environment today, and which specific objects, fields, and history can each connection provide? What interface, review process, and maintenance arrangement should a Creatnet-built connector use in the Dalgo repository?
-- Who sets up credentials, refreshes, backfills, warehouse preparation, and quality checks? How will Creatnet see and resolve a failed or stale run?
-- Where will the database be hosted, how will Creatnet's analytics code read it, and how can Creatnet export the data and its work if the arrangement changes?
-- Can we keep Shopify commercial measures distinct from GA4 behaviour and clearly label selected-window coverage gaps?
-- What is the agreed first data handoff milestone and acceptance test? Are any Dalgo charts or reports useful as supporting tools while Creatnet builds its analytics experience?
-
 ## Glossary for new readers
 
 **API** means an interface through which one program asks another for data; the scripts used Shopify, Google, and Meta APIs to learn what each would return. **Schema** means the available fields and their types; a field appearing in a schema does not mean Steele fills it in. **Connector** means the configured route that reads data from a source. **Warehouse** means the place where copied and prepared data can be joined and queried. **Transformation** means cleaning or reshaping source data into measures people can use. **Reconciliation** means comparing two sources over a clearly defined population and date range to find agreements and differences. **Grain** means what one row represents, such as an order, order line, product per day, or campaign per day. **Attribution** means the rules a platform uses to credit a visit or purchase to a marketing source. **Source of authority** means the system trusted for a particular fact; Shopify is the commercial authority here, while GA4 describes captured website behaviour.

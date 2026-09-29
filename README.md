@@ -676,9 +676,9 @@ across a wider window or the older property.
 ## Technical follow-ups from earlier research
 
 The [current handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
-sets out the immediate, mostly non-code product discovery path. The following
-checks remain useful if a specific Dalgo connector gap, metric definition, or
-analytics question requires deeper technical evidence:
+summarizes the project's direction, completed research, and remaining unknowns.
+The following checks remain useful if a specific Dalgo connector gap, metric
+definition, or analytics question requires deeper technical evidence:
 
 1. Search the 25 absent order IDs across a wider period in the current and older
    GA4 properties.
