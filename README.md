@@ -1,5 +1,14 @@
 # Product Intelligence Discovery
 
+> [!IMPORTANT]
+> **Project direction changed in September 2026.** Creatnet has signed a deal
+> to use Project Tech4Dev's Dalgo platform. The custom database, connectors,
+> dashboard build, and phased roadmap described below are historical plans,
+> not current implementation instructions. Start with
+> [the current discovery handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
+> for the confirmed direction, completed findings, caveats, and open questions.
+> Meta discovery was only at an early exploratory stage when work paused.
+
 This repository contains small Python tools and saved evidence used to discover,
 test, and document data available from Shopify, Google Analytics 4 (GA4), and
 Meta Ads for the Steele Product Intelligence project.
@@ -614,8 +623,9 @@ decisions:
 
 ## Keeping this README current
 
-This README is the authoritative context and handoff document for the
-repository. It must be reviewed and updated whenever the project changes.
+The current discovery handoff linked above is the authority for project
+direction. This README explains the repository's code and historical research.
+It must be reviewed and updated whenever that code or research changes.
 
 Any change that adds, removes, renames, or alters code, scripts, folders,
 commands, dependencies, configuration, generated outputs, verified findings,
@@ -633,10 +643,9 @@ the only available explanation of the repository.
 
 If this README is the only project context available, use the following rules:
 
-1. **Treat this repository as discovery only.** Do not propose adding the
-   production application, database, dashboards, schedulers, deployment, Meta
-   connector, chatbot, or ML system here. Under the current plan, those belong
-   in separate repositories.
+1. **Treat this repository as discovery only.** Read the current discovery
+   handoff before using the historical custom-build sections below. Dalgo is
+   now the intended platform; its contracted scope has not been documented here.
 2. **Inspect before changing assumptions.** Property IDs, API versions, schemas,
    date windows, and saved outputs can become stale.
 3. **Do not run live API scripts unless explicitly authorized.** Syntax checks
