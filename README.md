@@ -2,9 +2,11 @@
 
 > [!IMPORTANT]
 > **Project direction changed in September 2026.** Creatnet has signed a deal
-> to use Project Tech4Dev's Dalgo platform. The custom database, connectors,
-> dashboard build, and phased roadmap described below are historical plans,
-> not current implementation instructions. Start with
+> to use Project Tech4Dev's Dalgo platform for data aggregation and the
+> database. Creatnet remains responsible for analytics, dashboards, later ML
+> work, and any source connector Dalgo lacks; needed connectors will be built
+> in the Dalgo repository. The product brief's own-database design is
+> superseded, while most of its product goals remain relevant. Start with
 > [the current discovery handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
 > for the confirmed direction, completed findings, caveats, and open questions.
 > Meta discovery was only at an early exploratory stage when work paused.
@@ -18,8 +20,9 @@ Meta Ads for the Steele Product Intelligence project.
 > Intelligence research, API exploration, schema inspection, data-quality
 > testing, and reconciliation. It is not the production Product Intelligence
 > application, ingestion service, database, dashboard, or analytics platform.
-> Under the current plan, all implementation after discovery will happen in
-> other repositories. That plan may change later, but until it does, do not add
+> Production connectors, if needed, belong in the Dalgo repository; Creatnet's
+> analytics and other product implementation will be separate from this
+> discovery repository. Do not add
 > production application code, database migrations, scheduled jobs, dashboard
 > code, or deployment infrastructure here.
 
@@ -34,7 +37,7 @@ Meta Ads for the Steele Product Intelligence project.
 - [Project structure and file responsibilities](#project-structure-and-file-responsibilities)
 - [Verified findings](#verified-findings)
 - [Known limitations and open questions](#known-limitations-and-open-questions)
-- [Recommended next discovery work](#recommended-next-discovery-work)
+- [Technical follow-ups from earlier research](#technical-follow-ups-from-earlier-research)
 - [Keeping this README current](#keeping-this-readme-current)
 - [Guidance for AI assistants](#guidance-for-ai-assistants)
 
@@ -61,15 +64,17 @@ as:
 - Where does the customer funnel lose people?
 - Which commercial totals are trustworthy, and why do platforms disagree?
 
-The broader product plan is to create a governed database and dashboard layer
-that combines these sources while keeping metric definitions, source lineage,
-time zones, currency, and data-quality caveats explicit.
+The broader product plan is to use Dalgo for data aggregation and the database,
+then build Creatnet's analytics and dashboard experience on that data. Metric
+definitions, source lineage, time zones, currency, and data-quality caveats
+still need to be explicit. Creatnet will build a missing source connector in
+the Dalgo repository if an existing Dalgo integration does not meet the need.
 
 ### Planned product phases
 
-1. **Database and dashboard foundation:** reliable source ingestion, a
-   reasonably normalized database, daily rollups, reconciliation, source-health
-   monitoring, and leadership-ready dashboards.
+1. **Data and dashboard foundation:** Dalgo aggregation and database, reliable
+   source connections, reconciliation and source-health checks, followed by
+   Creatnet analytics and leadership-ready dashboards.
 2. **Focused vision-model experiment:** test whether product and creative images
    can provide useful design or e-commerce signals.
 3. **Natural-language query interface:** allow users to ask questions against
@@ -77,12 +82,13 @@ time zones, currency, and data-quality caveats explicit.
 4. **Automated insight and mature vision layers:** anomaly detection,
    forecasting, opportunity flags, and reviewed product/creative intelligence.
 
-These are product goals, not features implemented in this repository.
+These are product goals, not features implemented in this repository. Their
+order and timing need review now that Dalgo provides the data foundation.
 
 ## Repository purpose and boundaries
 
 The job of this repository is to reduce uncertainty before production design
-and implementation begin elsewhere.
+and implementation in the Dalgo repository and Creatnet's product code.
 
 ### In scope here
 
@@ -93,7 +99,7 @@ and implementation begin elsewhere.
 - Compare Shopify orders with GA4 purchase events and item rows.
 - Identify reliable cross-source identifiers and mismatched definitions.
 - Record verified findings, likely explanations, limitations, and open
-  questions for database and dashboard design.
+  questions for Dalgo integration, analytics, and dashboard design.
 
 ### Out of scope here
 
@@ -106,10 +112,11 @@ and implementation begin elsewhere.
 - Production monitoring, retry orchestration, deployment, or CI/CD.
 - Chatbot, ML, or vision-model production features.
 
-Under the current plan, those capabilities belong in separate repositories
-created for the production system. Do not turn the scripts here into a
-production framework. Discovery scripts should remain small, explicit, and easy
-for a beginner to read and change.
+Under the current plan, Dalgo handles aggregation and the database; Creatnet
+builds any missing production connector in the Dalgo repository and owns the
+analytics, dashboards, and later ML work. Do not turn the scripts here into a
+production framework. Discovery scripts should remain small, explicit, and
+easy for a beginner to read and change.
 
 ## Current state
 
@@ -138,7 +145,7 @@ The repository currently provides:
 The most mature work is the Shopify/GA4 investigation for 1-7 July 2026. It
 established strong identifier mappings and exposed a GA4 purchase-coverage gap
 for the selected window. It did not finish the complete GA4 discovery required
-for production database design.
+for Dalgo integration and Creatnet's analytics design.
 
 ## How the discovery works
 
@@ -155,7 +162,7 @@ flowchart LR
     MS --> MO["Ad-account, Creative, and object-story outputs"]
     SO --> R["Shopify/GA4 reconciliation"]
     GO --> R
-    R --> E["Discovery findings and database-design evidence"]
+    R --> E["Discovery findings for Dalgo integration and analytics"]
 ```
 
 The code is intentionally divided into two layers:
@@ -620,9 +627,10 @@ across a wider window or the older property.
   tax, shipping, refunds, returns, cancellations, and current totals.
 - **GA4 is the behavioural and attribution source** for traffic, engagement,
   product interaction, funnel behaviour, and captured purchase signals.
-- **The future Product Intelligence database will be the governed reporting
-  layer**, but it must preserve each source's meaning, raw identifiers, lineage,
-  extraction window, and reconciliation status.
+- **Dalgo's aggregated database will provide the data foundation** for
+  Creatnet's reporting. The combined reporting must preserve each source's
+  meaning, raw identifiers, lineage, extraction window, and reconciliation
+  status.
 
 ## Known limitations and open questions
 
@@ -665,10 +673,12 @@ across a wider window or the older property.
 - Would later journey-level or ML use cases require GA4 BigQuery raw-event
   export instead of Data API summaries?
 
-## Recommended next discovery work
+## Technical follow-ups from earlier research
 
-Keep the remaining work focused on questions needed for production data-model
-decisions:
+The [current handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
+sets out the immediate, mostly non-code product discovery path. The following
+checks remain useful if a specific Dalgo connector gap, metric definition, or
+analytics question requires deeper technical evidence:
 
 1. Search the 25 absent order IDs across a wider period in the current and older
    GA4 properties.
@@ -682,8 +692,10 @@ decisions:
    meanings precisely.
 6. Repeat fixed-window reconciliation across several closed historical weeks
    and measure coverage by day and Shopify source.
-7. Complete the source-discovery handoff, then implement production ingestion,
-   storage, and dashboards in their dedicated repositories.
+7. Use the current handoff to review Dalgo's actual source coverage. Build any
+   missing production connector in the Dalgo repository, then validate Dalgo's
+   aggregation and database handoff before Creatnet builds analytics and
+   dashboards.
 8. Treat the 15 object-story permission failures as an open Meta access
    question. Confirm whether this detail is needed under the Dalgo plan before
    continuing API discovery.
@@ -711,8 +723,10 @@ the only available explanation of the repository.
 If this README is the only project context available, use the following rules:
 
 1. **Treat this repository as discovery only.** Read the current discovery
-   handoff before using the historical custom-build sections below. Dalgo is
-   now the intended platform; its contracted scope has not been documented here.
+   handoff before using the earlier build sections below. Dalgo handles data
+   aggregation and the database; Creatnet owns missing connectors in the Dalgo
+   repository, analytics, dashboards, and later ML. Exact contracted details
+   have not been documented here.
 2. **Inspect before changing assumptions.** Property IDs, API versions, schemas,
    date windows, and saved outputs can become stale.
 3. **Do not run live API scripts unless explicitly authorized.** Syntax checks
