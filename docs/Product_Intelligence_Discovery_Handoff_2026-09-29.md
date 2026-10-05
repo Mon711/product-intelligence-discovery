@@ -70,11 +70,23 @@ There are important **gaps**. A GA4 metadata list means a field exists in GA4 ge
 
 ### Meta Ads work completed
 
-Meta work had only just begun when the project paused. The files below show preparatory access and object-structure checks, not a completed source discovery.
+At the September handoff, Meta work had only just begun when the project paused. The historical files below show preparatory access and object-structure checks, not a completed source discovery.
 
 The saved results show access to three Meta ad accounts and first pages of 25 campaigns, 25 ad sets, and 25 ads for the selected Steele account. These are **first pages**, so the counts are not totals. A comparison of 15 selected ad creatives saved fields such as creative ID, name, thumbnail, object type, URL tags, object-story reference, and, where present, asset-feed or story specifications. This helps identify how ad and creative objects are related.
 
 An OAuth flow and object-story script were added as an explicitly unfinished experiment. The saved object-story file contains 15 attempted examples, each with an object-story ID, but **all 15 metadata requests and all 15 object-story requests failed with HTTP 400 permission errors referencing pages_read_engagement or Page Public Content Access**. The file therefore documents an access limitation, not retrieved engagement, post, comment, or media detail. This does not establish whether the correct permission was approved, granted to the current user, or usable for these objects. No saved Meta spend, impression, click, purchase, ROAS, or full pagination study supports a marketing-performance dashboard yet.
+
+### Meta reader update — 5 October 2026
+
+A separate local ads-only reader now lives in `meta_discovery/reader.py`, with evidence export in `meta_discovery/reporting.py` and the command `scripts.meta.export_ads_report`. It locks configuration to Steele ad account `2313037395632947` and app `2262542241238863`, validates a user token with only `ads_read` and optional `public_profile`, allows only approved GET endpoints/fields, ignores pagination URLs, redacts credential-bearing details, and saves new JSON/CSV runs with completion/failure manifests. It uses the existing Python environment and dependencies. The older Page-dependent OAuth experiment remains separate.
+
+Live checks on 5 October confirmed valid advertising access, AUD currency, and Australia/Sydney time zone using the configured API v26.0. A GET Insights request for **1 September 2026** returned **38 ad/day rows**, including spend, impressions, clicks, purchase-related actions/values, and website purchase ROAS. Those checks prove that the selected report fields are available for that sample; they do not prove agreement with Ads Manager, completeness of purchase tracking, or matching to Shopify orders.
+
+The initial inventory run collected **190 campaigns across 2 pages, 639 ad sets across 7 pages, and 3,114 ads across 32 pages**, under Meta's default status coverage. Its broad creative-library request was interrupted; the subsequent attempt was rate-limited with Meta code `80004`. Meta's numeric headers reported exhausted processing-time allowance (`total_cputime: 101`) and an estimated **51 minutes** to regain access at the last check. These are run-specific observations, not a permanent service limit. Both partial runs under `outputs/meta_discovery/reports/` are marked **failed**, and **no full September performance export has been verified**.
+
+The final reader requests up to 500 basic inventory rows per page, divides insights into inclusive seven-day windows, and reads only unique creative IDs referenced by collected ads with reported delivery in the requested window. This avoids unrelated creative-library entries. Optional creative access failures are recorded without requesting broader permissions. The revised creative path and complete month export have offline coverage but remain unverified live until the API allowance recovers. Reports preserve date/settings/currency/time-zone metadata, missing values, distinct action types, and the distinction between current creative inventory and historical performance. No reach sum is produced. See the README's Meta Ads section for commands and interpretation.
+
+This dated update applies to the Markdown handoff. Its companion DOCX remains the original 29 September snapshot. No production connector, database, schedule, advertising mutation, or conversion-event submission was added.
 
 ## The strongest findings across sources
 

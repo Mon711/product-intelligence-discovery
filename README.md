@@ -108,7 +108,7 @@ and implementation in the Dalgo repository and Creatnet's product code.
 - Production credential and secret management.
 - A backend API, user authentication, or role management.
 - Frontend dashboards or saved dashboard views.
-- Meta Ads ingestion.
+- Production Meta Ads ingestion (bounded local discovery reports are in scope).
 - Production monitoring, retry orchestration, deployment, or CI/CD.
 - Chatbot, ML, or vision-model production features.
 
@@ -136,6 +136,8 @@ The repository currently provides:
 - Shared Meta access-token loading and personal long-lived OAuth authorization,
   plus first-page ad-account, campaign, ad-set, and ad listing, a 15-Creative
   comparison, and object-story inspection for the same 15 examples.
+- A separate, account-locked GET-only Meta advertising reader with token checks,
+  full pagination, daily performance exports, and offline safety tests.
 - GA4 account/property listing, metadata inspection, event counts, item
   performance, purchase events, and purchase-item reports.
 - Saved Shopify, GA4, and Meta outputs for inspection.
@@ -159,7 +161,7 @@ flowchart LR
     MP --> MS["Meta scripts"]
     SS --> SO["Schema, order, and order-line outputs"]
     GS --> GO["Metadata, event, item, and purchase outputs"]
-    MS --> MO["Ad-account, Creative, and object-story outputs"]
+    MS --> MO["Ad-account, Creative, object-story, and daily advertising reports"]
     SO --> R["Shopify/GA4 reconciliation"]
     GO --> R
     R --> E["Discovery findings for Dalgo integration and analytics"]
@@ -243,17 +245,40 @@ contents into documentation, issues, prompts, or logs.
 
 ### Meta configuration
 
-Create `config/meta/.env` with the Meta access token:
+For the new ads-only reader, save these values in ignored `config/meta/.env`:
+
+```dotenv
+META_AD_ACCOUNT_ID=2313037395632947
+META_APP_ID=2262542241238863
+META_USER_ACCESS_TOKEN=your-fresh-user-token
+META_APP_SECRET=your-app-secret
+META_GRAPH_API_VERSION=v26.0
+```
+
+Generate a User Token for this app in Meta Graph API Explorer, requesting only
+`ads_read` (basic `public_profile` may also be present), then extend it in Meta's
+Access Token Debugger. The reader rejects additional permissions, an unexpected
+app/account, and expired credentials. `ads_management` and `business_management`
+are never needed. A developer-app use-case label does not determine the token's
+granted permissions. Never paste credentials into chat or version history.
+
+The reader uses this file directly; it does not silently use shell overrides or
+the legacy token. The App Secret enables automatic token validation and the
+`appsecret_proof` signature that authenticates advertising requests. Supported
+versions are `v25.0` and `v26.0`; the default is `v26.0`. No Facebook Page token,
+Page permission, callback URL, or browser OAuth flow is required for this reader.
+
+Older experiments instead accept the legacy setting:
 
 ```dotenv
 META_ACCESS_TOKEN=your-access-token
 ```
 
-Meta discovery loads this file before reading the access token. An exported
+The old Meta scripts load this file before reading the access token. An exported
 `META_ACCESS_TOKEN` environment variable takes precedence. The authentication
 helper does not make or validate any Meta API requests.
 
-For the local personal OAuth flow, add the Meta App credentials and exact local
+For the older Page-dependent personal OAuth experiment, add the Meta App credentials and exact local
 redirect URI instead:
 
 ```dotenv
@@ -363,7 +388,112 @@ Current GA4 script behavior:
 
 ### Meta Ads
 
-> **Incomplete discovery:** Meta work had only just begun when the project
+For a beginner-friendly explanation of the new code and the wider project, read
+the [Meta Ads code learning handoff](docs/Meta_Ads_Code_Learning_Handoff_2026-10-05.md).
+Its [selected-source learning pack](exports/Meta_Ads_Learning_Pack_2026-10-05.zip)
+includes the exact reader, exporter, command, and offline tests for another chatbot
+to explain. It excludes credentials and raw advertising exports.
+
+#### Read-only advertising report
+
+Run these commands from the repository root. They use the existing project
+environment and contact Meta's live API without changing advertising objects.
+
+Check the token and Steele account, without writing report files:
+
+```bash
+rtk proxy uv run python -m scripts.meta.export_ads_report --check-only
+```
+
+`--check-only` validates the token's app, permissions, and expiry, then reads the
+account's name, currency, and time zone. Expect a confirmation of Steele account
+`act_2313037395632947` and `ads_read, public_profile` (or `ads_read` alone).
+
+Export the fixed inclusive September 2026 window:
+
+```bash
+rtk proxy uv run python -m scripts.meta.export_ads_report
+```
+
+Choose a smaller window with `--since` (first date) and `--until` (last date):
+
+```bash
+rtk proxy uv run python -m scripts.meta.export_ads_report --since 2026-09-01 --until 2026-09-01
+```
+
+Dates are calendar dates in the ad account's time zone, not your Mac's time zone.
+The command allows 1–31 days, reads the account's current campaigns, ad sets, and
+ads across all returned pages (requesting up to 500 rows per page), then reads
+ad/day insights in inclusive
+seven-day chunks. It then reads each unique creative referenced by collected ads
+that reported delivery in the chosen window. It excludes unrelated library
+entries and ads without reported delivery, reducing API processing costs.
+It uses the ad sets' unified attribution settings and
+`action_report_time=impression`: conversions are assigned to the date of the ad
+impression, rather than necessarily the purchase date. It never submits events,
+creates background reports, or uses POST/DELETE requests. Pagination reuses the
+fixed approved endpoint and its cursor; credential-bearing next URLs are ignored.
+
+Every run creates a unique folder under `outputs/meta_discovery/reports/`, leaving
+historical exports unchanged. Expect progress messages and a final folder path.
+Within that folder:
+
+- `manifest.json` records completion/failure, account, currency, time zone,
+  dates, collection time, settings, page/row counts, missing metrics, and caveats.
+- Object JSON/CSV files contain current inventory, including the creatives'
+  available destination/link tracking fields and ad sets' attribution settings.
+  Creative IDs come from the collected ads; each selected creative is read once
+  and the manifest records the creative request count.
+- `insights_<since>_to_<until>.json` contains each date window's returned data
+  pages, with credential-bearing pagination information excluded.
+- `ad_daily_insights.csv` has one row per reported ad/day; nested action fields
+  remain JSON text so their original meaning is preserved.
+- `insight_actions.csv` separates action counts, values, and website ROAS by
+  action type and metric. ROAS means return on ad spend; it is a ratio, not money.
+
+JSON preserves missing fields; CSV leaves them blank. An absent metric is not
+automatically zero. Purchase action types can overlap and must not be added
+together. Reach must not be summed across ads/days. Current creative/settings
+inventory is not a reconstruction of how each ad looked during September.
+If detailed creative fields return a field/permission error, the reader tries
+only basic `id,name`, records the limitation in the manifest, and keeps performance
+reporting available. It never asks for more permissions. Ads missing from the
+current inventory or without a creative ID are also recorded explicitly.
+Listings use Meta's default status coverage, with no custom status filters;
+complete pagination does not imply access to every historical/deleted object.
+
+Only a manifest marked `complete` represents a completed export. API errors
+stop the run with safe diagnostics; a failed run keeps any completed files and
+a `failed` manifest. Permission failures never trigger broader permission requests.
+Meta error `80004` means the account's API allowance is exhausted. The reader
+records numeric usage headers and reports Meta's recovery estimate when present;
+it stops instead of retrying immediately if recovery is expected to take minutes.
+Wait for that allowance to recover before starting another run. Rate limits may
+reflect processing time as well as request counts.
+An export is not proof of agreement with Ads Manager or Shopify: align the dates,
+filters, attribution, and metrics before comparison. No customer-level data is
+requested, and outputs remain local.
+
+Run offline checks from the repository root:
+
+```bash
+rtk proxy uv run python -m unittest discover -s tests -v
+```
+
+`-s tests` selects the test folder and `-v` prints each test result. These tests
+use fake API responses, make no live API calls, install no additional test
+dependencies, and write export fixtures only to temporary directories. Expect
+all tests to finish with `OK`.
+
+API field/version references: Meta's official [Python Business SDK configuration](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/apiconfig.py),
+[account GET endpoints](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adaccount.py),
+[Insights fields](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adsinsights.py),
+and [creative fields](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adcreative.py).
+No SDK dependency was installed; the reader uses the existing `requests` library.
+
+#### Historical experiments
+
+> **Incomplete historical discovery:** Meta work had only just begun when the project
 > paused. The saved listings are first pages, and all 15 saved object-story
 > metadata and content requests failed with permission errors. These scripts
 > and files do not establish a complete Meta connector, performance dataset,
@@ -470,6 +600,12 @@ product-intelligence-discovery/
 - `auth.py` loads `config/meta/.env`, reads `META_ACCESS_TOKEN`, and raises a
   clear error when it is missing. It does not make API requests or validate the
   token.
+- `reader.py` provides the separate ads-only configuration, validated GET client,
+  account/endpoint/field restrictions, credential-safe errors, bounded retries,
+  cursor pagination, and reads of collected creatives referenced by reporting ads. Old helpers keep their
+  existing behaviour.
+- `reporting.py` splits date windows, writes unique local JSON/CSV evidence,
+  records completeness and reporting definitions, and keeps action types separate.
 - `__init__.py` marks the directory as an importable Python package.
 
 ### `scripts/shopify/`
@@ -505,6 +641,8 @@ product-intelligence-discovery/
 
 ### `scripts/meta/`
 
+- `export_ads_report.py` validates the approved Steele account/token and exports
+  current inventory plus daily ad insights; `--check-only` only tests access.
 - `test_meta_connection.py` lists the accessible Meta ad accounts with their
   IDs and account statuses.
 - `list_campaigns.py` lists the first page of campaigns for the Steele
@@ -529,6 +667,7 @@ product-intelligence-discovery/
 - `config/shopify/.env` stores local Shopify credentials.
 - `config/ga4/ga4_oauth_client.json` stores the Google OAuth client definition.
 - `config/ga4/ga4_token.json` stores the local authorized-user token.
+- `config/meta/.env` stores the local Meta app/account settings and secret credentials.
 - `.gitkeep` files retain otherwise-empty configuration directories without
   committing credentials.
 
@@ -546,6 +685,8 @@ product-intelligence-discovery/
 - `meta_discovery/` contains saved Meta listing and Creative evidence. The
   object-story script writes its 15-example comparison to
   `object_stories_of_15_ads.json` when it is run.
+- `meta_discovery/reports/` contains separate timestamped ads-only report runs.
+  Read each run's manifest before relying on it; failed runs are partial evidence.
 
 Outputs are evidence tied to their original execution conditions. Do not assume
 they are current, exhaustive, or automatically reproducible without checking
