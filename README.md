@@ -720,6 +720,9 @@ the only available explanation of the repository.
 
 ## Guidance for AI assistants
 
+Read [AGENTS.md](AGENTS.md) for repository instructions, beginner-friendly
+communication requirements, read-only Meta access rules, and credential handling.
+
 If this README is the only project context available, use the following rules:
 
 1. **Treat this repository as discovery only.** Read the current discovery
