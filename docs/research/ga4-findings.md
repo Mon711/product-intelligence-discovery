@@ -1,11 +1,24 @@
 # GA4 Discovery — Current State
 
 **Steele Intel Product Intelligence Platform**  
-**Document status:** Current discovery snapshot — research is still in progress  
-**Last updated:** 21 July 2026  
-**Prepared for:** Karan and the Product Intelligence database-design team
+**Document status:** Detailed historical findings, with maintenance notes; discovery is incomplete
+**Findings collected:** 21 July 2026
+**Document maintained:** 5 October 2026 (organization and provenance; no live queries)
+**Original audience:** Karan and the Product Intelligence database-design team
 
 > This document separates confirmed project evidence from reasonable inference and open work. A field being available in GA4 metadata does not mean Steele is populating it, and an order being absent from one GA4 report window does not prove that it was never collected.
+
+> **Read the [project state](../project-state.md) first.** This report preserves
+> the July investigation. The September Dalgo decision supersedes its custom
+> database implementation direction; sections 10–11 are historical proposals,
+> not delivered features or instructions to build them here. The October checks
+> described in project state are reported by archived documentation, not rerun
+> for this maintenance change. Original Word snapshots are in
+> [reference](../reference/GA4_Discovery_Current_State.docx).
+>
+> **Revenue precision:** GA4's saved purchase report prints money to two decimal
+> places. Revenue matches below mean agreement at that displayed cent precision;
+> they do not establish equality of unrounded source values.
 
 ## Contents
 
@@ -18,7 +31,7 @@
 7. Verified dimensions and metrics
 8. Product and variant identity findings
 9. Purchase and transaction reconciliation findings
-10. Recommended GA4 database model
+10. Historical proposed GA4 database model
 11. Dashboard and insight use cases
 12. Data-quality, attribution, and reconciliation considerations
 13. Confirmed findings
@@ -58,9 +71,9 @@ Every important conclusion is marked as one of the following:
 
 **Verified — there is a selected-window coverage gap.** Shopify GraphQL returned **251** orders created during 1–7 July 2026: 231 Online Store, 16 Draft Orders, 2 Shop, and 2 Refundid/Returns Portal orders. GA4 contained 206 of the 231 Online Store orders, or **89.2%**. The remaining **25 Online Store orders (10.8%)** were absent from both the event-level and item-level GA4 reports for that same fixed window. This is an observed window-level gap, not proof that the transactions never appeared in another date window or property.
 
-**Verified — captured purchase items are reliable, but GA4 is not the commercial ledger.** GA4 preserved original purchase quantities even where Shopify's current quantity later fell to zero. GA4 `purchaseRevenue` exactly matched Shopify's current subtotal for 184 of 207 captured orders, and the most common difference from Shopify's current total was A$10 or A$12, consistent with shipping being excluded. Shopify remains authoritative for order state, returns, refunds, shipping, tax, and current commercial totals; GA4 is the behavioural and attribution source.
+**Verified — captured purchase items are reliable, but GA4 is not the commercial ledger.** GA4 preserved original purchase quantities even where Shopify's current quantity later fell to zero. GA4 `purchaseRevenue` matched at displayed cent precision Shopify's current subtotal for 184 of 207 captured orders, and the most common difference from Shopify's current total was A$10 or A$12, consistent with shipping being excluded. Shopify remains authoritative for order state, returns, refunds, shipping, tax, and current commercial totals; GA4 is the behavioural and attribution source.
 
-**Open — the discovery is not yet broad enough for the final database.** Traffic source, medium, campaign, landing page, device, geography, site search, site-level traffic, and checkout metrics appear in the property metadata or discussion evidence, but have not been saved in tested Steele reports. Exact dimension/metric compatibility has not been checked. The 25 missing Online Store order IDs have not been searched across a wider date window or the older Global property.
+**Open — the discovery is not yet broad enough for the final database.** Traffic source, medium, campaign, landing page, device, geography, site search, site-level traffic, and checkout metrics appear in the property metadata or discussion evidence, but have not been saved in tested Steele reports. Exact dimension/metric compatibility has not been checked. The July investigation had not searched the 25 missing Online Store order IDs across a wider window or the older Global property. See project state for the later reported wider-window check; an older-property search remains unverified.
 
 ### Database-design direction
 
@@ -119,7 +132,7 @@ The current scripts use the GA4 Data API to request grouped report tables. These
 
 ### 5.1 Authentication
 
-**Verified.** [`ga4_discovery/auth.py`](../ga4_discovery/auth.py) uses:
+**Verified.** [`ga4_discovery/auth.py`](../../ga4_discovery/auth.py) uses:
 
 - OAuth scope `https://www.googleapis.com/auth/analytics.readonly`;
 - a desktop OAuth client file at `config/ga4/ga4_oauth_client.json`;
@@ -136,7 +149,7 @@ This is appropriate for discovery by an authorised user. A production scheduled 
 | **Verified** | Property `268350484` | Every saved Data API script and output targets this property. Reports returned populated Steele ecommerce data. | The saved Admin API output, stream ID, stream URL, measurement ID, and property configuration are not retained. |
 | **Likely** | “Steele AU/NZ — GA4” | This display name and the decision to use it are recorded in the supplied discovery notes. | The display name is not present in a saved Admin API output file. |
 | **Likely** | Older “Steele Global” property `268365916` | The notes state that this property represents an outdated website and propose searching it for missing transactions. | No repository script output validates its display name, stream, current traffic, or suitability. |
-| **Open question** | GA4 account name and full property list | [`scripts/ga4/list_ga4_properties.py`](../scripts/ga4/list_ga4_properties.py) prints accessible accounts and properties. | Its output was not saved, so this document cannot reliably name the account or claim the list is complete. |
+| **Open question** | GA4 account name and full property list | [`scripts/ga4/list_ga4_properties.py`](../../scripts/ga4/list_ga4_properties.py) prints accessible accounts and properties. | Its output was not saved, so this document cannot reliably name the account or claim the list is complete. |
 
 ### 5.3 Why property `268350484` was selected
 
@@ -148,7 +161,7 @@ This is appropriate for discovery by an authorised user. A production scheduled 
 
 | API | Current project use | Simple explanation | Evidence |
 |---|---|---|---|
-| GA4 Admin API | Lists account and property summaries | Reads GA4 configuration and containers: which accounts/properties exist and, in future, which streams/settings belong to them. | [`scripts/ga4/list_ga4_properties.py`](../scripts/ga4/list_ga4_properties.py) uses `AnalyticsAdminServiceClient`. |
+| GA4 Admin API | Lists account and property summaries | Reads GA4 configuration and containers: which accounts/properties exist and, in future, which streams/settings belong to them. | [`scripts/ga4/list_ga4_properties.py`](../../scripts/ga4/list_ga4_properties.py) uses `AnalyticsAdminServiceClient`. |
 | GA4 Data API | Runs reports and reads report metadata | Returns analytics tables made from selected dimensions, metrics, filters, and date ranges. | All item, event, purchase, and metadata scripts use `BetaAnalyticsDataClient`. |
 
 Official supporting context: the [Admin API](https://developers.google.com/analytics/devguides/config/admin/v1) manages and reads Analytics configuration, while the [Data API](https://developers.google.com/analytics/devguides/reporting/data/v1) produces reporting data.
@@ -189,7 +202,7 @@ The table below focuses on fields that were actually used in successful project 
 | `eventName` | Dimension | Name of the tracked activity | Event type over a date range | **Verified — documented execution** | Establish which funnel and engagement events exist | No direct key | Raw event-count output was not saved. |
 | `eventCount` | Metric | Number of times an event occurred | Event type over a date range | **Verified — documented execution** | Event-volume and instrumentation checks | Compare only after definitions align | Current script uses a moving inclusive range. |
 | `date` | Dimension | GA4 reporting date | Day | **Verified — saved output** | Daily facts and reconciliation | Compared with Shopify Melbourne-created date | Property report timezone returned `Australia/Sydney`. |
-| `transactionId` | Dimension | Ecommerce transaction identifier | Transaction/day; transaction-item/day | **Verified — saved output** | Purchase facts and order reconciliation | Equals Shopify numeric order ID in all 207 fixed-window matches | Search beyond the selected window is still pending. |
+| `transactionId` | Dimension | Ecommerce transaction identifier | Transaction/day; transaction-item/day | **Verified — saved output** | Purchase facts and order reconciliation | Equals Shopify numeric order ID in all 207 fixed-window matches | Pending in the July snapshot; see project state for the later reported wider-window check. |
 | `itemId` | Dimension | Identifier sent for an ecommerce item | Item/variant; transaction-item | **Verified — saved output** | Variant-level product facts | Parses to Shopify product and variant IDs | Format is implementation-specific and must be validated. |
 | `itemName` | Dimension | Name sent for the ecommerce item | Item/variant; transaction-item | **Verified — saved output** | Human-readable product analysis | Matched Shopify title for 326/326 fixed-window pairs | Names can change and are not safe keys. |
 | `itemVariant` | Dimension | Specific variation, such as size | Item/variant; transaction-item | **Verified — saved output** | Size/variant performance | Matched Shopify variant title for 326/326 pairs | Variant labels are not stable identifiers. |
@@ -380,7 +393,7 @@ One order can contain several product variants. The transaction ID repeats once 
 
 ### 9.6 Revenue findings
 
-**Verified:** GA4 `purchaseRevenue` exactly matched Shopify current subtotal for 184 of 207 captured transactions. It matched Shopify current total for only 35 of 207. The most common `purchaseRevenue - currentTotal` differences were `-A$10` (117 orders) and `-A$12` (32 orders), consistent with common shipping charges being present in Shopify total but absent from GA4 purchase value.
+**Verified:** GA4 `purchaseRevenue` matched at displayed cent precision Shopify current subtotal for 184 of 207 captured transactions. It matched Shopify current total for only 35 of 207. The most common `purchaseRevenue - currentTotal` differences were `-A$10` (117 orders) and `-A$12` (32 orders), consistent with common shipping charges being present in Shopify total but absent from GA4 purchase value.
 
 **Verified:** the earlier July 9–16 comparison found zero exact matches between GA4 `itemRevenue` and ShopifyQL `net_sales` across 159 matched item rows. These are not equivalent fields: the tested GA4 report was filtered to purchase events, while Shopify net sales reflects discounts and sales reversals under Shopify reporting rules.
 
@@ -404,7 +417,7 @@ Changing ShopifyQL to Shopify GraphQL did not change GA4 coverage. It changed th
 
 <!-- LANDSCAPE_START -->
 
-## 10. Recommended GA4 database model
+## 10. Historical proposed GA4 database model
 
 The model below is deliberately practical. It separates grains that answer different questions and avoids forcing all GA4 fields into one wide table.
 
@@ -551,6 +564,10 @@ GA4 records a behavioural event at purchase time. Shopify order and line fields 
 
 ## 15. Open questions and unresolved issues
 
+These priorities describe the July snapshot. Consult [project state](../project-state.md)
+for later reported checks and the current direction; a completed historical check
+does not authorize running it again.
+
 <!-- LANDSCAPE_START -->
 
 | Question | Why it matters | Current evidence | Recommended test | Priority |
@@ -587,34 +604,34 @@ These investigations are more valuable for database design than testing a long l
 
 ### Repository code
 
-- [`ga4_discovery/auth.py`](../ga4_discovery/auth.py) — OAuth credentials, token refresh, and read-only scope.
-- [`scripts/ga4/list_ga4_properties.py`](../scripts/ga4/list_ga4_properties.py) — Admin API account/property listing.
-- [`scripts/ga4/list_ga4_event_counts.py`](../scripts/ga4/list_ga4_event_counts.py) — event names and counts over a moving range.
-- [`scripts/ga4/list_ga4_metadata.py`](../scripts/ga4/list_ga4_metadata.py) — property reporting metadata.
-- [`scripts/ga4/list_ga4_item_performance.py`](../scripts/ga4/list_ga4_item_performance.py) — top-50 item performance.
-- [`scripts/ga4/list_ga4_purchase_transactions.py`](../scripts/ga4/list_ga4_purchase_transactions.py) — fixed-date purchase-item report.
-- [`scripts/ga4/list_ga4_purchase_events.py`](../scripts/ga4/list_ga4_purchase_events.py) — fixed-date purchase-event report and response metadata.
-- [`scripts/shopify/export_shopify_orders.py`](../scripts/shopify/export_shopify_orders.py) — fixed-window Shopify order/order-line export and GA4 reconciliation.
-- [`shopify_discovery/shopify_client.py`](../shopify_discovery/shopify_client.py), [`config.py`](../shopify_discovery/config.py), and [`queries.py`](../shopify_discovery/queries.py) — Shopify access and schema support.
-- [`README.md`](../README.md), [`PROGRESS.md`](../PROGRESS.md), and [`pyproject.toml`](../pyproject.toml) — project workflow, status, and dependencies.
+- [`ga4_discovery/auth.py`](../../ga4_discovery/auth.py) — OAuth credentials, token refresh, and read-only scope.
+- [`scripts/ga4/list_ga4_properties.py`](../../scripts/ga4/list_ga4_properties.py) — Admin API account/property listing.
+- [`scripts/ga4/list_ga4_event_counts.py`](../../scripts/ga4/list_ga4_event_counts.py) — event names and counts over a moving range.
+- [`scripts/ga4/list_ga4_metadata.py`](../../scripts/ga4/list_ga4_metadata.py) — property reporting metadata.
+- [`scripts/ga4/list_ga4_item_performance.py`](../../scripts/ga4/list_ga4_item_performance.py) — top-50 item performance.
+- [`scripts/ga4/list_ga4_purchase_transactions.py`](../../scripts/ga4/list_ga4_purchase_transactions.py) — fixed-date purchase-item report.
+- [`scripts/ga4/list_ga4_purchase_events.py`](../../scripts/ga4/list_ga4_purchase_events.py) — fixed-date purchase-event report and response metadata.
+- [`scripts/shopify/export_shopify_orders.py`](../../scripts/shopify/export_shopify_orders.py) — fixed-window Shopify order/order-line export and GA4 reconciliation.
+- [`shopify_discovery/shopify_client.py`](../../shopify_discovery/shopify_client.py), [`config.py`](../../shopify_discovery/config.py), and [`queries.py`](../../shopify_discovery/queries.py) — Shopify access and schema support.
+- [`README.md`](../../README.md), [project state](../project-state.md), [change history](../change-history.md), and [`pyproject.toml`](../../pyproject.toml) — workflow, current context, historical changes, and dependencies. The former `PROGRESS.md` was removed in commit `92ec6b9`.
 
 ### Saved repository outputs
 
-- `outputs/GA4_metadata/metadata.txt` — saved property dimension/metric metadata.
-- `outputs/GA4_metadata/item_performace.txt` — top-50 product/variant metrics; filename retains the original spelling.
-- `outputs/GA4_metadata/item_purchases.txt` and `item_purchases_2.txt` — July 9–16 moving-window item purchase exports.
-- `outputs/GA4_metadata/purchase_events_2026-07-01_to_2026-07-07.txt` — 207 fixed-window event rows plus response metadata.
-- `outputs/GA4_metadata/purchase_items_2026-07-01_to_2026-07-07.txt` — 326 fixed-window transaction–item rows.
-- `outputs/shopify_orders/orders_2026-07-01_to_2026-07-07.csv` — 251 GraphQL order rows.
-- `outputs/shopify_orders/order_lines_2026-07-01_to_2026-07-07.csv` — 385 Shopify order-line rows.
-- `outputs/discovery/shopify_ga4_order_reconciliation_2026-07-01_to_2026-07-07.csv` — 251 order-level reconciliation rows.
-- `outputs/discovery/Shopify_GA4_purchase_reconciliation_2026-07-09_to_2026-07-16.xlsx` — earlier ShopifyQL-versus-GA4 reconciliation workbook.
-- `outputs/shopify_schema_fields/*.csv` — Shopify schema field inventories used to understand available product/order objects.
+- `evidence/ga4/metadata.txt` — saved property dimension/metric metadata.
+- `evidence/ga4/item-performance.txt` — top-50 product/variant metrics; filename spelling corrected during the October folder cleanup.
+- `evidence/ga4/item_purchases.txt` and `item_purchases_2.txt` — July 9–16 moving-window item purchase exports.
+- `evidence/ga4/purchase_events_2026-07-01_to_2026-07-07.txt` — 207 fixed-window event rows plus response metadata.
+- `evidence/ga4/purchase_items_2026-07-01_to_2026-07-07.txt` — 326 fixed-window transaction–item rows.
+- `evidence/shopify/orders/orders_2026-07-01_to_2026-07-07.csv` — 251 GraphQL order rows.
+- `evidence/shopify/orders/order_lines_2026-07-01_to_2026-07-07.csv` — 385 Shopify order-line rows.
+- `evidence/reconciliation/shopify_ga4_order_reconciliation_2026-07-01_to_2026-07-07.csv` — 251 order-level reconciliation rows.
+- `evidence/reconciliation/Shopify_GA4_purchase_reconciliation_2026-07-09_to_2026-07-16.xlsx` — earlier ShopifyQL-versus-GA4 reconciliation workbook.
+- `evidence/shopify/schema-fields/*.csv` — Shopify schema field inventories used to understand available product/order objects.
 
 ### Provided context
 
-- `ChatGPT Conversation Outputs.md` — curated record of prior discovery analysis, manual item-ID checks, event observations, and reconciliation reasoning.
-- `Steele Intel - Product Brief and Dev Roadmap.docx` — product scope, database principles, dashboards, metric governance, reconciliation, and future ML requirements.
+- `ChatGPT Conversation Outputs.md` — context supplied when the July report was written; this file is not retained in the current checkout, so its claims are secondary context rather than independently inspectable saved output.
+- [Original product brief](<../reference/Steele Intel - Product Brief and Dev Roadmap.docx>) — product goals and historical database/technology proposals. Read the current Dalgo direction in project state before using its recommendations.
 
 ### Expected evidence not found
 
@@ -662,4 +679,6 @@ These investigations are more valuable for database design than testing a long l
 
 ---
 
-**Document status:** Current discovery snapshot. The GA4 portion of the Product Intelligence database should not be treated as final until the P0 investigations in Section 15 are completed.
+**Document status:** Historical discovery findings with current maintenance notes.
+The proposed database model and July priorities are not a delivered specification;
+use [project state](../project-state.md) for the Dalgo direction and later reported checks.

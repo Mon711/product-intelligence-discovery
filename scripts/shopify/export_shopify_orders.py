@@ -22,17 +22,17 @@ ORDER_SEARCH_QUERY = (
 )
 MELBOURNE = ZoneInfo("Australia/Melbourne")
 
-ORDER_OUTPUT = REPO_ROOT / "outputs/shopify_orders/orders_2026-07-01_to_2026-07-07.csv"
-LINE_OUTPUT = REPO_ROOT / "outputs/shopify_orders/order_lines_2026-07-01_to_2026-07-07.csv"
+ORDER_OUTPUT = REPO_ROOT / "evidence/shopify/orders/orders_2026-07-01_to_2026-07-07.csv"
+LINE_OUTPUT = REPO_ROOT / "evidence/shopify/orders/order_lines_2026-07-01_to_2026-07-07.csv"
 RECONCILIATION_OUTPUT = (
     REPO_ROOT
-    / "outputs/discovery/shopify_ga4_order_reconciliation_2026-07-01_to_2026-07-07.csv"
+    / "evidence/reconciliation/shopify_ga4_order_reconciliation_2026-07-01_to_2026-07-07.csv"
 )
 GA4_PURCHASE_EVENTS = (
-    REPO_ROOT / "outputs/GA4_metadata/purchase_events_2026-07-01_to_2026-07-07.txt"
+    REPO_ROOT / "evidence/ga4/purchase_events_2026-07-01_to_2026-07-07.txt"
 )
 GA4_PURCHASE_ITEMS = (
-    REPO_ROOT / "outputs/GA4_metadata/purchase_items_2026-07-01_to_2026-07-07.txt"
+    REPO_ROOT / "evidence/ga4/purchase_items_2026-07-01_to_2026-07-07.txt"
 )
 
 MONEY_FIELDS = {

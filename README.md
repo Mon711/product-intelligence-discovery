@@ -1,216 +1,107 @@
 # Product Intelligence Discovery
 
-> [!IMPORTANT]
-> **Project direction changed in September 2026.** Creatnet has signed a deal
-> to use Project Tech4Dev's Dalgo platform for data aggregation and the
-> database. Creatnet remains responsible for analytics, dashboards, later ML
-> work, and any source connector Dalgo lacks; needed connectors will be built
-> in the Dalgo repository. The product brief's own-database design is
-> superseded, while most of its product goals remain relevant. Start with
-> [the current discovery handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
-> for the confirmed direction, completed findings, caveats, and open questions.
-> Meta discovery was only at an early exploratory stage when work paused.
+Small Python experiments and saved research for Steele's Shopify, Google
+Analytics 4 (GA4), and Meta Ads data. An API is an interface that lets these
+scripts request data from another system.
 
-This repository contains small Python tools and saved evidence used to discover,
-test, and document data available from Shopify, Google Analytics 4 (GA4), and
-Meta Ads for the Steele Product Intelligence project.
+This is a **discovery repository**: it checks access, available fields, data
+relationships, and quality. Dalgo is the chosen aggregation and database
+direction. Production connectors belong in the Dalgo repository; dashboards,
+scheduled ingestion, deployment, and production infrastructure are outside this
+repository. See [project state](docs/project-state.md) for the current direction
+and what is actually supported by evidence.
 
-> [!IMPORTANT]
-> **This is a discovery-only repository.** It is intended for Product
-> Intelligence research, API exploration, schema inspection, data-quality
-> testing, and reconciliation. It is not the production Product Intelligence
-> application, ingestion service, database, dashboard, or analytics platform.
-> Production connectors, if needed, belong in the Dalgo repository; Creatnet's
-> analytics and other product implementation will be separate from this
-> discovery repository. Do not add
-> production application code, database migrations, scheduled jobs, dashboard
-> code, or deployment infrastructure here.
+## Start here: what each document is for
 
-## Contents
+| Document | Read it to understand | Update it when |
+| --- | --- | --- |
+| [Project state](docs/project-state.md) | Source connections, discoveries, limitations, archived work, and open questions | Meaningful knowledge or project status changes |
+| [README](README.md) | Setup, code responsibilities, commands, and folder structure | Setup, layout, or usage changes |
+| [AGENTS.md](AGENTS.md) | Working rules, safety boundaries, and context maintenance | Durable instructions change |
+| [Change history](docs/change-history.md) | Significant changes, reasons, related commits, and verification | Meaningful work is completed |
+| [GA4 findings](docs/research/ga4-findings.md) | Detailed July GA4 and Shopify–GA4 investigation | That research gains supported findings or maintenance corrections |
+| [Reference documents](docs/reference/) | Original product brief and dated Word snapshots | Preserve as references; edit canonical Markdown instead |
 
-- [Why this project exists](#why-this-project-exists)
-- [Repository purpose and boundaries](#repository-purpose-and-boundaries)
-- [Current state](#current-state)
-- [How the discovery works](#how-the-discovery-works)
-- [Setup](#setup)
-- [Running the scripts](#running-the-scripts)
-- [Project structure and file responsibilities](#project-structure-and-file-responsibilities)
-- [Verified findings](#verified-findings)
-- [Known limitations and open questions](#known-limitations-and-open-questions)
-- [Technical follow-ups from earlier research](#technical-follow-ups-from-earlier-research)
-- [Keeping this README current](#keeping-this-readme-current)
-- [Guidance for AI assistants](#guidance-for-ai-assistants)
+A new human reader can start with project state and this README. An agent should
+read `AGENTS.md`, project state, and only the detailed material needed for its
+task. This avoids making every new session reread every export. Summaries are
+starting points: check relevant source before changing behavior.
 
-## Why this project exists
+`AGENTS.md` is a shared Markdown instruction format supported by many agent
+tools. Automatic loading depends on the tool/version and its settings; another
+tool can be told explicitly: “Read AGENTS.md and docs/project-state.md first.”
+Keep one set of project facts instead of copying them into each tool's private
+memory. [Format guidance](https://agents.md/) and
+[Claude instruction-loading documentation](https://code.claude.com/docs/en/memory)
+explain the distinction between shared files and tool-managed memory.
 
-The planned Product Intelligence Platform is intended to combine commercial and
-behavioural data that currently lives in separate systems:
+## Folder structure and code responsibilities
 
-- **Shopify** explains what was ordered and what later happened commercially:
-  products, variants, orders, quantities, discounts, shipping, tax, refunds,
-  returns, cancellations, and current order state.
-- **GA4** explains how people reached and used the website: traffic,
-  engagement, product views, add-to-cart behaviour, checkout activity, searches,
-  attribution, and captured purchase events.
-- **Meta Ads** is expected to explain paid campaign, ad, creative, spend, and
-  marketing-efficiency performance.
-
-Looking at these sources separately makes it difficult to answer questions such
-as:
-
-- Which products attract attention but do not convert?
-- Which products are selling efficiently and may need more inventory?
-- Which campaigns and creatives produce valuable behaviour or purchases?
-- Where does the customer funnel lose people?
-- Which commercial totals are trustworthy, and why do platforms disagree?
-
-The broader product plan is to use Dalgo for data aggregation and the database,
-then build Creatnet's analytics and dashboard experience on that data. Metric
-definitions, source lineage, time zones, currency, and data-quality caveats
-still need to be explicit. Creatnet will build a missing source connector in
-the Dalgo repository if an existing Dalgo integration does not meet the need.
-
-### Planned product phases
-
-1. **Data and dashboard foundation:** Dalgo aggregation and database, reliable
-   source connections, reconciliation and source-health checks, followed by
-   Creatnet analytics and leadership-ready dashboards.
-2. **Focused vision-model experiment:** test whether product and creative images
-   can provide useful design or e-commerce signals.
-3. **Natural-language query interface:** allow users to ask questions against
-   governed metrics and receive traceable answers or dashboard views.
-4. **Automated insight and mature vision layers:** anomaly detection,
-   forecasting, opportunity flags, and reviewed product/creative intelligence.
-
-These are product goals, not features implemented in this repository. Their
-order and timing need review now that Dalgo provides the data foundation.
-
-## Repository purpose and boundaries
-
-The job of this repository is to reduce uncertainty before production design
-and implementation in the Dalgo repository and Creatnet's product code.
-
-### In scope here
-
-- Confirm that authorized Shopify, GA4, and Meta Ads access works.
-- Explore available API objects, fields, dimensions, and metrics.
-- Run small, readable reports against selected test windows.
-- Save privacy-minimal outputs that can be inspected later.
-- Compare Shopify orders with GA4 purchase events and item rows.
-- Identify reliable cross-source identifiers and mismatched definitions.
-- Record verified findings, likely explanations, limitations, and open
-  questions for Dalgo integration, analytics, and dashboard design.
-
-### Out of scope here
-
-- A production database or canonical warehouse.
-- Recurring or scheduled ingestion.
-- Production credential and secret management.
-- A backend API, user authentication, or role management.
-- Frontend dashboards or saved dashboard views.
-- Meta Ads ingestion.
-- Production monitoring, retry orchestration, deployment, or CI/CD.
-- Chatbot, ML, or vision-model production features.
-
-Under the current plan, Dalgo handles aggregation and the database; Creatnet
-builds any missing production connector in the Dalgo repository and owns the
-analytics, dashboards, and later ML work. Do not turn the scripts here into a
-production framework. Discovery scripts should remain small, explicit, and
-easy for a beginner to read and change.
-
-## Current state
-
-**Started:** 20 June 2026  
-**Current phase:** Foundation, data discovery, and source reconciliation  
-**Sources currently explored:** Shopify Admin GraphQL API, GA4 Admin/Data APIs,
-and Meta Ads Graph API
-
-**Sources not yet implemented:** Other possible future sources
-
-The repository currently provides:
-
-- Shared Shopify configuration and GraphQL request handling.
-- Shopify connection testing and GraphQL type-field discovery.
-- A fixed-window, paginated Shopify order and order-line export.
-- Shared GA4 OAuth authentication and token refresh.
-- Shared Meta access-token loading and personal long-lived OAuth authorization,
-  plus first-page ad-account, campaign, ad-set, and ad listing, a 15-Creative
-  comparison, and object-story inspection for the same 15 examples.
-- GA4 account/property listing, metadata inspection, event counts, item
-  performance, purchase events, and purchase-item reports.
-- Saved Shopify, GA4, and Meta outputs for inspection.
-- A fixed-window Shopify-to-GA4 purchase reconciliation.
-- A detailed GA4 discovery report in Markdown and DOCX form.
-
-The most mature work is the Shopify/GA4 investigation for 1-7 July 2026. It
-established strong identifier mappings and exposed a GA4 purchase-coverage gap
-for the selected window. It did not finish the complete GA4 discovery required
-for Dalgo integration and Creatnet's analytics design.
-
-## How the discovery works
-
-```mermaid
-flowchart LR
-    SC["Shopify credentials<br/>config/shopify/.env"] --> SP["Shopify discovery package"]
-    GC["GA4 OAuth files<br/>config/ga4/"] --> GP["GA4 discovery package"]
-    MC["Meta App credentials and tokens<br/>config/meta/.env"] --> MP["Meta discovery package"]
-    SP --> SS["Shopify scripts"]
-    GP --> GS["GA4 scripts"]
-    MP --> MS["Meta scripts"]
-    SS --> SO["Schema, order, and order-line outputs"]
-    GS --> GO["Metadata, event, item, and purchase outputs"]
-    MS --> MO["Ad-account, Creative, and object-story outputs"]
-    SO --> R["Shopify/GA4 reconciliation"]
-    GO --> R
-    R --> E["Discovery findings for Dalgo integration and analytics"]
+```text
+product-intelligence-discovery/
+├── docs/
+│   ├── project-state.md       Current knowledge and source/evidence register
+│   ├── change-history.md      Meaningful milestones and reasons
+│   ├── research/              Detailed investigation (currently GA4)
+│   └── reference/             Original brief and dated Word snapshots
+├── evidence/
+│   ├── shopify/
+│   │   ├── orders/            Saved order and order-line CSVs
+│   │   └── schema-fields/     Available API fields for Shopify objects
+│   ├── ga4/                   Saved metadata and report text
+│   ├── meta/                  Early listings, creatives, and story attempts
+│   └── reconciliation/        Comparisons between sources
+├── shopify_discovery/         Shared Shopify configuration/client/queries
+├── ga4_discovery/             Shared Google authentication
+├── meta_discovery/            Shared Meta token loading
+├── scripts/{shopify,ga4,meta}/ Runnable, one-purpose experiments
+├── config/                   Local configuration and ignored credentials
+├── .python-version            Selected Python version
+├── pyproject.toml             Direct dependencies and package configuration
+└── uv.lock                    Exact resolved dependency versions
 ```
 
-The code is intentionally divided into two layers:
+A Python **package** is a folder whose modules can be imported by other code.
+The `*_discovery` packages hold reusable helpers; `scripts/` holds the specific
+experiments a person runs. Their names and run commands are unchanged.
 
-1. **Shared packages** contain authentication, configuration, reusable API
-   clients, and shared queries.
-2. **Scripts** ask one specific discovery question, print or export the result,
-   and remain easy to inspect.
+| Code | Responsibility |
+| --- | --- |
+| `shopify_discovery/config.py` | Load and validate shop/token configuration |
+| `shopify_discovery/shopify_client.py` | Send GraphQL requests with a timeout and report request errors |
+| `shopify_discovery/queries.py` | Shared shop-information and field-discovery queries |
+| `ga4_discovery/auth.py` | Load/refresh Google credentials or start browser sign-in |
+| `meta_discovery/auth.py` | Load user/Page tokens; loading alone does not verify access |
+| `scripts/shopify/` | Connection check, field inventory, fixed order export and GA4 comparison |
+| `scripts/ga4/` | Connection/property checks, field metadata, event/item/purchase reports |
+| `scripts/meta/` | Early connection/listing/creative checks and unfinished Page/story experiments |
 
-The generated outputs are evidence, not production tables. Some were created by
-redirecting terminal output to text files; others are CSV or XLSX exports. Their
-date window, report grain, filters, and source definitions must be considered
-before using their numbers.
+Execution generally flows **local configuration → shared helper → script →
+printed report or saved evidence → research finding**. Reconciliation means
+comparing records between sources with aligned dates and definitions. Saved
+evidence is a dated research snapshot, not a current production table.
 
 ## Setup
 
-### Prerequisites
-
-- [`uv`](https://docs.astral.sh/uv/getting-started/installation/)
-- Authorized Shopify Admin API credentials
-- An authorized Google OAuth Desktop client with GA4 access
-- A Meta access token, when running Meta discovery scripts
-
-The project pins Python 3.12 in `.python-version`. Direct dependencies are
-declared in `pyproject.toml`, and exact resolved versions are recorded in
-`uv.lock`.
-
-From the project root:
+Run terminal commands from the repository root. On this machine use `rtk proxy`,
+which runs the following command through the user's command wrapper; on a
+machine without RTK, omit that prefix. `uv` manages Python and the project's
+dependencies (external libraries). Python is pinned to 3.12.
 
 ```bash
-uv sync
+rtk proxy uv sync
 ```
 
-This installs the required Python version when needed, creates or updates the
-project-local `.venv`, and installs the locked dependencies. You do not need to
-activate the environment when using `uv run`.
-
-If an editor asks for an interpreter, select:
-
-```text
-./.venv/bin/python
-```
-
-Do not use a global, Homebrew, or pyenv interpreter for this checkout.
+This prepares `.venv`, the isolated local Python environment, and installs
+project dependencies. It can download Python/packages and change the environment
+and lockfile as needed. After setup, select `.venv/bin/python` in your editor.
+To reproduce the existing lockfile without resolving new versions, use
+`rtk proxy uv sync --frozen`; `--frozen` uses the existing lockfile. Check that
+`.venv/bin/python` exists and the command exits successfully.
 
 ### Shopify configuration
 
-Create `config/shopify/.env`:
+Create `config/shopify/.env` locally:
 
 ```dotenv
 SHOPIFY_SHOP_DOMAIN=your-store.myshopify.com
@@ -218,541 +109,123 @@ SHOPIFY_ADMIN_ACCESS_TOKEN=your-access-token
 SHOPIFY_API_VERSION=2026-04
 ```
 
-`SHOPIFY_API_VERSION` is optional and defaults to `2026-04`.
+The API version is optional and defaults to `2026-04`. The domain chooses the
+store. These credentials are ignored by Git; never paste their real values into
+chat or documentation. The root `.env.example` is a legacy placeholder, not the
+current credential location.
 
 ### GA4 configuration
 
-Place the downloaded Google OAuth Desktop client file at:
-
-```text
-config/ga4/ga4_oauth_client.json
-```
-
-The first authenticated GA4 command opens a browser sign-in flow. After a
-successful sign-in, credentials are saved to:
-
-```text
-config/ga4/ga4_token.json
-```
-
-The token is refreshed automatically when possible. The current OAuth scope is
-read-only Analytics access.
-
-All three credential files are ignored by Git. Never commit or paste their
-contents into documentation, issues, prompts, or logs.
+Place a Google OAuth Desktop client file at
+`config/ga4/ga4_oauth_client.json`. OAuth means signing in to grant the script
+access; the current scope is read-only Analytics access. The first authenticated
+run can open a browser and save `config/ga4/ga4_token.json`; later runs refresh
+the token when possible. Both files are ignored by Git.
 
 ### Meta configuration
 
-Create `config/meta/.env` with the Meta access token:
+For the legacy ads scripts, create `config/meta/.env` with
+`META_USER_ACCESS_TOKEN` or the backward-compatible `META_ACCESS_TOKEN`.
+Process environment values take precedence over values loaded from the file.
+Token loading does not validate permissions or account access.
 
-```dotenv
-META_ACCESS_TOKEN=your-access-token
-```
+The unfinished personal OAuth flow additionally uses `META_APP_ID`,
+`META_APP_SECRET`, and `META_OAUTH_REDIRECT_URI=http://localhost:8765/callback`.
+The redirect must also be configured in the Meta App. It requests `ads_read`,
+`pages_show_list`, and `pages_read_engagement`, gets a user token and the Steele
+Page token, and writes `META_USER_ACCESS_TOKEN`, `META_PAGE_ACCESS_TOKEN`, and
+`META_ACCESS_TOKEN` into the ignored file. It refuses to save when the required
+permissions or Page are missing. This Page-oriented flow is not mandatory for
+ads-only reporting. The code does not request `pages_read_user_content`.
 
-Meta discovery loads this file before reading the access token. An exported
-`META_ACCESS_TOKEN` environment variable takes precedence. The authentication
-helper does not make or validate any Meta API requests.
+## Running discovery experiments
 
-For the local personal OAuth flow, add the Meta App credentials and exact local
-redirect URI instead:
+**The commands below contact live source APIs.** Run only with authorization
+for that source and scope. Check the script's target, dates, fields, and output
+paths first. Meta advertising access is strictly read-only.
 
-```dotenv
-META_APP_ID=your-meta-app-id
-META_APP_SECRET=your-meta-app-secret
-META_OAUTH_REDIRECT_URI=http://localhost:8765/callback
-```
-
-Add that same redirect URI to the Meta App's valid OAuth redirect URIs. Never
-commit or print the App Secret. The OAuth script requests `ads_read`,
-`pages_show_list`, and `pages_read_engagement`, exchanges the browser login for
-a long-lived User token, retrieves the Page token for Steele Page
-`114421101975106`, and writes `META_USER_ACCESS_TOKEN`,
-`META_PAGE_ACCESS_TOKEN`, and the backward-compatible `META_ACCESS_TOKEN` to
-this ignored file. It refuses to save tokens if the required permissions or
-Steele Page are missing.
-
-## Running the scripts
-
-> [!CAUTION]
-> These commands contact live Shopify, Google, or Meta APIs. Use them only with
-> authorization. Several reports also contain hard-coded property IDs or date
-> ranges. Inspect the relevant script before running it for a new investigation.
-
-### Shopify
-
-Test credentials and print basic shop information:
+`uv run` uses the project environment and can prepare it if needed. `python -m`
+runs a named module. For example, from the repository root:
 
 ```bash
-uv run python -m scripts.shopify.test_shopify_connection
+rtk proxy uv run python -m scripts.shopify.test_shopify_connection
 ```
 
-Inspect a Shopify GraphQL type and export its fields:
+This reads Shopify configuration, contacts its API, and prints shop information
+or an access error. It does not export research files. Confirm the expected shop
+before interpreting the result.
+
+Use the same prefix, `rtk proxy uv run python -m`, with a module below. Printed
+output means terminal text, not an automatically saved file.
+
+| Module | Purpose and expected output | Effects and limits |
+| --- | --- | --- |
+| `scripts.shopify.discover_shopify_type_fields Product` | List the fields of a GraphQL object type; print count and saved CSV path | Live read; default writes `evidence/shopify/schema-fields/Product_fields.csv`, replacing it if present |
+| `scripts.shopify.export_shopify_orders` | Export orders/lines and print reconciliation counts | Live Shopify reads with order/line pagination; fixed 1–7 July 2026 Melbourne dates; reads two saved GA4 files and replaces three fixed evidence CSVs |
+| `scripts.ga4.test_ga4_connection` | Verify authentication; print confirmation | Can open OAuth browser sign-in and save/refresh a local token |
+| `scripts.ga4.list_ga4_properties` | Print accessible accounts and properties | Live Admin API read; no automatic evidence export |
+| `scripts.ga4.list_ga4_metadata` | Print available dimensions and metrics | Live Data API metadata read for property `268350484` |
+| `scripts.ga4.list_ga4_event_counts` | Print event counts | Moving inclusive `7daysAgo`–`today` range |
+| `scripts.ga4.list_ga4_item_performance` | Print item views, cart units, purchases, and revenue | Same moving range; top 50 rows by views, not a full item extract |
+| `scripts.ga4.list_ga4_purchase_transactions` | Print purchase-item report | Fixed 1–7 July 2026; purchase filter; selected property |
+| `scripts.ga4.list_ga4_purchase_events` | Print purchase-event report and response metadata | Same fixed dates/filter/property; grouped report, not raw events |
+| `scripts.meta.test_meta_connection` | Print accessible ad accounts | Legacy live Graph API read; does not validate a full performance connection |
+| `scripts.meta.list_campaigns` | Print campaign sample | First page only for the selected Steele account |
+| `scripts.meta.list_adsets` | Print ad-set sample | First page only; an ad set groups targeting/delivery settings |
+| `scripts.meta.list_ads` | Print ad sample | First page only |
+| `scripts.meta.inspect_creative` | Print JSON for 15 selected creatives | Live read; creative means the content/configuration used by an ad |
+| `scripts.meta.inspect_object_stories` | Inspect referenced posts; print and save results | Reads saved creative JSON and replaces `evidence/meta/object_stories_of_15_ads.json`; saved historical requests all failed permissions |
+| `scripts.meta.authorize_meta` | Establish the unfinished personal user/Page-token flow | Opens Facebook Login and listens briefly on localhost port 8765; changes ignored credential files |
+
+For schema discovery, `Product` is the requested object type; `ProductVariant`
+and `Order` are other examples. `--output-dir` chooses the directory to write:
 
 ```bash
-uv run python -m scripts.shopify.discover_shopify_type_fields Product
-uv run python -m scripts.shopify.discover_shopify_type_fields ProductVariant
-uv run python -m scripts.shopify.discover_shopify_type_fields Order
+rtk proxy uv run python -m scripts.shopify.discover_shopify_type_fields Product --output-dir /tmp/pi-schema-check
 ```
 
-The script's default output directory is `outputs/schema_fields/`. The schema
-inventories retained in this repository were deliberately generated in
-`outputs/shopify_schema_fields/`:
-
-```bash
-uv run python -m scripts.shopify.discover_shopify_type_fields Product \
-  --output-dir outputs/shopify_schema_fields
-```
-
-Export and reconcile the fixed 1-7 July 2026 order window:
-
-```bash
-uv run python -m scripts.shopify.export_shopify_orders
-```
-
-Before running that command, understand that it:
-
-- uses hard-coded UTC boundaries corresponding to Melbourne-local dates;
-- fetches all matching orders and paginates both orders and line items;
-- writes fixed filenames under `outputs/shopify_orders/` and
-  `outputs/discovery/`;
-- reads transaction IDs from two existing GA4 text outputs;
-- overwrites the matching output files when rerun.
-
-It is a reproducible discovery experiment, not a general-purpose exporter.
-
-### GA4
-
-Test or establish OAuth authentication:
-
-```bash
-uv run python -m scripts.ga4.test_ga4_connection
-```
-
-List accessible accounts and properties:
-
-```bash
-uv run python -m scripts.ga4.list_ga4_properties
-```
-
-Inspect the dimensions and metrics exposed for the selected property:
-
-```bash
-uv run python -m scripts.ga4.list_ga4_metadata
-```
-
-Run the exploratory reports:
-
-```bash
-uv run python -m scripts.ga4.list_ga4_event_counts
-uv run python -m scripts.ga4.list_ga4_item_performance
-uv run python -m scripts.ga4.list_ga4_purchase_transactions
-uv run python -m scripts.ga4.list_ga4_purchase_events
-```
-
-Current GA4 script behavior:
-
-- The Data API scripts target property `268350484`.
-- Event counts and item performance use a moving `7daysAgo` through `today`
-  window, which is inclusive and changes every day.
-- Item performance is ordered by views and deliberately limited to 50 rows; it
-  is not a complete product extract.
-- Purchase transaction and purchase event scripts use the fixed inclusive
-  window 1-7 July 2026.
-- The scripts print reports to standard output. Saved text files in `outputs/`
-  were created from earlier runs and are not automatically refreshed.
-
-### Meta Ads
-
-> **Incomplete discovery:** Meta work had only just begun when the project
-> paused. The saved listings are first pages, and all 15 saved object-story
-> metadata and content requests failed with permission errors. These scripts
-> and files do not establish a complete Meta connector, performance dataset,
-> or dashboard. They are retained as historical research evidence.
-
-Run the small discovery requests:
-
-```bash
-uv run python -m scripts.meta.test_meta_connection
-uv run python -m scripts.meta.list_campaigns
-uv run python -m scripts.meta.list_adsets
-uv run python -m scripts.meta.list_ads
-uv run python -m scripts.meta.inspect_creative
-uv run python -m scripts.meta.inspect_object_stories
-```
-
-Generate or refresh the personal long-lived Meta tokens:
-
-```bash
-uv run python -m scripts.meta.authorize_meta
-```
-
-This command opens Facebook Login in the default browser and briefly listens on
-`localhost:8765` for the OAuth callback. Ads discovery uses the User token;
-object-story discovery uses the Page token. The script never prints either
-token. `pages_read_user_content` is not requested because it is not currently
-available to this app; comment access remains a separate permission-dependent
-discovery question.
-
-The listing scripts print accessible ad accounts, campaigns, ad sets, and ads
-to standard output. `inspect_creative.py` compares 15 example Steele Creatives
-and prints their complete JSON responses. `inspect_object_stories.py` reuses
-that maintained Creative list and the saved Creative comparison to inspect each
-referenced `effective_object_story_id`. For each available object story, it
-first attempts Graph API field-metadata discovery and then requests conservative
-post, attachment, permalink, media-reference, and summary-level engagement
-fields. A metadata or object-story failure is saved for that Creative without
-stopping the remaining examples. The complete results are printed and saved to
-`outputs/meta_discovery/object_stories_of_15_ads.json`. The listing scripts do
-not paginate or save output files.
-
-### Dependency management
-
-```bash
-# Add a direct runtime dependency and update the lockfile/environment
-uv add package-name
-
-# Remove a dependency
-uv remove package-name
-
-# Update locked dependencies within declared constraints
-uv lock --upgrade
-
-# Reproduce the lockfile exactly after pulling changes
-uv sync --frozen
-```
-
-`pyproject.toml` is the source of truth for direct dependencies. Commit both
-`pyproject.toml` and `uv.lock` whenever dependencies change.
-
-## Project structure and file responsibilities
-
-```text
-product-intelligence-discovery/
-├── shopify_discovery/       Shared Shopify configuration, client, and queries
-├── ga4_discovery/           Shared GA4 OAuth authentication
-├── meta_discovery/          Shared Meta access-token loading
-├── scripts/
-│   ├── shopify/             Runnable Shopify discovery experiments
-│   ├── ga4/                 Runnable GA4 discovery experiments
-│   └── meta/                Runnable Meta discovery experiments
-├── config/                  Local ignored credentials and tracked placeholders
-├── outputs/                 Saved discovery evidence and generated exports
-├── docs/                    Product brief and detailed GA4 discovery reports
-├── .python-version          Python version selected by uv
-├── pyproject.toml           Project metadata and direct dependencies
-├── uv.lock                  Exact resolved dependency versions
-└── README.md                Authoritative repository context and instructions
-```
-
-### `shopify_discovery/`
-
-- `config.py` defines the immutable `ShopifyConfig` dataclass and
-  `load_shopify_config()`. It loads `config/shopify/.env`, validates the shop
-  domain and access token, and supplies the default API version.
-- `shopify_client.py` defines `ShopifyClient` and `ShopifyApiError`. The client
-  builds the Admin GraphQL endpoint, sends authenticated requests with a
-  30-second timeout, and raises clear HTTP- or GraphQL-level errors.
-- `queries.py` contains the basic shop-information query and a GraphQL
-  introspection query that follows nested type wrappers deeply enough to format
-  fields and arguments.
-- `__init__.py` marks the directory as an importable Python package.
-
-### `ga4_discovery/`
-
-- `auth.py` is the one shared GA4 authentication path. It loads an existing
-  token, refreshes it when possible, or starts a local browser OAuth flow and
-  saves the resulting token. Discovery scripts should reuse this helper rather
-  than duplicate authentication.
-- `__init__.py` marks the directory as an importable Python package.
-
-### `meta_discovery/`
-
-- `auth.py` loads `config/meta/.env`, reads `META_ACCESS_TOKEN`, and raises a
-  clear error when it is missing. It does not make API requests or validate the
-  token.
-- `__init__.py` marks the directory as an importable Python package.
-
-### `scripts/shopify/`
-
-- `test_shopify_connection.py` loads the shared configuration/client, runs the
-  basic shop query, and prints identifying shop information.
-- `discover_shopify_type_fields.py` accepts a GraphQL type name, converts nested
-  GraphQL type references into readable signatures, and writes field names,
-  types, required flags, descriptions, and arguments to CSV.
-- `export_shopify_orders.py` fetches a fixed Melbourne-local order population,
-  paginates orders and line items, flattens money and timestamp fields, writes
-  privacy-minimal order/order-line CSVs, reads saved GA4 transaction IDs, and
-  classifies each Shopify order by whether GA4 event and item evidence exists.
-- `__init__.py` enables module-style execution.
-
-### `scripts/ga4/`
-
-- `test_ga4_connection.py` obtains credentials and confirms authentication.
-- `list_ga4_properties.py` uses the GA4 Admin API to print accessible account
-  and property summaries.
-- `list_ga4_metadata.py` uses the GA4 Data API to print every available
-  dimension and metric for the selected property.
-- `list_ga4_event_counts.py` prints event names and counts for a moving window.
-- `list_ga4_item_performance.py` prints the top 50 item/variant rows by views,
-  with view, add-to-cart, purchase, and item-revenue metrics.
-- `list_ga4_purchase_transactions.py` prints fixed-window purchase-item rows
-  containing dates, transaction IDs, product/variant identifiers, quantities,
-  and item revenue.
-- `list_ga4_purchase_events.py` prints fixed-window transaction-level purchase
-  rows, totals, row counts, time zone, thresholding, data-loss, and sampling
-  metadata when available.
-- `__init__.py` enables module-style execution.
-
-### `scripts/meta/`
-
-- `test_meta_connection.py` lists the accessible Meta ad accounts with their
-  IDs and account statuses.
-- `list_campaigns.py` lists the first page of campaigns for the Steele
-  production ad account.
-- `list_adsets.py` lists the first page of ad sets for the Steele production ad
-  account.
-- `list_ads.py` lists the first page of ads for the Steele production ad
-  account.
-- `inspect_creative.py` compares 15 example Steele Ad Creatives and prints
-  their complete JSON structures.
-- `authorize_meta.py` runs the local browser OAuth code flow, exchanges the
-  result for a long-lived User token, verifies the Steele Page assignment, and
-  saves separate User and Page tokens without printing them.
-- `inspect_object_stories.py` reads those same 15 maintained Creative examples
-  and their saved `effective_object_story_id` values, attempts supported field
-  metadata discovery, then saves each raw object-story response or individual
-  error without following related media objects.
-- `__init__.py` enables module-style execution.
-
-### `config/`
-
-- `config/shopify/.env` stores local Shopify credentials.
-- `config/ga4/ga4_oauth_client.json` stores the Google OAuth client definition.
-- `config/ga4/ga4_token.json` stores the local authorized-user token.
-- `.gitkeep` files retain otherwise-empty configuration directories without
-  committing credentials.
-
-### `outputs/`
-
-- `shopify_schema_fields/` contains 12 saved Shopify GraphQL type inventories,
-  including Product, ProductVariant, Order, LineItem, Refund, collection,
-  inventory, media, and option-related objects.
-- `GA4_metadata/` contains saved metadata, item-performance, purchase-item, and
-  purchase-event text reports. The historical filename
-  `item_performace.txt` intentionally retains its original misspelling.
-- `shopify_orders/` contains fixed-window order and order-line CSV exports.
-- `discovery/` contains the fixed order-level reconciliation CSV and an earlier
-  ShopifyQL-versus-GA4 reconciliation workbook.
-- `meta_discovery/` contains saved Meta listing and Creative evidence. The
-  object-story script writes its 15-example comparison to
-  `object_stories_of_15_ads.json` when it is run.
-
-Outputs are evidence tied to their original execution conditions. Do not assume
-they are current, exhaustive, or automatically reproducible without checking
-the source script and credentials.
-
-### `docs/`
-
-- `Steele Intel - Product Brief and Dev Roadmap.docx` describes the broader
-  product vision, users, phased roadmap, candidate architecture, requirements,
-  risks, and candidate data model.
-- `ga4_discovery_current_state.md` is the detailed, evidence-classified GA4
-  research report and the best source for exact findings, caveats, and next
-  investigations.
-- `GA4_Discovery_Current_State.docx` is an editable document version of the same
-  GA4 report.
-
-## Verified findings
-
-The statements below describe repository evidence available as of 21 July
-2026. They are discovery findings, not permanent production guarantees.
-
-### Access and useful data
-
-- Shopify Admin GraphQL access works through the shared client.
-- GA4 OAuth read-only access works, including saved-token refresh.
-- GA4 property `268350484` returns populated Steele ecommerce data.
-- Tested GA4 data includes product/variant identifiers, item views,
-  add-to-cart quantities, purchase quantities, item revenue, transaction IDs,
-  ecommerce purchases, and purchase revenue.
-
-### Product and variant identity
-
-In the tested Steele AU data, GA4 `itemId` follows:
-
-```text
-shopify_AU_{shopify_product_id}_{shopify_variant_id}
-```
-
-For the fixed 1-7 July test, all 326 captured transaction-variant combinations
-matched Shopify product ID, variant ID, product name, variant name, and original
-purchased quantity.
-
-Names and URLs should still not be used as durable identifiers. The raw GA4
-value and parsed/mapping status should be retained because formats can be blank,
-malformed, historical, or different for another store.
-
-### Transaction identity and selected-window coverage
-
-- GA4 `transactionId` matched Shopify's numeric order ID for all 207 captured
-  transaction IDs in the fixed window.
-- The event-level and item-level GA4 reports contained the same 207 transaction
-  IDs; no captured purchase event lacked item rows in that test.
-- Shopify returned 251 orders created during 1-7 July 2026: 231 Online Store,
-  16 Draft Orders, 2 Shop, and 2 Refundid/Returns Portal orders.
-- GA4 contained 206 of the 231 Online Store orders in the same report window,
-  or 89.2%. Twenty-five Online Store orders, or 10.8%, were absent from both the
-  event- and item-level fixed-window GA4 reports.
-
-That last result is a **selected-window coverage gap**. It does not prove the
-transactions were never collected, because they have not yet been searched
-across a wider window or the older property.
-
-### Revenue and source authority
-
-- GA4 preserved original purchased quantities even when Shopify's current
-  quantity later changed after returns or edits.
-- GA4 purchase revenue often matched the Shopify current subtotal in the tested
-  sample; common differences from current total were consistent with shipping
-  being excluded.
-- GA4 revenue fields are not substitutes for Shopify order, refund, return,
-  shipping, tax, or net-sales measures.
-- ShopifyQL sales activity is not a substitute for a GraphQL population of
-  orders created in the selected window. The two sources answer different
-  questions.
-
-### Source-of-truth rules
-
-- **Shopify is authoritative** for commercial order and line state, discounts,
-  tax, shipping, refunds, returns, cancellations, and current totals.
-- **GA4 is the behavioural and attribution source** for traffic, engagement,
-  product interaction, funnel behaviour, and captured purchase signals.
-- **Dalgo's aggregated database will provide the data foundation** for
-  Creatnet's reporting. The combined reporting must preserve each source's
-  meaning, raw identifiers, lineage, extraction window, and reconciliation
-  status.
-
-## Known limitations and open questions
-
-### Repository and code limitations
-
-- This is exploratory code with no automated test suite.
-- Several scripts hard-code property IDs, date windows, output paths, and report
-  definitions.
-- GA4 discovery uses interactive authorized-user OAuth, which is not a
-  production scheduled-ingestion credential strategy.
-- The Shopify order exporter expects existing GA4 text files and parses their
-  printed layout; it is not a general data pipeline.
-- The item-performance report is limited to 50 rows.
-- Saved outputs are snapshots and may be stale.
-- Personal Meta User tokens generally last about 60 days. Page tokens can still
-  be invalidated if the user loses Page access, revokes the app, changes account
-  security settings, or Meta invalidates the authorization.
-- The Meta object-story inspection depends on the saved 15-Creative comparison,
-  makes separate metadata and normal requests, and deliberately does not
-  paginate, retry, or follow attachment and media IDs.
-- GA4 Data API reports are grouped analytics tables, not raw browser-event
-  storage.
-
-### Unresolved data questions
-
-- Do the 25 absent Online Store orders appear outside the fixed date window?
-- Do any appear in the older property `268365916`?
-- What are the confirmed current GA4 web-stream ID, measurement ID, URL,
-  timezone, and currency settings?
-- Which traffic source, medium, campaign, landing-page, device, geography, site
-  search, and site-level funnel fields are populated in Steele data?
-- Which proposed dimension/metric bundles are compatible at site, session,
-  item, and purchase grain?
-- Is checkout activity reliably available at product/variant grain?
-- What exact payload values are sent for price, value, discounts, shipping,
-  tax, and currency?
-- Is the observed purchase coverage stable across multiple closed historical
-  windows?
-- Are item-ID patterns stable across historical periods, regions, and stores?
-- Would later journey-level or ML use cases require GA4 BigQuery raw-event
-  export instead of Data API summaries?
-
-## Technical follow-ups from earlier research
-
-The [current handoff](docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md)
-summarizes the project's direction, completed research, and remaining unknowns.
-The following checks remain useful if a specific Dalgo connector gap, metric
-definition, or analytics question requires deeper technical evidence:
-
-1. Search the 25 absent order IDs across a wider period in the current and older
-   GA4 properties.
-2. Save current GA4 account, property, web-stream, timezone, currency, and
-   measurement configuration as inspectable evidence.
-3. Build a small compatibility-and-population matrix only for the proposed
-   `site_day`, `item_day`, `landing_page_day`, `traffic_source_day`, and
-   `site_search_day` facts.
-4. Test checkout metrics at both site and item grain.
-5. Add currency to test reports and define GA4-versus-Shopify money-field
-   meanings precisely.
-6. Repeat fixed-window reconciliation across several closed historical weeks
-   and measure coverage by day and Shopify source.
-7. Use the current handoff to review Dalgo's actual source coverage. Build any
-   missing production connector in the Dalgo repository, then validate Dalgo's
-   aggregation and database handoff before Creatnet builds analytics and
-   dashboards.
-8. Treat the 15 object-story permission failures as an open Meta access
-   question. Confirm whether this detail is needed under the Dalgo plan before
-   continuing API discovery.
-
-## Keeping this README current
-
-The current discovery handoff linked above is the authority for project
-direction. This README explains the repository's code and historical research.
-It must be reviewed and updated whenever that code or research changes.
-
-Any change that adds, removes, renames, or alters code, scripts, folders,
-commands, dependencies, configuration, generated outputs, verified findings,
-open questions, repository scope, or planned next work should include the
-corresponding README update in the same change. Even when a code change does not
-appear to affect the documentation, the person or AI assistant making it should
-check this README and confirm that its descriptions and instructions remain
-accurate.
-
-Do not allow documentation updates to accumulate for later. Keeping this file
-current is necessary because it may be given to a developer or AI assistant as
-the only available explanation of the repository.
-
-## Guidance for AI assistants
-
-Read [AGENTS.md](AGENTS.md) for repository instructions, beginner-friendly
-communication requirements, read-only Meta access rules, and credential handling.
-
-If this README is the only project context available, use the following rules:
-
-1. **Treat this repository as discovery only.** Read the current discovery
-   handoff before using the earlier build sections below. Dalgo handles data
-   aggregation and the database; Creatnet owns missing connectors in the Dalgo
-   repository, analytics, dashboards, and later ML. Exact contracted details
-   have not been documented here.
-2. **Inspect before changing assumptions.** Property IDs, API versions, schemas,
-   date windows, and saved outputs can become stale.
-3. **Do not run live API scripts unless explicitly authorized.** Syntax checks
-   and local analysis should be separated from authenticated execution.
-4. **Reuse shared authentication and clients.** Shopify scripts should use
-   `load_shopify_config()` and `ShopifyClient`; GA4 scripts should use
-   `get_credentials()`.
-5. **Keep new discovery scripts small and beginner-readable.** Prefer one clear
-   question per script over production abstractions.
-6. **Verify API field names.** Use saved metadata or current official schema
-   documentation rather than guessing.
-7. **Preserve uncertainty.** Label conclusions as verified, likely,
-   unverified, or open when the evidence requires it.
-8. **Preserve source meaning and grain.** Never compare totals until date
-   windows, timezone, filters, row grain, order state, and metric definitions
-   are aligned.
-9. **Protect secrets and privacy.** Never print or commit credentials. Keep
-   customer names, emails, phones, street addresses, IP addresses, and other
-   unnecessary personal information out of exports.
-10. **Update this README when discovery changes.** Keep implemented behavior,
-    verified findings, open questions, commands, and repository boundaries in
-    sync so this file remains a reliable handoff.
-
-In short: this repository establishes what data exists, what it means, how
-Shopify and GA4 connect, and what remains uncertain. It supplies evidence for
-the future Product Intelligence system; it is not that system.
+This still makes a live read but writes the CSV to `/tmp/pi-schema-check` instead
+of replacing retained evidence. Expect a field count and that saved path; inspect
+the CSV headers and requested type to confirm the result. For other new
+investigations, inspect fixed paths before running; do not overwrite historical
+evidence to create a new sample.
+
+The newer Meta report command and its tests live only on the archive branch.
+They are not executable features of this checkout; see project state and history.
+
+## Changes to file locations
+
+The October cleanup changes paths, not the discovery logic or Python module
+names. References inside preserved Word snapshots retain their historical paths.
+
+| Previous location | Current location |
+| --- | --- |
+| `outputs/shopify_orders/` | `evidence/shopify/orders/` |
+| `outputs/shopify_schema_fields/` and schema-script default `outputs/schema_fields/` | `evidence/shopify/schema-fields/` |
+| `outputs/GA4_metadata/` | `evidence/ga4/` (`item_performace.txt` becomes `item-performance.txt`) |
+| `outputs/meta_discovery/` | `evidence/meta/` |
+| `outputs/discovery/` | `evidence/reconciliation/` |
+| September Markdown handoff in `docs/` | `docs/project-state.md` |
+| `docs/ga4_discovery_current_state.md` | `docs/research/ga4-findings.md` |
+| Three Word documents directly under `docs/` | `docs/reference/` |
+| `exports/` | Removed; learning/context packs belong outside the repository |
+
+The two Word research/handoff files are July and September snapshots, not copies
+that must be kept synchronized. The original product brief is a supplied
+reference. The tracked Excel `~$` lock artifact is preserved but is not evidence
+to analyze. Do not infer meaning from an ambiguous legacy filename alone.
+
+## Keeping context useful
+
+Maintain each fact in its owning document; project state can give a short summary
+and link to detailed research. Record source, tested dates/settings, evidence,
+checks, and limitations. Mark archived, historical, proposed, reported, and
+uncommitted work honestly. Git preserves the full commit history; Markdown
+history explains the significant changes without duplicating every minor edit.
+
+For this checkout there is no automated test suite. Verify relevant script
+changes offline where possible, and verify paths/links for documentation changes.
+Live access, successful exports, and production readiness require separate
+evidence. Never commit secrets or upload internal source/evidence without
+authorization. Generate requested learning or sharing packs outside the repo;
+do not recreate `exports/` or replace it with another pack folder.

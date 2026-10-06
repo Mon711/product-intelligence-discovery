@@ -82,7 +82,7 @@ def main() -> None:
 
     parser.add_argument(
         "--output-dir",
-        default="outputs/schema_fields",
+        default="evidence/shopify/schema-fields",
         help="Directory where the CSV file should be saved.",
     )
 

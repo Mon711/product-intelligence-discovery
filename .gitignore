@@ -15,3 +15,6 @@ config/meta/.env
 # Editor and operating-system files
 .vscode/
 .DS_Store
+
+# Learning/context packs are created outside this repository
+/exports/

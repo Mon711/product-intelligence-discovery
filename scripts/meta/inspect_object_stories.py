@@ -18,10 +18,10 @@ GRAPH_API_VERSION = "v25.0"
 REQUEST_TIMEOUT_SECONDS = 30
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CREATIVE_RESULTS_PATH = (
-    PROJECT_ROOT / "outputs" / "meta_discovery" / "list_creatives_of_15_ads.json"
+    PROJECT_ROOT / "evidence" / "meta" / "list_creatives_of_15_ads.json"
 )
 OUTPUT_PATH = (
-    PROJECT_ROOT / "outputs" / "meta_discovery" / "object_stories_of_15_ads.json"
+    PROJECT_ROOT / "evidence" / "meta" / "object_stories_of_15_ads.json"
 )
 OBJECT_STORY_FIELDS = (
     "id,message,created_time,permalink_url,full_picture,link,name,description,"

@@ -2,10 +2,10 @@
 
 ## Start here
 
-- Read `README.md` for setup, script commands, repository layout, and research
-  limitations. Read `docs/Product_Intelligence_Discovery_Handoff_2026-09-29.md`
-  for the project direction and historical handoff.
-- For GA4 questions, consult `docs/ga4_discovery_current_state.md`, then inspect
+- Read `docs/project-state.md` for current context, evidence status, and open
+  work. Read relevant sections of `README.md` for setup, commands, and layout.
+  Consult `docs/change-history.md` when the reasons for earlier changes matter.
+- For GA4 questions, consult `docs/research/ga4-findings.md`, then inspect
   the relevant source and evidence. Saved findings are tied to their dates,
   account/property, filters, and report settings; do not assume they are current.
 - Inspect Git status and affected files before editing. Preserve unrelated work.
@@ -102,3 +102,30 @@ Assume no prior technical knowledge unless the user says otherwise.
 - Respect explicit checkpoints such as plan-only, one step, or stop-after.
   Finish authorized work without asking for the same permission again. Creating
   or editing local files is not authorization to commit, push, or open a PR.
+
+## Maintain shared context
+
+- Keep instructions in this file, current knowledge in `docs/project-state.md`,
+  detailed GA4 research in `docs/research/ga4-findings.md`, and meaningful change
+  reasons in `docs/change-history.md`. Markdown is the shared source of context;
+  personal/tool memory is not a substitute for repository documentation.
+- Load only relevant detail. Check affected source and dirty changes before
+  relying on a summary; do not reread every saved export for routine onboarding.
+- After meaningful work, update affected findings with evidence paths, source
+  account/property, tested dates/settings, verification, limitations, and next
+  questions. Distinguish implemented, verified, reported, proposed, historical,
+  and unknown. Access failures are not absence-of-data findings.
+- Update change history for meaningful changes: before/after, reason, actual
+  checks, unresolved work, and relevant commits. Mark inferred reasons and
+  uncommitted work. Add verified commit identities when available; do not create
+  recursive documentation commits just to record a document's own hash.
+- Update README guidance when structure, setup, or usage changes. Skip trivial
+  log entries, duplicated findings, transcripts, and a new file per session.
+- Keep evidence under `evidence/`; save new experiments separately from earlier
+  snapshots. Preserve the original Word files in `docs/reference/` as dated
+  references; edit the canonical Markdown instead.
+- Learning/context sharing packs belong outside this repository and are created
+  only when requested. Do not recreate `exports/` or another pack directory here.
+- Archived work is not an active feature: preserve the Meta archive branch and
+  local evidence stash unless the user requests work on them. See change history
+  for their identities. Do not restore them just to refresh documentation.
