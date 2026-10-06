@@ -53,7 +53,7 @@ product-intelligence-discovery/
 │   └── reconciliation/        Comparisons between sources
 ├── shopify_discovery/         Shared Shopify configuration/client/queries
 ├── ga4_discovery/             Shared Google authentication
-├── meta_discovery/            Shared Meta token loading
+├── meta_discovery/            Meta token loading, Step 1 access checks and saved-ID audit
 ├── scripts/{shopify,ga4,meta}/ Runnable, one-purpose experiments
 ├── config/                   Local configuration and ignored credentials
 ├── .python-version            Selected Python version
@@ -129,6 +129,13 @@ For the legacy ads scripts, create `config/meta/.env` with
 Process environment values take precedence over values loaded from the file.
 Token loading does not validate permissions or account access.
 
+The new Step 1 command reads only the explicitly selected file (default
+`config/meta/.env`), without terminal-environment overrides or legacy token
+fallbacks. It requires `META_AD_ACCOUNT_ID=2313037395632947`, `META_APP_ID`,
+`META_APP_SECRET`, and `META_USER_ACCESS_TOKEN`. `META_GRAPH_API_VERSION` defaults
+to `v26.0`. It accepts only an ads-only User token with `ads_read` and optional
+`public_profile`. Credentials remain in ignored local configuration.
+
 The unfinished personal OAuth flow additionally uses `META_APP_ID`,
 `META_APP_SECRET`, and `META_OAUTH_REDIRECT_URI=http://localhost:8765/callback`.
 The redirect must also be configured in the Meta App. It requests `ads_read`,
@@ -190,7 +197,82 @@ the CSV headers and requested type to confirm the result. For other new
 investigations, inspect fixed paths before running; do not overwrite historical
 evidence to create a new sample.
 
-The newer Meta report command and its tests live only on the archive branch.
+### Meta connection discovery — Step 1 only
+
+From this repository root, first check the saved July identifiers:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --offline
+```
+
+`--offline` reads the four saved Shopify/GA4 files only; it does not load Meta
+credentials or contact any source. It creates a new timestamped folder under
+`evidence/meta/access-checks/`, with a `summary.json`. Expect `PASSED`, 207/207
+transaction matches, 326/326 item matches, and 25 absent Online Store orders.
+It also compares original quantities; it does not investigate absent orders.
+
+Then check current Meta access:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage access
+```
+
+`--stage access` is the only implemented stage and the default. After the saved
+audit passes, it makes two GET reads: token validation and Steele account metadata.
+Expect `Meta access: passed`, account `2313037395632947`, `AUD`,
+`Australia/Sydney`, API version and granted permissions. No advertising objects
+are collected or changed. Token validity, matching app, User-token type, permissions,
+token expiry and data-access expiry must pass before the account read. Raw token-debug
+responses and credential-bearing errors are not saved. Zero expiry means Meta
+reported no scheduled expiry; it does not promise permanent access.
+
+Open the printed `summary.json` path. For live success, overall `status`,
+`foundation.status` and `meta.status` must all be `passed`, and all foundation
+`checks` must be true. An offline success instead has `meta.status: not_requested`.
+The report records UTC collection time, account currency/time zone, the historical
+July window, input file paths and SHA-256 fingerprints (content identifiers).
+It contains counts rather than individual order/customer records. Historical
+Shopify/GA4 matches do not prove their current credentials work or establish Meta
+attribution. Current Meta currency does not independently verify July GA4 currency.
+
+A safe manual failure check uses an empty configuration source:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --config /dev/null
+```
+
+`--config` selects a different file; `/dev/null` supplies no configuration. Expect
+`FAILED`, `Meta access: failed`, a Steele-account configuration error, and a new
+failed summary. It never loads your real credentials or contacts Meta. Your
+configuration and previous reports remain intact. The process returns exit code
+1 for a failed check (0 for success); later stages such as `--stage sample` are
+rejected with code 2 before work starts.
+
+Optional input/output overrides are `--evidence-root` (read a copied evidence
+tree) and `--output-dir` (parent for a new run folder). A missing or malformed
+saved input is a failure, not an empty successful dataset. A network, permission
+or rate-limit rejection fails safely without automatic retries. Fix the reported
+access issue before rerunning; never paste credentials into a chatbot.
+
+Run the focused offline tests from the repository root:
+
+```bash
+rtk proxy uv run python -m unittest discover -s tests -v
+```
+
+`discover -s tests` finds the new standard-library test suite; `-v` prints each
+test name. Expect 15 tests and `OK`. Tests use fake Meta responses and temporary
+copies of saved evidence; they neither contact source APIs nor change retained
+evidence/configuration. `uv run` may prepare the local environment/cache if needed.
+
+Architecture: the command in `scripts/meta/discover_connections.py` coordinates
+one step and writes a summary; `meta_discovery/foundation.py` parses saved files
+and compares identifiers/quantities; `meta_discovery/reader.py` validates configuration,
+sends restricted reads and returns only safe access metadata. The older token
+loader and discovery scripts retain their existing behavior. No new dependencies
+or later discovery stages are introduced.
+
+The earlier full Meta report command and its separate tests live only on the archive branch.
 They are not executable features of this checkout; see project state and history.
 
 ## Changes to file locations

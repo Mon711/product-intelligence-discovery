@@ -3,6 +3,9 @@
 **Maintained:** 5 October 2026. Covers all 39 commits on `main` through `9a1afc4`,
 the separate Meta archive commit, and the uncommitted organization change.
 
+**6 October update:** the organization change is now committed as `0724d5e`.
+The Step 1 entry below documents new, uncommitted implementation work.
+
 This is a grouped explanation of meaningful work. Commit dates, subjects,
 changed paths, relevant safe diffs, saved findings, and the archive handoff are
 the evidence. Where intention is not explicit, the reason is marked **inferred**.
@@ -196,6 +199,39 @@ untracked reports; an ordinary clone will not include that evidence.
 `outputs/meta_discovery/reports/`. These paths describe the archived snapshot,
 not files to recreate in the active tree. Existing archives/history are not
 rewritten to remove historical sharing packs.
+
+## 6 October: implement Meta discovery Step 1 only (uncommitted)
+
+**Before:** active Meta scripts could load credentials and fetch first-page
+advertising samples, but had no small, shared ads-only access validation command
+or automated saved Shopify–GA4 identifier audit. The fuller reader remains archived.
+
+**After:** a staged command implements only `access`; the new reader validates
+explicit configuration, blocks all endpoints except token inspection and Steele
+account metadata, validates token/app/type/scopes/expiry, disables redirects,
+uses request timeouts, and returns safe metadata. The separate offline foundation
+audit validates saved July report rows, transaction/product/variant identifiers
+and original quantities. Fresh timestamped summaries preserve prior evidence.
+
+**Reason:** the user requested one explained implementation step with manual
+verification, after the earlier reporting workflow proved too broad to follow.
+Existing authentication scripts, dependencies, advertising objects, archived
+code and stash remain unchanged. No Step 2 collection or connection claims.
+
+**Actual checks:** 15 offline tests passed, including invalid/more broadly scoped
+tokens, expiry, wrong account, redirects, redacted errors, blocked endpoints,
+malformed/truncated evidence, unmatched items, unique outputs, offline isolation,
+and rejection of later stages. Live Step 1 passed two Meta GET reads: expected
+account `2313037395632947`, v26.0, AUD, Australia/Sydney, `ads_read/public_profile`.
+Saved foundation reproduced 207 transactions, 326 matching item rows and original
+quantities, plus 25 absent Online Store orders. An intentional `/dev/null` config
+run exited 1 before networking and saved failure. Evidence paths are recorded
+in [project state](project-state.md). README includes reproducible manual checks.
+
+**Remaining:** current Shopify/GA4 access, Meta fields/sample collection and actual
+cross-source connections remain unverified by this step. Original Shopify–GA4
+gap causes remain out of scope. New code is uncommitted; no commit, push, or PR.
+The requested small teaching handoff is saved outside this repository in Downloads.
 
 ## Git publication evidence and limits
 

@@ -1,5 +1,14 @@
 # GA4 Discovery — Current State
 
+**6 October 2026 local evidence recheck:** the new Meta Step 1 foundation audit
+reparsed the saved 1–7 July purchase-event/item reports and Shopify order/line
+CSVs. It reproduced 207/207 transaction matches, 326/326 order–product–variant
+row matches, agreement with original purchased quantities, and 25 absent Online
+Store orders. All audit checks passed; no live GA4 or Shopify requests were made
+and no discrepancy causes were investigated. The credential-free summary and
+input fingerprints are in `evidence/meta/access-checks/20261006T073917718635Z/summary.json`.
+These are historical-file checks, not newly collected July source data.
+
 **Steele Intel Product Intelligence Platform**  
 **Document status:** Detailed historical findings, with maintenance notes; discovery is incomplete
 **Findings collected:** 21 July 2026

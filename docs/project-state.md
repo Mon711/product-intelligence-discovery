@@ -1,9 +1,10 @@
 # Project state and discoveries
 
-**Maintained:** 5 October 2026. **Checkout inspected:** `main` at `9a1afc4`,
-with the organization change below still uncommitted. No live source queries
-were made for this update. Dates below describe the evidence, not a guarantee
-that credentials or reports work today.
+**Maintained:** 6 October 2026. **Checkout inspected:** `main` at `0724d5e`,
+with the new Meta Step 1 work uncommitted. Two live Meta access reads were made
+for this update; no live Shopify/GA4 or advertising-object requests were made.
+Dates below describe the evidence, not a guarantee that credentials or reports
+will continue to work.
 
 ## Purpose and current direction
 
@@ -26,9 +27,9 @@ sources → Dalgo data foundation → Creatnet analytics and product work; that
 handoff still needs validation.
 
 This repository holds small Python discovery experiments and saved evidence.
-It has no production service, database, scheduled ingestion, deployment, or
-automated test suite on the inspected `main` revision. The archived Meta reader
-has a separate test suite; see below.
+It has no production service, database, scheduled ingestion, or deployment.
+The new Step 1 has 15 offline tests in `tests/test_meta_access.py`. The archived
+Meta reporting reader has a separate test suite; see below.
 
 The [original product brief](<reference/Steele Intel - Product Brief and Dev Roadmap.docx>)
 remains useful for its leadership, ecommerce, marketing, and design/buying
@@ -49,7 +50,7 @@ contents in documentation.
 | Shopify; store domain selected by ignored local configuration | Admin GraphQL client, shop connection check, field discovery, paginated order and order-line export | July saved export: 251 orders and 385 lines. The archived October handoff reports a 1 October refresh rejected with HTTP 401 (invalid credentials). Current access is unverified. The exact store domain is not asserted from secrets. |
 | GA4 property `268350484` | Read-only OAuth; Admin account/property listing; Data API metadata, event, item, and purchase reports | July saved reports prove this property's populated ecommerce data. October archived documentation reports a fresh 1 October GA4 recheck against saved Shopify data. Current credentials are unverified. |
 | GA4 property labels and streams | Main scripts target the property ID above | “Steele AU/NZ” and older “Steele Global” property `268365916` are earlier reported context; their saved Admin listing/stream configuration is absent. Exact account name, web stream, measurement ID, website URL, and old-property suitability remain unverified. |
-| Meta Ads Steele account `2313037395632947` | Token loading, accessible-account check, first-page listings, 15-creative inspection | July evidence records three accessible accounts and first pages of 25 campaigns, 25 ad sets, and 25 ads. These are samples, not totals. October access and performance checks belong to archived work below. |
+| Meta Ads Steele account `2313037395632947` | Legacy token/listing/creative scripts; new restricted Step 1 access command and saved-ID audit | Live access validated on 6 October: User token for configured app, `ads_read` plus `public_profile`, API v26.0, AUD, Australia/Sydney. New access command reads no advertising objects. July first pages are samples, not totals; earlier performance checks remain archived. |
 | Facebook Page `114421101975106` and object stories | Unfinished OAuth/Page-token and object-story experiments | All 15 saved metadata attempts and all 15 saved story requests failed with permission errors. Advertising access and Page content access are separate; these errors do not prove ads reporting is unavailable. |
 | Dalgo | No configured connection demonstrated in this repository | Chosen platform direction; Steele source coverage and the technical data handoff still require evidence. |
 
@@ -104,6 +105,36 @@ The saved summary of the 1 October discovery session
 but its original API output is not retained here: this is reported context,
 not independently verified evidence. Another property's data,
 alternate IDs, collection timing, and the actual cause remain open.
+
+## New active Meta discovery — Step 1 only (6 October)
+
+Implemented `scripts.meta.discover_connections` with the sole stage `access`.
+It audits four retained July Shopify/GA4 files, then validates the selected Meta
+User token and reads the approved account through two GET requests. `--offline`
+audits saved evidence without loading credentials or contacting any API. The
+new reader uses explicit file configuration and requires ads-only permissions;
+the legacy token loader/scripts keep their previous behavior.
+
+**Verified:** 15 fake-response/temporary-file tests passed. The offline audit
+reproduced 207/207 transaction matches, 326/326 order–product–variant row matches,
+original quantity agreement, and 25 absent Online Store orders. A live run passed
+token validity, app/type/permission/expiry checks and returned the expected
+account, AUD, Australia/Sydney and v26.0. An empty-config manual test returned
+failure before networking; unsupported later stages are blocked.
+
+**Retained evidence:** live summary
+`evidence/meta/access-checks/20261006T073917718635Z/summary.json`; offline summary
+`evidence/meta/access-checks/20261006T073910978937Z/summary.json`; intentional
+empty-config failure `evidence/meta/access-checks/20261006T074014942699Z/summary.json`.
+Summaries record UTC collection time and saved-input fingerprints, without tokens,
+App Secrets, raw token-debug user identifiers, or individual order/customer rows.
+
+**Limits/next work:** Shopify/GA4 access was not refreshed; July files are historical.
+The missing orders were counted without cause investigation. Meta campaigns, ad
+sets, ads, creatives, links, catalogue items and Insights were not read in this
+step. Cross-source Meta connections remain unverified. Step 2 awaits the user's
+next instruction. A requested short teaching handoff belongs in Downloads,
+outside the repository. Archive branch/stash were not restored or modified.
 
 ## Archived Meta reporting work
 
