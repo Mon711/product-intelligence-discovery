@@ -190,7 +190,7 @@ class FoundationAndCommandTests(unittest.TestCase):
     def test_later_stages_are_not_available(self):
         with patch("scripts.meta.discover_connections.audit_foundation") as audit, redirect_stderr(io.StringIO()):
             with self.assertRaises(SystemExit) as caught:
-                main(["--stage", "sample"])
+                main(["--stage", "creatives"])
             self.assertEqual(caught.exception.code, 2)
             audit.assert_not_called()
 

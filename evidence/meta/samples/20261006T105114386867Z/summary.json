@@ -1,0 +1,65 @@
+{
+  "stage": "sample",
+  "collected_at_utc": "2026-10-06T10:51:14.386867+00:00",
+  "offline": false,
+  "meta": {
+    "status": "failed",
+    "error": "META_AD_ACCOUNT_ID must select Steele account 2313037395632947."
+  },
+  "foundation": {
+    "status": "passed",
+    "evidence_kind": "historical saved files; no live Shopify or GA4 requests",
+    "property_id": "268350484",
+    "dates": {
+      "since": "2026-07-01",
+      "until": "2026-07-07"
+    },
+    "shopify_date_basis": "orders created in Australia/Melbourne",
+    "ga4_timezone": "Australia/Sydney",
+    "item_id_pattern": "shopify_AU_{product_id}_{variant_id}",
+    "counts": {
+      "shopify_orders": 251,
+      "shopify_lines": 385,
+      "ga4_event_rows": 207,
+      "ga4_transactions": 207,
+      "matched_transactions": 207,
+      "ga4_item_rows": 326,
+      "matched_item_rows": 326,
+      "online_store_orders": 231,
+      "captured_online_store_orders": 206,
+      "absent_online_store_orders": 25
+    },
+    "checks": {
+      "unique_shopify_order_ids": true,
+      "ga4_events_match_recorded_row_count": true,
+      "event_and_item_transaction_sets_agree": true,
+      "all_ga4_transactions_match_shopify_orders": true,
+      "all_ga4_item_rows_match_order_product_variant": true,
+      "original_quantities_match": true
+    },
+    "inputs": [
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/shopify/orders/orders_2026-07-01_to_2026-07-07.csv",
+        "sha256": "c6ea3278d071a8f7f94f555a640a4668d551e147e2523648b943661ca7ebad38"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/shopify/orders/order_lines_2026-07-01_to_2026-07-07.csv",
+        "sha256": "779b62ba690a89e48eddf13162355fbda2abd300d999381ef96b3337c10260b5"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/ga4/purchase_events_2026-07-01_to_2026-07-07.txt",
+        "sha256": "f10b73b7bf1ad3b1a0afa726cab08d04264ce237161a748cee0e23fe13952068"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/ga4/purchase_items_2026-07-01_to_2026-07-07.txt",
+        "sha256": "ae621280a8f0e84810b88bff846e7f14bb234e8a935752667ab62e003b202b4d"
+      }
+    ],
+    "limitations": [
+      "Checks only retained July rows, not current Shopify/GA4 access or complete tracking.",
+      "Missing orders are counted; their causes are not investigated.",
+      "No Meta-to-GA4 or Meta-to-Shopify connection is established by Step 1."
+    ]
+  },
+  "status": "failed"
+}

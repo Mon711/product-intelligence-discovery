@@ -1,0 +1,874 @@
+{
+  "status": "complete",
+  "dates": {
+    "since": "2026-07-01",
+    "until": "2026-07-07"
+  },
+  "row_meaning": "one ad across the entire seven-day window",
+  "insights_complete": true,
+  "insight_pages": 1,
+  "candidate_count": 42,
+  "max_ads": 15,
+  "selection_rule": "positive impressions; exact saved-example ad names first; numeric ad ID ascending within each group",
+  "selection_reference": {
+    "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/list_creatives_of_15_ads.json",
+    "sha256": "17d1a22317b193183170d9f8e32c2343d93eea52d12a723407e1edfc0365a566"
+  },
+  "requested_fields": {
+    "insights": "account_id,ad_id,ad_name,adset_id,adset_name,campaign_id,campaign_name,date_start,date_stop,impressions",
+    "ad": "id,account_id,name,campaign_id,adset_id,status,effective_status,creative{id},created_time,updated_time",
+    "adset": "id,account_id,name,campaign_id,status,effective_status,created_time,updated_time",
+    "campaign": "id,account_id,name,status,effective_status,created_time,updated_time"
+  },
+  "report_settings": {
+    "level": "ad",
+    "time_increment": "entire window",
+    "breakdowns": [],
+    "attribution": "no conversion metrics requested; no attribution override"
+  },
+  "selected": [
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120245546322360458",
+      "ad_name": "Steele_retargeting_Full Price catalogue_30april26",
+      "adset_id": "120245546322370458",
+      "adset_name": "Steele_retargeting_engagers+viewcontent_april2026",
+      "campaign_id": "120245546322350458",
+      "campaign_name": "Steele_fullprice_july26",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "37051"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246312718390458",
+      "ad_name": "Steele_NewArrivals_16april26_Video1",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "650"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246336098680458",
+      "ad_name": "Steele_outerwear_14may26_static1",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "2943"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246405492600458",
+      "ad_name": "Steele_collection_Carousel14may26",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "4556"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120249803788750458",
+      "ad_name": "Steele_motion1_hannecoat_30june26",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "18802"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120249803949160458",
+      "ad_name": "Steele_static_hannecoat_30june26",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "603"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120249804128460458",
+      "ad_name": "Steele_outerwear_Collectionad_30june26",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "377"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120243366762550458",
+      "ad_name": "Steele_Bestsellers_motion3_march26_PDPrelaunch",
+      "adset_id": "120233396922930458",
+      "adset_name": "Steele_Bestsellers_Collection_Sept25",
+      "campaign_id": "120233396922910458",
+      "campaign_name": "Steele_Bestsellers",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "21663"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120244131690810458",
+      "ad_name": "Steele_essentials_23mar26_Video \u2013 Copy 2",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "2755"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120244131853990458",
+      "ad_name": "Steele_essentials_23mar26_Video 2",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "3348"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120244692207070458",
+      "ad_name": "Steele New arrival_catalog 2026",
+      "adset_id": "120244692207080458",
+      "adset_name": "Steele New arrival_catalog 2026",
+      "campaign_id": "120244692207060458",
+      "campaign_name": "Steele New arrival_catalog 2026",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "38332"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120244898136140458",
+      "ad_name": "Steele_sets_16april26_static1",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "33"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246312718300458",
+      "ad_name": "Steele_NewArrivals_16april26_static3",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "436"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246332513800458",
+      "ad_name": "Steele_NewArrivals_14may26_video1",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "1761"
+    },
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120246335113320458",
+      "ad_name": "Steele_NewArrivals_14may26_video2",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "190"
+    }
+  ],
+  "objects": {
+    "ad": {
+      "120245546322360458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322360458",
+          "account_id": "2313037395632947",
+          "name": "Steele_retargeting_Full Price catalogue_30april26",
+          "campaign_id": "120245546322350458",
+          "adset_id": "120245546322370458",
+          "status": "ACTIVE",
+          "effective_status": "ADSET_PAUSED",
+          "creative": {
+            "id": "2213623069380197"
+          },
+          "created_time": "2026-04-30T19:58:38+1000",
+          "updated_time": "2026-07-07T14:16:53+1000",
+          "collected_at_utc": "2026-10-06T10:51:16.033838+00:00"
+        }
+      },
+      "120246312718390458": {
+        "status": "available",
+        "data": {
+          "id": "120246312718390458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_16april26_Video1",
+          "campaign_id": "120246312718430458",
+          "adset_id": "120246312718200458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "1320608509934183"
+          },
+          "created_time": "2026-05-14T17:48:56+1000",
+          "updated_time": "2026-08-07T20:30:37+1000",
+          "collected_at_utc": "2026-10-06T10:51:17.365097+00:00"
+        }
+      },
+      "120246336098680458": {
+        "status": "available",
+        "data": {
+          "id": "120246336098680458",
+          "account_id": "2313037395632947",
+          "name": "Steele_outerwear_14may26_static1",
+          "campaign_id": "120246312718430458",
+          "adset_id": "120246312718200458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "2231962067556522"
+          },
+          "created_time": "2026-05-15T00:07:23+1000",
+          "updated_time": "2026-08-07T20:30:31+1000",
+          "collected_at_utc": "2026-10-06T10:51:18.600945+00:00"
+        }
+      },
+      "120246405492600458": {
+        "status": "available",
+        "data": {
+          "id": "120246405492600458",
+          "account_id": "2313037395632947",
+          "name": "Steele_collection_Carousel14may26",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "1325799332799642"
+          },
+          "created_time": "2026-05-15T22:17:54+1000",
+          "updated_time": "2026-07-07T14:24:51+1000",
+          "collected_at_utc": "2026-10-06T10:51:18.980829+00:00"
+        }
+      },
+      "120249803788750458": {
+        "status": "available",
+        "data": {
+          "id": "120249803788750458",
+          "account_id": "2313037395632947",
+          "name": "Steele_motion1_hannecoat_30june26",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "2535887650173076"
+          },
+          "created_time": "2026-07-02T20:13:56+1000",
+          "updated_time": "2026-08-19T23:33:34+1000",
+          "collected_at_utc": "2026-10-06T10:51:20.054111+00:00"
+        }
+      },
+      "120249803949160458": {
+        "status": "available",
+        "data": {
+          "id": "120249803949160458",
+          "account_id": "2313037395632947",
+          "name": "Steele_static_hannecoat_30june26",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "2046040699337199"
+          },
+          "created_time": "2026-07-02T20:19:10+1000",
+          "updated_time": "2026-08-19T23:48:22+1000",
+          "collected_at_utc": "2026-10-06T10:51:20.436831+00:00"
+        }
+      },
+      "120249804128460458": {
+        "status": "available",
+        "data": {
+          "id": "120249804128460458",
+          "account_id": "2313037395632947",
+          "name": "Steele_outerwear_Collectionad_30june26",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "1761957141639803"
+          },
+          "created_time": "2026-07-02T20:47:20+1000",
+          "updated_time": "2026-09-02T15:52:30+1000",
+          "collected_at_utc": "2026-10-06T10:51:20.846333+00:00"
+        }
+      },
+      "120243366762550458": {
+        "status": "available",
+        "data": {
+          "id": "120243366762550458",
+          "account_id": "2313037395632947",
+          "name": "Steele_Bestsellers_motion3_march26_PDPrelaunch",
+          "campaign_id": "120233396922910458",
+          "adset_id": "120233396922930458",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "creative": {
+            "id": "29026580370280649"
+          },
+          "created_time": "2026-03-25T07:43:37+1100",
+          "updated_time": "2026-10-06T19:19:13+1100",
+          "collected_at_utc": "2026-10-06T10:51:21.304287+00:00"
+        }
+      },
+      "120244131690810458": {
+        "status": "available",
+        "data": {
+          "id": "120244131690810458",
+          "account_id": "2313037395632947",
+          "name": "Steele_essentials_23mar26_Video \u2013 Copy 2",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "996428299482629"
+          },
+          "created_time": "2026-04-06T05:38:24+1000",
+          "updated_time": "2026-07-07T14:22:39+1000",
+          "collected_at_utc": "2026-10-06T10:51:22.436918+00:00"
+        }
+      },
+      "120244131853990458": {
+        "status": "available",
+        "data": {
+          "id": "120244131853990458",
+          "account_id": "2313037395632947",
+          "name": "Steele_essentials_23mar26_Video 2",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "2961426797384859"
+          },
+          "created_time": "2026-04-06T05:42:27+1000",
+          "updated_time": "2026-07-07T14:25:09+1000",
+          "collected_at_utc": "2026-10-06T10:51:22.819568+00:00"
+        }
+      },
+      "120244692207070458": {
+        "status": "available",
+        "data": {
+          "id": "120244692207070458",
+          "account_id": "2313037395632947",
+          "name": "Steele New arrival_catalog 2026",
+          "campaign_id": "120244692207060458",
+          "adset_id": "120244692207080458",
+          "status": "ACTIVE",
+          "effective_status": "CAMPAIGN_PAUSED",
+          "creative": {
+            "id": "813515491814716"
+          },
+          "created_time": "2026-04-17T18:09:07+1000",
+          "updated_time": "2026-04-18T15:37:10+1000",
+          "collected_at_utc": "2026-10-06T10:51:23.193982+00:00"
+        }
+      },
+      "120244898136140458": {
+        "status": "available",
+        "data": {
+          "id": "120244898136140458",
+          "account_id": "2313037395632947",
+          "name": "Steele_sets_16april26_static1",
+          "campaign_id": "120235813647500458",
+          "adset_id": "120235813647550458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "1279105241040350"
+          },
+          "created_time": "2026-04-22T00:46:04+1000",
+          "updated_time": "2026-07-31T09:01:47+1000",
+          "collected_at_utc": "2026-10-06T10:51:24.747648+00:00"
+        }
+      },
+      "120246312718300458": {
+        "status": "available",
+        "data": {
+          "id": "120246312718300458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_16april26_static3",
+          "campaign_id": "120246312718430458",
+          "adset_id": "120246312718200458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "1632098531326945"
+          },
+          "created_time": "2026-05-14T17:48:56+1000",
+          "updated_time": "2026-09-04T14:49:19+1000",
+          "collected_at_utc": "2026-10-06T10:51:25.118588+00:00"
+        }
+      },
+      "120246332513800458": {
+        "status": "available",
+        "data": {
+          "id": "120246332513800458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_14may26_video1",
+          "campaign_id": "120246312718430458",
+          "adset_id": "120246312718200458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "831685120014508"
+          },
+          "created_time": "2026-05-14T23:44:23+1000",
+          "updated_time": "2026-08-07T20:30:44+1000",
+          "collected_at_utc": "2026-10-06T10:51:25.502265+00:00"
+        }
+      },
+      "120246335113320458": {
+        "status": "available",
+        "data": {
+          "id": "120246335113320458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_14may26_video2",
+          "campaign_id": "120246312718430458",
+          "adset_id": "120246312718200458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "creative": {
+            "id": "2508857069565088"
+          },
+          "created_time": "2026-05-14T23:51:58+1000",
+          "updated_time": "2026-08-07T20:30:24+1000",
+          "collected_at_utc": "2026-10-06T10:51:25.883391+00:00"
+        }
+      }
+    },
+    "adset": {
+      "120245546322370458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322370458",
+          "account_id": "2313037395632947",
+          "name": "Steele_retargeting_engagers+viewcontent_april2026",
+          "campaign_id": "120245546322350458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "created_time": "2026-04-30T19:54:15+1000",
+          "updated_time": "2026-08-06T18:16:51+1000",
+          "collected_at_utc": "2026-10-06T10:51:16.547415+00:00"
+        }
+      },
+      "120246312718200458": {
+        "status": "available",
+        "data": {
+          "id": "120246312718200458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_13May26",
+          "campaign_id": "120246312718430458",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2026-05-14T17:48:53+1000",
+          "updated_time": "2026-08-07T20:28:13+1000",
+          "collected_at_utc": "2026-10-06T10:51:17.738511+00:00"
+        }
+      },
+      "120235813647550458": {
+        "status": "available",
+        "data": {
+          "id": "120235813647550458",
+          "account_id": "2313037395632947",
+          "name": "Steele_Dresses_25",
+          "campaign_id": "120235813647500458",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2025-10-28T18:55:04+1100",
+          "updated_time": "2026-09-15T17:30:12+1000",
+          "collected_at_utc": "2026-10-06T10:51:19.349195+00:00"
+        }
+      },
+      "120233396922930458": {
+        "status": "available",
+        "data": {
+          "id": "120233396922930458",
+          "account_id": "2313037395632947",
+          "name": "Steele_Bestsellers_Collection_Sept25",
+          "campaign_id": "120233396922910458",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2025-09-23T05:59:32+1000",
+          "updated_time": "2026-02-14T19:16:52+1100",
+          "collected_at_utc": "2026-10-06T10:51:21.683783+00:00"
+        }
+      },
+      "120244692207080458": {
+        "status": "available",
+        "data": {
+          "id": "120244692207080458",
+          "account_id": "2313037395632947",
+          "name": "Steele New arrival_catalog 2026",
+          "campaign_id": "120244692207060458",
+          "status": "ACTIVE",
+          "effective_status": "CAMPAIGN_PAUSED",
+          "created_time": "2026-04-17T18:09:04+1000",
+          "updated_time": "2026-04-17T18:09:12+1000",
+          "collected_at_utc": "2026-10-06T10:51:23.578923+00:00"
+        }
+      }
+    },
+    "campaign": {
+      "120245546322350458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322350458",
+          "account_id": "2313037395632947",
+          "name": "Steele_fullprice_july26",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2026-04-30T19:54:14+1000",
+          "updated_time": "2026-10-02T16:42:43+1000",
+          "collected_at_utc": "2026-10-06T10:51:16.954884+00:00"
+        }
+      },
+      "120246312718430458": {
+        "status": "available",
+        "data": {
+          "id": "120246312718430458",
+          "account_id": "2313037395632947",
+          "name": "Steele_NewArrivals_updated",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2026-05-14T17:48:53+1000",
+          "updated_time": "2026-10-06T20:00:41+1100",
+          "collected_at_utc": "2026-10-06T10:51:18.183721+00:00"
+        }
+      },
+      "120235813647500458": {
+        "status": "available",
+        "data": {
+          "id": "120235813647500458",
+          "account_id": "2313037395632947",
+          "name": "Steele_Collections",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2025-10-28T18:55:03+1100",
+          "updated_time": "2026-08-26T22:02:35+1000",
+          "collected_at_utc": "2026-10-06T10:51:19.682232+00:00"
+        }
+      },
+      "120233396922910458": {
+        "status": "available",
+        "data": {
+          "id": "120233396922910458",
+          "account_id": "2313037395632947",
+          "name": "Steele_Bestsellers",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2025-09-23T05:59:32+1000",
+          "updated_time": "2026-10-06T20:00:02+1100",
+          "collected_at_utc": "2026-10-06T10:51:22.013160+00:00"
+        }
+      },
+      "120244692207060458": {
+        "status": "available",
+        "data": {
+          "id": "120244692207060458",
+          "account_id": "2313037395632947",
+          "name": "Steele New arrival_catalog 2026",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "created_time": "2026-04-17T18:09:03+1000",
+          "updated_time": "2026-08-06T01:42:50+1000",
+          "collected_at_utc": "2026-10-06T10:51:23.935931+00:00"
+        }
+      }
+    }
+  },
+  "hierarchy": [
+    {
+      "campaign_id": "120245546322350458",
+      "campaign_name": "Steele_fullprice_july26",
+      "adset_id": "120245546322370458",
+      "adset_name": "Steele_retargeting_engagers+viewcontent_april2026",
+      "ad_id": "120245546322360458",
+      "ad_name": "Steele_retargeting_Full Price catalogue_30april26",
+      "impressions": "37051",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2213623069380197",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246312718390458",
+      "ad_name": "Steele_NewArrivals_16april26_Video1",
+      "impressions": "650",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1320608509934183",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246336098680458",
+      "ad_name": "Steele_outerwear_14may26_static1",
+      "impressions": "2943",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2231962067556522",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120246405492600458",
+      "ad_name": "Steele_collection_Carousel14may26",
+      "impressions": "4556",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1325799332799642",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249803788750458",
+      "ad_name": "Steele_motion1_hannecoat_30june26",
+      "impressions": "18802",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2535887650173076",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249803949160458",
+      "ad_name": "Steele_static_hannecoat_30june26",
+      "impressions": "603",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2046040699337199",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249804128460458",
+      "ad_name": "Steele_outerwear_Collectionad_30june26",
+      "impressions": "377",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1761957141639803",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120233396922910458",
+      "campaign_name": "Steele_Bestsellers",
+      "adset_id": "120233396922930458",
+      "adset_name": "Steele_Bestsellers_Collection_Sept25",
+      "ad_id": "120243366762550458",
+      "ad_name": "Steele_Bestsellers_motion3_march26_PDPrelaunch",
+      "impressions": "21663",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "29026580370280649",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244131690810458",
+      "ad_name": "Steele_essentials_23mar26_Video \u2013 Copy 2",
+      "impressions": "2755",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "996428299482629",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244131853990458",
+      "ad_name": "Steele_essentials_23mar26_Video 2",
+      "impressions": "3348",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "2961426797384859",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120244692207060458",
+      "campaign_name": "Steele New arrival_catalog 2026",
+      "adset_id": "120244692207080458",
+      "adset_name": "Steele New arrival_catalog 2026",
+      "ad_id": "120244692207070458",
+      "ad_name": "Steele New arrival_catalog 2026",
+      "impressions": "38332",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "813515491814716",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244898136140458",
+      "ad_name": "Steele_sets_16april26_static1",
+      "impressions": "33",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "1279105241040350",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246312718300458",
+      "ad_name": "Steele_NewArrivals_16april26_static3",
+      "impressions": "436",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "1632098531326945",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246332513800458",
+      "ad_name": "Steele_NewArrivals_14may26_video1",
+      "impressions": "1761",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "831685120014508",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246335113320458",
+      "ad_name": "Steele_NewArrivals_14may26_video2",
+      "impressions": "190",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "2508857069565088",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    }
+  ],
+  "limitations": [
+    "Small deliberately chosen sample; not full account or creative-format coverage.",
+    "Insights describe July delivery; object names/status/creative references are current snapshots.",
+    "Name-based priority is a sampling hint, not a cross-source identity match.",
+    "No creative content, destinations, catalogue items or Shopify/GA4 attribution is read."
+  ],
+  "empty_sample": false,
+  "request_count_including_access": 28
+}

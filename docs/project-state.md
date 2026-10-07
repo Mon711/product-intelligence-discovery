@@ -1,8 +1,9 @@
 # Project state and discoveries
 
-**Maintained:** 6 October 2026. **Checkout inspected:** `main` at `0724d5e`,
-with the new Meta Step 1 work uncommitted. Two live Meta access reads were made
-for this update; no live Shopify/GA4 or advertising-object requests were made.
+**Maintained:** 7 October 2026. **Checkout inspected:** `main` at `74839ec`,
+with Step 2 prepared for the accompanying implementation commit at the user's
+request. Live Meta access and bounded sample reads were made on 6 October;
+no live Shopify/GA4 requests were made.
 Dates below describe the evidence, not a guarantee that credentials or reports
 will continue to work.
 
@@ -28,7 +29,7 @@ handoff still needs validation.
 
 This repository holds small Python discovery experiments and saved evidence.
 It has no production service, database, scheduled ingestion, or deployment.
-The new Step 1 has 15 offline tests in `tests/test_meta_access.py`. The archived
+The new Steps 1–2 have 29 offline tests across the access and sampling suites. The archived
 Meta reporting reader has a separate test suite; see below.
 
 The [original product brief](<reference/Steele Intel - Product Brief and Dev Roadmap.docx>)
@@ -129,14 +130,53 @@ empty-config failure `evidence/meta/access-checks/20261006T074014942699Z/summary
 Summaries record UTC collection time and saved-input fingerprints, without tokens,
 App Secrets, raw token-debug user identifiers, or individual order/customer rows.
 
-**Limits/next work:** Shopify/GA4 access was not refreshed; July files are historical.
+**Limits:** Shopify/GA4 access was not refreshed; July files are historical.
 The missing orders were counted without cause investigation. Meta campaigns, ad
 sets, ads, creatives, links, catalogue items and Insights were not read in this
-step. Cross-source Meta connections remain unverified. Step 2 awaits the user's
-next instruction. A requested short teaching handoff belongs in Downloads,
+step. Cross-source Meta connections remain unverified. Step 2 is documented below.
+A requested short teaching handoff belongs in Downloads,
 outside the repository. Archive branch/stash were not restored or modified.
 
+## Active Meta discovery — Step 2 sample (6 October)
+
+Implemented `--stage sample` for the fixed **1–7 July 2026** window, with default
+15 ads and `--max-ads` accepting 1–15. It completes paginated ad-level Insights
+before selecting positive-impression ads, prioritizes exact saved-example names,
+then fills by numeric ad ID. Only selected ads and unique referenced campaigns/ad
+sets are read. Creative access stops at the ID reference; there is no creative
+content, URL, catalogue, Page/post, conversion or Shopify/GA4 collection.
+
+**Verified:** 29 offline tests pass, covering Step 1 plus selection, pagination,
+ownership, redaction, partial failures and cached parent reads. Both live samples
+passed access validation and a complete one-page Insights report with **42 ad
+rows**. The one-ad sample made six GET requests. The default sample made **28 GET
+requests**, selected **15 ads**, read **five ad sets/five campaigns**, prioritized
+**seven saved-example names**, and had **zero hierarchy gaps**. One empty-config
+manual failure stopped before networking. No retries or broad inventory reads.
+
+**Evidence:** full sample
+`evidence/meta/samples/20261006T105113482121Z/`; one-ad sample
+`evidence/meta/samples/20261006T105053919403Z/`; intentional configuration failure
+`evidence/meta/samples/20261006T105114386867Z/summary.json`.
+Complete samples contain `summary.json`, `insights.json`, `sample.json`, and
+`hierarchy.csv`. Account is `2313037395632947`, AUD, Australia/Sydney, API v26.0.
+Insights rows describe one ad for the whole week with no breakdowns, daily
+increments or conversion metrics/attribution override. Current object snapshots
+have collection timestamps and may differ from July state. Credentials and
+pagination URLs are excluded. The user authorized committing and pushing the
+saved advertising evidence with Step 2 on 7 October.
+
+**Limits/next:** selection is a deliberately bounded sample, not complete ad or
+creative-format coverage. Ads Manager comparison is available as a manual check
+but was not performed by the agent. Cross-source matches and the original GA4
+coverage gap remain uninvestigated. Step 3 awaits the next instruction. The Step 2
+flat teaching pack contains exact source/tests and incremental diffs, belongs in
+Downloads, and excludes source evidence/credentials. No archive/stash changes,
+new dependencies or PRs. Publication checks on 7 October passed all 29 offline
+tests and the whitespace check; see the accompanying commit for its identity.
+
 ## Archived Meta reporting work
+
 
 **Code location:** branch `archive/meta-ads-reporting-reader`, commit `cfa22bb`.
 The code is absent from `main`; do not describe its command as available here.

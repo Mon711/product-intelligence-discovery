@@ -4,7 +4,7 @@
 the separate Meta archive commit, and the uncommitted organization change.
 
 **6 October update:** the organization change is now committed as `0724d5e`.
-The Step 1 entry below documents new, uncommitted implementation work.
+The Step 1 entry below records implementation; publication is noted below.
 
 This is a grouped explanation of meaningful work. Commit dates, subjects,
 changed paths, relevant safe diffs, saved findings, and the archive handoff are
@@ -200,7 +200,7 @@ untracked reports; an ordinary clone will not include that evidence.
 not files to recreate in the active tree. Existing archives/history are not
 rewritten to remove historical sharing packs.
 
-## 6 October: implement Meta discovery Step 1 only (uncommitted)
+## 6 October: implement Meta discovery Step 1 only (commit `74839ec`)
 
 **Before:** active Meta scripts could load credentials and fetch first-page
 advertising samples, but had no small, shared ads-only access validation command
@@ -232,6 +232,47 @@ in [project state](project-state.md). README includes reproducible manual checks
 cross-source connections remain unverified by this step. Original Shopify–GA4
 gap causes remain out of scope. New code is uncommitted; no commit, push, or PR.
 The requested small teaching handoff is saved outside this repository in Downloads.
+
+**Publication:** committed and pushed to `origin/main` as `74839ec` at the user's
+request. The isolated Step 1 tree passed all 15 tests before committing. Step 2
+code, tests, evidence and shared-file additions remained unstaged/uncommitted;
+the Git index was verified empty after commit. This publication note is recorded
+with Step 2 rather than in a separate documentation-only commit.
+
+## 6 October: implement Meta discovery Step 2 only
+
+**Before:** the active command could validate access and audit saved identifiers,
+but could not choose a dated advertising sample or save campaign/ad-set/ad references.
+
+**After:** `--stage sample` retrieves complete period-level ad Insights for 1–7
+July, selects up to 15 positive-impression ads using saved-example name priority
+then numeric ID, and reads only selected ads and unique parent campaign/ad-set
+objects. It saves a hierarchy CSV plus source/settings/selection evidence. The
+reader's GET gate now permits only fixed-window Insights and registered IDs
+discovered from this account; validated ownership/fields, cursor paging, partial
+failure preservation and credential redaction remain enforced. Creative reads
+stop at ID references. Step 1 behavior and legacy scripts are preserved.
+
+**Reason:** implement the user's next explained checkpoint and provide manual
+verification plus a flat Downloads learning ZIP with exact source and Git diffs.
+The Step 1 working files were snapshotted before this change so incremental
+diffs can distinguish Step 2 from still-uncommitted Step 1 additions.
+
+**Actual checks:** 29 offline tests passed. Live one-ad and 15-ad samples both
+passed; Insights returned 42 rows in one page. The full sample read 15 ads, five
+ad sets and five campaigns in 28 GET requests (including validation), with seven
+saved-name priorities and zero hierarchy gaps. Empty configuration failed before
+networking. Recorded output paths/settings/limits are in project state. Ads
+Manager/manual UI comparison is not established by these API checks.
+
+**Remaining:** Step 3 creative content/link discovery, Meta-to-GA4/Shopify matching
+and existing discrepancy causes are not implemented. No new dependencies or
+production infrastructure or change to the archived Meta branch/evidence stash.
+
+**7 October publication preparation:** the user authorized staging, committing
+and pushing Step 2, including its saved sample evidence. All 29 offline tests and
+the whitespace check passed again. This entry accompanies the implementation
+commit; its Git identity is available in repository history.
 
 ## Git publication evidence and limits
 

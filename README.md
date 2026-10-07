@@ -217,7 +217,7 @@ Then check current Meta access:
 rtk proxy uv run python -m scripts.meta.discover_connections --stage access
 ```
 
-`--stage access` is the only implemented stage and the default. After the saved
+`--stage access` is Step 1 and the default. After the saved
 audit passes, it makes two GET reads: token validation and Steele account metadata.
 Expect `Meta access: passed`, account `2313037395632947`, `AUD`,
 `Australia/Sydney`, API version and granted permissions. No advertising objects
@@ -245,7 +245,7 @@ rtk proxy uv run python -m scripts.meta.discover_connections --config /dev/null
 `FAILED`, `Meta access: failed`, a Steele-account configuration error, and a new
 failed summary. It never loads your real credentials or contacts Meta. Your
 configuration and previous reports remain intact. The process returns exit code
-1 for a failed check (0 for success); later stages such as `--stage sample` are
+1 for a failed check (0 for success); later stages such as `--stage creatives` are
 rejected with code 2 before work starts.
 
 Optional input/output overrides are `--evidence-root` (read a copied evidence
@@ -261,7 +261,7 @@ rtk proxy uv run python -m unittest discover -s tests -v
 ```
 
 `discover -s tests` finds the new standard-library test suite; `-v` prints each
-test name. Expect 15 tests and `OK`. Tests use fake Meta responses and temporary
+test name. Expect 29 tests and `OK`. Tests use fake Meta responses and temporary
 copies of saved evidence; they neither contact source APIs nor change retained
 evidence/configuration. `uv run` may prepare the local environment/cache if needed.
 
@@ -270,7 +270,92 @@ one step and writes a summary; `meta_discovery/foundation.py` parses saved files
 and compares identifiers/quantities; `meta_discovery/reader.py` validates configuration,
 sends restricted reads and returns only safe access metadata. The older token
 loader and discovery scripts retain their existing behavior. No new dependencies
-or later discovery stages are introduced.
+or discovery stages beyond Step 2 are introduced.
+
+### Meta connection discovery — Step 2 sample
+
+From the repository root, start with one ad:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage sample --max-ads 1
+```
+
+`--stage sample` selects Step 2. It rechecks saved July identifiers and validates
+Meta access, then makes a paginated GET Insights report at ad level for **1–7 July
+2026**. Each Insights row describes one ad across the whole seven-day account-local
+window. Only identifiers, names, dates and impressions are requested: impressions
+identify reported delivery, not conversion attribution. No breakdowns, daily rows,
+conversion measures or attribution overrides are requested.
+
+After all pages are collected, ads with positive impressions are eligible. Exact
+names from the 15 saved creative examples receive priority; within each priority
+group ads are sorted by numeric ID. Names are only a sampling hint, not a cross-source
+matching key. `--max-ads 1` limits object collection to one ad and its parent ad set
+and campaign; it still retrieves all Insights pages so selection is reproducible.
+Each unique parent is read once. Creative reads stop at the reference `creative{id}`;
+creative content, destination URLs, product sets and Page/posts remain later work.
+
+Then collect the default sample of up to 15 ads:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage sample
+```
+
+Each run creates a new folder under `evidence/meta/samples/` without replacing
+earlier evidence. `--max-ads` accepts only 1–15. `--offline` remains available only
+for Step 1; combining it with `--stage sample` is rejected before work starts.
+`--config`, `--evidence-root` and `--output-dir` retain their existing meanings.
+
+**Verified on 6 October:** one complete Insights page returned 42 candidate ad rows.
+The one-ad run used six GET requests; the default selected 15 ads, five ad sets and
+five campaigns in 28 GET requests, with seven saved-name priorities and no hierarchy
+gaps. These are dated observations, not hard-coded required counts. A smaller pool
+may return fewer than the requested ads; a fully collected report with no positive
+impressions explicitly reports an empty sample.
+
+| Output | How to check it manually |
+| --- | --- |
+| `summary.json` | Overall status `passed`, Meta status `passed`, sample status `complete`, `insights_complete: true`, `issue_rows: 0` |
+| `insights.json` | `complete: true`; requested July dates; period-level rows with account `2313037395632947`; selected ads must exist here with positive impressions |
+| `sample.json` | Dates, requested fields, report settings, selection/reference fingerprint, selected rows, unique current objects, collection timestamps and limitations |
+| `hierarchy.csv` | One row per selected ad, showing campaign → ad set → ad → creative ID; unique ad IDs, expected sample limit, row status `complete`, empty `issues` |
+
+The CSV names are July Insights labels. Current object names/statuses are stored
+separately in `sample.json`; they can change after July. Its `objects.ad` entry for
+an ad must have matching parent IDs, and each referenced object must belong to
+Steele. Missing optional fields remain null. In Meta Ads Manager, independently
+select Steele's account and 1–7 July, locate a selected ad by its ID and compare
+the seven-day impressions and parent IDs. Do not filter out currently paused ads
+when checking historical delivery. The CSV impressions are repeated selection
+evidence, not an analytics report or per-day values.
+
+To verify failure without touching credentials or contacting Meta:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage sample --config /dev/null
+```
+
+Expect `FAILED`, a Steele-account configuration error, and exit code 1. Only a
+failed summary is created; no sample objects are requested. An invalid size such
+as `--max-ads 16` is rejected with exit code 2 before creating a folder/networking.
+
+The reader follows only cursors against the same approved Insights address and
+never follows or saves next-page URLs. Missing/repeated cursors, repeated ads,
+wrong accounts/dates, rate limits, and network errors stop collection without
+retries. Pages already saved remain labelled incomplete. Unavailable referenced
+objects and changed parent relationships remain visible as gaps: sample status
+`partial`, overall `failed`, exit code 1. A 50-page cap prevents unbounded paging;
+a capped run cannot claim completeness.
+
+`meta_discovery/sampling.py` owns deterministic selection, cached unique parent
+reads, partial-result preservation and CSV/JSON output. `reader.py` extends the
+existing GET gate only after access validation, and node reads are restricted to
+IDs actually discovered in Steele Insights and chosen for the sample. The command
+coordinates the stage. The Step 1 foundation checker and legacy scripts are unchanged.
+Relevant field/GET definitions were checked against Meta's official
+[account/Insights SDK source](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adaccount.py)
+and [ad SDK source](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/ad.py);
+the live runs verify the requested fields for the configured v26.0 account.
 
 The earlier full Meta report command and its separate tests live only on the archive branch.
 They are not executable features of this checkout; see project state and history.

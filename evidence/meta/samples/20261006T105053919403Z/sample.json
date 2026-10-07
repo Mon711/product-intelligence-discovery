@@ -1,0 +1,122 @@
+{
+  "status": "complete",
+  "dates": {
+    "since": "2026-07-01",
+    "until": "2026-07-07"
+  },
+  "row_meaning": "one ad across the entire seven-day window",
+  "insights_complete": true,
+  "insight_pages": 1,
+  "candidate_count": 42,
+  "max_ads": 1,
+  "selection_rule": "positive impressions; exact saved-example ad names first; numeric ad ID ascending within each group",
+  "selection_reference": {
+    "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/list_creatives_of_15_ads.json",
+    "sha256": "17d1a22317b193183170d9f8e32c2343d93eea52d12a723407e1edfc0365a566"
+  },
+  "requested_fields": {
+    "insights": "account_id,ad_id,ad_name,adset_id,adset_name,campaign_id,campaign_name,date_start,date_stop,impressions",
+    "ad": "id,account_id,name,campaign_id,adset_id,status,effective_status,creative{id},created_time,updated_time",
+    "adset": "id,account_id,name,campaign_id,status,effective_status,created_time,updated_time",
+    "campaign": "id,account_id,name,status,effective_status,created_time,updated_time"
+  },
+  "report_settings": {
+    "level": "ad",
+    "time_increment": "entire window",
+    "breakdowns": [],
+    "attribution": "no conversion metrics requested; no attribution override"
+  },
+  "selected": [
+    {
+      "account_id": "2313037395632947",
+      "ad_id": "120245546322360458",
+      "ad_name": "Steele_retargeting_Full Price catalogue_30april26",
+      "adset_id": "120245546322370458",
+      "adset_name": "Steele_retargeting_engagers+viewcontent_april2026",
+      "campaign_id": "120245546322350458",
+      "campaign_name": "Steele_fullprice_july26",
+      "date_start": "2026-07-01",
+      "date_stop": "2026-07-07",
+      "impressions": "37051"
+    }
+  ],
+  "objects": {
+    "ad": {
+      "120245546322360458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322360458",
+          "account_id": "2313037395632947",
+          "name": "Steele_retargeting_Full Price catalogue_30april26",
+          "campaign_id": "120245546322350458",
+          "adset_id": "120245546322370458",
+          "status": "ACTIVE",
+          "effective_status": "ADSET_PAUSED",
+          "creative": {
+            "id": "2213623069380197"
+          },
+          "created_time": "2026-04-30T19:58:38+1000",
+          "updated_time": "2026-07-07T14:16:53+1000",
+          "collected_at_utc": "2026-10-06T10:50:56.347315+00:00"
+        }
+      }
+    },
+    "adset": {
+      "120245546322370458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322370458",
+          "account_id": "2313037395632947",
+          "name": "Steele_retargeting_engagers+viewcontent_april2026",
+          "campaign_id": "120245546322350458",
+          "status": "PAUSED",
+          "effective_status": "PAUSED",
+          "created_time": "2026-04-30T19:54:15+1000",
+          "updated_time": "2026-08-06T18:16:51+1000",
+          "collected_at_utc": "2026-10-06T10:50:56.781981+00:00"
+        }
+      }
+    },
+    "campaign": {
+      "120245546322350458": {
+        "status": "available",
+        "data": {
+          "id": "120245546322350458",
+          "account_id": "2313037395632947",
+          "name": "Steele_fullprice_july26",
+          "status": "ACTIVE",
+          "effective_status": "ACTIVE",
+          "created_time": "2026-04-30T19:54:14+1000",
+          "updated_time": "2026-10-02T16:42:43+1000",
+          "collected_at_utc": "2026-10-06T10:50:58.801835+00:00"
+        }
+      }
+    }
+  },
+  "hierarchy": [
+    {
+      "campaign_id": "120245546322350458",
+      "campaign_name": "Steele_fullprice_july26",
+      "adset_id": "120245546322370458",
+      "adset_name": "Steele_retargeting_engagers+viewcontent_april2026",
+      "ad_id": "120245546322360458",
+      "ad_name": "Steele_retargeting_Full Price catalogue_30april26",
+      "impressions": "37051",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2213623069380197",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    }
+  ],
+  "limitations": [
+    "Small deliberately chosen sample; not full account or creative-format coverage.",
+    "Insights describe July delivery; object names/status/creative references are current snapshots.",
+    "Name-based priority is a sampling hint, not a cross-source identity match.",
+    "No creative content, destinations, catalogue items or Shopify/GA4 attribution is read."
+  ],
+  "empty_sample": false,
+  "request_count_including_access": 6
+}
