@@ -1,0 +1,140 @@
+{
+  "status": "complete",
+  "item_limit": 20,
+  "attempts": [
+    {
+      "product_set_id": "9791703717598496",
+      "availability": "populated",
+      "collected_at_utc": "2026-10-07T09:05:43.785778+00:00"
+    }
+  ],
+  "items": [
+    {
+      "id": "25543150898715981",
+      "retailer_id": "46460349939851",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460349939851"
+    },
+    {
+      "id": "26368116202885651",
+      "retailer_id": "46461425680523",
+      "retailer_product_group_id": "8136626897035",
+      "url": "https://steelelabel.com/products/melina-blouse-crimson-check?variant=46461425680523"
+    },
+    {
+      "id": "26727213596953945",
+      "retailer_id": "46461429907595",
+      "retailer_product_group_id": "8136631025803",
+      "url": "https://steelelabel.com/products/elowen-dress-crimson-check?variant=46461429907595"
+    },
+    {
+      "id": "27191782067189975",
+      "retailer_id": "46461429973131",
+      "retailer_product_group_id": "8136631025803",
+      "url": "https://steelelabel.com/products/elowen-dress-crimson-check?variant=46461429973131"
+    },
+    {
+      "id": "27343939185277535",
+      "retailer_id": "46460349907083",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460349907083"
+    },
+    {
+      "id": "27479341305082779",
+      "retailer_id": "46460350005387",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460350005387"
+    },
+    {
+      "id": "27491161613867059",
+      "retailer_id": "46461116809355",
+      "retailer_product_group_id": "8136614412427",
+      "url": "https://steelelabel.com/products/elin-shirt-ruby-polka?variant=46461116809355"
+    },
+    {
+      "id": "27497349779927215",
+      "retailer_id": "46461116776587",
+      "retailer_product_group_id": "8136614412427",
+      "url": "https://steelelabel.com/products/elin-shirt-ruby-polka?variant=46461116776587"
+    },
+    {
+      "id": "27503094589362795",
+      "retailer_id": "46461116711051",
+      "retailer_product_group_id": "8136614412427",
+      "url": "https://steelelabel.com/products/elin-shirt-ruby-polka?variant=46461116711051"
+    },
+    {
+      "id": "27503483759314884",
+      "retailer_id": "46461430038667",
+      "retailer_product_group_id": "8136631025803",
+      "url": "https://steelelabel.com/products/elowen-dress-crimson-check?variant=46461430038667"
+    },
+    {
+      "id": "27531870093143247",
+      "retailer_id": "46461116678283",
+      "retailer_product_group_id": "8136614412427",
+      "url": "https://steelelabel.com/products/elin-shirt-ruby-polka?variant=46461116678283"
+    },
+    {
+      "id": "27581648644784901",
+      "retailer_id": "46460350038155",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460350038155"
+    },
+    {
+      "id": "27587746320852035",
+      "retailer_id": "46460349972619",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460349972619"
+    },
+    {
+      "id": "27599731586336488",
+      "retailer_id": "46460079538315",
+      "retailer_product_group_id": "8136556576907",
+      "url": "https://steelelabel.com/products/lola-blouse-ruby-polka?variant=46460079538315"
+    },
+    {
+      "id": "27640828345569442",
+      "retailer_id": "46460079603851",
+      "retailer_product_group_id": "8136556576907",
+      "url": "https://steelelabel.com/products/lola-blouse-ruby-polka?variant=46460079603851"
+    },
+    {
+      "id": "27870169069286900",
+      "retailer_id": "46460079472779",
+      "retailer_product_group_id": "8136556576907",
+      "url": "https://steelelabel.com/products/lola-blouse-ruby-polka?variant=46460079472779"
+    },
+    {
+      "id": "28042559955432223",
+      "retailer_id": "46461116743819",
+      "retailer_product_group_id": "8136614412427",
+      "url": "https://steelelabel.com/products/elin-shirt-ruby-polka?variant=46461116743819"
+    },
+    {
+      "id": "28086630511018883",
+      "retailer_id": "46460838609035",
+      "retailer_product_group_id": "8136607727755",
+      "url": "https://steelelabel.com/products/liva-midi-dress-ruby-polka?variant=46460838609035"
+    },
+    {
+      "id": "28114387828155046",
+      "retailer_id": "46460349874315",
+      "retailer_product_group_id": "8136588722315",
+      "url": "https://steelelabel.com/products/maja-skirt-ruby-polka?variant=46460349874315"
+    },
+    {
+      "id": "28256962117280043",
+      "retailer_id": "46460838674571",
+      "retailer_product_group_id": "8136607727755",
+      "url": "https://steelelabel.com/products/liva-midi-dress-ruby-polka?variant=46460838674571"
+    }
+  ],
+  "selected_product_set_id": "9791703717598496",
+  "all_set_items_collected": false,
+  "limit_reached": true,
+  "referenced_product_set_ids": [
+    "9791703717598496",
+    "34531011566498379"
+  ]
+}

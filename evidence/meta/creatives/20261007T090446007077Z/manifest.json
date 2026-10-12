@@ -1,0 +1,73 @@
+{
+  "stage": "creatives",
+  "status": "complete",
+  "account_id": "2313037395632947",
+  "api_version": "v26.0",
+  "dates": {
+    "since": "2026-07-01",
+    "until": "2026-07-07"
+  },
+  "collected_at_utc": "2026-10-07T09:04:50.489003+00:00",
+  "source_sample": {
+    "folder": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/samples/20261006T132743461677Z",
+    "api_version": "v26.0",
+    "files": {
+      "sample.json": "4985fe0385858e4ba9454674a5292d3a1374e862e923e599c264763ce506d9d0",
+      "summary.json": "a4c52c2d189986c912c60ae3b391b724c1af0156e03adcf3512a644b58c62700"
+    },
+    "selected_ads": 15,
+    "unique_creatives": 15
+  },
+  "max_creatives": 1,
+  "creative_ids": [
+    "813515491814716"
+  ],
+  "adset_ids": [
+    "120244692207080458"
+  ],
+  "requested_fields": {
+    "destination": "id,account_id,name,status,link_url,object_url,object_story_spec,asset_feed_spec,url_tags",
+    "catalogue": "id,account_id,product_set_id,template_url,template_url_spec",
+    "promoted": "id,account_id,campaign_id,created_time,updated_time,promoted_object",
+    "catalogue_items": "id,retailer_id,retailer_product_group_id,url",
+    "ad_verification": "Step 2 ad fields"
+  },
+  "limits": {
+    "selected_ads": 15,
+    "unique_creatives": 15,
+    "catalogue_items": 20,
+    "catalogue_scope": "first accessible referenced set; no catalogue inventory"
+  },
+  "availability_states": [
+    "populated",
+    "omitted",
+    "empty",
+    "unsupported",
+    "permission_blocked",
+    "unavailable",
+    "not_requested"
+  ],
+  "limitations": [
+    "July dates select the source sample; these reads are current configuration snapshots.",
+    "Omitted does not prove unsupported or absent during July.",
+    "Product-set membership does not establish which item was shown or purchased.",
+    "Tracking placeholders are not delivered values; no Shopify/GA4 matching or link parsing.",
+    "Small sample does not guarantee coverage of all creative formats.",
+    "Page/post content is not requested; nested creative settings are preserved."
+  ],
+  "finished_at_utc": "2026-10-07T09:04:53.617094+00:00",
+  "request_count_including_access": 7,
+  "creative_count": 1,
+  "verified_ad_count": 1,
+  "catalogue_status": "complete",
+  "catalogue_item_count": 20,
+  "availability_counts": {
+    "populated": 91,
+    "omitted": 4,
+    "empty": 0,
+    "unsupported": 0,
+    "permission_blocked": 0,
+    "unavailable": 0,
+    "not_requested": 0
+  }
+}

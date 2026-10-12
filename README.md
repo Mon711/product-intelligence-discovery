@@ -245,7 +245,7 @@ rtk proxy uv run python -m scripts.meta.discover_connections --config /dev/null
 `FAILED`, `Meta access: failed`, a Steele-account configuration error, and a new
 failed summary. It never loads your real credentials or contacts Meta. Your
 configuration and previous reports remain intact. The process returns exit code
-1 for a failed check (0 for success); later stages such as `--stage creatives` are
+1 for a failed check (0 for success); later stages such as `--stage links` are
 rejected with code 2 before work starts.
 
 Optional input/output overrides are `--evidence-root` (read a copied evidence
@@ -261,7 +261,7 @@ rtk proxy uv run python -m unittest discover -s tests -v
 ```
 
 `discover -s tests` finds the new standard-library test suite; `-v` prints each
-test name. Expect 29 tests and `OK`. Tests use fake Meta responses and temporary
+test name. Expect 52 tests and `OK`. Tests use fake Meta responses and temporary
 copies of saved evidence; they neither contact source APIs nor change retained
 evidence/configuration. `uv run` may prepare the local environment/cache if needed.
 
@@ -270,7 +270,7 @@ one step and writes a summary; `meta_discovery/foundation.py` parses saved files
 and compares identifiers/quantities; `meta_discovery/reader.py` validates configuration,
 sends restricted reads and returns only safe access metadata. The older token
 loader and discovery scripts retain their existing behavior. No new dependencies
-or discovery stages beyond Step 2 are introduced.
+or discovery stages beyond Step 3 are introduced.
 
 ### Meta connection discovery — Step 2 sample
 
@@ -357,6 +357,116 @@ Relevant field/GET definitions were checked against Meta's official
 and [ad SDK source](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/ad.py);
 the live runs verify the requested fields for the configured v26.0 account.
 
+### Meta connection discovery — Step 3 creative fields
+
+Step 3 reuses a **completed Step 2 run** rather than choosing new ads. A creative
+is the content/configuration used by an ad. From the repository root, begin with
+one unique creative:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage creatives --sample-dir evidence/meta/samples/20261006T132743461677Z --max-creatives 1
+```
+
+`--sample-dir` selects the saved input folder containing `sample.json` and
+`summary.json`. `--max-creatives 1` selects the first creative by numeric ID;
+the default is up to 15. The saved July sample, identifiers, relationships and
+completion status are checked locally before credentials are loaded. Then current
+token/account access and each chosen ad's ownership, parents and creative reference
+are rechecked. Changed references stop the run and require a fresh Step 2 sample.
+This does not repeat Insights or change the Step 2 selection rule.
+
+The code requests destination/tracking fields first (`link_url`, `object_url`,
+`object_story_spec`, `asset_feed_spec`, `url_tags`, plus name/status), then catalogue
+fields separately (`product_set_id`, `template_url`, `template_url_spec`). Each
+unique creative receives one request per group on the normal path, even if several
+ads share it. Nested creative settings are saved; no Page/post content is read.
+Unique referenced ad sets receive a separate `promoted_object`/timestamp read.
+
+If a product set is returned, the code attempts referenced sets in numeric-ID
+order until the first accessible one. It reads at most **20 items from that set**,
+requesting only `id`, `retailer_id`, `retailer_product_group_id` and `url`. Pagination
+uses cursors against that same approved edge, with decreasing remaining limits.
+An accessible empty set ends the attempt; it does not trigger a larger inventory.
+A product-set ID is a Meta group reference, not a Shopify product/variant ID, and
+membership does not establish which item was shown or purchased.
+
+For the full saved sample:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage creatives --sample-dir evidence/meta/samples/20261006T132743461677Z
+```
+
+Both commands perform live Meta **GET reads** and save a new timestamped folder
+under `evidence/meta/creatives/`. Earlier evidence and configuration are preserved.
+`--output-dir` overrides the output parent; `--config` chooses the configuration
+file. `--offline` is still Step 1 only. `--max-ads` belongs to Step 2, while
+`--max-creatives` belongs to Step 3. Limits accept 1–15; invalid arguments exit 2
+before creating a run. Expect `Step 3: PASSED`, with the printed collection status
+and folder. `complete_with_gaps` also exits 0: optional unsupported/inaccessible
+fields are valid discovery findings. Network, token, account, changed-reference,
+rate-limit and malformed-pagination failures exit 1, without automatic retries.
+
+| Output | Purpose and manual verification |
+| --- | --- |
+| `summary.json` | Check overall `status: passed`, Meta access `passed`, and creative collection `complete` or `complete_with_gaps` |
+| `manifest.json` | Settings, dates, current collection times, sample fingerprints, requested fields, limits/counts and collection status; this must agree with the summary |
+| `creatives.json` | Ad → creative references, freshly verified ads, nested destination/catalogue responses and ad-set promoted objects; compare references to the input sample |
+| `field_dictionary.csv` | One row per investigated field/object, with meaning, full sample value, availability and possible connection use; open as a spreadsheet |
+| `catalogue.json` | Referenced sets, attempted access, chosen set and at most 20 items; `limit_reached: true` means more items exist, while `all_set_items_collected: false` prevents claiming full membership |
+
+Availability is `populated`, `empty` (null/empty value), or `omitted` (key not
+returned). Explicit field rejection is `unsupported`; explicit permission codes
+are `permission_blocked`; ambiguous object/access rejection is `unavailable`.
+`not_requested` marks work not reached after stopping. Omitted fields do not prove
+unsupported access or absence during July. A confirmed unsupported creative group
+may be split into bounded single-field reads to isolate the rejected field;
+permission errors never trigger that fallback or broader permissions. Error text
+is sanitized, nested credentials are redacted and pagination URLs are discarded.
+
+**Verified on 7 October:** one creative completed in seven GET requests; the full
+run completed in **53 GET requests**, with **15 creatives, five ad sets**, two
+returned creative product-set references and **20 items from one set**. Its
+dictionary contains **178 populated and 73 omitted fields**, zero rejected,
+blocked, empty or unrequested fields. All 15 creatives returned `object_story_spec`,
+`asset_feed_spec` and the same `url_tags`:
+`utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}`.
+Top-level `link_url`/`object_url` were omitted; destinations remain in nested
+responses for Step 4. Two creatives returned `product_set_id`. The catalogue cap
+was reached with more members available; this is deliberately not a full export.
+
+For an independent manual check, open Steele's Meta Ads Manager, locate an ad by
+its saved ID and inspect its current destination and URL parameters without
+editing/saving it. Compare nested links and tracking tags with `creatives.json`.
+In Commerce Manager, if you already have access, compare a saved item ID, merchant
+identifier and URL. This UI comparison has not been performed by the agent.
+July describes the source sample's delivery window; these fields describe current
+configuration. Tracking placeholders stay literal. Shopify/GA4 matching and
+delivered ad/product attribution remain unverified until later steps.
+
+Safe failure check, using the same working folder:
+
+```bash
+rtk proxy uv run python -m scripts.meta.discover_connections --stage creatives --sample-dir evidence/meta/samples/20261006T132743461677Z --config /dev/null
+```
+
+`/dev/null` supplies empty configuration. Expect `Step 3: FAILED`, Meta access
+`failed`, exit 1, and only a new failed summary; no credentials or live requests
+are used. The 52-test offline suite above also covers saved-sample consistency,
+fresh ownership binding, group availability/fallback, nested values/placeholders,
+credential protection, catalogue caps/pagination and preserved partial failures.
+
+Architecture: `discover_connections.py` coordinates the chosen stage;
+`creatives.py` checks the saved sample, collects groups and writes the dictionary
+and evidence; `reader.py` restricts requests to freshly verified sample references
+and product sets actually returned by them. No new dependencies were added.
+Step 4 link interpretation and Step 5 Shopify/GA4 checks remain unimplemented.
+Requested fields/GET edges were checked against Meta's official
+[creative](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adcreative.py),
+[ad-set](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/adset.py),
+[product-set](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/productset.py)
+and [item](https://github.com/facebook/facebook-python-business-sdk/blob/main/facebook_business/adobjects/productitem.py)
+definitions; the live checks above verify their availability for Steele.
+
 The earlier full Meta report command and its separate tests live only on the archive branch.
 They are not executable features of this checkout; see project state and history.
 
@@ -390,8 +500,8 @@ checks, and limitations. Mark archived, historical, proposed, reported, and
 uncommitted work honestly. Git preserves the full commit history; Markdown
 history explains the significant changes without duplicating every minor edit.
 
-For this checkout there is no automated test suite. Verify relevant script
-changes offline where possible, and verify paths/links for documentation changes.
+The active Meta workflow has an offline automated test suite under `tests/`.
+Verify relevant script changes offline where possible, and verify paths/links for documentation changes.
 Live access, successful exports, and production readiness require separate
 evidence. Never commit secrets or upload internal source/evidence without
 authorization. Generate requested learning or sharing packs outside the repo;

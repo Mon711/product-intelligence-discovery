@@ -265,14 +265,53 @@ saved-name priorities and zero hierarchy gaps. Empty configuration failed before
 networking. Recorded output paths/settings/limits are in project state. Ads
 Manager/manual UI comparison is not established by these API checks.
 
-**Remaining:** Step 3 creative content/link discovery, Meta-to-GA4/Shopify matching
+**Remaining at that checkpoint:** Step 3 creative content/link discovery, Meta-to-GA4/Shopify matching
 and existing discrepancy causes are not implemented. No new dependencies or
 production infrastructure or change to the archived Meta branch/evidence stash.
 
 **7 October publication preparation:** the user authorized staging, committing
 and pushing Step 2, including its saved sample evidence. All 29 offline tests and
 the whitespace check passed again. This entry accompanies the implementation
-commit; its Git identity is available in repository history.
+commit, verified during Step 3 as `2512b7672b022d0fcae8c591bb00077b083d3eb8`.
+
+## 7 October: implement Meta discovery Step 3 only
+
+**Before:** Step 2 saved a bounded July ad hierarchy and creative IDs but did not
+read connection fields. **After:** `--stage creatives` loads a completed sample,
+checks saved evidence consistency, validates current access and rechecks chosen
+ad ownership/relationships before reading separate destination and catalogue
+groups once per unique creative. It reads unique ad-set promoted objects and at
+most 20 items from the first accessible returned product set. `creatives.py`
+preserves nested JSON and field availability; the reader permits only exact GET
+groups on freshly verified references, with bounded cursor pagination, safe
+diagnostics, unsupported-field isolation and credential redaction. It saves a
+field dictionary and manifest alongside creative/catalogue evidence.
+
+**Reason:** implement the next requested review checkpoint, reuse the saved
+15-ad sample and expose the connection clues before building Step 4's parser or
+Step 5's source comparisons. Defaults do not run every stage. No new dependencies.
+
+**Actual checks:** 52 offline tests passed, including Step 1/2 regression paths,
+sample tampering, wrong/currently changed ownership/references, unique group reads,
+nested data/placeholders, omitted/empty/unsupported/blocked states, credential
+protection, 20-item paging caps, incomplete results and no rate-limit retries.
+Live one-creative then full-sample checks passed (7 and 53 GET requests). The
+full run read 15 creatives/five ad sets and 20 catalogue items; the dictionary
+records 178 populated/73 omitted fields with no API field/permission rejection.
+Both referenced creative product sets were recorded, but only the first accessible
+one was sampled; more members exist beyond the cap. Empty config failed before
+networking. Evidence paths, settings, limitations and remaining questions are in
+project state; source/diffs/manual checks are in the requested flat Downloads ZIP.
+Saved file consistency, credential protection and Markdown/whitespace checks were
+performed. No Ads/Commerce Manager comparison, Shopify/GA4 read, attribution,
+Step 4/5 implementation, archive/stash change, commit/push, PR or upload.
+
+**12 October publication preparation:** the user authorized staging, committing
+and pushing all uncommitted Step 3 implementation, tests, documentation and saved
+evidence. All 52 offline tests passed again. The 7 October live results above
+remain dated evidence; no new live Meta, Shopify or GA4 requests were made.
+This entry accompanies the Step 3 implementation commit; its Git identity is
+available in repository history.
 
 ## Git publication evidence and limits
 

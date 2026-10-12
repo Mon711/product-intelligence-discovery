@@ -1,0 +1,177 @@
+{
+  "stage": "creatives",
+  "collected_at_utc": "2026-10-07T09:05:11.869800+00:00",
+  "offline": false,
+  "meta": {
+    "status": "passed",
+    "api_version": "v26.0",
+    "token": {
+      "valid": true,
+      "app_matches": true,
+      "type": "USER",
+      "scopes": [
+        "ads_read",
+        "public_profile"
+      ],
+      "expires_at": 1796042627,
+      "data_access_expires_at": 1798634747
+    },
+    "account": {
+      "id": "act_2313037395632947",
+      "name": "s t e e l e. 2019",
+      "account_id": "2313037395632947",
+      "currency": "AUD",
+      "timezone_name": "Australia/Sydney",
+      "account_status": 1
+    },
+    "requests": 2,
+    "advertising_objects_read": false
+  },
+  "foundation": {
+    "status": "passed",
+    "evidence_kind": "historical saved files; no live Shopify or GA4 requests",
+    "property_id": "268350484",
+    "dates": {
+      "since": "2026-07-01",
+      "until": "2026-07-07"
+    },
+    "shopify_date_basis": "orders created in Australia/Melbourne",
+    "ga4_timezone": "Australia/Sydney",
+    "item_id_pattern": "shopify_AU_{product_id}_{variant_id}",
+    "counts": {
+      "shopify_orders": 251,
+      "shopify_lines": 385,
+      "ga4_event_rows": 207,
+      "ga4_transactions": 207,
+      "matched_transactions": 207,
+      "ga4_item_rows": 326,
+      "matched_item_rows": 326,
+      "online_store_orders": 231,
+      "captured_online_store_orders": 206,
+      "absent_online_store_orders": 25
+    },
+    "checks": {
+      "unique_shopify_order_ids": true,
+      "ga4_events_match_recorded_row_count": true,
+      "event_and_item_transaction_sets_agree": true,
+      "all_ga4_transactions_match_shopify_orders": true,
+      "all_ga4_item_rows_match_order_product_variant": true,
+      "original_quantities_match": true
+    },
+    "inputs": [
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/shopify/orders/orders_2026-07-01_to_2026-07-07.csv",
+        "sha256": "c6ea3278d071a8f7f94f555a640a4668d551e147e2523648b943661ca7ebad38"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/shopify/orders/order_lines_2026-07-01_to_2026-07-07.csv",
+        "sha256": "779b62ba690a89e48eddf13162355fbda2abd300d999381ef96b3337c10260b5"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/ga4/purchase_events_2026-07-01_to_2026-07-07.txt",
+        "sha256": "f10b73b7bf1ad3b1a0afa726cab08d04264ce237161a748cee0e23fe13952068"
+      },
+      {
+        "path": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/ga4/purchase_items_2026-07-01_to_2026-07-07.txt",
+        "sha256": "ae621280a8f0e84810b88bff846e7f14bb234e8a935752667ab62e003b202b4d"
+      }
+    ],
+    "limitations": [
+      "Checks only retained July rows, not current Shopify/GA4 access or complete tracking.",
+      "Missing orders are counted; their causes are not investigated.",
+      "No Meta-to-GA4 or Meta-to-Shopify connection is established by Step 1."
+    ]
+  },
+  "creatives": {
+    "stage": "creatives",
+    "status": "complete",
+    "account_id": "2313037395632947",
+    "api_version": "v26.0",
+    "dates": {
+      "since": "2026-07-01",
+      "until": "2026-07-07"
+    },
+    "collected_at_utc": "2026-10-07T09:05:13.051389+00:00",
+    "source_sample": {
+      "folder": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/samples/20261006T132743461677Z",
+      "api_version": "v26.0",
+      "files": {
+        "sample.json": "4985fe0385858e4ba9454674a5292d3a1374e862e923e599c264763ce506d9d0",
+        "summary.json": "a4c52c2d189986c912c60ae3b391b724c1af0156e03adcf3512a644b58c62700"
+      },
+      "selected_ads": 15,
+      "unique_creatives": 15
+    },
+    "max_creatives": 15,
+    "creative_ids": [
+      "813515491814716",
+      "831685120014508",
+      "996428299482629",
+      "1279105241040350",
+      "1320608509934183",
+      "1325799332799642",
+      "1632098531326945",
+      "1761957141639803",
+      "2046040699337199",
+      "2213623069380197",
+      "2231962067556522",
+      "2508857069565088",
+      "2535887650173076",
+      "2961426797384859",
+      "29026580370280649"
+    ],
+    "adset_ids": [
+      "120233396922930458",
+      "120235813647550458",
+      "120244692207080458",
+      "120245546322370458",
+      "120246312718200458"
+    ],
+    "requested_fields": {
+      "destination": "id,account_id,name,status,link_url,object_url,object_story_spec,asset_feed_spec,url_tags",
+      "catalogue": "id,account_id,product_set_id,template_url,template_url_spec",
+      "promoted": "id,account_id,campaign_id,created_time,updated_time,promoted_object",
+      "catalogue_items": "id,retailer_id,retailer_product_group_id,url",
+      "ad_verification": "Step 2 ad fields"
+    },
+    "limits": {
+      "selected_ads": 15,
+      "unique_creatives": 15,
+      "catalogue_items": 20,
+      "catalogue_scope": "first accessible referenced set; no catalogue inventory"
+    },
+    "availability_states": [
+      "populated",
+      "omitted",
+      "empty",
+      "unsupported",
+      "permission_blocked",
+      "unavailable",
+      "not_requested"
+    ],
+    "limitations": [
+      "July dates select the source sample; these reads are current configuration snapshots.",
+      "Omitted does not prove unsupported or absent during July.",
+      "Product-set membership does not establish which item was shown or purchased.",
+      "Tracking placeholders are not delivered values; no Shopify/GA4 matching or link parsing.",
+      "Small sample does not guarantee coverage of all creative formats.",
+      "Page/post content is not requested; nested creative settings are preserved."
+    ],
+    "finished_at_utc": "2026-10-07T09:05:44.513360+00:00",
+    "request_count_including_access": 53,
+    "creative_count": 15,
+    "verified_ad_count": 15,
+    "catalogue_status": "complete",
+    "catalogue_item_count": 20,
+    "availability_counts": {
+      "populated": 178,
+      "omitted": 73,
+      "empty": 0,
+      "unsupported": 0,
+      "permission_blocked": 0,
+      "unavailable": 0,
+      "not_requested": 0
+    }
+  },
+  "status": "passed"
+}

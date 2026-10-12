@@ -1,9 +1,10 @@
 # Project state and discoveries
 
-**Maintained:** 7 October 2026. **Checkout inspected:** `main` at `74839ec`,
-with Step 2 prepared for the accompanying implementation commit at the user's
-request. Live Meta access and bounded sample reads were made on 6 October;
-no live Shopify/GA4 requests were made.
+**Maintained:** 12 October 2026. **Publication base:** `main` at `2512b76`,
+with Step 3 code/tests/documentation and saved evidence prepared for the
+accompanying implementation commit at the user's request.
+Live Meta access/sample reads were made on 6 October and connection-field reads
+on 7 October; no live Shopify/GA4 requests were made in those steps.
 Dates below describe the evidence, not a guarantee that credentials or reports
 will continue to work.
 
@@ -121,7 +122,7 @@ reproduced 207/207 transaction matches, 326/326 order–product–variant row ma
 original quantity agreement, and 25 absent Online Store orders. A live run passed
 token validity, app/type/permission/expiry checks and returned the expected
 account, AUD, Australia/Sydney and v26.0. An empty-config manual test returned
-failure before networking; unsupported later stages are blocked.
+failure before networking; later stages were blocked at that checkpoint.
 
 **Retained evidence:** live summary
 `evidence/meta/access-checks/20261006T073917718635Z/summary.json`; offline summary
@@ -169,11 +170,58 @@ saved advertising evidence with Step 2 on 7 October.
 **Limits/next:** selection is a deliberately bounded sample, not complete ad or
 creative-format coverage. Ads Manager comparison is available as a manual check
 but was not performed by the agent. Cross-source matches and the original GA4
-coverage gap remain uninvestigated. Step 3 awaits the next instruction. The Step 2
+coverage gap remain uninvestigated. Step 3 is documented below. The Step 2
 flat teaching pack contains exact source/tests and incremental diffs, belongs in
 Downloads, and excludes source evidence/credentials. No archive/stash changes,
 new dependencies or PRs. Publication checks on 7 October passed all 29 offline
-tests and the whitespace check; see the accompanying commit for its identity.
+tests and the whitespace check; Step 2's verified commit is `2512b76`.
+
+## Active Meta discovery — Step 3 connection fields (7 October)
+
+Implemented `--stage creatives --sample-dir <completed Step 2 folder>`, with
+`--max-creatives` accepting 1–15 (default 15). Saved provenance/relationships
+are checked before networking. Each chosen ad is freshly checked for Steele
+ownership and unchanged parent/creative references. Unique creatives receive
+separate destination/tracking and catalogue field reads; unique ad sets receive
+`promoted_object`/timestamp reads. Nested JSON and literal tracking placeholders
+are preserved. Optional omissions/rejections are recorded in a field dictionary.
+Confirmed unsupported creative fields can be isolated by bounded single-field
+reads; permission/network/rate-limit errors do not trigger retries or broader access.
+
+**Verified:** 52 offline tests pass. A live one-creative check completed in **seven
+GET requests**, then the full saved sample completed in **53 GET requests**, with
+**15 creatives/five ad sets**, zero rejected/blocked fields and **178 populated /
+73 omitted** dictionary rows. Every creative returned `object_story_spec`,
+`asset_feed_spec` and the same tags:
+`utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}`.
+Top-level `link_url`/`object_url` were omitted. Two creatives returned product-set
+references. **20 catalogue items** were read from the first accessible referenced
+set `9791703717598496`; the cap was reached with more items available, so full
+membership is not claimed. Returned item fields include merchant identifiers and
+product URLs with explicit variant parameters; Shopify identity is not yet checked.
+An empty-config manual run failed before networking. Saved-output consistency and
+credential scans passed. Ads/Commerce Manager UI comparison was not performed.
+
+**Evidence:** input sample `evidence/meta/samples/20261006T132743461677Z/`;
+one-creative run `evidence/meta/creatives/20261007T090446007077Z/`;
+full run `evidence/meta/creatives/20261007T090511869800Z/`;
+intentional empty-config failure
+`evidence/meta/creatives/20261007T090719897142Z/summary.json`.
+Complete runs contain `summary.json`, `manifest.json`, `creatives.json`,
+`field_dictionary.csv` and `catalogue.json`. Account `2313037395632947`, AUD,
+Australia/Sydney, API v26.0, ads_read/public_profile. July dates describe the input
+sample; creative/catalogue fields are snapshots collected on 7 October.
+
+**Limits/next:** Step 4 offline destination/identifier extraction and Step 5
+Shopify/GA4 checks remain unimplemented. No ad-level GA4 linkage, delivered
+catalogue item, variant purchase or attribution is established. Omitted fields
+do not establish absence during July. The small sample's format coverage remains
+unproven. No Page/post content, new Shopify/GA4 queries, dependency/infrastructure,
+archive/stash changes during implementation. The requested flat learning ZIP belongs
+in Downloads and excludes credentials/raw evidence. On 12 October the user
+authorized committing and pushing all uncommitted Step 3 work, including its saved
+evidence. All 52 offline tests passed again; no new live source requests were made.
+See the accompanying implementation commit for its Git identity.
 
 ## Archived Meta reporting work
 

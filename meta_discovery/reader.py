@@ -1,4 +1,4 @@
-"""Restricted Meta reads for access checks and a small July advertising sample."""
+"""Restricted Meta reads for access, a July sample and its connection fields."""
 
 from dataclasses import dataclass, field
 import hashlib
@@ -23,6 +23,20 @@ OBJECT_FIELDS = {
     "adset": "id,account_id,name,campaign_id,status,effective_status,created_time,updated_time",
     "campaign": "id,account_id,name,status,effective_status,created_time,updated_time",
 }
+CONNECTION_FIELDS = {
+    "destination": "id,account_id,name,status,link_url,object_url,object_story_spec,asset_feed_spec,url_tags",
+    "catalogue": "id,account_id,product_set_id,template_url,template_url_spec",
+    "promoted": "id,account_id,campaign_id,created_time,updated_time,promoted_object",
+}
+ITEM_FIELDS = "id,retailer_id,retailer_product_group_id,url"
+
+
+class MetaFieldUnavailable(ValueError):
+    """A safe diagnostic for an optional field/group, not an access validation failure."""
+
+    def __init__(self, availability, message):
+        super().__init__(message)
+        self.availability = availability
 
 
 class MetaReadError(ValueError):
@@ -67,6 +81,8 @@ class MetaReader:
         self._validated = False
         self._known_objects = {}
         self._insight_refs = {}
+        self._connection_nodes = {}
+        self._product_sets = set()
         self.request_count = 0
 
     def _get(self, endpoint: str, params: dict, bearer: str) -> dict:
@@ -82,6 +98,14 @@ class MetaReader:
             if (params.get("level") != "ad" or params.get("time_range") != json.dumps(JULY_WINDOW)
                     or params.get("limit") != 100):
                 raise MetaReadError("Insights parameters blocked: only the fixed July ad-level sample is allowed.")
+        elif self._validated and endpoint in self._connection_nodes and params.get("fields") in self._connection_nodes[endpoint]:
+            allowed_params, fields = {"fields", "appsecret_proof"}, params["fields"]
+        elif self._validated and endpoint.removesuffix("/products") in self._product_sets and endpoint.endswith("/products"):
+            allowed_params, fields = {"fields", "appsecret_proof", "limit"}, ITEM_FIELDS
+            if "after" in params:
+                allowed_params.add("after")
+            if type(params.get("limit")) is not int or not 1 <= params["limit"] <= 20:
+                raise MetaReadError("Catalogue reads are limited to 20 referenced items.")
         elif self._validated and endpoint in self._known_objects:
             allowed_params, fields = {"fields", "appsecret_proof"}, OBJECT_FIELDS[self._known_objects[endpoint]]
         else:
@@ -107,8 +131,16 @@ class MetaReader:
         if response.status_code != 200 or "error" in payload:
             code = payload.get("error", {}).get("code") if isinstance(payload.get("error"), dict) else None
             safe_code = str(code) if isinstance(code, int) else "unavailable"
+            message = f"Meta rejected the read (HTTP {response.status_code}, code {safe_code}); details withheld."
+            optional = endpoint in self._connection_nodes or endpoint.endswith("/products")
+            if optional and code in (10, 100, 200, 294, 803):
+                raw_message = payload.get("error", {}).get("message", "")
+                unsupported = code == 100 and isinstance(raw_message, str) and any(
+                    phrase in raw_message.lower() for phrase in ("nonexisting field", "non-existing field", "cannot query field"))
+                state = "unsupported" if unsupported else "permission_blocked" if code in (10, 200, 294) else "unavailable"
+                raise MetaFieldUnavailable(state, message)
             error_type = MetaObjectUnavailable if endpoint in self._known_objects and code in (100, 803) else MetaReadError
-            raise error_type(f"Meta rejected the read (HTTP {response.status_code}, code {safe_code}); details withheld.")
+            raise error_type(message)
         return payload
 
     def scrub(self, value):
@@ -117,9 +149,12 @@ class MetaReader:
             for secret in (self.config.user_token, self.config.app_secret,
                            hmac.new(self.config.app_secret.encode(), self.config.user_token.encode(), hashlib.sha256).hexdigest()):
                 value = value.replace(secret, "[REDACTED]")
-            return value
+            # Also redact unknown credentials in URL query parameters, preserving UTM placeholders.
+            return re.sub(r"(?i)((?:^|[?&])(?:access_token|input_token|appsecret_proof|app_secret|client_secret|user_token)=)[^&#\s]*",
+                          r"\1[REDACTED]", value)
         if isinstance(value, dict):
-            return {key: self.scrub(item) for key, item in value.items()}
+            return {self.scrub(key): ("[REDACTED]" if key.lower() in {"access_token", "appsecret_proof", "app_secret", "user_token"}
+                                     else self.scrub(item)) for key, item in value.items()}
         if isinstance(value, list):
             return [self.scrub(item) for item in value]
         return value
@@ -199,10 +234,80 @@ class MetaReader:
             cleaned["creative"] = {"id": creative.get("id")} if isinstance(creative, dict) else None
         return self.scrub(cleaned)
 
+    def bind_connection_ad(self, saved):
+        """Recheck a saved ad's ownership/relationships before authorizing its creative."""
+        ad_id = saved["ad_id"]
+        self._known_objects[ad_id] = "ad"
+        current = self.object("ad", ad_id)
+        if (current.get("adset_id") != saved["adset_id"] or current.get("campaign_id") != saved["campaign_id"]
+                or (current.get("creative") or {}).get("id") != saved["creative_id"]):
+            raise MetaReadError("Current ad references differ from the saved sample; collect a new Step 2 sample.")
+        creative_id = saved["creative_id"]
+        self._connection_nodes[creative_id] = {
+            CONNECTION_FIELDS[group] for group in ("destination", "catalogue")}
+        # Single-field fallback is allowed only for this already-bound creative.
+        for group in ("destination", "catalogue"):
+            for name in CONNECTION_FIELDS[group].split(",")[2:]:
+                self._connection_nodes[creative_id].add(f"id,account_id,{name}")
+        self._connection_nodes[saved["adset_id"]] = {CONNECTION_FIELDS["promoted"]}
+        return current
+
+    def connection(self, object_id, fields):
+        if fields not in self._connection_nodes.get(object_id, set()):
+            raise MetaReadError("Connection read is not a verified sample reference or approved field group.")
+        data = self._ads_get(object_id, {"fields": fields})
+        if str(data.get("id")) != object_id or str(data.get("account_id")) != ACCOUNT_ID:
+            raise MetaReadError("Connection object does not match its expected ID/account.")
+        clean = self.scrub({key: data[key] for key in fields.split(",") if key in data})
+        references = [clean.get("product_set_id")]
+        promoted = clean.get("promoted_object")
+        if isinstance(promoted, dict):
+            references.append(promoted.get("product_set_id"))
+        for reference in references:
+            if reference not in (None, "", [], {}):
+                if not isinstance(reference, str) or not re.fullmatch(r"[0-9]+", reference):
+                    raise MetaReadError("Referenced product-set ID is malformed.")
+                self._product_sets.add(reference)
+        return clean
+
+    def product_pages(self, product_set_id):
+        """Read at most 20 items; use cursors on the approved edge, never next URLs."""
+        if product_set_id not in self._product_sets:
+            raise MetaReadError("Product set was not referenced by a verified sampled object.")
+        cursors, seen = set(), set()
+        params = {"fields": ITEM_FIELDS, "limit": 20}
+        for _ in range(20):
+            payload = self._ads_get(f"{product_set_id}/products", params)
+            rows = payload.get("data")
+            if not isinstance(rows, list) or len(rows) > params["limit"]:
+                raise MetaReadError("Catalogue returned an invalid or oversized item page.")
+            clean = []
+            for row in rows:
+                if not isinstance(row, dict) or not isinstance(row.get("id"), str) or not re.fullmatch(r"[0-9]+", row["id"]) or row["id"] in seen:
+                    raise MetaReadError("Catalogue item identifier is malformed or repeated.")
+                seen.add(row["id"])
+                clean.append(self.scrub({key: row[key] for key in ITEM_FIELDS.split(",") if key in row}))
+            paging = payload.get("paging", {})
+            if not isinstance(paging, dict):
+                raise MetaReadError("Catalogue pagination is malformed.")
+            has_more = bool(paging.get("next"))
+            yield clean, has_more
+            if not has_more or len(seen) == 20:
+                return
+            markers = paging.get("cursors", {})
+            after = markers.get("after") if isinstance(markers, dict) else None
+            if not isinstance(after, str) or not after or after in cursors:
+                raise MetaReadError("Catalogue cursor is missing or repeated; collection is incomplete.")
+            cursors.add(after)
+            params = {"fields": ITEM_FIELDS, "limit": 20 - len(seen), "after": after}
+        raise MetaReadError("Catalogue exceeded the 20-page safety limit; collection is incomplete.")
+
     def validate(self) -> dict:
         self._validated = False
         self._known_objects = {}
         self._insight_refs = {}
+        self._connection_nodes = {}
+        self._product_sets = set()
         cfg = self.config
         debug = self._get("debug_token", {"input_token": cfg.user_token},
                           f"{cfg.app_id}|{cfg.app_secret}").get("data")

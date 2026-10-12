@@ -145,7 +145,7 @@ class SampleTests(unittest.TestCase):
         self.assertEqual(data[0][0]["ad_name"], "[REDACTED] [REDACTED]")
 
     def test_sample_arguments_fail_before_work(self):
-        for args in (["--stage", "sample", "--offline"], ["--stage", "sample", "--max-ads", "16"], ["--stage", "creatives"]):
+        for args in (["--stage", "sample", "--offline"], ["--stage", "sample", "--max-ads", "16"], ["--stage", "links"]):
             with self.subTest(args=args), patch("scripts.meta.discover_connections.audit_foundation") as audit, redirect_stderr(io.StringIO()):
                 with self.assertRaises(SystemExit) as caught:
                     main(args)

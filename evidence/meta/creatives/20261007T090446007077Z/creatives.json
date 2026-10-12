@@ -1,0 +1,131 @@
+{
+  "status": "complete",
+  "source_sample": {
+    "folder": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/samples/20261006T132743461677Z",
+    "api_version": "v26.0",
+    "files": {
+      "sample.json": "4985fe0385858e4ba9454674a5292d3a1374e862e923e599c264763ce506d9d0",
+      "summary.json": "a4c52c2d189986c912c60ae3b391b724c1af0156e03adcf3512a644b58c62700"
+    },
+    "selected_ads": 15,
+    "unique_creatives": 15
+  },
+  "ad_creative_references": [
+    {
+      "campaign_id": "120244692207060458",
+      "campaign_name": "Steele New arrival_catalog 2026",
+      "adset_id": "120244692207080458",
+      "adset_name": "Steele New arrival_catalog 2026",
+      "ad_id": "120244692207070458",
+      "ad_name": "Steele New arrival_catalog 2026",
+      "impressions": "38332",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "813515491814716",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    }
+  ],
+  "verified_ads": {
+    "120244692207070458": {
+      "id": "120244692207070458",
+      "account_id": "2313037395632947",
+      "name": "Steele New arrival_catalog 2026",
+      "campaign_id": "120244692207060458",
+      "adset_id": "120244692207080458",
+      "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
+      "creative": {
+        "id": "813515491814716"
+      },
+      "created_time": "2026-04-17T18:09:07+1000",
+      "updated_time": "2026-04-18T15:37:10+1000"
+    }
+  },
+  "creatives": {
+    "813515491814716": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "813515491814716",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-17-95b594fcab9c49c13fd4f9f6a0ac4404",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717",
+            "template_data": {
+              "link": "https://steelelabel.com/collections/new-arrivals",
+              "message": "Bespoke in-house prints, rich seasonal textures and signature silhouettes. \nDiscover our new collection, exclusively online at steelelabel.com",
+              "name": "{{product.name}}",
+              "multi_share_end_card": false,
+              "show_multiple_images": false,
+              "call_to_action": {
+                "type": "SHOP_NOW"
+              }
+            }
+          },
+          "asset_feed_spec": {
+            "optimization_type": "FORMAT_AUTOMATION",
+            "ad_formats": [
+              "CAROUSEL",
+              "COLLECTION"
+            ],
+            "bodies": [
+              {
+                "text": "Bespoke in-house prints, rich seasonal textures and signature silhouettes. \nDiscover our new collection, exclusively online at steelelabel.com"
+              }
+            ],
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:04:50.937905+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "813515491814716",
+          "account_id": "2313037395632947",
+          "product_set_id": "9791703717598496"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:04:51.459226+00:00"
+      }
+    }
+  },
+  "adsets": {
+    "120244692207080458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120244692207080458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120244692207060458",
+          "created_time": "2026-04-17T18:09:04+1000",
+          "updated_time": "2026-04-17T18:09:12+1000",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "product_set_id": "9791703717598496",
+            "variation": "PRODUCT_SET_AND_WEBSITE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:04:51.836615+00:00"
+      }
+    }
+  }
+}

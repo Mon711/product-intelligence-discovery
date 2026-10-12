@@ -1,0 +1,4121 @@
+{
+  "status": "complete",
+  "source_sample": {
+    "folder": "/Users/mrinalsood/Developer/Creatnet/csl/product-intelligence-discovery/evidence/meta/samples/20261006T132743461677Z",
+    "api_version": "v26.0",
+    "files": {
+      "sample.json": "4985fe0385858e4ba9454674a5292d3a1374e862e923e599c264763ce506d9d0",
+      "summary.json": "a4c52c2d189986c912c60ae3b391b724c1af0156e03adcf3512a644b58c62700"
+    },
+    "selected_ads": 15,
+    "unique_creatives": 15
+  },
+  "ad_creative_references": [
+    {
+      "campaign_id": "120245546322350458",
+      "campaign_name": "Steele_fullprice_july26",
+      "adset_id": "120245546322370458",
+      "adset_name": "Steele_retargeting_engagers+viewcontent_april2026",
+      "ad_id": "120245546322360458",
+      "ad_name": "Steele_retargeting_Full Price catalogue_30april26",
+      "impressions": "37051",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2213623069380197",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246312718390458",
+      "ad_name": "Steele_NewArrivals_16april26_Video1",
+      "impressions": "650",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1320608509934183",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246336098680458",
+      "ad_name": "Steele_outerwear_14may26_static1",
+      "impressions": "2943",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2231962067556522",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120246405492600458",
+      "ad_name": "Steele_collection_Carousel14may26",
+      "impressions": "4556",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1325799332799642",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249803788750458",
+      "ad_name": "Steele_motion1_hannecoat_30june26",
+      "impressions": "18802",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2535887650173076",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249803949160458",
+      "ad_name": "Steele_static_hannecoat_30june26",
+      "impressions": "603",
+      "selection_reason": "saved_example_name",
+      "creative_id": "2046040699337199",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120249804128460458",
+      "ad_name": "Steele_outerwear_Collectionad_30june26",
+      "impressions": "377",
+      "selection_reason": "saved_example_name",
+      "creative_id": "1761957141639803",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120233396922910458",
+      "campaign_name": "Steele_Bestsellers",
+      "adset_id": "120233396922930458",
+      "adset_name": "Steele_Bestsellers_Collection_Sept25",
+      "ad_id": "120243366762550458",
+      "ad_name": "Steele_Bestsellers_motion3_march26_PDPrelaunch",
+      "impressions": "21663",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "29026580370280649",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244131690810458",
+      "ad_name": "Steele_essentials_23mar26_Video \u2013 Copy 2",
+      "impressions": "2755",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "996428299482629",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244131853990458",
+      "ad_name": "Steele_essentials_23mar26_Video 2",
+      "impressions": "3348",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "2961426797384859",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120244692207060458",
+      "campaign_name": "Steele New arrival_catalog 2026",
+      "adset_id": "120244692207080458",
+      "adset_name": "Steele New arrival_catalog 2026",
+      "ad_id": "120244692207070458",
+      "ad_name": "Steele New arrival_catalog 2026",
+      "impressions": "38332",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "813515491814716",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120235813647500458",
+      "campaign_name": "Steele_Collections",
+      "adset_id": "120235813647550458",
+      "adset_name": "Steele_Dresses_25",
+      "ad_id": "120244898136140458",
+      "ad_name": "Steele_sets_16april26_static1",
+      "impressions": "33",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "1279105241040350",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246312718300458",
+      "ad_name": "Steele_NewArrivals_16april26_static3",
+      "impressions": "436",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "1632098531326945",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246332513800458",
+      "ad_name": "Steele_NewArrivals_14may26_video1",
+      "impressions": "1761",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "831685120014508",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    },
+    {
+      "campaign_id": "120246312718430458",
+      "campaign_name": "Steele_NewArrivals_updated",
+      "adset_id": "120246312718200458",
+      "adset_name": "Steele_NewArrivals_13May26",
+      "ad_id": "120246335113320458",
+      "ad_name": "Steele_NewArrivals_14may26_video2",
+      "impressions": "190",
+      "selection_reason": "ad_id_fill",
+      "creative_id": "2508857069565088",
+      "status": "complete",
+      "issues": [],
+      "ad_read_status": "available",
+      "adset_read_status": "available",
+      "campaign_read_status": "available"
+    }
+  ],
+  "verified_ads": {
+    "120245546322360458": {
+      "id": "120245546322360458",
+      "account_id": "2313037395632947",
+      "name": "Steele_retargeting_Full Price catalogue_30april26",
+      "campaign_id": "120245546322350458",
+      "adset_id": "120245546322370458",
+      "status": "ACTIVE",
+      "effective_status": "ADSET_PAUSED",
+      "creative": {
+        "id": "2213623069380197"
+      },
+      "created_time": "2026-04-30T19:58:38+1000",
+      "updated_time": "2026-07-07T14:16:53+1000"
+    },
+    "120246312718390458": {
+      "id": "120246312718390458",
+      "account_id": "2313037395632947",
+      "name": "Steele_NewArrivals_16april26_Video1",
+      "campaign_id": "120246312718430458",
+      "adset_id": "120246312718200458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "1320608509934183"
+      },
+      "created_time": "2026-05-14T17:48:56+1000",
+      "updated_time": "2026-08-07T20:30:37+1000"
+    },
+    "120246336098680458": {
+      "id": "120246336098680458",
+      "account_id": "2313037395632947",
+      "name": "Steele_outerwear_14may26_static1",
+      "campaign_id": "120246312718430458",
+      "adset_id": "120246312718200458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "2231962067556522"
+      },
+      "created_time": "2026-05-15T00:07:23+1000",
+      "updated_time": "2026-08-07T20:30:31+1000"
+    },
+    "120246405492600458": {
+      "id": "120246405492600458",
+      "account_id": "2313037395632947",
+      "name": "Steele_collection_Carousel14may26",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "1325799332799642"
+      },
+      "created_time": "2026-05-15T22:17:54+1000",
+      "updated_time": "2026-07-07T14:24:51+1000"
+    },
+    "120249803788750458": {
+      "id": "120249803788750458",
+      "account_id": "2313037395632947",
+      "name": "Steele_motion1_hannecoat_30june26",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "2535887650173076"
+      },
+      "created_time": "2026-07-02T20:13:56+1000",
+      "updated_time": "2026-08-19T23:33:34+1000"
+    },
+    "120249803949160458": {
+      "id": "120249803949160458",
+      "account_id": "2313037395632947",
+      "name": "Steele_static_hannecoat_30june26",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "2046040699337199"
+      },
+      "created_time": "2026-07-02T20:19:10+1000",
+      "updated_time": "2026-08-19T23:48:22+1000"
+    },
+    "120249804128460458": {
+      "id": "120249804128460458",
+      "account_id": "2313037395632947",
+      "name": "Steele_outerwear_Collectionad_30june26",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "1761957141639803"
+      },
+      "created_time": "2026-07-02T20:47:20+1000",
+      "updated_time": "2026-09-02T15:52:30+1000"
+    },
+    "120243366762550458": {
+      "id": "120243366762550458",
+      "account_id": "2313037395632947",
+      "name": "Steele_Bestsellers_motion3_march26_PDPrelaunch",
+      "campaign_id": "120233396922910458",
+      "adset_id": "120233396922930458",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "creative": {
+        "id": "29026580370280649"
+      },
+      "created_time": "2026-03-25T07:43:37+1100",
+      "updated_time": "2026-10-06T19:19:13+1100"
+    },
+    "120244131690810458": {
+      "id": "120244131690810458",
+      "account_id": "2313037395632947",
+      "name": "Steele_essentials_23mar26_Video \u2013 Copy 2",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "996428299482629"
+      },
+      "created_time": "2026-04-06T05:38:24+1000",
+      "updated_time": "2026-07-07T14:22:39+1000"
+    },
+    "120244131853990458": {
+      "id": "120244131853990458",
+      "account_id": "2313037395632947",
+      "name": "Steele_essentials_23mar26_Video 2",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "2961426797384859"
+      },
+      "created_time": "2026-04-06T05:42:27+1000",
+      "updated_time": "2026-07-07T14:25:09+1000"
+    },
+    "120244692207070458": {
+      "id": "120244692207070458",
+      "account_id": "2313037395632947",
+      "name": "Steele New arrival_catalog 2026",
+      "campaign_id": "120244692207060458",
+      "adset_id": "120244692207080458",
+      "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
+      "creative": {
+        "id": "813515491814716"
+      },
+      "created_time": "2026-04-17T18:09:07+1000",
+      "updated_time": "2026-04-18T15:37:10+1000"
+    },
+    "120244898136140458": {
+      "id": "120244898136140458",
+      "account_id": "2313037395632947",
+      "name": "Steele_sets_16april26_static1",
+      "campaign_id": "120235813647500458",
+      "adset_id": "120235813647550458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "1279105241040350"
+      },
+      "created_time": "2026-04-22T00:46:04+1000",
+      "updated_time": "2026-07-31T09:01:47+1000"
+    },
+    "120246312718300458": {
+      "id": "120246312718300458",
+      "account_id": "2313037395632947",
+      "name": "Steele_NewArrivals_16april26_static3",
+      "campaign_id": "120246312718430458",
+      "adset_id": "120246312718200458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "1632098531326945"
+      },
+      "created_time": "2026-05-14T17:48:56+1000",
+      "updated_time": "2026-09-04T14:49:19+1000"
+    },
+    "120246332513800458": {
+      "id": "120246332513800458",
+      "account_id": "2313037395632947",
+      "name": "Steele_NewArrivals_14may26_video1",
+      "campaign_id": "120246312718430458",
+      "adset_id": "120246312718200458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "831685120014508"
+      },
+      "created_time": "2026-05-14T23:44:23+1000",
+      "updated_time": "2026-08-07T20:30:44+1000"
+    },
+    "120246335113320458": {
+      "id": "120246335113320458",
+      "account_id": "2313037395632947",
+      "name": "Steele_NewArrivals_14may26_video2",
+      "campaign_id": "120246312718430458",
+      "adset_id": "120246312718200458",
+      "status": "PAUSED",
+      "effective_status": "PAUSED",
+      "creative": {
+        "id": "2508857069565088"
+      },
+      "created_time": "2026-05-14T23:51:58+1000",
+      "updated_time": "2026-08-07T20:30:24+1000"
+    }
+  },
+  "creatives": {
+    "813515491814716": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "813515491814716",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-17-95b594fcab9c49c13fd4f9f6a0ac4404",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717",
+            "template_data": {
+              "link": "https://steelelabel.com/collections/new-arrivals",
+              "message": "Bespoke in-house prints, rich seasonal textures and signature silhouettes. \nDiscover our new collection, exclusively online at steelelabel.com",
+              "name": "{{product.name}}",
+              "multi_share_end_card": false,
+              "show_multiple_images": false,
+              "call_to_action": {
+                "type": "SHOP_NOW"
+              }
+            }
+          },
+          "asset_feed_spec": {
+            "optimization_type": "FORMAT_AUTOMATION",
+            "ad_formats": [
+              "CAROUSEL",
+              "COLLECTION"
+            ],
+            "bodies": [
+              {
+                "text": "Bespoke in-house prints, rich seasonal textures and signature silhouettes. \nDiscover our new collection, exclusively online at steelelabel.com"
+              }
+            ],
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:21.247016+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "813515491814716",
+          "account_id": "2313037395632947",
+          "product_set_id": "9791703717598496"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:21.738175+00:00"
+      }
+    },
+    "831685120014508": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "831685120014508",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-05-14-e3031d11ceba735215d3bc53faf26f6f",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Winter, but make it s t e e l e . \nLayer up in new season outerwear, dresses, sets and separates.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbe89cc41f986be6b_1778764033537",
+                    "id": "120246332623820458"
+                  },
+                  {
+                    "name": "placement_asset_fd617da8b36704c56_1778764033521",
+                    "id": "120246332623860458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Femininity in every layer. \nShop New Arrivals",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f26fe51893a6f8407_1778764033522",
+                    "id": "120246332623830458"
+                  },
+                  {
+                    "name": "placement_asset_f46ad87b54322f95b_1778764033538",
+                    "id": "120246332623870458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/new-arrivals",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fcfb867b85a1853a0_1778764033525",
+                    "id": "120246332623810458"
+                  },
+                  {
+                    "name": "placement_asset_ff2150254ff4992b1_1778764033538",
+                    "id": "120246332623840458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "992870063105101",
+                "thumbnail_url": "https://scontent.fdel1-4.fna.fbcdn.net/v/t15.5256-10/698253604_981625494360021_7468834366023120334_n.jpg?stp=dst-jpg_p110x80_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=qULzqmicViwQ7kNvwEuLm0q&_nc_oc=AdrI6xdrNTjL0rdGo4F66BW_-GOZXpwKzXWIv12o3qGOD0C2VXJiFW4cjpDJONqmIMmB5Gg3CHBmq_earq1A6MiD&_nc_zt=23&_nc_ht=scontent.fdel1-4.fna&edm=ALfz3TcEAAAA&_nc_gid=-QKtQ7NQ0NKQ-OjCMWn_5g&_nc_tpa=Q5bMBQJiowKNYJ6Fjz2A2fWAXT1xJTXkoI6wKExPYPSv2rztYzWNepLR27wpBBx-ieOVCoOTULcjZRmaFA&oh=00_AQO600mzrDf43XzKPYVddLK4Tb3Hjp2iWSTQQnDBtOQiZw&oe=6ACBCDC2",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f5d1804966dec7604_1778764033521",
+                    "id": "120246332623850458"
+                  }
+                ]
+              },
+              {
+                "video_id": "3914116378890376",
+                "thumbnail_url": "https://scontent.fdel1-2.fna.fbcdn.net/v/t15.5256-10/698816693_1292010189757369_1526610005216160363_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=8aZMSm-bNfQQ7kNvwE66daQ&_nc_oc=AdoR3gyRTDaQg1qv5giNLQkGV5kJ7m4aLDeaDTot62DWHgltxOTuqpchPQl1szNuvji0pv4pK6iPezNm1gseEgHW&_nc_zt=23&_nc_ht=scontent.fdel1-2.fna&edm=ALfz3TcEAAAA&_nc_gid=-QKtQ7NQ0NKQ-OjCMWn_5g&_nc_tpa=Q5bMBQJa80zcSiy5v1GZjoWWTxSxI4_fpIeZfv9bvLF1n3jVlYP5Vq2BeiS4AivGsn4z-Mt2Y35InJm5nA&oh=00_AQM8hpx7MpcLanrI-3FoZhm616Uv5gXwumu2Ou7dYHwbAA&oe=6ACBE6C3",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f5ba780b89a669b67_1778764033527",
+                    "id": "120246332623880458"
+                  },
+                  {
+                    "name": "placement_asset_f460a56c1363b2784_1778763996999",
+                    "id": "120246332623900458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_fbe89cc41f986be6b_1778764033537",
+                  "id": "120246332623820458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f46ad87b54322f95b_1778764033538",
+                  "id": "120246332623870458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_ff2150254ff4992b1_1778764033538",
+                  "id": "120246332623840458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f5ba780b89a669b67_1778764033527",
+                  "id": "120246332623880458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels",
+                    "facebook_reels_overlay"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic",
+                    "rewarded_video"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_fd617da8b36704c56_1778764033521",
+                  "id": "120246332623860458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f26fe51893a6f8407_1778764033522",
+                  "id": "120246332623830458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fcfb867b85a1853a0_1778764033525",
+                  "id": "120246332623810458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f5d1804966dec7604_1778764033521",
+                  "id": "120246332623850458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:22.139709+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "831685120014508",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:23.042088+00:00"
+      }
+    },
+    "996428299482629": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "996428299482629",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-05-b2f0731e8203887ad8252db1cf51bf1d",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "New Season. New Essentials. \nIntroducing new season styles to our Essentials range. To be worn with simplicity or paired back with joyful mainline signatures.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fe22196c91ec0f414_1775417861610",
+                    "id": "120244131781290458"
+                  },
+                  {
+                    "name": "placement_asset_f60d2e53718677f14_1775417861615",
+                    "id": "120244131781350458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shop Essentials at steelelabel.com",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f731f95ce4fc10594_1775417861616",
+                    "id": "120244131781300458"
+                  },
+                  {
+                    "name": "placement_asset_ff42b945e8a9a4fc4_1775417861610",
+                    "id": "120244131781320458"
+                  }
+                ]
+              },
+              {
+                "text": "Shop s t e e l e .",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f731f95ce4fc10594_1775417861616",
+                    "id": "120244131781300458"
+                  },
+                  {
+                    "name": "placement_asset_ff42b945e8a9a4fc4_1775417861610",
+                    "id": "120244131781320458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/the-essentials",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f89f22de5e7a17b42_1775417861617",
+                    "id": "120244131781340458"
+                  },
+                  {
+                    "name": "placement_asset_ff10eaef92a8d8b98_1775417861612",
+                    "id": "120244131781360458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "974735481748572",
+                "thumbnail_url": "https://scontent.fdel27-3.fna.fbcdn.net/v/t15.5256-10/665258916_1899263880728317_5505917797249094336_n.jpg?stp=dst-jpg_p110x80_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=MV3kgTx3WBoQ7kNvwFXm_Uw&_nc_oc=AdpOArdi_jkmuK83dJizl5cYZ8IuKdTD6Y3foSzpaQqxj2xB-73O56AQlGzk6jBAHr7GuH62jvvNYYHlXXYUVvW4&_nc_zt=23&_nc_ht=scontent.fdel27-3.fna&edm=ALfz3TcEAAAA&_nc_gid=tZuPCoz6NUHhJKNxKzCvWg&_nc_tpa=Q5bMBQINdM54QJTAdCjRtJB2fVA4yQ8cak6-NwTAvUIZ0oaBVqPd42XVfJD9N9SwWG_jpf-upwN_MR6JXQ&oh=00_AQMFx7GCulGuHtDMuuSaWoXFMjNxJqXJeaqlLC_I-ZqqaQ&oe=6ACBDE08",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_faa9f99310835385b_1775417861610",
+                    "id": "120244131781270458"
+                  }
+                ]
+              },
+              {
+                "video_id": "1319788470015787",
+                "thumbnail_url": "https://scontent.fdel1-2.fna.fbcdn.net/v/t15.5256-10/666287748_811034778725176_7061653515468889925_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=JqB_gp_o2-cQ7kNvwH9FK6e&_nc_oc=Adqqg0J0hMmv1-3QckP8RkfHqZUPzvsLPuIaX9t3qxHMrUhv0bbiz5kEm4gOd_2j6icmCjy_0o245szxkB3lAbio&_nc_zt=23&_nc_ht=scontent.fdel1-2.fna&edm=ALfz3TcEAAAA&_nc_gid=tZuPCoz6NUHhJKNxKzCvWg&_nc_tpa=Q5bMBQINfY8f0pGqnpUpZV6Mu1C7qLpo9yqe2u2z7Ud963ywV3cGuXWOHkhMSTdM8SWlWuAJ0Vck3316xQ&oh=00_AQPCKkl3NrH78rvhgt8QFvfWzw9x8QoqJubAzMWf9T-CYQ&oe=6ACBCB2E",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fea776e0ae95b1f62_1775417823724",
+                    "id": "120244131781330458"
+                  },
+                  {
+                    "name": "placement_asset_f9259b3da15931720_1775417861613",
+                    "id": "120244131781370458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f60d2e53718677f14_1775417861615",
+                  "id": "120244131781350458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f731f95ce4fc10594_1775417861616",
+                  "id": "120244131781300458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f89f22de5e7a17b42_1775417861617",
+                  "id": "120244131781340458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f9259b3da15931720_1775417861613",
+                  "id": "120244131781370458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search",
+                    "profile_reels"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels",
+                    "facebook_reels_overlay"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic",
+                    "rewarded_video"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_fe22196c91ec0f414_1775417861610",
+                  "id": "120244131781290458"
+                },
+                "title_label": {
+                  "name": "placement_asset_ff42b945e8a9a4fc4_1775417861610",
+                  "id": "120244131781320458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_ff10eaef92a8d8b98_1775417861612",
+                  "id": "120244131781360458"
+                },
+                "video_label": {
+                  "name": "placement_asset_faa9f99310835385b_1775417861610",
+                  "id": "120244131781270458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:23.692077+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "996428299482629",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:24.424939+00:00"
+      }
+    },
+    "1279105241040350": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "1279105241040350",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-21-f6b5aaefd940d87e283a4414309207d8",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "The weather can't decide. Your outfit already has.\nMeet our transeasonal sets. Two pieces, endless ways to wear them.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f428f0c064b3e8d06_1776782726425",
+                    "id": "120244898323160458"
+                  },
+                  {
+                    "name": "placement_asset_f80d326f78fe3c527_1776782726417",
+                    "id": "120244898323230458"
+                  },
+                  {
+                    "name": "placement_asset_fe377e7c3cce3867c_1776782730911",
+                    "id": "120244898323250458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "New season sets",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f2567d67b3a6fcd45_1776782730911",
+                    "id": "120244898323170458"
+                  },
+                  {
+                    "name": "placement_asset_fbbc78118ff15a64e_1776782726425",
+                    "id": "120244898323240458"
+                  },
+                  {
+                    "name": "placement_asset_f5e695bd104933c53_1776782726421",
+                    "id": "120244898323260458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/sets",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f2db60db1295de311_1776782726426",
+                    "id": "120244898323180458"
+                  },
+                  {
+                    "name": "placement_asset_f1f9c633d49ff7174_1776782730911",
+                    "id": "120244898323200458"
+                  },
+                  {
+                    "name": "placement_asset_fcc795b6ff8a90688_1776782726424",
+                    "id": "120244898323220458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "64fb9b9e98e9b58907f1baa0922fce9f",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f3dba9236e55fcc27_1776782730908",
+                    "id": "120244898323190458"
+                  }
+                ]
+              },
+              {
+                "hash": "a108c138d4ef4d275bd86948be6b7972",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fa3e0e5496980b712_1776782726410",
+                    "id": "120244898323210458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_fe377e7c3cce3867c_1776782730911",
+                  "id": "120244898323250458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f2567d67b3a6fcd45_1776782730911",
+                  "id": "120244898323170458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f1f9c633d49ff7174_1776782730911",
+                  "id": "120244898323200458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f3dba9236e55fcc27_1776782730908",
+                  "id": "120244898323190458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f80d326f78fe3c527_1776782726417",
+                  "id": "120244898323230458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f5e695bd104933c53_1776782726421",
+                  "id": "120244898323260458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fcc795b6ff8a90688_1776782726424",
+                  "id": "120244898323220458"
+                },
+                "image_label": {
+                  "name": "placement_asset_fa3e0e5496980b712_1776782726410",
+                  "id": "120244898323210458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:24.820528+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "1279105241040350",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:25.556510+00:00"
+      }
+    },
+    "1320608509934183": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "1320608509934183",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-17-db27bd0a089f4ecb4d8d311e53c2b84b",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Bespoke in-house prints, rich seasonal textures and signature silhouettes. \nDiscover our new collection, exclusively online at steelelabel.com",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fc7e3f10efe6fc387_1776490928132",
+                    "id": "120244739281180458"
+                  },
+                  {
+                    "name": "placement_asset_fc726e2ad3aecc390_1776490928143",
+                    "id": "120244739281220458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shot in Paris. Designed in Melbourne.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fa8a528d279425a2a_1776490928144",
+                    "id": "120244739281190458"
+                  },
+                  {
+                    "name": "placement_asset_fa5ef8023e544359a_1776490928132",
+                    "id": "120244739281200458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/new-arrivals",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f2c6782c460d71ba4_1776490928135",
+                    "id": "120244739281150458"
+                  },
+                  {
+                    "name": "placement_asset_f71043ca12df972e2_1776490928144",
+                    "id": "120244739281170458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "908320922196452",
+                "thumbnail_url": "https://scontent.fdel27-1.fna.fbcdn.net/v/t15.5256-10/673691287_1514476510290434_6383112392835858071_n.jpg?stp=dst-jpg_p110x80_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=xXMPO82QmNEQ7kNvwGNorD0&_nc_oc=AdrSDZVEniLqbgU0Y85wlEjLkd25hLU4IG98bZJCrMIgRLycEWgELKIVyGqhGrpWarQGRj78NnRnKipp8t0ywkLk&_nc_zt=23&_nc_ht=scontent.fdel27-1.fna&edm=ALfz3TcEAAAA&_nc_gid=PX3ZuzMA6nF0J_lTzlJ5yQ&_nc_tpa=Q5bMBQK3zzUIJ9bpNZe_60PJnoAsvyDx7ngG2ZXQo0LA3Rgpve2Di7nH_5C7e9W6To37dm2aDglijNyXhQ&oh=00_AQO56uD6A4CshWPKra2_58KRot-7VNalNdQe0fYICSwcVQ&oe=6ACBC844",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f83a4bd07f3aba30e_1776490928132",
+                    "id": "120244739281160458"
+                  }
+                ]
+              },
+              {
+                "video_id": "2161631471317284",
+                "thumbnail_url": "https://scontent.fdel1-8.fna.fbcdn.net/v/t15.5256-10/673323742_1435806961100509_5472376955872669225_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=VLPCW5_uaBAQ7kNvwFbS7pd&_nc_oc=Adpq8u9IV3WwtIfyGt8tgpNoJfJAKQ9ziZnuGzMWX7Su4AtiJScj4zEVI7Aqb6HxMgbOTn1pEmItizTjbo36oiSy&_nc_zt=23&_nc_ht=scontent.fdel1-8.fna&edm=ALfz3TcEAAAA&_nc_gid=PX3ZuzMA6nF0J_lTzlJ5yQ&_nc_tpa=Q5bMBQIoSAZ0f0jJqyu_eSFlAcIcKm1_34tlPPa47Kx5bsbRFjjBjNcH0t-vzMrrESfpsEVPBPpHstr28A&oh=00_AQMXncRJnvBHl_uiabLa_uSvQyMV-Tc8aJG4yE7c8erl4A&oe=6ACBDF97",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f9a67024fafd29664_1776490928139",
+                    "id": "120244739281140458"
+                  },
+                  {
+                    "name": "placement_asset_f9a93b2ca371a2ffb_1776490844789",
+                    "id": "120244739281210458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_fc726e2ad3aecc390_1776490928143",
+                  "id": "120244739281220458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fa8a528d279425a2a_1776490928144",
+                  "id": "120244739281190458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f71043ca12df972e2_1776490928144",
+                  "id": "120244739281170458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f9a67024fafd29664_1776490928139",
+                  "id": "120244739281140458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels",
+                    "facebook_reels_overlay"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic",
+                    "rewarded_video"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_fc7e3f10efe6fc387_1776490928132",
+                  "id": "120244739281180458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fa5ef8023e544359a_1776490928132",
+                  "id": "120244739281200458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f2c6782c460d71ba4_1776490928135",
+                  "id": "120244739281150458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f83a4bd07f3aba30e_1776490928132",
+                  "id": "120244739281160458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:26.170025+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "1320608509934183",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:27.254445+00:00"
+      }
+    },
+    "1325799332799642": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "1325799332799642",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-05-15-3deafd6a63e7057d1841036aa827d63c",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "CAROUSEL"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "The weather can't decide. Your outfit already has.\nMeet our transeasonal sets. Two pieces, endless ways to wear them.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                    "id": "120246407093990458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "The Cassandra Top & Pant @guiomar.machaz",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                    "id": "120246407093900458"
+                  }
+                ]
+              },
+              {
+                "text": "The Marsielle Top & Lottie Short @cassigeorges",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                    "id": "120246407093850458"
+                  }
+                ]
+              },
+              {
+                "text": "The Alexandra Coat @marthvadar",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                    "id": "120246407093800458"
+                  }
+                ]
+              },
+              {
+                "text": "The Louise Top & Manon Skirt @miatqueiroz",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                    "id": "120246407093820458"
+                  }
+                ]
+              },
+              {
+                "text": "The Roxana Jacket & Alexis Pant  @ceejaylucy",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                    "id": "120246407093890458"
+                  }
+                ]
+              },
+              {
+                "text": "The Daphne Jacket @larnie_Ives",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                    "id": "120246407093870458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                    "id": "120246407093950458"
+                  }
+                ]
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/shop-all/products/alexis-pant-antique-check",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                    "id": "120246407093860458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/collections/shop-all/products/alexandra-coat-antique-check",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                    "id": "120246407093880458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/collections/shop-all/products/manon-skirt-granita-stripe",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                    "id": "120246407093830458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/collections/shop-all/products/daphne-jacket-pink-polka",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                    "id": "120246407094220458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/collections/the-essentials/products/marsielle-top-chalk",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                    "id": "120246407093930458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/collections/shop-all/products/cassandra-top-ruby-check",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                    "id": "120246407093780458"
+                  }
+                ]
+              },
+              {
+                "website_url": "https://steelelabel.com/",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f31057510238a91ad_1778847267610",
+                    "id": "120246407093840458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "c542eb59caedfd74a79235833f5d2d84",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f55c844a3d65968dd_1778847267611",
+                    "id": "120246407093910458"
+                  }
+                ]
+              },
+              {
+                "hash": "eeaedf9fdd8bdc8b0ec80f384993b386",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f42c854cad632af4f_1778847267611",
+                    "id": "120246407093940458"
+                  }
+                ]
+              },
+              {
+                "hash": "e0669b18f76b9ab9268e1f4a13ee377f",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ff43cca4cce8afce0_1778847267612",
+                    "id": "120246407093920458"
+                  }
+                ]
+              },
+              {
+                "hash": "9997b8c9a24ae67aa09f0efc0f10a263",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ff0057e97f81a8ee7_1778847267612",
+                    "id": "120246407093970458"
+                  }
+                ]
+              },
+              {
+                "hash": "5999e7083963e3fb5ef61231c5ee0880",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fc993214f60251aac_1778847267612",
+                    "id": "120246407093980458"
+                  }
+                ]
+              },
+              {
+                "hash": "feeacb4b361cf8119f76e57620b6b555",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f63cd0709d7778613_1778847267612",
+                    "id": "120246407093960458"
+                  }
+                ]
+              },
+              {
+                "hash": "d177da616c9b0bbb19907a17a302d4df",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f63c1b0086045a52f_1778847273351",
+                    "id": "120246407100090458"
+                  }
+                ]
+              },
+              {
+                "hash": "e3b34dc0fe4e313091fb7afa86c097d4",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ffb54238b016181db_1778847283416",
+                    "id": "120246407111200458"
+                  }
+                ]
+              },
+              {
+                "hash": "90100f533cca72170a80c113113ee22b",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f810796ea46fa06b1_1778847288541",
+                    "id": "120246407115580458"
+                  }
+                ]
+              },
+              {
+                "hash": "9d055a04f61025f74f0e4e30cddb2ef3",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f541fcf620a6a6b8c_1778847293160",
+                    "id": "120246407122060458"
+                  }
+                ]
+              },
+              {
+                "hash": "ff6ab487fa33a1b07518b67a744de1b1",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f29ca0e363799feff_1778847298474",
+                    "id": "120246407127040458"
+                  }
+                ]
+              },
+              {
+                "hash": "feb12e3f58215823a3e6ef959de6acda",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f6d172391912dbcca_1778847302036",
+                    "id": "120246407129810458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                  "id": "120246407093990458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f31057510238a91ad_1778847267610",
+                  "id": "120246407093840458"
+                },
+                "carousel_label": {
+                  "name": "placement_asset_f24ece4b8d9b1aca9_1778847267615",
+                  "id": "120246407093810458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "instagram"
+                  ],
+                  "instagram_positions": [
+                    "story"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                  "id": "120246407093990458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f31057510238a91ad_1778847267610",
+                  "id": "120246407093840458"
+                },
+                "carousel_label": {
+                  "name": "placement_asset_ff1d93a21f1577fb0_1778847352455",
+                  "id": "120246407189160458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "instagram"
+                  ],
+                  "instagram_positions": [
+                    "reels"
+                  ]
+                }
+              },
+              {
+                "priority": 3,
+                "body_label": {
+                  "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                  "id": "120246407093990458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f31057510238a91ad_1778847267610",
+                  "id": "120246407093840458"
+                },
+                "carousel_label": {
+                  "name": "placement_asset_f6f14ca829909f747_1778847395297",
+                  "id": "120246407235920458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook"
+                  ],
+                  "facebook_positions": [
+                    "story"
+                  ]
+                }
+              },
+              {
+                "priority": 4,
+                "body_label": {
+                  "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                  "id": "120246407093990458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f31057510238a91ad_1778847267610",
+                  "id": "120246407093840458"
+                },
+                "carousel_label": {
+                  "name": "placement_asset_fde23166b6be15237_1778847437317",
+                  "id": "120246407288750458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook"
+                  ],
+                  "facebook_positions": [
+                    "facebook_reels"
+                  ]
+                }
+              },
+              {
+                "priority": 5,
+                "body_label": {
+                  "name": "placement_asset_fbbcac72bdd3ce2d3_1778847267610",
+                  "id": "120246407093990458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f31057510238a91ad_1778847267610",
+                  "id": "120246407093840458"
+                },
+                "carousel_label": {
+                  "name": "placement_asset_f79ccb7b961409550_1778847267609",
+                  "id": "120246407093790458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "carousels": [
+              {
+                "multi_share_end_card": true,
+                "multi_share_optimized": true,
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f79ccb7b961409550_1778847267609",
+                    "id": "120246407093790458"
+                  }
+                ],
+                "child_attachments": [
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                      "id": "120246407093890458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                      "id": "120246407093860458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f55c844a3d65968dd_1778847267611",
+                      "id": "120246407093910458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                      "id": "120246407093820458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                      "id": "120246407093830458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f42c854cad632af4f_1778847267611",
+                      "id": "120246407093940458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                      "id": "120246407093800458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                      "id": "120246407093880458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ff43cca4cce8afce0_1778847267612",
+                      "id": "120246407093920458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                      "id": "120246407093870458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                      "id": "120246407094220458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ff0057e97f81a8ee7_1778847267612",
+                      "id": "120246407093970458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                      "id": "120246407093900458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                      "id": "120246407093780458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f63cd0709d7778613_1778847267612",
+                      "id": "120246407093960458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                      "id": "120246407093850458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                      "id": "120246407093930458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_fc993214f60251aac_1778847267612",
+                      "id": "120246407093980458"
+                    }
+                  }
+                ]
+              },
+              {
+                "multi_share_end_card": true,
+                "multi_share_optimized": true,
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f24ece4b8d9b1aca9_1778847267615",
+                    "id": "120246407093810458"
+                  }
+                ],
+                "child_attachments": [
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                      "id": "120246407093890458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                      "id": "120246407093860458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f63c1b0086045a52f_1778847273351",
+                      "id": "120246407100090458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                      "id": "120246407093820458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                      "id": "120246407093830458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ffb54238b016181db_1778847283416",
+                      "id": "120246407111200458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                      "id": "120246407093800458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                      "id": "120246407093880458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f810796ea46fa06b1_1778847288541",
+                      "id": "120246407115580458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                      "id": "120246407093870458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                      "id": "120246407094220458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f541fcf620a6a6b8c_1778847293160",
+                      "id": "120246407122060458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                      "id": "120246407093900458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                      "id": "120246407093780458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f29ca0e363799feff_1778847298474",
+                      "id": "120246407127040458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                      "id": "120246407093850458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                      "id": "120246407093930458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f6d172391912dbcca_1778847302036",
+                      "id": "120246407129810458"
+                    }
+                  }
+                ]
+              },
+              {
+                "multi_share_end_card": true,
+                "multi_share_optimized": true,
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ff1d93a21f1577fb0_1778847352455",
+                    "id": "120246407189160458"
+                  }
+                ],
+                "child_attachments": [
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                      "id": "120246407093890458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                      "id": "120246407093860458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f63c1b0086045a52f_1778847273351",
+                      "id": "120246407100090458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                      "id": "120246407093820458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                      "id": "120246407093830458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ffb54238b016181db_1778847283416",
+                      "id": "120246407111200458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                      "id": "120246407093800458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                      "id": "120246407093880458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f810796ea46fa06b1_1778847288541",
+                      "id": "120246407115580458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                      "id": "120246407093870458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                      "id": "120246407094220458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f541fcf620a6a6b8c_1778847293160",
+                      "id": "120246407122060458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                      "id": "120246407093900458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                      "id": "120246407093780458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f29ca0e363799feff_1778847298474",
+                      "id": "120246407127040458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                      "id": "120246407093850458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                      "id": "120246407093930458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f6d172391912dbcca_1778847302036",
+                      "id": "120246407129810458"
+                    }
+                  }
+                ]
+              },
+              {
+                "multi_share_end_card": true,
+                "multi_share_optimized": true,
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f6f14ca829909f747_1778847395297",
+                    "id": "120246407235920458"
+                  }
+                ],
+                "child_attachments": [
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                      "id": "120246407093890458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                      "id": "120246407093860458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f63c1b0086045a52f_1778847273351",
+                      "id": "120246407100090458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                      "id": "120246407093820458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                      "id": "120246407093830458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ffb54238b016181db_1778847283416",
+                      "id": "120246407111200458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                      "id": "120246407093800458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                      "id": "120246407093880458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f810796ea46fa06b1_1778847288541",
+                      "id": "120246407115580458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                      "id": "120246407093870458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                      "id": "120246407094220458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f541fcf620a6a6b8c_1778847293160",
+                      "id": "120246407122060458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                      "id": "120246407093900458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                      "id": "120246407093780458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f29ca0e363799feff_1778847298474",
+                      "id": "120246407127040458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                      "id": "120246407093850458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                      "id": "120246407093930458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f6d172391912dbcca_1778847302036",
+                      "id": "120246407129810458"
+                    }
+                  }
+                ]
+              },
+              {
+                "multi_share_end_card": true,
+                "multi_share_optimized": true,
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fde23166b6be15237_1778847437317",
+                    "id": "120246407288750458"
+                  }
+                ],
+                "child_attachments": [
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fd0b462a19a4d217f_1778847267611",
+                      "id": "120246407093890458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fdd2fc2d99acd6766_1778847267611",
+                      "id": "120246407093860458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f63c1b0086045a52f_1778847273351",
+                      "id": "120246407100090458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_ff2569a8ebe8b325d_1778847267611",
+                      "id": "120246407093820458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc86a81afb53a2dae_1778847267611",
+                      "id": "120246407093830458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_ffb54238b016181db_1778847283416",
+                      "id": "120246407111200458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f6632927b690ff9c7_1778847267612",
+                      "id": "120246407093800458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fc0da3bb51b62282a_1778847267611",
+                      "id": "120246407093880458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f810796ea46fa06b1_1778847288541",
+                      "id": "120246407115580458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fab7ea29edc71c191_1778847267612",
+                      "id": "120246407093870458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_fd65d5eec18b5fa0c_1778847267612",
+                      "id": "120246407094220458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f541fcf620a6a6b8c_1778847293160",
+                      "id": "120246407122060458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_f580cd6233cad4407_1778847267612",
+                      "id": "120246407093900458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_feea1eaaeecd91d35_1778847267612",
+                      "id": "120246407093780458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f29ca0e363799feff_1778847298474",
+                      "id": "120246407127040458"
+                    }
+                  },
+                  {
+                    "title_label": {
+                      "name": "placement_asset_fbc9ca7f049d90238_1778847267612",
+                      "id": "120246407093850458"
+                    },
+                    "link_url_label": {
+                      "name": "placement_asset_f7e12d7bd0c137688_1778847267612",
+                      "id": "120246407093930458"
+                    },
+                    "description_label": {
+                      "name": "placement_asset_fdae38ab184f22792_1778847267611",
+                      "id": "120246407093950458"
+                    },
+                    "image_label": {
+                      "name": "placement_asset_f6d172391912dbcca_1778847302036",
+                      "id": "120246407129810458"
+                    }
+                  }
+                ]
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "EMAIL_CAPTURE_SHOPIFY"
+              ]
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:27.721440+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "1325799332799642",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:28.390463+00:00"
+      }
+    },
+    "1632098531326945": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "1632098531326945",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-21-6727ed2149be6acb2a7ec09d81255216",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Paris is never a bad idea. Neither is dressing like you're already there. Ailleurs, new collection, now available.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f9a2abf5a8ff07a24_1776781915667",
+                    "id": "120244897968550458"
+                  },
+                  {
+                    "name": "placement_asset_f46b40a02048a0e81_1776781915653",
+                    "id": "120244897968560458"
+                  },
+                  {
+                    "name": "placement_asset_f67a867190c0abc8b_1776781954882",
+                    "id": "120244897968570458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shop New Arrivals",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f76e98d5b7561e483_1776781915668",
+                    "id": "120244897968460458"
+                  },
+                  {
+                    "name": "placement_asset_f9db4d573e87c11bc_1776781915659",
+                    "id": "120244897968480458"
+                  },
+                  {
+                    "name": "placement_asset_f3ad23d49efa9eb2c_1776781954882",
+                    "id": "120244897968580458"
+                  }
+                ]
+              },
+              {
+                "text": "New Arrivals ",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f76e98d5b7561e483_1776781915668",
+                    "id": "120244897968460458"
+                  }
+                ]
+              },
+              {
+                "text": "Shop New ",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f76e98d5b7561e483_1776781915668",
+                    "id": "120244897968460458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/new-arrivals",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f262ed2ebfd1966a8_1776781915669",
+                    "id": "120244897968500458"
+                  },
+                  {
+                    "name": "placement_asset_fa3e6e8007c907fb3_1776781954883",
+                    "id": "120244897968530458"
+                  },
+                  {
+                    "name": "placement_asset_fd64fe4d958c2e7d8_1776781915664",
+                    "id": "120244897968540458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "523fce9b040a3dcf32438ab30bec630d",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f8d8a08ae7838a5e1_1776781954880",
+                    "id": "120244897968590458"
+                  }
+                ]
+              },
+              {
+                "hash": "ade24e6a8e5eaf40a3788711537218f7",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ffd41ed9a525b0662_1776781915646",
+                    "id": "120244897968510458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f67a867190c0abc8b_1776781954882",
+                  "id": "120244897968570458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f3ad23d49efa9eb2c_1776781954882",
+                  "id": "120244897968580458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fa3e6e8007c907fb3_1776781954883",
+                  "id": "120244897968530458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f8d8a08ae7838a5e1_1776781954880",
+                  "id": "120244897968590458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f46b40a02048a0e81_1776781915653",
+                  "id": "120244897968560458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f9db4d573e87c11bc_1776781915659",
+                  "id": "120244897968480458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fd64fe4d958c2e7d8_1776781915664",
+                  "id": "120244897968540458"
+                },
+                "image_label": {
+                  "name": "placement_asset_ffd41ed9a525b0662_1776781915646",
+                  "id": "120244897968510458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:28.833279+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "1632098531326945",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:29.447330+00:00"
+      }
+    },
+    "1761957141639803": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "1761957141639803",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-07-02-61e45764fc3dadf396c1474a76759424",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Winter, but make it s t e e l e . Discover our most-loved Hanne Coat for the cold days ahead.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f0c0eb8c22300eb43_1782987535575",
+                    "id": "120249804036510458"
+                  },
+                  {
+                    "name": "placement_asset_f805953332a454c5c_1782987514947",
+                    "id": "120249804036520458"
+                  },
+                  {
+                    "name": "placement_asset_f8d93434ebbe36836_1782987514955",
+                    "id": "120249804036540458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shop Outerwear \nFree Shipping* | Afterpay ",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f83c9a1809b40202c_1782987535575",
+                    "id": "120249804036490458"
+                  },
+                  {
+                    "name": "placement_asset_f5f941d4ac492eaf7_1782987514952",
+                    "id": "120249804036500458"
+                  },
+                  {
+                    "name": "placement_asset_f9d5a35b4ecc2fba9_1782987514956",
+                    "id": "120249804036530458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/jackets-coats",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f0e141fb4c2b248bb_1782987535575",
+                    "id": "120249804036470458"
+                  },
+                  {
+                    "name": "placement_asset_f75fd19a3cc7b36ba_1782987514954",
+                    "id": "120249804036550458"
+                  },
+                  {
+                    "name": "placement_asset_fe2e43a4cda335c68_1782987514956",
+                    "id": "120249804036560458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "6297abc08badb8f17f5d3cf7889f7868",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f90afef20774d93ef_1782987514941",
+                    "id": "120249804036480458"
+                  }
+                ]
+              },
+              {
+                "hash": "65592cf7e9b8f7441cddfefb999bccba",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f7c0b2b7bcf906d1f_1782987535573",
+                    "id": "120249804036570458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f0c0eb8c22300eb43_1782987535575",
+                  "id": "120249804036510458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f83c9a1809b40202c_1782987535575",
+                  "id": "120249804036490458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f0e141fb4c2b248bb_1782987535575",
+                  "id": "120249804036470458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f7c0b2b7bcf906d1f_1782987535573",
+                  "id": "120249804036570458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f805953332a454c5c_1782987514947",
+                  "id": "120249804036520458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f5f941d4ac492eaf7_1782987514952",
+                  "id": "120249804036500458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f75fd19a3cc7b36ba_1782987514954",
+                  "id": "120249804036550458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f90afef20774d93ef_1782987514941",
+                  "id": "120249804036480458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "EMAIL_CAPTURE_SHOPIFY"
+              ]
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:30.177586+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "1761957141639803",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:30.878768+00:00"
+      }
+    },
+    "2046040699337199": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2046040699337199",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-07-02-1eed5e79019fb98020fd0ebfacee03e4",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Winter, but make it s t e e l e . Discover our most-loved Hanne Coat for the cold days ahead.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f0c0eb8c22300eb43_1782987535575",
+                    "id": "120249804036510458"
+                  },
+                  {
+                    "name": "placement_asset_f805953332a454c5c_1782987514947",
+                    "id": "120249804036520458"
+                  },
+                  {
+                    "name": "placement_asset_f8d93434ebbe36836_1782987514955",
+                    "id": "120249804036540458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shop Outerwear \nFree Shipping* | Afterpay ",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f83c9a1809b40202c_1782987535575",
+                    "id": "120249804036490458"
+                  },
+                  {
+                    "name": "placement_asset_f5f941d4ac492eaf7_1782987514952",
+                    "id": "120249804036500458"
+                  },
+                  {
+                    "name": "placement_asset_f9d5a35b4ecc2fba9_1782987514956",
+                    "id": "120249804036530458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/new-arrivals/products/hanne-coat-citron-check",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f0e141fb4c2b248bb_1782987535575",
+                    "id": "120249804036470458"
+                  },
+                  {
+                    "name": "placement_asset_f75fd19a3cc7b36ba_1782987514954",
+                    "id": "120249804036550458"
+                  },
+                  {
+                    "name": "placement_asset_fe2e43a4cda335c68_1782987514956",
+                    "id": "120249804036560458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "6297abc08badb8f17f5d3cf7889f7868",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f90afef20774d93ef_1782987514941",
+                    "id": "120249804036480458"
+                  }
+                ]
+              },
+              {
+                "hash": "65592cf7e9b8f7441cddfefb999bccba",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f7c0b2b7bcf906d1f_1782987535573",
+                    "id": "120249804036570458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f0c0eb8c22300eb43_1782987535575",
+                  "id": "120249804036510458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f83c9a1809b40202c_1782987535575",
+                  "id": "120249804036490458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f0e141fb4c2b248bb_1782987535575",
+                  "id": "120249804036470458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f7c0b2b7bcf906d1f_1782987535573",
+                  "id": "120249804036570458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f805953332a454c5c_1782987514947",
+                  "id": "120249804036520458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f5f941d4ac492eaf7_1782987514952",
+                  "id": "120249804036500458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f75fd19a3cc7b36ba_1782987514954",
+                  "id": "120249804036550458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f90afef20774d93ef_1782987514941",
+                  "id": "120249804036480458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "EMAIL_CAPTURE_SHOPIFY"
+              ]
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:31.353526+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2046040699337199",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:31.946238+00:00"
+      }
+    },
+    "2213623069380197": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2213623069380197",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-30-66cd99b28de4982e6ba101daf63c1b91",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717",
+            "template_data": {
+              "link": "https://steelelabel.com/collections/full-price-february-26",
+              "message": "Timeless pieces for your wardrobe \u2014 all waiting for you.",
+              "name": "{{product.name}}",
+              "multi_share_end_card": false,
+              "show_multiple_images": false,
+              "call_to_action": {
+                "type": "SHOP_NOW"
+              }
+            }
+          },
+          "asset_feed_spec": {
+            "optimization_type": "FORMAT_AUTOMATION",
+            "ad_formats": [
+              "CAROUSEL",
+              "COLLECTION"
+            ],
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:32.464224+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2213623069380197",
+          "account_id": "2313037395632947",
+          "product_set_id": "34531011566498379"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:32.916534+00:00"
+      }
+    },
+    "2231962067556522": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2231962067556522",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-05-14-8a34ea6c298831bcd776680a79549a1e",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Winter, but make it s t e e l e . \nLayer up in new season outerwear.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fe3901b220f549d89_1778767549723",
+                    "id": "120246336379570458"
+                  },
+                  {
+                    "name": "placement_asset_ffa7a411e12497c45_1778767549727",
+                    "id": "120246336379620458"
+                  },
+                  {
+                    "name": "placement_asset_fd9567409147bcaf4_1778767463608",
+                    "id": "120246336379760458"
+                  },
+                  {
+                    "name": "placement_asset_f0f04b5989d746590_1778767549731",
+                    "id": "120246336379800458"
+                  },
+                  {
+                    "name": "placement_asset_fd2769ef5e59a3ba4_1778767463599",
+                    "id": "120246336379820458"
+                  },
+                  {
+                    "name": "placement_asset_f6976bd10e59a84bc_1778767622919",
+                    "id": "120246336429250458"
+                  },
+                  {
+                    "name": "placement_asset_fa42b7be0e4139d38_1778767622911",
+                    "id": "120246336429270458"
+                  },
+                  {
+                    "name": "placement_asset_f7d3269b2bbe186fc_1778767622915",
+                    "id": "120246336429280458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Femininity in every layer. \nShop Outerwear ",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f4b32c83b80f2c209_1778767549723",
+                    "id": "120246336379510458"
+                  },
+                  {
+                    "name": "placement_asset_f984c242f38ee3a11_1778767549728",
+                    "id": "120246336379530458"
+                  },
+                  {
+                    "name": "placement_asset_f733ad0e9999523a3_1778767549732",
+                    "id": "120246336379580458"
+                  },
+                  {
+                    "name": "placement_asset_fabcac92d1ce72ecd_1778767463603",
+                    "id": "120246336379610458"
+                  },
+                  {
+                    "name": "placement_asset_fc9ee74ac5983344a_1778767463608",
+                    "id": "120246336379780458"
+                  },
+                  {
+                    "name": "placement_asset_faae372cc82ec9d38_1778767622919",
+                    "id": "120246336429230458"
+                  },
+                  {
+                    "name": "placement_asset_fc7649a327444d409_1778767622911",
+                    "id": "120246336429240458"
+                  },
+                  {
+                    "name": "placement_asset_f5d1a55e5e2f0585b_1778767622916",
+                    "id": "120246336429260458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/jackets-coats",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f418786e25b8bd7c7_1778767549732",
+                    "id": "120246336379440458"
+                  },
+                  {
+                    "name": "placement_asset_fd1f8fca9ee419d86_1778767549724",
+                    "id": "120246336379670458"
+                  },
+                  {
+                    "name": "placement_asset_fbe886374f3362126_1778767463608",
+                    "id": "120246336379680458"
+                  },
+                  {
+                    "name": "placement_asset_fe68931a04f386508_1778767549728",
+                    "id": "120246336379690458"
+                  },
+                  {
+                    "name": "placement_asset_feea4d88209f3fb4c_1778767463606",
+                    "id": "120246336379700458"
+                  },
+                  {
+                    "name": "placement_asset_f9e393d4dda628970_1778767622916",
+                    "id": "120246336429180458"
+                  },
+                  {
+                    "name": "placement_asset_fee87777f1726b228_1778767622912",
+                    "id": "120246336429190458"
+                  },
+                  {
+                    "name": "placement_asset_fb5db23b71a6091b1_1778767622920",
+                    "id": "120246336429210458"
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "hash": "dfd76c824e850f0ba23d23b870c919af",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f930fa4981803c628_1778767463591",
+                    "id": "120246336379650458"
+                  },
+                  {
+                    "name": "placement_asset_fe86bc1d4c04e588e_1778767549729",
+                    "id": "120246336379660458"
+                  },
+                  {
+                    "name": "placement_asset_f77abcedd1cf44d58_1778767549719",
+                    "id": "120246336379710458"
+                  },
+                  {
+                    "name": "placement_asset_f47a53a73e06c191a_1778767622917",
+                    "id": "120246336429200458"
+                  },
+                  {
+                    "name": "placement_asset_f69de06e4848a4c09_1778767622908",
+                    "id": "120246336429220458"
+                  }
+                ]
+              },
+              {
+                "hash": "2a54cdbdba38531c75d92314d7d5f841",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f2d639437859ce774_1778767622913",
+                    "id": "120246336429290458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_fa42b7be0e4139d38_1778767622911",
+                  "id": "120246336429270458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fc7649a327444d409_1778767622911",
+                  "id": "120246336429240458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fee87777f1726b228_1778767622912",
+                  "id": "120246336429190458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f69de06e4848a4c09_1778767622908",
+                  "id": "120246336429220458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "threads"
+                  ],
+                  "instagram_positions": [
+                    "stream",
+                    "explore_home",
+                    "profile_feed"
+                  ],
+                  "facebook_positions": [
+                    "feed",
+                    "instream_video",
+                    "marketplace",
+                    "biz_disco_feed",
+                    "facebook_reels_overlay",
+                    "profile_feed",
+                    "notification"
+                  ],
+                  "threads_positions": [
+                    "threads_stream"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f7d3269b2bbe186fc_1778767622915",
+                  "id": "120246336429280458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f5d1a55e5e2f0585b_1778767622916",
+                  "id": "120246336429260458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f9e393d4dda628970_1778767622916",
+                  "id": "120246336429180458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f2d639437859ce774_1778767622913",
+                  "id": "120246336429290458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic"
+                  ]
+                }
+              },
+              {
+                "priority": 3,
+                "body_label": {
+                  "name": "placement_asset_f6976bd10e59a84bc_1778767622919",
+                  "id": "120246336429250458"
+                },
+                "title_label": {
+                  "name": "placement_asset_faae372cc82ec9d38_1778767622919",
+                  "id": "120246336429230458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_fb5db23b71a6091b1_1778767622920",
+                  "id": "120246336429210458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f47a53a73e06c191a_1778767622917",
+                  "id": "120246336429200458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "whatsapp"
+                  ],
+                  "facebook_positions": [
+                    "right_hand_column",
+                    "search"
+                  ]
+                }
+              },
+              {
+                "priority": 4,
+                "body_label": {
+                  "name": "placement_asset_fd2769ef5e59a3ba4_1778767463599",
+                  "id": "120246336379820458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fabcac92d1ce72ecd_1778767463603",
+                  "id": "120246336379610458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_feea4d88209f3fb4c_1778767463606",
+                  "id": "120246336379700458"
+                },
+                "image_label": {
+                  "name": "placement_asset_f930fa4981803c628_1778767463591",
+                  "id": "120246336379650458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:33.376460+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2231962067556522",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:34.003328+00:00"
+      }
+    },
+    "2508857069565088": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2508857069565088",
+          "account_id": "2313037395632947",
+          "name": "Dressing for Joy. Always. Shop Dresses 2026-05-14-54b6fd5a54de15b723a568a11fe8fce5",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717",
+            "video_data": {
+              "video_id": "862852976844752",
+              "title": "Dressing for Joy. Always.\nShop Dresses",
+              "message": "Dressing for Joy. This Winter.\nNew season dresses have arrived, exclusively at steelelabel.com.",
+              "link_description": "exclusively online",
+              "image_url": "https://www.facebook.com/ads/image/?d=AQKJ55K74aABqLRaUCx1Dx0aFUnxKUtDQ81F5tq3TmPdNj3GehJhx0qYv8ABPuRs3f2GN8EXtMJnw3MY4VFGtgRbj3ygQwp9tr-wUa2rpUFSBR1wyZlt1Y8wnKUkUTLT2PANk0LdSlXABkEgTC_YzTde",
+              "image_hash": "26827fd0bfb6454c2c3989d27b3768a6",
+              "call_to_action": {
+                "type": "SHOP_NOW",
+                "value": {
+                  "link": "https://steelelabel.com/collections/new-arrivals"
+                }
+              }
+            }
+          },
+          "asset_feed_spec": {
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "DETECTED_FROM_MERCHANT_ADS",
+                "PROVIDED_BY_MERCHANT",
+                "DETECTED_FROM_MERCHANT_WEBSITE",
+                "EMAIL_CAPTURE_SHOPIFY"
+              ],
+              "is_auto_update_allowed": true
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:34.403939+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2508857069565088",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:34.923464+00:00"
+      }
+    },
+    "2535887650173076": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2535887650173076",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-07-02-04947b75fff8f889782c03f802fcd87c",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Winter, but make it s t e e l e . Discover our most-loved Hanne Coat for the cold days ahead.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_ff6341a44ae8027cc_1782987217296",
+                    "id": "120249803871230458"
+                  },
+                  {
+                    "name": "placement_asset_f642a3a05383ba246_1782987217299",
+                    "id": "120249803871240458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Layer Up\nFree Shipping* | Afterpay",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fac242dd68105fa94_1782987217296",
+                    "id": "120249803871260458"
+                  },
+                  {
+                    "name": "placement_asset_f8decdbfa22322320_1782987217300",
+                    "id": "120249803871270458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/new-arrivals/products/hanne-coat-citron-check",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f1386b16b72410f6d_1782987217297",
+                    "id": "120249803871190458"
+                  },
+                  {
+                    "name": "placement_asset_faa9e864698ccf3ff_1782987217300",
+                    "id": "120249803871250458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "1693801865163302",
+                "thumbnail_url": "https://scontent.fdel1-2.fna.fbcdn.net/v/t15.5256-10/736007793_1556877559154660_9118066133218114325_n.jpg?stp=dst-jpg_p110x80_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=gx8IN9MCnYcQ7kNvwGUjbS_&_nc_oc=AdoyeYfhF-l7PP8GvKnhedqNGg0-AvnpPkF57RFX1LBTTHRZzOW55eR5eAaguExN422DyOmz3selGAJVCMqPz9v8&_nc_zt=23&_nc_ht=scontent.fdel1-2.fna&edm=ALfz3TcEAAAA&_nc_gid=C7TXiXogFt5uJlAsaAEuIw&_nc_tpa=Q5bMBQIvHLMku92usWy2Qa2d9byGh5lxmoquS1xN5K0l7u7YNdvqdnyHvdwoV7XgPayAKP7oN3Pjl_YOFw&oh=00_AQNK7_SVrXu692ViFtDxhYkONFgUObcFKUwk5gUkccjZAQ&oe=6ACBDE4B",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f20c1b41c95fae780_1782987217296",
+                    "id": "120249803871220458"
+                  }
+                ]
+              },
+              {
+                "video_id": "1760827438677215",
+                "thumbnail_url": "https://scontent.fdel27-6.fna.fbcdn.net/v/t15.5256-10/736980492_1714834282901373_9018472664316420979_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=aos_NmUFnfQQ7kNvwEDU5AN&_nc_oc=AdpgVnfYP04LaRMPzamd8OgfwqN7eq7DWyWytfzMyc2fn5LIg12Yl_r-KliQHzhyhDxbcvWS11vr8VLuGB28ZnBL&_nc_zt=23&_nc_ht=scontent.fdel27-6.fna&edm=ALfz3TcEAAAA&_nc_gid=C7TXiXogFt5uJlAsaAEuIw&_nc_tpa=Q5bMBQKaoIzq3eBLf1nRp8cvieuiDIufurdU5It-oVW21JTqoNVGIYxNrfGysQukWc9VlvgHWO8s6a9njA&oh=00_AQMVhNzXZDHDVDcr0Tnp_3E-JMa9GONlKr8fUmQe22wMhw&oe=6ACBD877",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fc62595dc6b709d80_1782987197662",
+                    "id": "120249803871200458"
+                  },
+                  {
+                    "name": "placement_asset_f828c4cb463f20805_1782987217298",
+                    "id": "120249803871210458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f642a3a05383ba246_1782987217299",
+                  "id": "120249803871240458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f8decdbfa22322320_1782987217300",
+                  "id": "120249803871270458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_faa9e864698ccf3ff_1782987217300",
+                  "id": "120249803871250458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f828c4cb463f20805_1782987217298",
+                  "id": "120249803871210458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels",
+                    "facebook_reels_overlay"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic",
+                    "rewarded_video"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_ff6341a44ae8027cc_1782987217296",
+                  "id": "120249803871230458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fac242dd68105fa94_1782987217296",
+                  "id": "120249803871260458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f1386b16b72410f6d_1782987217297",
+                  "id": "120249803871190458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f20c1b41c95fae780_1782987217296",
+                  "id": "120249803871220458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            },
+            "promotional_metadata": {
+              "allowed_coupon_code_sources": [
+                "EMAIL_CAPTURE_SHOPIFY"
+              ]
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:35.736854+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2535887650173076",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:36.917455+00:00"
+      }
+    },
+    "2961426797384859": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "2961426797384859",
+          "account_id": "2313037395632947",
+          "name": "{{product.name}} 2026-04-05-16728041d27a8ee5c3cd24e9a101d331",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "New Season. New Essentials. \nIntroducing new season styles to our Essentials range. To be worn with simplicity or paired back with joyful mainline signatures.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f7fc4376fcaca195c_1775418135689",
+                    "id": "120244131883740458"
+                  },
+                  {
+                    "name": "placement_asset_f28100836490e5993_1775418135683",
+                    "id": "120244131883750458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Shop Essentials at steelelabel.com",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbc4cc2537f4a82c3_1775418135690",
+                    "id": "120244131883660458"
+                  },
+                  {
+                    "name": "placement_asset_f9bed1063c0f1a78c_1775418135683",
+                    "id": "120244131883680458"
+                  }
+                ]
+              },
+              {
+                "text": "Shop s t e e l e .",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbc4cc2537f4a82c3_1775418135690",
+                    "id": "120244131883660458"
+                  },
+                  {
+                    "name": "placement_asset_f9bed1063c0f1a78c_1775418135683",
+                    "id": "120244131883680458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "exclusively online"
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/the-essentials",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f77606c57088d5f15_1775418135685",
+                    "id": "120244131883700458"
+                  },
+                  {
+                    "name": "placement_asset_f375157edfc086e3b_1775418135690",
+                    "id": "120244131883710458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "1894118754602876",
+                "thumbnail_url": "https://scontent.fdel27-1.fna.fbcdn.net/v/t15.5256-10/664396823_1304801641500982_4635419069686736605_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=mr88lQSHNg0Q7kNvwFdzBze&_nc_oc=Ado3YtgfC2CyxqssNXJm2KwpWWDhHSYTsZLP1xVHlfInKqj9gFz3npqvNJ62fJSsxgfjXIDvTUEhkZv25WT1A9CD&_nc_zt=23&_nc_ht=scontent.fdel27-1.fna&edm=ALfz3TcEAAAA&_nc_gid=g-45uab6C9_IKbzY7nAVeA&_nc_tpa=Q5bMBQIqigWJgJvDCBghdM74vbrdbalYdqRlefUz24sxU7H1nFSkYz9xEo0jpYMnkWjF95qYIDOJnmTFZA&oh=00_AQMBnfnCs7X_i1kSc1WteQKqhcplJGIa35z1rx4jYhM8aQ&oe=6ACBDDBE",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbe5d8ce11668b490_1775418135683",
+                    "id": "120244131883720458"
+                  }
+                ]
+              },
+              {
+                "video_id": "959680797017016",
+                "thumbnail_url": "https://scontent.fdel27-6.fna.fbcdn.net/v/t15.5256-10/666533417_1958548858384279_6776520307797551080_n.jpg?stp=dst-jpg_p110x80_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=b696e2&_nc_ohc=EVSxqc2N9nUQ7kNvwHSXeCj&_nc_oc=AdrJmO0Aul9IoN7RQEiv3NP1vtYqdE0h-11Zy0CDfUMGmzmY5GMTgCKFJH6Qzc8xGIEfszjF6SG9wGRMEHNtdpwU&_nc_zt=23&_nc_ht=scontent.fdel27-6.fna&edm=ALfz3TcEAAAA&_nc_gid=g-45uab6C9_IKbzY7nAVeA&_nc_tpa=Q5bMBQJM2gYw0E6PQMjQW4_Du0593eApavbjVVM96QCz7Z9Gznf5lb05dJ3uwqItNC7U2BxxO73Ejt-hBA&oh=00_AQOQlNie2sN6bsTQuVF5Tyso7Ua2W1_nE_g9M-fdWzBuVA&oe=6ACBCF92",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f591905111a98bc07_1775418126790",
+                    "id": "120244131883650458"
+                  },
+                  {
+                    "name": "placement_asset_f40823735ee977e27_1775418135687",
+                    "id": "120244131883690458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f7fc4376fcaca195c_1775418135689",
+                  "id": "120244131883740458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fbc4cc2537f4a82c3_1775418135690",
+                  "id": "120244131883660458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f375157edfc086e3b_1775418135690",
+                  "id": "120244131883710458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f40823735ee977e27_1775418135687",
+                  "id": "120244131883690458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram"
+                  ],
+                  "instagram_positions": [
+                    "stream",
+                    "explore",
+                    "explore_home",
+                    "profile_feed"
+                  ],
+                  "facebook_positions": [
+                    "feed",
+                    "instream_video",
+                    "marketplace",
+                    "biz_disco_feed",
+                    "profile_feed"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f28100836490e5993_1775418135683",
+                  "id": "120244131883750458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f9bed1063c0f1a78c_1775418135683",
+                  "id": "120244131883680458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f77606c57088d5f15_1775418135685",
+                  "id": "120244131883700458"
+                },
+                "video_label": {
+                  "name": "placement_asset_fbe5d8ce11668b490_1775418135683",
+                  "id": "120244131883720458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:37.744182+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "2961426797384859",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:38.474100+00:00"
+      }
+    },
+    "29026580370280649": {
+      "destination": {
+        "status": "complete",
+        "data": {
+          "id": "29026580370280649",
+          "account_id": "2313037395632947",
+          "name": "Exclusively online at steelelabel.com 2026-10-06-cd3a41b4bbdd5db4f65e7c48a34e4c8e",
+          "status": "ACTIVE",
+          "object_story_spec": {
+            "page_id": "114421101975106",
+            "instagram_user_id": "17841401562972717"
+          },
+          "asset_feed_spec": {
+            "optimization_type": "PLACEMENT",
+            "call_to_action_types": [
+              "SHOP_NOW"
+            ],
+            "ad_formats": [
+              "AUTOMATIC_FORMAT"
+            ],
+            "reasons_to_shop": false,
+            "shops_bundle": false,
+            "bodies": [
+              {
+                "text": "Our best-selling set for a reason. \nShop our most-loved styles exclusively online at steelelabel.com.",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f924895b58386c4dd_1774385010302",
+                    "id": "120243367235430458"
+                  },
+                  {
+                    "name": "placement_asset_f2f1dfecbb020c753_1774385010293",
+                    "id": "120243367235450458"
+                  }
+                ]
+              }
+            ],
+            "titles": [
+              {
+                "text": "Exclusively online at steelelabel.com",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fd416571a60973860_1774385010302",
+                    "id": "120243367235480458"
+                  },
+                  {
+                    "name": "placement_asset_f7c4aad769f688ff1_1774385010293",
+                    "id": "120243367235520458"
+                  }
+                ]
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "Exclusively online."
+              }
+            ],
+            "link_urls": [
+              {
+                "website_url": "https://steelelabel.com/collections/tops/products/coco-top-rainbow-check",
+                "display_url": "",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_f7e3ae9d55be04d07_1774385010303",
+                    "id": "120243367235410458"
+                  },
+                  {
+                    "name": "placement_asset_ff0c3230c10dac8cc_1774385010295",
+                    "id": "120243367235500458"
+                  }
+                ]
+              }
+            ],
+            "videos": [
+              {
+                "video_id": "1434295280986840",
+                "thumbnail_url": "https://scontent.fdel72-1.fna.fbcdn.net/v/t15.5256-10/656968745_915827917721532_4360678211264283689_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=WK88yOW8o04Q7kNvwHK_s26&_nc_oc=AdoSrjprUCh9HCd9kc60FcRuI40pCfTZpMe5h6KTMyxEqrJhH9xgX3dLm9eJSJk1i8U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fdel72-1.fna&_nc_gid=OumwJ0JaI7iKw0raoVr_Cw&_nc_ss=7a22e&oh=00_AQPjzn_-0ftwxG2H0c7g7j5-_OR1jBv9XYuh6jjMRbOXZg&oe=6ACA7C26",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_fbddb34a8f80b606d_1774385010293",
+                    "id": "120243367235220458"
+                  }
+                ]
+              },
+              {
+                "video_id": "1117050674021098",
+                "thumbnail_url": "https://scontent.fdel72-1.fna.fbcdn.net/v/t15.5256-10/656492367_2318603581883828_5531497745816164300_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=HISvvFG4i_UQ7kNvwEJkFrV&_nc_oc=AdprrMvDMlqVFVofnM4Gcz2G62eSYWixJlQX_1WS7cMMyhEURmMU_z7YDJJcLFW3t8o&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fdel72-1.fna&_nc_gid=ccBJjHXp-jX95x5lTLqatw&_nc_ss=7a22e&oh=00_AQPzktCtYE4_CPlbgkMcG6Wnz-Oac8MtyP2gLASFpUMQfA&oe=6ACA98D9",
+                "adlabels": [
+                  {
+                    "name": "placement_asset_feac32e7c6432fa5a_1774384998392",
+                    "id": "120243367235460458"
+                  },
+                  {
+                    "name": "placement_asset_f27d184d885f096a0_1774385010298",
+                    "id": "120243367235510458"
+                  }
+                ]
+              }
+            ],
+            "asset_customization_rules": [
+              {
+                "priority": 1,
+                "body_label": {
+                  "name": "placement_asset_f924895b58386c4dd_1774385010302",
+                  "id": "120243367235430458"
+                },
+                "title_label": {
+                  "name": "placement_asset_fd416571a60973860_1774385010302",
+                  "id": "120243367235480458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_f7e3ae9d55be04d07_1774385010303",
+                  "id": "120243367235410458"
+                },
+                "video_label": {
+                  "name": "placement_asset_f27d184d885f096a0_1774385010298",
+                  "id": "120243367235510458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65,
+                  "publisher_platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "instagram_positions": [
+                    "story",
+                    "reels",
+                    "ig_search",
+                    "profile_reels"
+                  ],
+                  "facebook_positions": [
+                    "story",
+                    "facebook_reels",
+                    "facebook_reels_overlay"
+                  ],
+                  "messenger_positions": [
+                    "story"
+                  ],
+                  "audience_network_positions": [
+                    "classic",
+                    "rewarded_video"
+                  ]
+                }
+              },
+              {
+                "priority": 2,
+                "body_label": {
+                  "name": "placement_asset_f2f1dfecbb020c753_1774385010293",
+                  "id": "120243367235450458"
+                },
+                "title_label": {
+                  "name": "placement_asset_f7c4aad769f688ff1_1774385010293",
+                  "id": "120243367235520458"
+                },
+                "link_url_label": {
+                  "name": "placement_asset_ff0c3230c10dac8cc_1774385010295",
+                  "id": "120243367235500458"
+                },
+                "video_label": {
+                  "name": "placement_asset_fbddb34a8f80b606d_1774385010293",
+                  "id": "120243367235220458"
+                },
+                "customization_spec": {
+                  "age_min": 13,
+                  "age_max": 65
+                }
+              }
+            ],
+            "additional_data": {
+              "multi_share_end_card": false,
+              "is_click_to_message": false
+            }
+          },
+          "url_tags": "utm_source={{site_source_name}}&utm_medium=cpc&utm_campaign={{campaign.name}}"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:38.902582+00:00"
+      },
+      "catalogue": {
+        "status": "complete",
+        "data": {
+          "id": "29026580370280649",
+          "account_id": "2313037395632947"
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:39.355069+00:00"
+      }
+    }
+  },
+  "adsets": {
+    "120233396922930458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120233396922930458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120233396922910458",
+          "created_time": "2025-09-23T05:59:32+1000",
+          "updated_time": "2026-02-14T19:16:52+1100",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:40.409309+00:00"
+      }
+    },
+    "120235813647550458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120235813647550458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120235813647500458",
+          "created_time": "2025-10-28T18:55:04+1100",
+          "updated_time": "2026-09-15T17:30:12+1000",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:40.857714+00:00"
+      }
+    },
+    "120244692207080458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120244692207080458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120244692207060458",
+          "created_time": "2026-04-17T18:09:04+1000",
+          "updated_time": "2026-04-17T18:09:12+1000",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "product_set_id": "9791703717598496",
+            "variation": "PRODUCT_SET_AND_WEBSITE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:41.444756+00:00"
+      }
+    },
+    "120245546322370458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120245546322370458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120245546322350458",
+          "created_time": "2026-04-30T19:54:15+1000",
+          "updated_time": "2026-08-06T18:16:51+1000",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "product_set_id": "34531011566498379",
+            "variation": "PRODUCT_SET_AND_WEBSITE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:41.992419+00:00"
+      }
+    },
+    "120246312718200458": {
+      "promoted": {
+        "status": "complete",
+        "data": {
+          "id": "120246312718200458",
+          "account_id": "2313037395632947",
+          "campaign_id": "120246312718430458",
+          "created_time": "2026-05-14T17:48:53+1000",
+          "updated_time": "2026-08-07T20:28:13+1000",
+          "promoted_object": {
+            "pixel_id": "1691070941110239",
+            "custom_event_type": "PURCHASE",
+            "smart_pse_enabled": false
+          }
+        },
+        "diagnostics": {},
+        "collected_at_utc": "2026-10-07T09:05:42.858546+00:00"
+      }
+    }
+  }
+}
